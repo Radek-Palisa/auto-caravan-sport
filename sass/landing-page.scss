@@ -1,0 +1,106 @@
+.landing-container {
+	height: 100vh;
+	position: relative;
+}
+
+.picture-grid {
+	box-sizing: border-box;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	//	height: 50vh;
+	width: 1440px;
+	min-width: 960px;
+	margin: 0 auto;
+	//	border: 2px dashed black;
+	
+	&__container {
+		box-sizing: border-box;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+	
+	&__cell {
+		border: 1px dashed red;
+		display: inline-block;
+		width: 31%;
+		height: 48.129%;
+		margin-right: 2%;
+		background-color: grey;
+		box-sizing: border-box;
+		
+		&--first {
+			width: 11%
+		}
+		
+		&--last {
+			width: 21%;
+			margin-right: 0;
+		}
+	}
+	
+}
+
+.logo {
+	position: absolute;
+	bottom: 102%;
+	font-family: tahoma;
+	
+	h1 {
+		margin: 0 0 5px 0;
+		font-style: oblique;
+	}
+	
+	p {
+		margin: 0;
+	}
+}
+
+.nav {
+	position: absolute;
+	right: 0;
+	bottom: 105%;
+	
+	ul {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		
+		li {
+			display: inline-block;
+			margin-left: 10px;
+			
+			a {
+				text-decoration: none;
+				text-transform: uppercase;
+				color: black;
+			}
+		}
+	}
+}
+
+.mozaika img {
+	width: 100%;
+}
+
+.text {
+	box-sizing: border-box;
+	position: absolute;
+	top: 0;
+	left: 9%;
+	width: 313px;
+	height: 180px;
+	padding: 19px;
+	background-color: rgba(0,0,0,0.8);
+	color: white;
+	vertical-align: middle;
+	
+	p {
+		margin: 0;
+		line-height: 1.3em;
+	}
+}
