@@ -393,12 +393,17 @@ th {
   padding: 0;
 }
 
+html, body {
+  height: 100%;
+}
+
 img {
   max-height: 100%;
   display: block;
 }
 
 .landing-container {
+  height: 100%;
   height: 100vh;
   position: relative;
 }
@@ -411,15 +416,13 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  margin-left: -500px;
+  margin-top: -199px;
   width: 1000px;
 }
 
-.grid__container::after {
-  content: '';
-  display: block;
-  clear: both;
+.grid__container {
+  height: 398px;
 }
 .grid__cell {
   position: relative;
@@ -450,15 +453,18 @@ img {
 
 .logo {
   position: absolute;
-  bottom: 102%;
-  font-family: tahoma;
+  bottom: 103%;
+  line-height: 1.1;
 }
 .logo h1 {
-  margin: 0 0 5px 0;
+  margin: 0;
+  font-family: tahoma;
+  font-size: 28px;
   font-style: oblique;
 }
 .logo p {
   margin: 0;
+  font-family: verdana;
 }
 
 .nav {
@@ -467,13 +473,14 @@ img {
   bottom: 105%;
 }
 .nav ul {
+  font-size: 14px;
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 .nav ul li {
   display: inline-block;
-  margin-left: 10px;
+  margin-left: 22px;
 }
 .nav ul li a {
   text-decoration: none;
@@ -512,6 +519,18 @@ img {
   left: 0;
 }
 
+.slogan {
+  display: none;
+  width: 280px;
+  height: 21px;
+  position: absolute;
+  bottom: -55px;
+  right: 0;
+  font-style: italic;
+  font-size: 18px;
+  color: #AF7848;
+}
+
 .arrow-link {
   position: absolute;
   width: 70px;
@@ -535,8 +554,11 @@ img {
 }
 
 #after-content {
+  height: 100%;
   height: 100vh;
   position: relative;
+  overflow: hidden;
+  /* for IE! computes big left margin and adds horizontal scrollbar */
 }
 #after-content img {
   position: absolute;
