@@ -8,9 +8,9 @@
 }
 
 .picture-grid {
+	background-image: url('img/picture-grid_1000x398.jpg');
 	position: absolute;
-	top: 50%;
-	left: 50%;
+	top: 50%; left: 50%;
 	margin-left: -500px; margin-top: -199px;
 	width: 1000px;
 }
@@ -26,7 +26,6 @@
 		float: left;
 		height: 194px;
 		margin-right: 10px;
-		background-color: grey;
 		overflow: hidden;
 		
 		&--top-start {
@@ -60,6 +59,7 @@
 	position: absolute;
 	bottom: 103%;
 	line-height: 1.1;
+	color: #2b180f;
 	
 	h1 {
 		margin: 0;
