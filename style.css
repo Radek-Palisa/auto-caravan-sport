@@ -569,3 +569,60 @@ img {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
+
+header {
+  max-width: 1000px;
+  height: 47px;
+  margin: 30px auto;
+}
+
+header .logo, header .nav {
+  position: static;
+}
+
+header .logo {
+  float: left;
+  color: midnightblue;
+}
+
+header .nav {
+  float: right;
+  line-height: 47px;
+}
+
+main {
+  background-color: rosybrown;
+  height: 100vh;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 34px;
+}
+.content h1 {
+  text-align: center;
+  font-size: 1.5em;
+  font-family: Arial;
+  font-weight: normal;
+}
+
+.gallery-nav {
+  margin-top: 40px;
+  text-align: center;
+}
+.gallery-nav a {
+  display: inline-block;
+  text-decoration: none;
+  color: aliceblue;
+  margin: 10px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: firebrick;
+  font-size: 1.2em;
+  transition: 0.4s;
+}
+.gallery-nav a:hover {
+  background-color: midnightblue;
+  transition: 0.4s;
+}
