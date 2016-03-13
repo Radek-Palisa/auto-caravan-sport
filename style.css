@@ -570,7 +570,7 @@ img {
           transform: translate(-50%, -50%);
 }
 
-header {
+.gallery-header {
   position: relative;
   height: 400px;
   background-image: url(img/gallery-bg.jpg);
@@ -578,38 +578,55 @@ header {
   background-position: center;
   background-attachment: fixed;
 }
-header .header__wrapper {
+.gallery-header .header__banner {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.gallery-header .header__wrapper {
   max-width: 1000px;
   margin: 0 auto;
   height: 47px;
   padding: 30px 20px;
 }
-header .nadpis {
+.gallery-header .heading__wrapper {
   position: absolute;
-  left: 50%;
+  left: 0;
+  right: 0;
   bottom: 0;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+}
+.gallery-header .heading__wrapper--centered {
+  width: 1000px;
+  margin: 0 auto;
+}
+.gallery-header .heading {
+  display: inline-block;
   margin: 0;
-  border-bottom: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   padding: 15px 25px;
   background-color: white;
   font-size: 1.5em;
   font-family: Arial;
 }
 
-header .logo, header .nav {
+.gallery-header .logo, .gallery-header .nav {
   position: static;
 }
 
-header .logo {
+.gallery-header .logo {
   float: left;
-  color: midnightblue;
+  color: white;
 }
 
-header .nav {
+.gallery-header .nav {
   float: right;
   line-height: 47px;
+}
+.gallery-header .nav a {
+  color: white;
 }
 
 .content {

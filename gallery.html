@@ -17,24 +17,30 @@
 
 <body>
 
-	<header>
-		<div class="header__wrapper">
-			<div class="logo">
-				<h1>A.C.S. s.r.o.</h1>
-				<p>Auto Caravan Sport</p>
-			</div>
+	<header class="gallery-header">
+		<div class="header__banner">
+			<div class="header__wrapper">
+				<div class="logo">
+					<h1>A.C.S. s.r.o.</h1>
+					<p>Auto Caravan Sport</p>
+				</div>
 
-			<nav class="nav" role="navigation">
-				<ul>
-					<li><a href="index.html">Domů</a></li>
-					<li><a href="">Nabídka</a></li>
-					<li><a href="">O firmě</a></li>
-					<li><a href="">Kontakt</a></li>
-				</ul>
-			</nav>
+				<nav class="nav" role="navigation">
+					<ul>
+						<li><a href="index.html">Domů</a></li>
+						<li><a href="">Nabídka</a></li>
+						<li><a href="">O firmě</a></li>
+						<li><a href="">Kontakt</a></li>
+					</ul>
+				</nav>
+			</div>
 		</div>
 		
-		<h1 class="nadpis">Dokumentace Ford Custom A.C.S.</h1>
+		<div class="heading__wrapper">
+			<div class="heading__wrapper--centered">
+				<h1 class="heading">Dokumentace Ford Custom A.C.S.</h1>
+			</div>
+		</div>
 	</header>
 
 	<main>
@@ -241,7 +247,42 @@
 			});
 		});	
 	</script>
-					
+	
+	<script> /* https://davidwalsh.name/javascript-debounce-function */
+		
+		function debounce(func, wait, immediate) {
+			var timeout;
+			return function() {
+				var context = this, args = arguments;
+				var later = function() {
+					timeout = null;
+					if (!immediate) func.apply(context, args);
+				};
+				var callNow = immediate && !timeout;
+				clearTimeout(timeout);
+				timeout = setTimeout(later, wait);
+				if (callNow) func.apply(context, args);
+			};
+		};
+	
+		var myEfficientFn = debounce(function() {
+			$(window).scroll(function() {
+
+				if ($(this).scrollTop()>100)
+				 {
+					$('.header__banner').fadeOut();
+				 }
+				else
+				 {
+				  $('.header__banner').fadeIn();
+				 }
+			});
+		}, 250);
+
+		window.addEventListener('scroll', myEfficientFn);
+		
+	</script>				
+													
 	<!-- Script for Life Reloading-->
 	<script src="//localhost:35729/livereload.js"></script>
 </body>
