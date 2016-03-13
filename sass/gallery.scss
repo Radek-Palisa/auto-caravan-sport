@@ -2,6 +2,7 @@ header {
 	max-width: 1000px;
 	height: 47px;
 	margin: 30px auto;
+	padding: 0 20px;
 }
 
 header .logo, header .nav {
@@ -20,13 +21,12 @@ header .nav {
 
 main {
 	background-color: rosybrown;
-	height: 100vh;
 }
 
 .content {
 	max-width: 1000px;
 	margin: 0 auto;
-	padding-top: 34px;
+	padding: 34px 20px;
 	
 	h1 {
 		text-align: center;
@@ -55,5 +55,27 @@ main {
 	a:hover {
 		background-color: midnightblue;
 		transition: 0.4s;
+	}
+}
+
+.gallery {
+	margin-top: 20px;
+	padding-top: 5px;
+	
+	h2 {
+		color: midnightblue;
+	}
+	
+	p {
+		max-width: 55em;
+	}
+	
+	&__thumbnail {
+		display: inline-block;
+		width: 140px;
+		height: 120px;
+		background-color: grey;
+		margin-right: 10px;
+		margin-bottom: 10px;
 	}
 }
