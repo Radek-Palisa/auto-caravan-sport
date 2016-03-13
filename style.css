@@ -571,10 +571,31 @@ img {
 }
 
 header {
+  position: relative;
+  height: 400px;
+  background-image: url(img/gallery-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+header .header__wrapper {
   max-width: 1000px;
+  margin: 0 auto;
   height: 47px;
-  margin: 30px auto;
-  padding: 0 20px;
+  padding: 30px 20px;
+}
+header .nadpis {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin: 0;
+  border-bottom: none;
+  padding: 15px 25px;
+  background-color: white;
+  font-size: 1.5em;
+  font-family: Arial;
 }
 
 header .logo, header .nav {
@@ -591,46 +612,47 @@ header .nav {
   line-height: 47px;
 }
 
-main {
-  background-color: rosybrown;
-}
-
 .content {
   max-width: 1000px;
   margin: 0 auto;
   padding: 34px 20px;
 }
-.content h1 {
-  text-align: center;
-  font-size: 1.5em;
-  font-family: Arial;
-  font-weight: normal;
-}
 
-.gallery-nav {
+#gallery-nav {
   margin-top: 40px;
-  text-align: center;
 }
-.gallery-nav a {
+#gallery-nav li {
   display: inline-block;
   text-decoration: none;
-  color: aliceblue;
-  margin: 10px;
-  padding: 10px 15px;
-  border-radius: 5px;
-  background-color: firebrick;
+  color: dimgrey;
+  margin-bottom: -1px;
+  padding: 8px 15px;
+  border: 1px solid rosybrown;
   font-size: 1.2em;
+  cursor: pointer;
   transition: 0.4s;
 }
-.gallery-nav a:hover {
-  background-color: midnightblue;
+#gallery-nav li:hover {
+  background-color: rosybrown;
+  color: aliceblue;
   transition: 0.4s;
+}
+#gallery-nav li.active {
+  background-color: rosybrown;
+  color: aliceblue;
 }
 
-.gallery {
-  margin-top: 20px;
-  padding-top: 5px;
+#tab-wrapper {
+  background-color: rosybrown;
+  padding: 20px;
 }
+#tab-wrapper article {
+  display: none;
+}
+#tab-wrapper article.active {
+  display: block;
+}
+
 .gallery h2 {
   color: midnightblue;
 }
@@ -640,8 +662,14 @@ main {
 .gallery__thumbnail {
   display: inline-block;
   width: 140px;
-  height: 120px;
+  height: 110px;
   background-color: grey;
   margin-right: 10px;
   margin-bottom: 10px;
+  transition: 0.3s;
+}
+.gallery__thumbnail:hover {
+  transition: 0.3s;
+  -webkit-filter: brightness(130%);
+          filter: brightness(130%);
 }
