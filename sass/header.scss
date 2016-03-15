@@ -1,0 +1,117 @@
+.logo {
+	line-height: 1.1;
+	float: left;
+	color: white;
+	
+	h1 {
+		margin: 0;
+		font-family: tahoma;
+		font-size: 28px;
+		font-style: oblique;
+	}
+	
+	p {
+		margin: 0;
+		font-family: verdana; 
+	}
+}
+
+.nav {
+	float: right;
+	line-height: 47px;
+	
+	ul {
+		font-size: 14px;
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		
+		li {
+			display: inline-block;
+			margin-left: 22px;
+			
+			a {
+				color: white;
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+
+/* Landing Page Specific */
+
+.picture-grid {
+	.logo {
+		position: absolute;
+		bottom: 103%;
+		color: #2b180f;
+	}
+	
+	.nav {
+		position: absolute;
+		right: 0;
+		bottom: 105%;
+		
+		a {
+			color: black;
+		}
+	}
+}
+
+.header {
+	position: relative;
+	height: 400px;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	
+	&--gallery-bg {
+		background-image: url(img/gallery-bg.jpg);
+	}
+	
+	&--nabidka-bg {
+		background-image: url(img/nabidka-bg.jpg);
+		transition: all 0.5s ease-in-out;
+	}
+	
+	&--predchoziprace-bg {
+		background-image: url(img/predchoziprace-bg.jpg);
+		transition: all 0.5s ease-in-out;
+	}
+
+	&__banner {
+		background-color: rgba(0,0,0,0.3);
+		position: fixed;
+		top: 0; left: 0; right: 0;
+	}
+	
+	&__wrapper {
+		max-width: 1000px;
+		margin: 0 auto;
+		height: 47px;
+		padding: 30px 20px;
+	}
+	
+	.heading__wrapper {
+		position: absolute;
+		left: 0; right: 0; bottom: 0;
+		
+		&--centered {
+			width: 1000px;
+			margin: 0 auto;
+		}
+	}
+	
+	.heading {
+		display: inline-block;
+		margin: 0;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+		padding: 15px 25px;
+		background-color: white;
+		font-size: 1.5em;
+		font-family: Arial;
+	}
+}
+

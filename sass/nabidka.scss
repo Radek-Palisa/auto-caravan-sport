@@ -1,0 +1,20 @@
+.heading2 {
+	left: 50%;
+	color: grey;
+}
+
+.nabidka-nav .active {
+	color: black;
+}
+
+.nabidka-tabs section { 
+	display: none;
+
+	&.active {
+	display: block;
+	}
+}
+
+.nabidka-tabs section {
+	height: 100vh;
+}

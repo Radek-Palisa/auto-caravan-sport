@@ -54,50 +54,6 @@
 	
 }
 
-
-.logo {
-	position: absolute;
-	bottom: 103%;
-	line-height: 1.1;
-	color: #2b180f;
-	
-	h1 {
-		margin: 0;
-		font-family: tahoma;
-		font-size: 28px;
-		font-style: oblique;
-	}
-	
-	p {
-		margin: 0;
-		font-family: verdana; 
-	}
-}
-
-.nav {
-	position: absolute;
-	right: 0;
-	bottom: 105%;
-	
-	ul {
-		font-size: 14px;
-		list-style-type: none;
-		padding: 0;
-		margin: 0;
-		
-		li {
-			display: inline-block;
-			margin-left: 22px;
-			
-			a {
-				text-decoration: none;
-				text-transform: uppercase;
-				color: black;
-			}
-		}
-	}
-}
-
 .slide-in {
 	box-sizing: border-box;
 	position: absolute;
