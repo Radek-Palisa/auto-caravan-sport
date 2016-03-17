@@ -505,29 +505,6 @@ img {
   font-family: Arial;
 }
 
-.nabidka-tabs .content {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-.nabidka-tabs .content article {
-  margin-bottom: 30px;
-}
-.nabidka-tabs .content article:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-.nabidka-tabs .content p {
-  width: 60%;
-  float: left;
-  line-height: 1.4;
-  margin: 0;
-}
-.nabidka-tabs .content img {
-  width: 37%;
-  float: right;
-}
-
 .landing-container {
   height: 100%;
   height: 100vh;
@@ -661,6 +638,11 @@ img {
 .heading2 {
   left: 50%;
   color: grey;
+  background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.nabidka-nav {
+  cursor: pointer;
 }
 
 .nabidka-nav .active {
@@ -674,8 +656,59 @@ img {
   display: block;
 }
 
-.nabidka-tabs section {
-  height: 100vh;
+.nabidka-tabs .content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.nabidka-tabs .content article:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.nabidka-tabs .content p {
+  line-height: 1.4;
+}
+.nabidka-tabs .content a {
+  box-sizing: border-box;
+  display: block;
+  width: 560px;
+  margin: 40px auto;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: white;
+  background-color: brown;
+  border-radius: 5px;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.predchozi-prace article:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.predchozi-prace p {
+  float: left;
+}
+.predchozi-prace img {
+  float: right;
+  width: 45%;
+}
+
+.nabidka-gallery {
+  width: 50%;
+  margin-left: 20px;
+  float: right;
+  cursor: pointer;
+}
+.nabidka-gallery img {
+  box-sizing: border-box;
+  float: left;
+  width: 25%;
+  border: 1px solid white;
+}
+.nabidka-gallery img:first-of-type {
+  width: 100%;
 }
 
 .content {
@@ -738,4 +771,41 @@ img {
   transition: 0.3s;
   -webkit-filter: brightness(130%);
           filter: brightness(130%);
+}
+
+footer {
+  margin-top: 30px;
+  color: white;
+  background-color: saddlebrown;
+}
+footer .content {
+  width: 1000px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 auto;
+  padding: 0;
+}
+footer p {
+  float: left;
+  margin: 0;
+}
+footer p .copyright {
+  border: 1px solid white;
+  border-radius: 100%;
+  padding: 1px 3px;
+  margin-right: 5px;
+}
+footer nav {
+  float: right;
+}
+footer nav ul {
+  margin: 0;
+}
+footer nav li {
+  display: inline-block;
+  margin-left: 15px;
+}
+footer nav li a {
+  text-decoration: none;
+  color: white;
 }
