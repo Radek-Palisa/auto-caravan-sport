@@ -505,6 +505,29 @@ img {
   font-family: Arial;
 }
 
+.nabidka-tabs .content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.nabidka-tabs .content article {
+  margin-bottom: 30px;
+}
+.nabidka-tabs .content article:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.nabidka-tabs .content p {
+  width: 60%;
+  float: left;
+  line-height: 1.4;
+  margin: 0;
+}
+.nabidka-tabs .content img {
+  width: 37%;
+  float: right;
+}
+
 .landing-container {
   height: 100%;
   height: 100vh;
