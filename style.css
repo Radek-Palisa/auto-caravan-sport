@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
@@ -471,6 +472,9 @@ img {
   background-image: url(img/predchoziprace-bg.jpg);
   transition: all 0.5s ease-in-out;
 }
+.header--ofirme-bg {
+  background-image: url(img/ofirme.jpg);
+}
 .header__banner {
   background-color: rgba(0, 0, 0, 0.3);
   position: fixed;
@@ -484,17 +488,15 @@ img {
   height: 47px;
   padding: 30px 20px;
 }
-.header .heading__wrapper {
+
+.heading__wrapper {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 100%;
 }
-.header .heading__wrapper--centered {
-  width: 1000px;
-  margin: 0 auto;
-}
-.header .heading {
+
+.heading {
   display: inline-block;
   margin: 0;
   border-top-left-radius: 5px;
@@ -637,8 +639,6 @@ img {
 
 .heading2 {
   left: 50%;
-  color: grey;
-  background-color: rgba(255, 255, 255, 0.8) !important;
 }
 
 .nabidka-nav {
@@ -648,6 +648,10 @@ img {
 .nabidka-nav .active {
   color: black;
 }
+.nabidka-nav .non-active {
+  color: grey;
+  background-color: rgba(255, 255, 255, 0.8) !important;
+}
 
 .nabidka-tabs section {
   display: none;
@@ -656,10 +660,6 @@ img {
   display: block;
 }
 
-.nabidka-tabs .content {
-  max-width: 1000px;
-  margin: 0 auto;
-}
 .nabidka-tabs .content article:after {
   content: '';
   display: block;
@@ -682,17 +682,16 @@ img {
   text-align: center;
 }
 
+/* P┼Öedchoz├ş pr├íce */
 .predchozi-prace article:after {
   content: '';
   display: block;
   clear: both;
 }
-.predchozi-prace p {
-  float: left;
-}
 .predchozi-prace img {
   float: right;
-  width: 45%;
+  width: 40%;
+  margin-left: 15px;
 }
 
 .nabidka-gallery {
@@ -714,6 +713,7 @@ img {
 .content {
   max-width: 1000px;
   margin: 0 auto;
+  position: relative;
   padding: 34px 20px;
 }
 

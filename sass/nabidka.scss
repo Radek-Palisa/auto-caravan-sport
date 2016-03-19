@@ -1,14 +1,18 @@
 .heading2 {
-	left: 50%;
-	color: grey;
-	background-color: rgba(255,255,255,0.8) !important;
+	left: 50%;	
 }
 .nabidka-nav {
 	cursor: pointer;
 }
 
-.nabidka-nav .active {
-	color: black;
+.nabidka-nav { 
+	.active {
+		color: black;
+	}
+	.non-active {
+		color: grey;
+		background-color: rgba(255,255,255,0.8) !important;
+	}
 }
 
 .nabidka-tabs section { 
@@ -20,8 +24,6 @@
 }
 
 .nabidka-tabs .content {
-	max-width: 1000px;
-	margin: 0 auto;
 	
 	article {
 		
@@ -52,6 +54,8 @@
 	}
 }
 
+/* Předchozí práce */
+
 .predchozi-prace {
 	article {
 		
@@ -63,13 +67,10 @@
 		}
 	}
 	
-	p {
-		float: left;	
-	}
-	
 	img {
 		float: right;
-		width: 45%
+		width: 40%;
+		margin-left: 15px;
 	}
 }
 .nabidka-gallery {

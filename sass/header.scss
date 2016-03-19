@@ -79,6 +79,10 @@
 		background-image: url(img/predchoziprace-bg.jpg);
 		transition: all 0.5s ease-in-out;
 	}
+	
+	&--ofirme-bg {
+		background-image: url(img/ofirme.jpg);
+	}
 
 	&__banner {
 		background-color: rgba(0,0,0,0.3);
@@ -91,26 +95,5 @@
 		margin: 0 auto;
 		height: 47px;
 		padding: 30px 20px;
-	}
-	
-	.heading__wrapper {
-		position: absolute;
-		left: 0; right: 0; bottom: 0;
-		
-		&--centered {
-			width: 1000px;
-			margin: 0 auto;
-		}
-	}
-	
-	.heading {
-		display: inline-block;
-		margin: 0;
-		border-top-left-radius: 5px;
-		border-top-right-radius: 5px;
-		padding: 15px 25px;
-		background-color: white;
-		font-size: 1.5em;
-		font-family: Arial;
 	}
 }
