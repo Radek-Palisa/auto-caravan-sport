@@ -13,10 +13,10 @@ module.exports = function(grunt) {
 			},
 			files: {
 			    'nabidka.html' : 'jade/nabidka.jade',
-				'jade/gallery.html' : 'jade/gallery.jade',
-				'jade/index.html' : 'jade/index.jade',
-				'jade/kontakt.html' : 'jade/kontakt.jade',
-				'jade/ofirme.html' : 'jade/ofirme.jade'
+				'gallery.html' : 'jade/gallery.jade',
+				'index.html' : 'jade/index.jade',
+				'kontakt.html' : 'jade/kontakt.jade',
+				'ofirme.html' : 'jade/ofirme.jade'
 			}
 		  }
 		},

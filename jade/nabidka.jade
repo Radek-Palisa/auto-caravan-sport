@@ -2,16 +2,16 @@ extends partials/layout.jade
 
 block content
 	main.nabidka-tabs
-		div.content
-			div.heading__wrapper
-				div.nabidka-nav
+		.content
+			.heading__wrapper
+				.nabidka-nav
 					h1.heading.active Současně k prodeji
 					h1.heading.heading2.non-active Předchozí práce
 			
 			section.active
 				h1 Ford Custom A.C.S
 				article
-					div.nabidka-gallery
+					.nabidka-gallery
 						img(src="img/soucasna-nabidka/001.jpg" alt="")
 						img(src="img/soucasna-nabidka/049.jpg" alt="")
 						img(src="img/soucasna-nabidka/050.jpg" alt="")
@@ -30,3 +30,14 @@ block content
 					h1 Ford Transit s vyklápěcí střechou
 					img(src="img/predchozi-prace/102.JPG" alt="")
 					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas a qui, sapiente quod, nemo at accusamus blanditiis ex beatae, corrupti veritatis minima ipsum expedita. Perspiciatis praesentium ea impedit asperiores cum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus corporis sed laborum iste veniam, sit quasi deleniti, voluptas adipisci a, similique magni debitis suscipit nemo quos. Distinctio temporibus reprehenderit dolore? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum omnis, eveniet earum esse ex laudantium consequuntur. Recusandae molestiae ipsam doloremque quidem doloribus laudantium voluptas, omnis dignissimos. Maxime corporis ducimus, explicabo?
+					
+block prepend scripts
+	script.
+		$(document).ready(function(){
+			$(".nabidka-nav h1").click(function(e){
+				if (!$(this).hasClass("active")) {
+					$(".header").toggleClass("header--nabidka-bg header--predchoziprace-bg");
+					$(".nabidka-nav h1,.nabidka-tabs section").toggleClass("active non-active");
+				}
+			});
+		});

@@ -11,20 +11,12 @@ html
 		
 	body
 		
-		block header
+		block header-wrapper
 			header.header.header--nabidka-bg
 				div.header__banner
 					div.header__wrapper
-						div.logo
-							h1 A.C.S. s.r.o.
-							p Auto Caravan Sport
-
-						nav.nav(role="navigation")
-							ul
-								li: a(href="index.html") Domů
-								li: a(href="nabidka.html") Nabídka
-								li: a(href="ofirme.html") O firmě
-								li: a(href="kontakt.html") Kontakt
+						
+						include header.jade
 		
 		block content
 		
@@ -39,18 +31,9 @@ html
 							li: a(href="ofirme.html") O firmě
 							li: a(href="kontakt.html") Kontakt
 							
-		block scripts
-			script.
-				$(document).ready(function(){
-					$(".nabidka-nav h1").click(function(e){
-						if (!$(this).hasClass("active")) {
-							$(".header").toggleClass("header--nabidka-bg header--predchoziprace-bg");
-							$(".nabidka-nav h1,.nabidka-tabs section").toggleClass("active non-active");
-						}
-					});
-				});
-				
-			script. // https://davidwalsh.name/javascript-debounce-function
+		block scripts		
+			script. 
+				// https://davidwalsh.name/javascript-debounce-function
 				function debounce(func, wait, immediate) {
 					var timeout;
 					return function() {
