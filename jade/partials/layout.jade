@@ -1,0 +1,83 @@
+doctype html
+html
+	head
+		include html5shiv.jade
+		title ACS s.r.o.
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		link(rel="stylesheet" href="style.css")
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js")
+		script(type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js")
+		
+	body
+		
+		block header
+			header.header.header--nabidka-bg
+				div.header__banner
+					div.header__wrapper
+						div.logo
+							h1 A.C.S. s.r.o.
+							p Auto Caravan Sport
+
+						nav.nav(role="navigation")
+							ul
+								li: a(href="index.html") Domů
+								li: a(href="nabidka.html") Nabídka
+								li: a(href="ofirme.html") O firmě
+								li: a(href="kontakt.html") Kontakt
+		
+		block content
+		
+		block footer
+			footer
+				div.content
+					p <span class="copyright">C</span>Auto Caravan Sport s.r.o. 2016
+					nav.footer__nav
+						ul
+							li: a(href="index.html") Domů
+							li: a(href="nabidka.html") Nabídka
+							li: a(href="ofirme.html") O firmě
+							li: a(href="kontakt.html") Kontakt
+							
+		block scripts
+			script.
+				$(document).ready(function(){
+					$(".nabidka-nav h1").click(function(e){
+						if (!$(this).hasClass("active")) {
+							$(".header").toggleClass("header--nabidka-bg header--predchoziprace-bg");
+							$(".nabidka-nav h1,.nabidka-tabs section").toggleClass("active non-active");
+						}
+					});
+				});
+				
+			script. // https://davidwalsh.name/javascript-debounce-function
+				function debounce(func, wait, immediate) {
+					var timeout;
+					return function() {
+						var context = this, args = arguments;
+						var later = function() {
+							timeout = null;
+							if (!immediate) func.apply(context, args);
+						};
+						var callNow = immediate && !timeout;
+						clearTimeout(timeout);
+						timeout = setTimeout(later, wait);
+						if (callNow) func.apply(context, args);
+					};
+				};
+	
+				var myEfficientFn = debounce(function() {
+					$(window).scroll(function() {
+
+						if ($(this).scrollTop()> $('.header__wrapper').height())
+						 {
+							$('.header__banner').fadeOut();
+						 }
+						else
+						 {
+						  $('.header__banner').fadeIn();
+						 }
+					});
+				}, 200);
+
+				window.addEventListener('scroll', myEfficientFn);
