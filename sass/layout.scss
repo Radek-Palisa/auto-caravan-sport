@@ -1,0 +1,46 @@
+/* Layout Home Page */
+
+.landing-container {
+	height: 100vh;
+	position: relative;
+}
+
+#after-content {
+	height: 100vh;
+	position: relative;
+	overflow: hidden; /* for IE! computes big left margin and adds horizontal scrollbar */
+}
+
+/* Layout General */
+
+.header {
+	position: relative;
+	height: 94vh;
+	
+	&__banner {
+		position: fixed;
+		top: 0; left: 0; right: 0;
+	}
+	
+	&__wrapper {
+		position: relative;
+		max-width: 1000px;
+		margin: 0 auto;
+		height: 17vh;
+	}
+}
+
+.content {
+	max-width: 1000px;
+	margin: 0 auto;
+	position: relative;
+	padding: 34px 20px;
+}
+
+footer .content {
+	width: 1000px;
+	height: 50px;
+	line-height: 50px;
+	margin: 0 auto;
+	padding: 0;
+}

@@ -7,6 +7,9 @@
     <title>ACS s.r.o.</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,300,500,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
@@ -15,11 +18,11 @@
     <header class="header header--nabidka-bg">
       <div class="header__banner">
         <div class="header__wrapper">
-          <div class="logo">
+          <div class="logo logo--fonts">
             <h1>A.C.S. s.r.o.</h1>
             <p>Auto Caravan Sport</p>
           </div>
-          <nav role="navigation" class="nav">
+          <nav role="navigation" class="nav nav--fonts">
             <ul>
               <li><a href="index.html">Domů</a></li>
               <li><a href="nabidka.html">Nabídka</a></li>
@@ -32,9 +35,9 @@
     </header>
     <main>
       <section class="content">
-        <div class="heading__wrapper">
+        <div class="heading__wrap">
           <div>
-            <h1 class="heading">Dokumentace Ford Custom A.C.S.</h1>
+            <h1 class="heading heading--fonts">Dokumentace Ford Custom A.C.S.</h1>
           </div>
         </div>
         <nav id="gallery-nav">
@@ -47,7 +50,7 @@
         <div id="tab-wrapper">
           <article class="gallery active">
             <h2>Izolace vozu</h2>
-            <p>Boční pevné stěny vozu jsou vypěněny montážní pěnou (elektrik. Kabely byly vloženy do husích krků), stěna je obložena 3mm překližkou, oboustranně nalakovanou akrylátem. Stropní plech je vylepen pláty PP pěny MIRELON. Stropnice vozu zůstala originální, v toaletním prostoru byla nahrazena 3mm deskou ABS. Podlaha je izolována PP německou pěnou EXTREME. na ní leží 8mm vodovzdorná překližka a tvrzené dekorační lino. Okraje desky jsou zalakovány, pod toaletním je kompletně lakovaná 12mm vodní překližka.</p>
+            <p>Boční pevné stěny vozu jsou vypěněny montážní pěnou (elektrik. Kabely byly vloženy do husích krků), stěna je obložena 3mm překližkou, oboustranně nalakovanou akrylátem. Stropní plech je vylepen pláty PP pěny MIRELON. Stropnice vozu zůstala originální, v toaletním prostoru byla nahrazena 3mm deskou ABS. Podlaha je izolována PP německou pěnou EXTREME. Na ní leží 8mm vodovzdorná překližka a tvrzené dekorační lino. Okraje desky jsou zalakovány, pod toaletním je kompletně lakovaná 12mm vodní překližka.</p>
             <section><a href="#" class="gallery__thumbnail"></a><a href="#" class="gallery__thumbnail"></a><a href="#" class="gallery__thumbnail"></a><a href="#" class="gallery__thumbnail"></a><a href="#" class="gallery__thumbnail"></a><a href="#" class="gallery__thumbnail"></a><a href="#" class="gallery__thumbnail"></a><a href="#" class="gallery__thumbnail"></a><a href="#" class="gallery__thumbnail"></a><a href="#" class="gallery__thumbnail"></a><a href="#" class="gallery__thumbnail"></a><a href="#" class="gallery__thumbnail"></a><a href="#" class="gallery__thumbnail"></a><a href="#" class="gallery__thumbnail"></a><a href="#" class="gallery__thumbnail"></a><a href="#" class="gallery__thumbnail"></a><a href="#" class="gallery__thumbnail"></a><a href="#" class="gallery__thumbnail"></a><a href="#" class="gallery__thumbnail"></a><a href="#" class="gallery__thumbnail"></a><a href="#" class="gallery__thumbnail"></a><a href="#" class="gallery__thumbnail"></a><a href="#" class="gallery__thumbnail"></a><a href="#" class="gallery__thumbnail"></a><a href="#" class="gallery__thumbnail"></a><a href="#" class="gallery__thumbnail"></a><a href="#" class="gallery__thumbnail"></a><a href="#" class="gallery__thumbnail"></a>
             </section>
           </article>
@@ -106,6 +109,7 @@
       });
     </script>
     <script>
+      // https://davidwalsh.name/javascript-debounce-function
       function debounce(func, wait, immediate) {
       	var timeout;
       	return function() {

@@ -394,13 +394,46 @@ th {
   padding: 0;
 }
 
-html, body {
-  height: 100%;
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 img {
   max-height: 100%;
   display: block;
+}
+
+/* Typography */
+p {
+  font-family: roboto;
+}
+
+.logo--fonts h1 {
+  font-family: tahoma;
+  font-size: 28px;
+  font-style: oblique;
+}
+.logo--fonts p {
+  font-family: verdana;
+}
+
+.nav--fonts {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.heading--fonts {
+  font-family: Open Sans, Arial, sans-serif;
+  font-size: 1em;
+}
+
+/* Header partial */
+.header__banner {
+  background-color: white;
 }
 
 .logo, .nav {
@@ -415,23 +448,14 @@ img {
   line-height: 1.1;
   color: #522611;
 }
-.logo h1 {
+.logo h1, .logo p {
   margin: 0;
-  font-family: tahoma;
-  font-size: 28px;
-  font-style: oblique;
-}
-.logo p {
-  margin: 0;
-  font-family: verdana;
 }
 
 .nav {
   right: 0;
 }
 .nav ul {
-  font-size: 14px;
-  list-style-type: none;
   padding: 0;
   margin: 0;
 }
@@ -442,10 +466,9 @@ img {
 .nav ul li a {
   color: grey;
   text-decoration: none;
-  text-transform: uppercase;
 }
 
-/* Landing Page Specific */
+/* Header - Landing Page Specific */
 .picture-grid .logo {
   bottom: 103%;
   -webkit-transform: translateY(0);
@@ -457,9 +480,8 @@ img {
           transform: translateY(0);
 }
 
+/* Header - Hero section */
 .header {
-  position: relative;
-  height: 92vh;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -484,8 +506,26 @@ img {
 .header--kontakt-bg {
   background-image: url(img/kontakt-bg.jpg);
 }
+
+/* Layout Home Page */
+.landing-container {
+  height: 100vh;
+  position: relative;
+}
+
+#after-content {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  /* for IE! computes big left margin and adds horizontal scrollbar */
+}
+
+/* Layout General */
+.header {
+  position: relative;
+  height: 94vh;
+}
 .header__banner {
-  background-color: white;
   position: fixed;
   top: 0;
   left: 0;
@@ -495,10 +535,26 @@ img {
   position: relative;
   max-width: 1000px;
   margin: 0 auto;
-  height: 16vh;
+  height: 17vh;
 }
 
-.heading__wrapper {
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  padding: 34px 20px;
+}
+
+footer .content {
+  width: 1000px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Main Content Heeading module */
+.heading__wrap {
   position: absolute;
   left: 0;
   right: 0;
@@ -510,20 +566,8 @@ img {
   margin: 0;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  padding: 15px 25px;
+  padding: 10px 25px;
   background-color: white;
-  font-size: 1.5em;
-  font-family: Arial;
-}
-
-.landing-container {
-  height: 100%;
-  height: 100vh;
-  position: relative;
-}
-
-.picture-grid, .grid__container, .grid__cell {
-  box-sizing: border-box;
 }
 
 .picture-grid {
@@ -566,7 +610,6 @@ img {
 }
 
 .slide-in {
-  box-sizing: border-box;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -630,13 +673,6 @@ img {
           transform: rotate(180deg);
 }
 
-#after-content {
-  height: 100%;
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
-  /* for IE! computes big left margin and adds horizontal scrollbar */
-}
 #after-content img {
   position: absolute;
   width: 60%;
@@ -646,6 +682,7 @@ img {
           transform: translate(-50%, -50%);
 }
 
+/* Nabidka Page styles */
 .heading2 {
   left: 50%;
 }
@@ -687,7 +724,8 @@ img {
   color: white;
   background-color: brown;
   border-radius: 5px;
-  font-size: 1.5em;
+  font-size: 1em;
+  letter-spacing: 1px;
   text-align: center;
 }
 
@@ -719,13 +757,7 @@ img {
   width: 100%;
 }
 
-.content {
-  max-width: 1000px;
-  margin: 0 auto;
-  position: relative;
-  padding: 34px 20px;
-}
-
+/* Gallery Module */
 #gallery-nav {
   margin-top: 40px;
 }
@@ -782,6 +814,7 @@ img {
           filter: brightness(130%);
 }
 
+/* Contact Form module */
 .kontakt-form {
   width: 600px;
   margin: 0 auto;
@@ -794,13 +827,6 @@ footer {
   margin-top: 30px;
   color: white;
   background-color: #522611;
-}
-footer .content {
-  width: 1000px;
-  height: 50px;
-  line-height: 50px;
-  margin: 0 auto;
-  padding: 0;
 }
 footer p {
   float: left;

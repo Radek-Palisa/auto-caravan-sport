@@ -1,3 +1,9 @@
+/* Header partial */
+
+.header__banner {
+		background-color: white;
+}
+
 .logo, .nav {
 	position: absolute;
 	bottom: 50%;
@@ -9,16 +15,8 @@
 	line-height: 1.1;
 	color: #522611;
 	
-	h1 {
+	h1, p {
 		margin: 0;
-		font-family: tahoma;
-		font-size: 28px;
-		font-style: oblique;
-	}
-	
-	p {
-		margin: 0;
-		font-family: verdana; 
 	}
 }
 
@@ -26,8 +24,6 @@
 	right: 0;
 	
 	ul {
-		font-size: 14px;
-		list-style-type: none;
 		padding: 0;
 		margin: 0;
 		
@@ -38,13 +34,12 @@
 			a {
 				color: grey;
 				text-decoration: none;
-				text-transform: uppercase;
 			}
 		}
 	}
 }
 
-/* Landing Page Specific */
+/* Header - Landing Page Specific */
 
 .picture-grid {
 	.logo {
@@ -58,9 +53,9 @@
 	}
 }
 
+/* Header - Hero section */
+
 .header {
-	position: relative;
-	height: 92vh;;
 	background-size: cover;
 	// background-position: center;
 	background-attachment: fixed;
@@ -90,18 +85,5 @@
 	
 	&--kontakt-bg {
 		background-image: url(img/kontakt-bg.jpg);
-	}
-	
-	&__banner {
-		background-color: white;
-		position: fixed;
-		top: 0; left: 0; right: 0;
-	}
-	
-	&__wrapper {
-		position: relative;
-		max-width: 1000px;
-		margin: 0 auto;
-		height: 16vh;
 	}
 }
