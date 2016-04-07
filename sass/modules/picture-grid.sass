@@ -1,19 +1,27 @@
 .picture-grid
-	background-image: url('img/picture-grid_1000x398.jpg')
+	background-image: url('img/picture-grid_laptop.jpg')
+
+	/* For Retina */
+	@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)
+		background-image: url('img/picture-grid_laptop_2x.jpg')
+
+	background-size: contain
 	position: absolute
 	top: 50%
 	left: 50%
-	margin-left: -500px
-	margin-top: -199px
-	width: 1000px
 	
+	$pic-grid-width: 1000px
+	$pic-grid-height: 398px
+	
+	margin-left: -($pic-grid-width / 2)
+	margin-top: -($pic-grid-height / 2)
+	width: $pic-grid-width
+	height: $pic-grid-height
+		
 .grid
 
-	&__container
-		height: 398px
-
 	&__cell
-		position: relative
+		position: relative // for the slide-in divs
 		float: left
 		height: 194px
 		margin-right: 10px
@@ -64,3 +72,46 @@
 .grid__cell--hover:hover .slide-in
 	transition: 0.8s
 	left: 0
+
+/* For Desktop Screens */
+	
+@media screen and (min-width: $break-desktop)
+	.landing-container
+		min-height: 750px
+
+	.picture-grid
+		background-image: url('img/picture-grid_desktop.jpg')
+
+		/* For Retina */
+		@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)
+			background-image: url('img/picture-grid_desktop_2x.jpg')
+		
+		$pic-grid-width: 1300px
+		$pic-grid-height: 517px
+
+		margin-left: -($pic-grid-width / 2)
+		margin-top: -($pic-grid-height / 2)
+		width: $pic-grid-width
+		height: $pic-grid-height
+
+	.grid
+
+		&__cell
+			height: 252px
+			margin-right: 13px
+
+			&--top-start
+				width: 143px
+
+			&--middle
+				width: 416px
+
+			&--top-end
+				width: 286px
+				margin-bottom: 13px
+
+			&--bottom-start
+				width: 286px
+
+			&--bottom-end
+				width: 143px

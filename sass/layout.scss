@@ -1,14 +1,13 @@
 /* Layout Home Page */
 
-.landing-container {
+.landing-page {
+	min-height: 650px;
 	height: 100vh;
 	position: relative;
 }
 
-#after-content {
-	height: 100vh;
-	position: relative;
-	overflow: hidden; /* for IE! computes big left margin and adds horizontal scrollbar */
+#below-landing {
+	min-height: 100vh;
 }
 
 /* Layout General */
@@ -35,12 +34,4 @@
 	margin: 0 auto;
 	position: relative;
 	padding: 34px 20px;
-}
-
-footer .content {
-	width: 1000px;
-	height: 50px;
-	line-height: 50px;
-	margin: 0 auto;
-	padding: 0;
 }

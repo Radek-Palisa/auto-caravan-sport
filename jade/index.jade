@@ -4,11 +4,11 @@ block header-wrapper
 
 block content
 	// Landing Page
-	.landing-container
+	section.landing-page
 		.picture-grid
 
 			include partials/header.jade
-			
+
 			.grid__container
 				.grid__cell.grid__cell--hover.grid__cell--top-start
 					.slide-in
@@ -56,8 +56,43 @@ block content
 	// landing container end
 	
 	// Second Page
-	#after-content
-		img(src="img/after-content.jpg", alt="")
+	section#below-landing
+		.content
+			article.homepage-article
+				.article__wrap
+					h1 O firmě
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt nulla officia et accusantium perspiciatis ratione quis, obcaecati, mollitia in laboriosam tenetur odit sint unde quia inventore velit necessitatibus rerum, distinctio.
+				.article__img-wrap
+					div.logo.logo--fonts
+						h1 A.C.S. s.r.o.
+						p Auto Caravan Sport
+				a.button(href="./ofirme.html") Více
+				
+			article.homepage-article
+				.article__wrap
+					h1 Co nabízím
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis asperiores, labore quo tempora placeat dolorem libero id alias accusamus odio aut excepturi, similique fugit. Perspiciatis accusamus nostrum a! Velit, quibusdam.
+				.article__img-wrap
+					img.home-nabidka(src="./img/ford-custom.jpg", alt="ford custom")
+				a.button(href="./nabidka.html") Více
+			
+			article.homepage-article.homepage-article--clear
+				.article__wrap
+					h1 Předchozí práce
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque sint quam omnis, maiores culpa est, suscipit optio facere ea nesciunt corporis vitae illum dicta voluptatem minima a, ullam minus. Culpa?  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque dolore cum, ea nobis cumque magnam totam aut error perspiciatis qui! Delectus, at, aperiam quasi ea laudantium ipsa rem. Eligendi, praesentium.
+				.article__img-wrap
+					img.home-predprace(src="./img/predchozi-prace/202.jpg", alt="")
+					img.home-predprace(src="./img/predchozi-prace/index.jpg", alt="")
+				a.button(href="#0") Více
+				
+			article.homepage-article
+				.article__wrap
+					h1 Zkontaktujte mně
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum molestias, dolores eaque ullam perferendis consequatur? Totam deserunt itaque culpa laudantium, cumque, dolor tempore optio harum placeat similique temporibus molestiae fugiat!
+				.article__img-wrap
+					img.home-socicon(src="./img/email-icon.jpeg")
+					img.home-socicon(src="./img/fb-icon.png")
+				a.button(href="./kontakt.html") Kontaktní formulář
 
 block scripts
 
@@ -84,7 +119,7 @@ block scripts
 			 else {
 				 $('.arrow-link').show();
 		 }
-		}); // Hide arrow link 
+		}); // Hide arrow link
 		
 		$(window).load(function () {
 			setTimeout(function () {
@@ -107,7 +142,7 @@ block scripts
 					$('.siblingElement').not(currentItem).removeClass('expand');
 					//slide in the selected element
 					$(this).siblings('.theClassName').toggleClass('expand')
-					//code goes here			   
+					//code goes here
 				});
 				//close the slideins if users click outsite the grid
 				$('html').bind('touchstart', function(e) {

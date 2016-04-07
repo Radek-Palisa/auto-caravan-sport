@@ -16,7 +16,7 @@
   </head>
   <body>
     <!-- Landing Page-->
-    <div class="landing-container">
+    <section class="landing-page">
       <div class="picture-grid">
         <div class="logo logo--fonts">
           <h1>A.C.S. s.r.o.</h1>
@@ -79,13 +79,48 @@
         <p class="slogan">...cestování s obytňákem kamkoliv.</p>
       </div>
       <!-- picture grid end--><a href="#after-content" class="arrow-link"><img src="img/ctrl.svg" alt="" class="arrow"></a>
-    </div>
+    </section>
     <!-- landing container end-->
     <!-- Second Page-->
-    <div id="after-content"><img src="img/after-content.jpg" alt=""></div>
-    <footer>
+    <section id="below-landing">
       <div class="content">
-        <p><span class="copyright">C</span>Auto Caravan Sport s.r.o. 2016</p>
+        <article class="homepage-article">
+          <div class="article__wrap">
+            <h1>O firmě</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt nulla officia et accusantium perspiciatis ratione quis, obcaecati, mollitia in laboriosam tenetur odit sint unde quia inventore velit necessitatibus rerum, distinctio.</p>
+          </div>
+          <div class="article__img-wrap">
+            <div class="logo logo--fonts">
+              <h1>A.C.S. s.r.o.</h1>
+              <p>Auto Caravan Sport</p>
+            </div>
+          </div><a href="./ofirme.html" class="button">Více</a>
+        </article>
+        <article class="homepage-article">
+          <div class="article__wrap">
+            <h1>Co nabízím</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis asperiores, labore quo tempora placeat dolorem libero id alias accusamus odio aut excepturi, similique fugit. Perspiciatis accusamus nostrum a! Velit, quibusdam.</p>
+          </div>
+          <div class="article__img-wrap"><img src="./img/ford-custom.jpg" alt="ford custom" class="home-nabidka"></div><a href="./nabidka.html" class="button">Více</a>
+        </article>
+        <article class="homepage-article homepage-article--clear">
+          <div class="article__wrap">
+            <h1>Předchozí práce</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque sint quam omnis, maiores culpa est, suscipit optio facere ea nesciunt corporis vitae illum dicta voluptatem minima a, ullam minus. Culpa?  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque dolore cum, ea nobis cumque magnam totam aut error perspiciatis qui! Delectus, at, aperiam quasi ea laudantium ipsa rem. Eligendi, praesentium.</p>
+          </div>
+          <div class="article__img-wrap"><img src="./img/predchozi-prace/202.jpg" alt="" class="home-predprace"><img src="./img/predchozi-prace/index.jpg" alt="" class="home-predprace"></div><a href="#0" class="button">Více</a>
+        </article>
+        <article class="homepage-article">
+          <div class="article__wrap">
+            <h1>Zkontaktujte mně</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum molestias, dolores eaque ullam perferendis consequatur? Totam deserunt itaque culpa laudantium, cumque, dolor tempore optio harum placeat similique temporibus molestiae fugiat!</p>
+          </div>
+          <div class="article__img-wrap"><img src="./img/email-icon.jpeg" class="home-socicon"><img src="./img/fb-icon.png" class="home-socicon"></div><a href="./kontakt.html" class="button">Kontaktní formulář</a>
+        </article>
+      </div>
+    </section>
+    <footer>
+      <div class="footer__top">
         <nav class="footer__nav">
           <ul>
             <li><a href="index.html">Domů</a></li>
@@ -94,6 +129,10 @@
             <li><a href="kontakt.html">Kontakt</a></li>
           </ul>
         </nav>
+      </div>
+      <div class="footer__bottom">
+        <p>Auto Caravan Sport s.r.o. 2016</p><img src="./img/email-icon.jpeg" class="home-socicon"><img src="./img/fb-icon.png" class="home-socicon">
+        <p>Všechna práva vyhrazena</p>
       </div>
     </footer>
     <script>
@@ -119,7 +158,7 @@
       	 else {
       		 $('.arrow-link').show();
        }
-      }); // Hide arrow link 
+      }); // Hide arrow link
       
       $(window).load(function () {
       	setTimeout(function () {
@@ -142,7 +181,7 @@
       			$('.siblingElement').not(currentItem).removeClass('expand');
       			//slide in the selected element
       			$(this).siblings('.theClassName').toggleClass('expand')
-      			//code goes here			   
+      			//code goes here
       		});
       		//close the slideins if users click outsite the grid
       		$('html').bind('touchstart', function(e) {

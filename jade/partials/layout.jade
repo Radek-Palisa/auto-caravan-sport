@@ -25,17 +25,21 @@ html
 		
 		block footer
 			footer
-				div.content
-					p <span class="copyright">C</span>Auto Caravan Sport s.r.o. 2016
+				.footer__top
 					nav.footer__nav
 						ul
 							li: a(href="index.html") Domů
 							li: a(href="nabidka.html") Nabídka
 							li: a(href="ofirme.html") O firmě
 							li: a(href="kontakt.html") Kontakt
+				.footer__bottom
+					p Auto Caravan Sport s.r.o. 2016
+					img.home-socicon(src="./img/email-icon.jpeg")
+					img.home-socicon(src="./img/fb-icon.png")
+					p Všechna práva vyhrazena
 					
-		block scripts		
-			script. 
+		block scripts
+			script.
 				// https://davidwalsh.name/javascript-debounce-function
 				function debounce(func, wait, immediate) {
 					var timeout;

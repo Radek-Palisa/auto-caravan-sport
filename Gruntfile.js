@@ -68,11 +68,11 @@ module.exports = function(grunt) {
 		watch: {
 			options: { livereload: true},
 			jade: {
-				files: 'jade/*.jade',
+				files: 'jade/**/*.jade',
 				tasks: ['jade']
 			},
 			css: {
-				files: 'sass/*.scss',
+				files: 'sass/**/*.{scss,sass}',
 				tasks: ['sass', 'autoprefixer']
 			}, //css
 			html: {
