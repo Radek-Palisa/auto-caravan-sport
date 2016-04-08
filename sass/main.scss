@@ -2,10 +2,22 @@
 
 @import "base";
 
-@import "header";
+@import "partials/header";
+
+@import "layout";
+
+@import "modules/main-heading";
+
+@import "modules/picture-grid";
 
 @import "landing-page";
 
 @import "nabidka";
 
-@import "gallery";
+@import "modules/gallery";
+
+@import "modules/contact-form";
+
+@import "partials/footer";
+
+@import "media-queries";

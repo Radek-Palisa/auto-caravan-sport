@@ -1,8 +1,43 @@
-html, body {
-	height: 100%;
+$break-laptop: 1150px;
+$break-desktop: 1600px;
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 img {
 	max-height: 100%;
 	display: block;
+}
+
+/* Typography */
+
+p {
+	font-family: roboto;
+}
+
+.logo--fonts {
+	
+	h1 {
+		font-family: tahoma;
+		font-size: 28px;
+		font-style: oblique;
+	}
+	
+	p {
+		font-family: verdana;
+	}
+}
+
+.nav--fonts {
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+.heading--fonts {
+	font-family: Open Sans, Arial, sans-serif;
+	font-size: 1em;
 }

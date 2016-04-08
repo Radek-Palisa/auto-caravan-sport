@@ -4,6 +4,24 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 
 		/**
+		 * Jade
+		 */
+		jade: {
+		  compile: {
+			options: {
+			  pretty: true,
+			},
+			files: {
+			    'nabidka.html' : 'jade/nabidka.jade',
+				'gallery.html' : 'jade/gallery.jade',
+				'index.html' : 'jade/index.jade',
+				'kontakt.html' : 'jade/kontakt.jade',
+				'ofirme.html' : 'jade/ofirme.jade'
+			}
+		  }
+		},
+		
+		/**
 		 * Sass
 		 */
 		sass: {
@@ -49,8 +67,12 @@ module.exports = function(grunt) {
 	  	 */
 		watch: {
 			options: { livereload: true},
+			jade: {
+				files: 'jade/**/*.jade',
+				tasks: ['jade']
+			},
 			css: {
-				files: '**/*.scss',
+				files: 'sass/**/*.{scss,sass}',
 				tasks: ['sass', 'autoprefixer']
 			}, //css
 			html: {
@@ -62,5 +84,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-autoprefixer');
-	grunt.registerTask('default',['watch']);
+	grunt.loadNpmTasks('grunt-contrib-jade');
+	grunt.registerTask('default','Convert Jade templates into html templates',['jade','watch']);
 }

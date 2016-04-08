@@ -1,0 +1,43 @@
+extends partials/layout.jade
+
+block content
+	main.nabidka-tabs
+		.content
+			.heading__wrap
+				.nabidka-nav
+					h1.heading.heading--fonts.active Současně k prodeji
+					h1.heading.heading--fonts.heading2.non-active Předchozí práce
+			
+			section.active
+				h1 Ford Custom A.C.S
+				article
+					.nabidka-gallery
+						img(src="img/soucasna-nabidka/001.jpg" alt="")
+						img(src="img/soucasna-nabidka/049.jpg" alt="")
+						img(src="img/soucasna-nabidka/050.jpg" alt="")
+						img(src="img/soucasna-nabidka/003.jpg" alt="")
+						img(src="img/soucasna-nabidka/005.jpg" alt="")
+					p Tento typ vestavby je použit v prodloužené verzi Fordu CUSTOM. Mohlo tedy dojít k umístění kompletního toaletního koutu. Nejdůležitější část vozu je zatím před přestavbou a to je střecha. Počítáme u tohoto typu vozu s vysokou plastovou střechou. Výrobci střech zatím dělají jen na krátké verze vozidel a mi pevně věříme, že k výrobě na tento prodloužený typ.
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas a qui, sapiente quod, nemo at accusamus blanditiis ex beatae, corrupti veritatis minima ipsum expedita. Perspiciatis praesentium ea impedit asperiores cum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus corporis sed laborum iste veniam, sit quasi deleniti, voluptas adipisci a, similique magni debitis suscipit nemo quos. Distinctio temporibus reprehenderit dolore? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum omnis, eveniet earum esse ex laudantium consequuntur. Recusandae molestiae ipsam doloremque quidem doloribus laudantium voluptas, omnis dignissimos. Maxime corporis ducimus, explicabo?
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas a qui, sapiente quod, nemo at accusamus blanditiis ex beatae, corrupti veritatis minima ipsum expedita. Perspiciatis praesentium ea impedit asperiores cum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus corporis sed laborum iste veniam, sit quasi deleniti, voluptas adipisci a, similique magni debitis suscipit nemo quos. Distinctio temporibus reprehenderit dolore? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum omnis, eveniet earum esse ex laudantium consequuntur. Recusandae molestiae ipsam doloremque quidem doloribus laudantium voluptas, omnis dignissimos. Maxime corporis ducimus, explicabo?
+				a(href="gallery.html") Kompletní dokumentace Ford Custom A.C.S.
+			section.predchozi-prace.non-active
+				article
+					h1 Ford Transit s vysokou střechou
+					img(src="img/predchozi-prace/202.JPG" alt="")
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas a qui, sapiente quod, nemo at accusamus blanditiis ex beatae, corrupti veritatis minima ipsum expedita. Perspiciatis praesentium ea impedit asperiores cum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus corporis sed laborum iste veniam, sit quasi deleniti, voluptas adipisci a, similique magni debitis suscipit nemo quos. Distinctio temporibus reprehenderit dolore? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum omnis, eveniet earum esse ex laudantium consequuntur. Recusandae molestiae ipsam doloremque quidem doloribus laudantium voluptas, omnis dignissimos. Maxime corporis ducimus, explicabo?	
+				article
+					h1 Ford Transit s vyklápěcí střechou
+					img(src="img/predchozi-prace/102.JPG" alt="")
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas a qui, sapiente quod, nemo at accusamus blanditiis ex beatae, corrupti veritatis minima ipsum expedita. Perspiciatis praesentium ea impedit asperiores cum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus corporis sed laborum iste veniam, sit quasi deleniti, voluptas adipisci a, similique magni debitis suscipit nemo quos. Distinctio temporibus reprehenderit dolore? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum omnis, eveniet earum esse ex laudantium consequuntur. Recusandae molestiae ipsam doloremque quidem doloribus laudantium voluptas, omnis dignissimos. Maxime corporis ducimus, explicabo?
+					
+block prepend scripts
+	script.
+		$(document).ready(function(){
+			$(".nabidka-nav h1").click(function(e){
+				if (!$(this).hasClass("active")) {
+					$(".header").toggleClass("header--nabidka-bg header--predchoziprace-bg");
+					$(".nabidka-nav h1,.nabidka-tabs section").toggleClass("active non-active");
+				}
+			});
+		});

@@ -1,0 +1,89 @@
+/* Header partial */
+
+.header__banner {
+		background-color: white;
+}
+
+.logo, .nav {
+	position: absolute;
+	bottom: 50%;
+	transform: translateY(50%);
+}
+
+.logo {
+	left: 0; 
+	line-height: 1.1;
+	color: #522611;
+	
+	h1, p {
+		margin: 0;
+	}
+}
+
+.nav {
+	right: 0;
+	
+	ul {
+		padding: 0;
+		margin: 0;
+		
+		li {
+			display: inline-block;
+			margin-left: 22px;
+			
+			a {
+				color: grey;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+/* Header - Landing Page Specific */
+
+.picture-grid {
+	.logo {
+		bottom: 103%;
+		transform: translateY(0);
+	}
+	
+	.nav {
+		bottom: 105%;
+		transform: translateY(0);
+	}
+}
+
+/* Header - Hero section */
+
+.header {
+	background-size: cover;
+	// background-position: center;
+	background-attachment: fixed;
+	
+	&--gallery-bg {
+		background-image: url(img/gallery-bg.jpg);
+	}
+	
+	&--nabidka-bg {
+		background-image: url(img/nabidka-bg-1600w-45q.jpg);
+		transition: all 0.5s ease-in-out;
+	}
+	
+	&--nabidka-bg {
+		background-image: url(img/nabidka-bg.jpg);
+		transition: all 0.5s ease-in-out;
+	}
+	
+	&--predchoziprace-bg {
+		background-image: url(img/predchoziprace-bg.jpg);
+		transition: all 0.5s ease-in-out;
+	}
+	
+	&--ofirme-bg {
+		background-image: url(img/ofirme.jpg);
+	}
+	
+	&--kontakt-bg {
+		background-image: url(img/kontakt-bg.jpg);
+	}
+}

@@ -1,0 +1,37 @@
+/* Layout Home Page */
+
+.landing-page {
+	min-height: 650px;
+	height: 100vh;
+	position: relative;
+}
+
+#below-landing {
+	min-height: 100vh;
+}
+
+/* Layout General */
+
+.header {
+	position: relative;
+	height: 94vh;
+	
+	&__banner {
+		position: fixed;
+		top: 0; left: 0; right: 0;
+	}
+	
+	&__wrapper {
+		position: relative;
+		max-width: 1000px;
+		margin: 0 auto;
+		height: 17vh;
+	}
+}
+
+.content {
+	max-width: 1000px;
+	margin: 0 auto;
+	position: relative;
+	padding: 34px 20px;
+}
