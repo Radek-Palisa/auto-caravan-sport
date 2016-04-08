@@ -1,60 +1,961 @@
-/*
-Error: The line was indented 4 levels deeper than the previous line.
-        on line 13 of sass/partials/footer.sass
-        from line 21 of sass/main.scss
+@charset "UTF-8";
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
 
-8: 	background-repeat: no-repeat
-9: 	// background-attachment: fixed
-10: 	box-shadow: inset 0 0 0 1000px rgba(17,18,25,.9)
-11: 	
-12: .footer
-13: 				display: inline-block
-14: 				margin-left: 15px
-15: 				
-16: 				&:first-of-type
-17: 					margin-left: 0
-18: 
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
 
-Backtrace:
-sass/partials/footer.sass:13
-sass/main.scss:21
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/engine.rb:517:in `tree'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/engine.rb:406:in `_to_tree'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/engine.rb:309:in `to_tree'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:324:in `block in visit_import'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:88:in `block in with_import'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:88:in `with_import'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:323:in `visit_import'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:52:in `map'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:157:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:8:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/root_node.rb:36:in `css_tree'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/root_node.rb:20:in `render'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/engine.rb:278:in `render'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/exec/sass_scss.rb:423:in `run'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/exec/sass_scss.rb:63:in `process_result'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/exec/base.rb:52:in `parse'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/exec/base.rb:19:in `parse!'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.21/bin/sass:13:in `<top (required)>'
-C:/Ruby22-x64/bin/sass:23:in `load'
-C:/Ruby22-x64/bin/sass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: The line was indented 4 levels deeper than the previous line.\A         on line 13 of sass/partials/footer.sass\A         from line 21 of sass/main.scss\A \A 8: 	background-repeat: no-repeat\A 9: 	// background-attachment: fixed\A 10: 	box-shadow: inset 0 0 0 1000px rgba(17,18,25,.9)\A 11: 	\A 12: .footer\A 13: 				display: inline-block\A 14: 				margin-left: 15px\A 15: 				\A 16: 				&:first-of-type\A 17: 					margin-left: 0\A 18: "; }
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  box-sizing: content-box;
+  /* 2 */
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+img {
+  max-height: 100%;
+  display: block;
+}
+
+/* Typography */
+p {
+  font-family: roboto;
+}
+
+.logo--fonts h1 {
+  font-family: tahoma;
+  font-size: 28px;
+  font-style: oblique;
+}
+.logo--fonts p {
+  font-family: verdana;
+}
+
+.nav--fonts {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.heading--fonts {
+  font-family: Open Sans, Arial, sans-serif;
+  font-size: 1em;
+}
+
+/* Header partial */
+.header__banner {
+  background-color: white;
+}
+
+.logo, .nav {
+  position: absolute;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+}
+
+.logo {
+  left: 0;
+  line-height: 1.1;
+  color: #522611;
+}
+.logo h1, .logo p {
+  margin: 0;
+}
+
+.nav {
+  right: 0;
+}
+.nav ul {
+  padding: 0;
+  margin: 0;
+}
+.nav ul li {
+  display: inline-block;
+  margin-left: 22px;
+}
+.nav ul li a {
+  color: grey;
+  text-decoration: none;
+}
+
+/* Header - Landing Page Specific */
+.picture-grid .logo {
+  bottom: 103%;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+.picture-grid .nav {
+  bottom: 105%;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+/* Header - Hero section */
+.header {
+  background-size: cover;
+  background-attachment: fixed;
+}
+.header--gallery-bg {
+  background-image: url(img/gallery-bg.jpg);
+}
+.header--nabidka-bg {
+  background-image: url(img/nabidka-bg-1600w-45q.jpg);
+  transition: all 0.5s ease-in-out;
+}
+.header--nabidka-bg {
+  background-image: url(img/nabidka-bg.jpg);
+  transition: all 0.5s ease-in-out;
+}
+.header--predchoziprace-bg {
+  background-image: url(img/predchoziprace-bg.jpg);
+  transition: all 0.5s ease-in-out;
+}
+.header--ofirme-bg {
+  background-image: url(img/ofirme.jpg);
+}
+.header--kontakt-bg {
+  background-image: url(img/kontakt-bg.jpg);
+}
+
+/* Layout Home Page */
+.landing-page {
+  min-height: 650px;
+  height: 100vh;
+  position: relative;
+}
+
+#below-landing {
+  min-height: 100vh;
+}
+
+/* Layout General */
+.header {
+  position: relative;
+  height: 94vh;
+}
+.header__banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.header__wrapper {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 17vh;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  padding: 34px 20px;
+}
+
+/* Main Content Heeading module */
+.heading__wrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+}
+
+.heading {
+  display: inline-block;
+  margin: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 10px 25px;
+  background-color: white;
+}
+
+.picture-grid {
+  background-image: url("img/picture-grid_laptop.jpg");
+  /* For Retina */
+  background-size: contain;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -500px;
+  margin-top: -199px;
+  width: 1000px;
+  height: 398px;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  .picture-grid {
+    background-image: url("img/picture-grid_laptop_2x.jpg");
+  }
+}
+
+.grid__cell {
+  position: relative;
+  float: left;
+  height: 194px;
+  margin-right: 10px;
+  overflow: hidden;
+}
+.grid__cell--top-start {
+  width: 110px;
+}
+.grid__cell--middle {
+  width: 320px;
+}
+.grid__cell--top-end {
+  width: 220px;
+  margin-right: 0;
+  margin-bottom: 10px;
+}
+.grid__cell--bottom-start {
+  width: 220px;
+}
+.grid__cell--bottom-end {
+  width: 110px;
+  margin-right: 0;
+}
+
+.slide-in {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  width: 100%;
+  padding: 19px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  vertical-align: middle;
+  transition: 0.8s;
+}
+.slide-in h1 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid white;
+  font-size: 1em;
+}
+.slide-in p {
+  margin: 0;
+  line-height: 1.3em;
+}
+
+.grid__cell--hover:hover .slide-in {
+  transition: 0.8s;
+  left: 0;
+}
+
+/* For Desktop Screens */
+@media screen and (min-width: 1600px) {
+  .landing-container {
+    min-height: 750px;
+  }
+
+  .picture-grid {
+    background-image: url("img/picture-grid_desktop.jpg");
+    /* For Retina */
+    margin-left: -650px;
+    margin-top: -258.5px;
+    width: 1300px;
+    height: 517px;
+  }
+}
+@media screen and (min-width: 1600px) and (-webkit-min-device-pixel-ratio: 1.5), screen and (min-width: 1600px) and (min-resolution: 144dpi) {
+  .picture-grid {
+    background-image: url("img/picture-grid_desktop_2x.jpg");
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .grid__cell {
+    height: 252px;
+    margin-right: 13px;
+  }
+  .grid__cell--top-start {
+    width: 143px;
+  }
+  .grid__cell--middle {
+    width: 416px;
+  }
+  .grid__cell--top-end {
+    width: 286px;
+    margin-bottom: 13px;
+  }
+  .grid__cell--bottom-start {
+    width: 286px;
+  }
+  .grid__cell--bottom-end {
+    width: 143px;
+  }
+}
+/* Landing Page */
+.slogan {
+  display: none;
+  width: 280px;
+  height: 21px;
+  position: absolute;
+  bottom: -55px;
+  right: 0;
+  font-style: italic;
+  font-size: 18px;
+  color: #AF7848;
+}
+
+.arrow-link {
+  position: absolute;
+  width: 70px;
+  height: 45px;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -35px;
+  transition: 0.8s;
+}
+
+.arrow-link:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: 0.8s;
+}
+
+.arrow {
+  margin: 0 auto;
+  width: 35px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+/* Below Landing Section */
+#below-landing {
+  background-color: #efefee;
+  padding: 100px 20px;
+}
+#below-landing .content {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  max-width: 1000px;
+  padding: 20px;
+  background-color: white;
+}
+
+.homepage-article {
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  width: 50%;
+  padding: 10px;
+}
+.homepage-article .button {
+  background-color: rosybrown;
+  color: white;
+  padding: 8px 10px;
+  border-radius: 5px;
+  letter-spacing: 0.8px;
+}
+
+.article__img-wrap {
+  width: 100%;
+  text-align: center;
+}
+.article__img-wrap .logo {
+  position: static;
+}
+.article__img-wrap img {
+  width: 50%;
+  display: inline-block;
+}
+
+.article__wrap {
+  width: 100%;
+}
+.article__wrap h1 {
+  margin-top: 0;
+  font-size: 1.2em;
+  font-family: open sans;
+  border-bottom: solid 2px black;
+}
+
+.article__img-wrap .home-socicon {
+  width: 20%;
+  padding: 10px 20px;
+}
+
+/* Nabidka Page styles */
+.heading2 {
+  left: 50%;
+}
+
+.nabidka-nav {
+  cursor: pointer;
+}
+
+.nabidka-nav .active {
+  color: black;
+}
+.nabidka-nav .non-active {
+  color: grey;
+  background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.nabidka-tabs section {
+  display: none;
+}
+.nabidka-tabs section.active {
+  display: block;
+}
+
+.nabidka-tabs .content article:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.nabidka-tabs .content p {
+  line-height: 1.4;
+}
+.nabidka-tabs .content a {
+  box-sizing: border-box;
+  display: block;
+  width: 560px;
+  margin: 40px auto;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: white;
+  background-color: brown;
+  border-radius: 5px;
+  font-size: 1em;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* P┼Öedchoz├ş pr├íce */
+.predchozi-prace article:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.predchozi-prace img {
+  float: right;
+  width: 40%;
+  margin-left: 15px;
+}
+
+.nabidka-gallery {
+  width: 50%;
+  margin-left: 20px;
+  float: right;
+  cursor: pointer;
+}
+.nabidka-gallery img {
+  box-sizing: border-box;
+  float: left;
+  width: 25%;
+  border: 1px solid white;
+}
+.nabidka-gallery img:first-of-type {
+  width: 100%;
+}
+
+/* Gallery Module */
+#gallery-nav {
+  margin-top: 40px;
+}
+#gallery-nav li {
+  display: inline-block;
+  text-decoration: none;
+  color: dimgrey;
+  margin-bottom: -1px;
+  padding: 8px 15px;
+  border: 1px solid rosybrown;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: 0.4s;
+}
+#gallery-nav li:hover {
+  background-color: rosybrown;
+  color: aliceblue;
+  transition: 0.4s;
+}
+#gallery-nav li.active {
+  background-color: rosybrown;
+  color: aliceblue;
+}
+
+#tab-wrapper {
+  background-color: rosybrown;
+  padding: 20px;
+}
+#tab-wrapper article {
+  display: none;
+}
+#tab-wrapper article.active {
+  display: block;
+}
+
+.gallery h2 {
+  color: midnightblue;
+}
+.gallery p {
+  max-width: 55em;
+}
+.gallery__thumbnail {
+  display: inline-block;
+  width: 140px;
+  height: 110px;
+  background-color: grey;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+.gallery__thumbnail:hover {
+  transition: 0.3s;
+  -webkit-filter: brightness(130%);
+          filter: brightness(130%);
+}
+
+/* Contact Form module */
+.kontakt-form {
+  width: 600px;
+  margin: 0 auto;
+  height: 600px;
+  background-color: rosybrown;
+  text-align: center;
+}
+
+footer {
+  font-size: 14px;
+  color: #e1e1e1;
+}
+
+.footer__top {
+  height: 110px;
+  background: url("img/picture-grid_desktop.jpg"), url("img/picture-grid_desktop.jpg");
+  background-size: 1000px auto;
+  background-position: left top -33px, left 1010px bottom -29px;
+  background-repeat: no-repeat;
+  box-shadow: inset 0 0 0 1000px rgba(17, 18, 25, 0.9);
+}
+.footer__nav {
+  text-align: center;
+  line-height: 110px;
+}
+.footer__nav ul {
+  margin: 0;
+  padding: 0;
+}
+.footer__nav ul li {
+  display: inline-block;
+  margin-left: 15px;
+}
+.footer__nav ul li:first-of-type {
+  margin-left: 0;
+}
+.footer__nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+.footer__bottom {
+  padding-top: 30px;
+  height: 180px;
+  background-color: #2b2b2b;
+  text-align: center;
+}
+.footer__bottom img {
+  width: 30px;
+  display: inline-block;
+  margin: 18px 7px;
+}
+.footer__bottom p {
+  margin: 0;
+}
