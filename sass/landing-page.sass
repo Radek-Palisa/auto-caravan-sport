@@ -1,4 +1,8 @@
 /* Landing Page */
+.landing-page
+	min-height: 650px
+	height: 100vh
+	position: relative
 
 .slogan
 	display: none
@@ -31,24 +35,29 @@
 
 /* Below Landing Section */
 
-#below-landing 
+.below-landing 
+	min-height: 100vh
 
 	background-color: #efefee
 	padding: 100px 20px
 
-	.content
+	&__content
 		display: flex
 		flex-wrap: wrap
 		max-width: 1000px
-		padding: 20px
-		background-color: white
-
+		margin: 0 auto
+		
 .homepage-article
 	flex-wrap: wrap
-	width: 50%
+	width: 49.5%
+	margin-right: 1%
 	padding: 10px
 	// border: dashed 1px grey
+	background-color: white
 	
+	&:nth-child(even)
+		margin-right: 0
+		
 	.button
 		background-color: rosybrown
 		color: white
