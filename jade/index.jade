@@ -50,13 +50,13 @@ block content
 			p.slogan ...cestování s obytňákem kamkoliv.
 		// picture grid end
 		
-		a.arrow-link(href="#after-content")
+		a.arrow-link(href="#home-page")
 			img.arrow(src="img/ctrl.svg", alt="")
 	
 	// landing container end
 	
 	// Second Page
-	section.below-landing
+	section.below-landing#home-page
 		.below-landing__content
 			article.homepage-article
 				.article__wrap
@@ -97,29 +97,22 @@ block content
 block scripts
 
 	script.
-		$(function() {
-		  $('a[href*="#"]:not([href="#"])').click(function() {
-			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-			  var target = $(this.hash);
-			  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-			  if (target.length) {
-				$('html, body').animate({
-				  scrollTop: target.offset().top
-				}, 800);
-				return false;
-			  }
-			}
-		  });
-		});  // Smooth Scroll
+		var $root = $('html, body');
+		$('.arrow-link').click(function() {
+			$root.animate({
+				scrollTop: $( $.attr(this, 'href') ).offset().top
+			}, 600);
+			return false;
+		});
 
-		$(window).bind('scroll', function() {
+		/* $(window).bind('scroll', function() {
 			 if ($(window).scrollTop() > 200) {
 				 $('.arrow-link').hide(150);
 			 }
 			 else {
 				 $('.arrow-link').show();
 		 }
-		}); // Hide arrow link
+		}); // Hide arrow link */
 		
 		$(window).load(function () {
 			setTimeout(function () {
@@ -134,7 +127,7 @@ block scripts
 			if ('ontouchstart' in document.documentElement) {
 				//find all 'hover' class and strip them
 				$('.theClassName').find('element.hover').removeClass('hover');
-				//add touch events */
+				//add touch events
 				$('.grid__cell').bind('touchstart', function(e) {
 					//find the current chosen element
 					var currentItem = $(this).siblings('.siblingElements')
@@ -151,5 +144,5 @@ block scripts
 				$('#parentElement').bind('touchstart', function(e) {
 					e.stopPropagation();
 				});
-		/*	}
+			}
 		} //JS that you could use as fallback for non-hover devices */

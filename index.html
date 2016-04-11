@@ -78,11 +78,11 @@
         </div>
         <p class="slogan">...cestování s obytňákem kamkoliv.</p>
       </div>
-      <!-- picture grid end--><a href="#after-content" class="arrow-link"><img src="img/ctrl.svg" alt="" class="arrow"></a>
+      <!-- picture grid end--><a href="#home-page" class="arrow-link"><img src="img/ctrl.svg" alt="" class="arrow"></a>
     </section>
     <!-- landing container end-->
     <!-- Second Page-->
-    <section class="below-landing">
+    <section id="home-page" class="below-landing">
       <div class="below-landing__content">
         <article class="homepage-article">
           <div class="article__wrap">
@@ -140,29 +140,22 @@
       </div>
     </footer>
     <script>
-      $(function() {
-        $('a[href*="#"]:not([href="#"])').click(function() {
-      	if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      	  var target = $(this.hash);
-      	  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      	  if (target.length) {
-      		$('html, body').animate({
-      		  scrollTop: target.offset().top
-      		}, 800);
-      		return false;
-      	  }
-      	}
-        });
-      });  // Smooth Scroll
+      var $root = $('html, body');
+      $('.arrow-link').click(function() {
+      	$root.animate({
+      		scrollTop: $( $.attr(this, 'href') ).offset().top
+      	}, 600);
+      	return false;
+      });
       
-      $(window).bind('scroll', function() {
+      /* $(window).bind('scroll', function() {
       	 if ($(window).scrollTop() > 200) {
       		 $('.arrow-link').hide(150);
       	 }
       	 else {
       		 $('.arrow-link').show();
        }
-      }); // Hide arrow link
+      }); // Hide arrow link */
       
       $(window).load(function () {
       	setTimeout(function () {
@@ -177,7 +170,7 @@
       	if ('ontouchstart' in document.documentElement) {
       		//find all 'hover' class and strip them
       		$('.theClassName').find('element.hover').removeClass('hover');
-      		//add touch events */
+      		//add touch events
       		$('.grid__cell').bind('touchstart', function(e) {
       			//find the current chosen element
       			var currentItem = $(this).siblings('.siblingElements')
@@ -194,7 +187,7 @@
       		$('#parentElement').bind('touchstart', function(e) {
       			e.stopPropagation();
       		});
-      /*	}
+      	}
       } //JS that you could use as fallback for non-hover devices */
     </script>
   </body>
