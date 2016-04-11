@@ -1,5 +1,12 @@
 extends partials/layout.jade
 
+block header-wrapper
+	header.header.header--gallery-bg
+		div.header__banner
+			div.header__wrapper
+
+				include partials/header.jade
+
 block content
 	main
 		section.content
