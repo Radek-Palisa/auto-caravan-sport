@@ -24,20 +24,20 @@ html
 		block content
 		
 		block footer
-			footer
-				.footer__top
-					nav.footer__nav
-						ul
-							li: a(href="index.html") Domů
-							li: a(href="nabidka.html") Nabídka
-							li: a(href="ofirme.html") O firmě
-							li: a(href="kontakt.html") Kontakt
-				.footer__bottom
-					p Auto Caravan Sport s.r.o. 2016
-					img.home-socicon(src="./img/email-icon.jpeg")
-					img.home-socicon(src="./img/fb-icon.png")
-					p Všechna práva vyhrazena
-					
+			footer.footer
+				p.footer__copyright.footer--middle Auto Caravan Sport s.r.o. 2016
+				nav.footer__nav.footer--left
+					ul
+						li: a(href="index.html") Domů
+						li: a(href="nabidka.html") Nabídka
+						li: a(href="ofirme.html") O firmě
+						li: a(href="kontakt.html") Kontakt
+				.footer--right
+					img.home-socicon.footer__socicon(src="./img/email-icon.jpeg")
+					img.home-socicon.footer__socicon(src="./img/fb-icon.png")
+					p.footer__credits Web: 
+						a(href="https://www.linkedin.com/in/radek-palisa-96332886", target="_blank") Radek Palisa
+
 		block scripts
 			script.
 				// https://davidwalsh.name/javascript-debounce-function
