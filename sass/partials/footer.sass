@@ -1,42 +1,65 @@
 /* Footer */
+body
+	margin-bottom: 120px
 
 .landing-page, main
 	background-color: white //for the fixed footer not to come on top
 
-footer
-	position: relative
-	z-index: -2
-	background-color: #242638 //first 3 properties are to eliminate occasional white space between footer top and bottom when resizing the screen. BUT it also fills the space between the background images in footer bottom
+.footer
+	position: fixed
+	z-index: -1
+	bottom: 0
+	
+	width: 100%
+	height: 110px
+	
 	font-size: 14px
 	color: #e1e1e1
-	height: 290px
-	
-.footer
-	&__top
-		padding-top: 38px
-		height: 180px
-		background-color: inherit
-		text-align: center
-		
-		img
-			width: 30px
-			display: inline-block
-			margin: 18px 7px
 
-		p
-			margin: 0
+	background: url('img/picture-grid_desktop.jpg'), url('img/picture-grid_desktop.jpg')
+	background-size: 1000px auto
+	background-position: left top -47px, left 1010px bottom -29px
+	background-repeat: no-repeat
+	box-shadow: inset 0 0 0 1000px rgba(17,18,25,0.95)
+
+.footer--left,
+.footer--middle,
+.footer--right,
+	position: absolute
+	bottom: 50%
+	transform: translateY(50%)
+
+.footer
+	&--left
+		left: 30px
+	&--middle
+		left: 50%
+		transform: translate(-50%, 50%)
+	&--right
+		right: 30px
+		text-align: right
+
+.footer
+		
+	&__copyright
+		margin: 0
+
+	&__socicon
+		width: 30px
+		display: inline-block
+		margin-left: 7px
+		margin-bottom: 18px
 
 	&__nav
-		text-align: center
-		
+
 		ul
 			margin: 0
 			padding: 0
-			
+
 			li
 				display: inline-block
 				margin-left: 15px
-				
+
 				&:first-of-type
 					margin-left: 0
 
@@ -44,22 +67,9 @@ footer
 					text-decoration: none
 					color: white
 
-	&__bottom
-		text-align: center
-		line-height: 110px
-		position: fixed
-		z-index: -1
-		bottom: 0
-		width: 100%
-		height: 110px
-
-		// background: url(img/nabidka-bg-1600w-45q.jpg)
-		background: url('img/picture-grid_desktop.jpg'), url('img/picture-grid_desktop.jpg')
-		background-size: 1000px auto
-		background-position: left top -47px, left 1010px bottom -29px
-		background-repeat: no-repeat
-		box-shadow: inset 0 0 0 1000px rgba(17,18,25,0.9)
-
-		p
-			margin: 0
-			letter-spacing: 0.8px
+	&__credits
+		margin: 0
+		letter-spacing: 0.8px
+		
+		a
+			color: #ABB0FF
