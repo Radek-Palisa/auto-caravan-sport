@@ -77,17 +77,14 @@
       };
       
       var myEfficientFn = debounce(function() {
-      	$(window).scroll(function() {
-      
-      		if ($(this).scrollTop()> $('.header__wrapper').height())
-      		 {
-      			$('.header__banner').fadeOut();
-      		 }
-      		else
-      		 {
-      		  $('.header__banner').fadeIn();
-      		 }
-      	});
+      	if ($(this).scrollTop()> $('.header__wrapper').height())
+      	 {
+      		$('.header__banner').slideUp(500);
+      	 }
+      	else
+      	 {
+      	  $('.header__banner').slideDown(500);
+      	 }
       }, 200);
       
       window.addEventListener('scroll', myEfficientFn);
