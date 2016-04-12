@@ -44,28 +44,40 @@
 	&__content
 		display: flex
 		flex-wrap: wrap
-		max-width: 1000px
+		max-width: 1080px
 		margin: 0 auto
 		
 .homepage-article
 	flex-wrap: wrap
 	width: 49.5%
 	margin-right: 1%
-	padding: 10px
+	margin-bottom: 1%
+	padding: 0 30px 10px
 	// border: dashed 1px grey
 	background-color: white
+	box-shadow: 3px 3px 2px 1px #ccc
 	
 	&:nth-child(even)
 		margin-right: 0
+
+.article__wrap
+	width: 100%
+
+	h1
+		margin-top: 0
+		width: 40%
+		padding: 10px 0
+		background-color: #102775
+		font-size: 1em
+		font-family: open sans
+		color: #E2E2E2
+		text-align: center
 		
-	.button
-		background-color: rosybrown
-		color: white
-		// text-transform: uppercase
-		padding: 8px 10px
-		border-radius: 5px
-		letter-spacing: 0.8px
-	
+	p
+		line-height: 1.4
+		margin-top: 20px
+		color: #545454
+
 .article__img-wrap
 	width: 100%
 	text-align: center
@@ -73,19 +85,16 @@
 	.logo
 		position: static
 	
-	img
+	.home-nabidka
 		width: 50%
-		display: inline-block
-
-.article__wrap
-	width: 100%
-
-	h1
-		margin-top: 0
-		font-size: 1.2em
-		font-family: open sans
-		border-bottom: solid 2px black
+		margin: 0 auto
 		
-.article__img-wrap .home-socicon
-	width: 20%
-	padding: 10px 20px
+	.home-predprace
+		width: 50%
+		padding: 29px
+		display: inline-block
+		
+	.home-socicon
+		width: 20%
+		padding: 10px 20px
+		display: inline-block
