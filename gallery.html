@@ -95,49 +95,6 @@
         <p class="footer__credits">Web: <a href="https://www.linkedin.com/in/radek-palisa-96332886" target="_blank">Radek Palisa</a></p>
       </div>
     </footer>
-    <script>
-      $(document).ready(function(){
-      	$("#gallery-nav li").click(function(e){
-      		if (!$(this).hasClass("active")) {
-      			var tabNum = $(this).index();
-      			var nthChild = tabNum+1;
-      			$("#gallery-nav li.active").removeClass("active");
-      			$(this).addClass("active");
-      			$("#tab-wrapper article.active").removeClass("active");
-      			$("#tab-wrapper article:nth-child("+nthChild+")").addClass("active");
-      		}
-      	});
-      });
-    </script>
-    <script>
-      // https://davidwalsh.name/javascript-debounce-function
-      function debounce(func, wait, immediate) {
-      	var timeout;
-      	return function() {
-      		var context = this, args = arguments;
-      		var later = function() {
-      			timeout = null;
-      			if (!immediate) func.apply(context, args);
-      		};
-      		var callNow = immediate && !timeout;
-      		clearTimeout(timeout);
-      		timeout = setTimeout(later, wait);
-      		if (callNow) func.apply(context, args);
-      	};
-      };
-      
-      var myEfficientFn = debounce(function() {
-      	if ($(this).scrollTop()> $('.header__wrapper').height())
-      	 {
-      		$('.header__banner').slideUp(500);
-      	 }
-      	else
-      	 {
-      	  $('.header__banner').slideDown(500);
-      	 }
-      }, 200);
-      
-      window.addEventListener('scroll', myEfficientFn);
-    </script>
+    <script src="js/functions.js"></script>
   </body>
 </html>

@@ -29,14 +29,3 @@ block content
 					h1 Ford Transit s vyklápěcí střechou
 					img(src="img/predchozi-prace/102.JPG" alt="")
 					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas a qui, sapiente quod, nemo at accusamus blanditiis ex beatae, corrupti veritatis minima ipsum expedita. Perspiciatis praesentium ea impedit asperiores cum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus corporis sed laborum iste veniam, sit quasi deleniti, voluptas adipisci a, similique magni debitis suscipit nemo quos. Distinctio temporibus reprehenderit dolore? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum omnis, eveniet earum esse ex laudantium consequuntur. Recusandae molestiae ipsam doloremque quidem doloribus laudantium voluptas, omnis dignissimos. Maxime corporis ducimus, explicabo?
-					
-block prepend scripts
-	script.
-		$(document).ready(function(){
-			$(".nabidka-nav h1").click(function(e){
-				if (!$(this).hasClass("active")) {
-					$(".header").toggleClass("header--nabidka-bg header--predchoziprace-bg");
-					$(".nabidka-nav h1,.nabidka-tabs section").toggleClass("active non-active");
-				}
-			});
-		});

@@ -77,7 +77,10 @@ module.exports = function(grunt) {
 			}, //css
 			html: {
 				files: '*.html',
-			}
+			},
+			scripts: {
+				files: 'js/**/*.js',
+			},
 		}, // watch
 
 	});

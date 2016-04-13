@@ -55,19 +55,3 @@ block content
 					section
 						- for (var x = 0; x < 28; x++)
 							a.gallery__thumbnail(href="#")
-
-block prepend scripts
-
-	script.
-		$(document).ready(function(){
-			$("#gallery-nav li").click(function(e){
-				if (!$(this).hasClass("active")) {
-					var tabNum = $(this).index();
-					var nthChild = tabNum+1;
-					$("#gallery-nav li.active").removeClass("active");
-					$(this).addClass("active");
-					$("#tab-wrapper article.active").removeClass("active");
-					$("#tab-wrapper article:nth-child("+nthChild+")").addClass("active");
-				}
-			});
-		});

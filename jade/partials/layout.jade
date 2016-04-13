@@ -38,33 +38,4 @@ html
 					p.footer__credits Web: 
 						a(href="https://www.linkedin.com/in/radek-palisa-96332886", target="_blank") Radek Palisa
 
-		block scripts
-			script.
-				// https://davidwalsh.name/javascript-debounce-function
-				function debounce(func, wait, immediate) {
-					var timeout;
-					return function() {
-						var context = this, args = arguments;
-						var later = function() {
-							timeout = null;
-							if (!immediate) func.apply(context, args);
-						};
-						var callNow = immediate && !timeout;
-						clearTimeout(timeout);
-						timeout = setTimeout(later, wait);
-						if (callNow) func.apply(context, args);
-					};
-				};
-	
-				var myEfficientFn = debounce(function() {
-					if ($(this).scrollTop()> $('.header__wrapper').height())
-					 {
-						$('.header__banner').slideUp(500);
-					 }
-					else
-					 {
-					  $('.header__banner').slideDown(500);
-					 }
-				}, 200);
-
-				window.addEventListener('scroll', myEfficientFn);
+		script(src="js/functions.js")
