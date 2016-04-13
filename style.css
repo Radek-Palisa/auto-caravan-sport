@@ -631,6 +631,10 @@ main {
   left: 0;
 }
 
+.js-slide-in {
+  left: 0;
+}
+
 /* For Desktop Screens */
 @media screen and (min-width: 1600px) {
   .picture-grid {
@@ -684,6 +688,23 @@ main {
   min-height: 650px;
   height: 100vh;
   position: relative;
+}
+
+.show-slides {
+  position: absolute;
+  left: 0;
+  bottom: -27px;
+  cursor: pointer;
+}
+.show-slides img {
+  display: inline-block;
+  width: 30px;
+  margin-bottom: -9px;
+  margin-right: 8px;
+}
+.show-slides span {
+  font-size: 15px;
+  color: #6B6B6B;
 }
 
 .slogan {

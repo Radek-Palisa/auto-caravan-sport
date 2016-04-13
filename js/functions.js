@@ -7,6 +7,7 @@ $(window).load(function () {
 
 var $root = $('html, body');
 
+// Smooth scroll to Below Landing Section
 $('.arrow-link').click(function() {
 	$root.animate({
 		scrollTop: $( $.attr(this, 'href') ).offset().top
@@ -26,35 +27,20 @@ $(window).bind('scroll', function() {
 });
 */
 
-// JS that you could use as fallback for non-hover devices
-/* 
-function touchScreens() {
-	//check to see if the device supports touch
-	//will use touch events instead of click as it will allow us to //support both a CSS-driven hover and touch enabled menu for this
-	//screen range
-	if ('ontouchstart' in document.documentElement) {
-		//find all 'hover' class and strip them
-		$('.theClassName').find('element.hover').removeClass('hover');
-		//add touch events
-		$('.grid__cell').bind('touchstart', function(e) {
-			//find the current chosen element
-			var currentItem = $(this).siblings('.siblingElements')
-			//remove the expand class from other elemets to close any currently open submenus
-			$('.siblingElement').not(currentItem).removeClass('expand');
-			//slide in the selected element
-			$(this).siblings('.theClassName').toggleClass('expand')
-			//code goes here
-		});
-		//close the slideins if users click outsite the grid
-		$('html').bind('touchstart', function(e) {
-			$('.theClassName').find('element.hover').removeClass('expand');
-		});
-		$('#parentElement').bind('touchstart', function(e) {
-			e.stopPropagation();
-		});
-	}
-};
-*/
+// Fallback for non-hover devices
+$('.grid__cell').on('click', function(e) {
+	//find the current chosen element
+	// var currentItem = $(this).siblings('.siblingElements')
+	$(this).children().toggleClass('js-slide-in');
+});
+$(document).on('click', function(event) {
+  if (!$(event.target).closest('.grid__container').length) {
+	  $('.slide-in').removeClass('js-slide-in');
+  }
+});
+$('.show-slides').on('click', function(e){
+	$('.slide-in').toggleClass('js-slide-in');
+});
 
 // Debounce function to improve performance on scroll listener
 // https://davidwalsh.name/javascript-debounce-function
