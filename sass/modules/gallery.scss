@@ -50,18 +50,33 @@
 		max-width: 55em;
 	}
 	
-	&__thumbnail {
-		display: inline-block;
-		width: 140px;
-		height: 110px;
-		background-color: grey;
-		margin-right: 10px;
-		margin-bottom: 10px;
+	section {
+		text-align: center;
+	}
+}
+
+$thumbnail-width: 189px;
+$thumbnail-height: 126.5px;
+$thumbnail-url: 'img/gallery-izolace.jpg';
+	
+.gallery__thumbnail {
+	display: inline-block;
+	width: $thumbnail-width;
+	height: $thumbnail-height;
+	background-color: grey;
+	margin: 5px;
+	transition: 0.3s;
+	background-image: url('#{$thumbnail-url}');
+	background-size: auto $thumbnail-height;
+
+	&:hover {
 		transition: 0.3s;
-		
-		&:hover {
-			transition: 0.3s;
-			filter: brightness(130%)
-		}
+		filter: brightness(130%)
+	}
+}
+
+@for $i from 1 through 31  {
+	.gallery__thumbnail:nth-child(#{$i}) {
+		background-position: -($thumbnail-width) * $i + $thumbnail-width; 
 	}
 }

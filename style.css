@@ -932,19 +932,148 @@ main {
 .gallery p {
   max-width: 55em;
 }
+.gallery section {
+  text-align: center;
+}
+
 .gallery__thumbnail {
   display: inline-block;
-  width: 140px;
-  height: 110px;
+  width: 189px;
+  height: 126.5px;
   background-color: grey;
-  margin-right: 10px;
-  margin-bottom: 10px;
+  margin: 5px;
   transition: 0.3s;
+  background-image: url("img/gallery-izolace.jpg");
+  background-size: auto 126.5px;
 }
 .gallery__thumbnail:hover {
   transition: 0.3s;
   -webkit-filter: brightness(130%);
           filter: brightness(130%);
+}
+
+.gallery__thumbnail:nth-child(1) {
+  background-position: 0px;
+}
+
+.gallery__thumbnail:nth-child(2) {
+  background-position: -189px;
+}
+
+.gallery__thumbnail:nth-child(3) {
+  background-position: -378px;
+}
+
+.gallery__thumbnail:nth-child(4) {
+  background-position: -567px;
+}
+
+.gallery__thumbnail:nth-child(5) {
+  background-position: -756px;
+}
+
+.gallery__thumbnail:nth-child(6) {
+  background-position: -945px;
+}
+
+.gallery__thumbnail:nth-child(7) {
+  background-position: -1134px;
+}
+
+.gallery__thumbnail:nth-child(8) {
+  background-position: -1323px;
+}
+
+.gallery__thumbnail:nth-child(9) {
+  background-position: -1512px;
+}
+
+.gallery__thumbnail:nth-child(10) {
+  background-position: -1701px;
+}
+
+.gallery__thumbnail:nth-child(11) {
+  background-position: -1890px;
+}
+
+.gallery__thumbnail:nth-child(12) {
+  background-position: -2079px;
+}
+
+.gallery__thumbnail:nth-child(13) {
+  background-position: -2268px;
+}
+
+.gallery__thumbnail:nth-child(14) {
+  background-position: -2457px;
+}
+
+.gallery__thumbnail:nth-child(15) {
+  background-position: -2646px;
+}
+
+.gallery__thumbnail:nth-child(16) {
+  background-position: -2835px;
+}
+
+.gallery__thumbnail:nth-child(17) {
+  background-position: -3024px;
+}
+
+.gallery__thumbnail:nth-child(18) {
+  background-position: -3213px;
+}
+
+.gallery__thumbnail:nth-child(19) {
+  background-position: -3402px;
+}
+
+.gallery__thumbnail:nth-child(20) {
+  background-position: -3591px;
+}
+
+.gallery__thumbnail:nth-child(21) {
+  background-position: -3780px;
+}
+
+.gallery__thumbnail:nth-child(22) {
+  background-position: -3969px;
+}
+
+.gallery__thumbnail:nth-child(23) {
+  background-position: -4158px;
+}
+
+.gallery__thumbnail:nth-child(24) {
+  background-position: -4347px;
+}
+
+.gallery__thumbnail:nth-child(25) {
+  background-position: -4536px;
+}
+
+.gallery__thumbnail:nth-child(26) {
+  background-position: -4725px;
+}
+
+.gallery__thumbnail:nth-child(27) {
+  background-position: -4914px;
+}
+
+.gallery__thumbnail:nth-child(28) {
+  background-position: -5103px;
+}
+
+.gallery__thumbnail:nth-child(29) {
+  background-position: -5292px;
+}
+
+.gallery__thumbnail:nth-child(30) {
+  background-position: -5481px;
+}
+
+.gallery__thumbnail:nth-child(31) {
+  background-position: -5670px;
 }
 
 /* Contact Form module */
