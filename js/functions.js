@@ -88,12 +88,11 @@ $(document).ready(function(){
 $(document).ready(function(){
 	$("#gallery-nav li").click(function(e){
 		if (!$(this).hasClass("active")) {
-			var tabNum = $(this).index();
-			var nthChild = tabNum+1;
+			var tabNum = $(this).index() + 1;
 			$("#gallery-nav li.active").removeClass("active");
 			$(this).addClass("active");
 			$("#tab-wrapper article.active").removeClass("active");
-			$("#tab-wrapper article:nth-child("+nthChild+")").addClass("active");
+			$("#tab-wrapper article:nth-child("+tabNum+")").addClass("active");
 		}
 	});
 });
