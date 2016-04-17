@@ -61,7 +61,7 @@
 	background-attachment: fixed;
 	
 	&--gallery-bg {
-		background-image: url(img/gallery-bg.jpg);
+		background-image: url(img/gallery-bg_3872w_35q.jpg);
 	}
 	
 	&--nabidka-bg {
@@ -69,13 +69,8 @@
 		transition: all 0.5s ease-in-out;
 	}
 	
-	&--nabidka-bg {
-		background-image: url(img/nabidka-bg.jpg);
-		transition: all 0.5s ease-in-out;
-	}
-	
 	&--predchoziprace-bg {
-		background-image: url(img/predchoziprace-bg.jpg);
+		background-image: url(img/predchoziprace-bg_3872w_10q.jpg);
 		transition: all 0.5s ease-in-out;
 	}
 	
@@ -84,6 +79,6 @@
 	}
 	
 	&--kontakt-bg {
-		background-image: url(img/kontakt-bg.jpg);
+		background-image: url(img/kontakt-bg_3872w_10q.jpg);
 	}
 }

@@ -488,25 +488,21 @@ p {
   background-attachment: fixed;
 }
 .header--gallery-bg {
-  background-image: url(img/gallery-bg.jpg);
+  background-image: url(img/gallery-bg_3872w_35q.jpg);
 }
 .header--nabidka-bg {
   background-image: url(img/nabidka-bg-1600w-45q.jpg);
   transition: all 0.5s ease-in-out;
 }
-.header--nabidka-bg {
-  background-image: url(img/nabidka-bg.jpg);
-  transition: all 0.5s ease-in-out;
-}
 .header--predchoziprace-bg {
-  background-image: url(img/predchoziprace-bg.jpg);
+  background-image: url(img/predchoziprace-bg_3872w_10q.jpg);
   transition: all 0.5s ease-in-out;
 }
 .header--ofirme-bg {
   background-image: url(img/ofirme.jpg);
 }
 .header--kontakt-bg {
-  background-image: url(img/kontakt-bg.jpg);
+  background-image: url(img/kontakt-bg_3872w_10q.jpg);
 }
 
 /* Layout for all pages except Landing */
@@ -890,7 +886,11 @@ main {
   width: 100%;
 }
 
-/* Gallery Module */
+/*
+*
+* ********   Gallery Module    ***********
+*
+*/
 #gallery-nav {
   margin-top: 40px;
 }
@@ -936,6 +936,26 @@ main {
   text-align: center;
 }
 
+.izolace-vozu .gallery__thumbnail {
+  background-image: url("img/gallery-izolace.jpg");
+}
+
+.sestava-sedadel .gallery__thumbnail {
+  background-image: url("img/gallery-izolace.jpg");
+}
+
+.toaletni-kout .gallery__thumbnail {
+  background-image: url("img/gallery-izolace.jpg");
+}
+
+.kuchynska-skrin .gallery__thumbnail {
+  background-image: url("img/gallery-izolace.jpg");
+}
+
+.postel .gallery__thumbnail {
+  background-image: url("img/gallery-izolace.jpg");
+}
+
 .gallery__thumbnail {
   display: inline-block;
   width: 189px;
@@ -943,7 +963,6 @@ main {
   background-color: grey;
   margin: 5px;
   transition: 0.3s;
-  background-image: url("img/gallery-izolace.jpg");
   background-size: auto 126.5px;
 }
 .gallery__thumbnail:hover {
@@ -952,127 +971,127 @@ main {
           filter: brightness(130%);
 }
 
-.gallery__thumbnail:nth-child(1) {
+.gallery__thumbnail:nth-of-type(1) {
   background-position: 0px;
 }
 
-.gallery__thumbnail:nth-child(2) {
+.gallery__thumbnail:nth-of-type(2) {
   background-position: -189px;
 }
 
-.gallery__thumbnail:nth-child(3) {
+.gallery__thumbnail:nth-of-type(3) {
   background-position: -378px;
 }
 
-.gallery__thumbnail:nth-child(4) {
+.gallery__thumbnail:nth-of-type(4) {
   background-position: -567px;
 }
 
-.gallery__thumbnail:nth-child(5) {
+.gallery__thumbnail:nth-of-type(5) {
   background-position: -756px;
 }
 
-.gallery__thumbnail:nth-child(6) {
+.gallery__thumbnail:nth-of-type(6) {
   background-position: -945px;
 }
 
-.gallery__thumbnail:nth-child(7) {
+.gallery__thumbnail:nth-of-type(7) {
   background-position: -1134px;
 }
 
-.gallery__thumbnail:nth-child(8) {
+.gallery__thumbnail:nth-of-type(8) {
   background-position: -1323px;
 }
 
-.gallery__thumbnail:nth-child(9) {
+.gallery__thumbnail:nth-of-type(9) {
   background-position: -1512px;
 }
 
-.gallery__thumbnail:nth-child(10) {
+.gallery__thumbnail:nth-of-type(10) {
   background-position: -1701px;
 }
 
-.gallery__thumbnail:nth-child(11) {
+.gallery__thumbnail:nth-of-type(11) {
   background-position: -1890px;
 }
 
-.gallery__thumbnail:nth-child(12) {
+.gallery__thumbnail:nth-of-type(12) {
   background-position: -2079px;
 }
 
-.gallery__thumbnail:nth-child(13) {
+.gallery__thumbnail:nth-of-type(13) {
   background-position: -2268px;
 }
 
-.gallery__thumbnail:nth-child(14) {
+.gallery__thumbnail:nth-of-type(14) {
   background-position: -2457px;
 }
 
-.gallery__thumbnail:nth-child(15) {
+.gallery__thumbnail:nth-of-type(15) {
   background-position: -2646px;
 }
 
-.gallery__thumbnail:nth-child(16) {
+.gallery__thumbnail:nth-of-type(16) {
   background-position: -2835px;
 }
 
-.gallery__thumbnail:nth-child(17) {
+.gallery__thumbnail:nth-of-type(17) {
   background-position: -3024px;
 }
 
-.gallery__thumbnail:nth-child(18) {
+.gallery__thumbnail:nth-of-type(18) {
   background-position: -3213px;
 }
 
-.gallery__thumbnail:nth-child(19) {
+.gallery__thumbnail:nth-of-type(19) {
   background-position: -3402px;
 }
 
-.gallery__thumbnail:nth-child(20) {
+.gallery__thumbnail:nth-of-type(20) {
   background-position: -3591px;
 }
 
-.gallery__thumbnail:nth-child(21) {
+.gallery__thumbnail:nth-of-type(21) {
   background-position: -3780px;
 }
 
-.gallery__thumbnail:nth-child(22) {
+.gallery__thumbnail:nth-of-type(22) {
   background-position: -3969px;
 }
 
-.gallery__thumbnail:nth-child(23) {
+.gallery__thumbnail:nth-of-type(23) {
   background-position: -4158px;
 }
 
-.gallery__thumbnail:nth-child(24) {
+.gallery__thumbnail:nth-of-type(24) {
   background-position: -4347px;
 }
 
-.gallery__thumbnail:nth-child(25) {
+.gallery__thumbnail:nth-of-type(25) {
   background-position: -4536px;
 }
 
-.gallery__thumbnail:nth-child(26) {
+.gallery__thumbnail:nth-of-type(26) {
   background-position: -4725px;
 }
 
-.gallery__thumbnail:nth-child(27) {
+.gallery__thumbnail:nth-of-type(27) {
   background-position: -4914px;
 }
 
-.gallery__thumbnail:nth-child(28) {
+.gallery__thumbnail:nth-of-type(28) {
   background-position: -5103px;
 }
 
-.gallery__thumbnail:nth-child(29) {
+.gallery__thumbnail:nth-of-type(29) {
   background-position: -5292px;
 }
 
-.gallery__thumbnail:nth-child(30) {
+.gallery__thumbnail:nth-of-type(30) {
   background-position: -5481px;
 }
 
-.gallery__thumbnail:nth-child(31) {
+.gallery__thumbnail:nth-of-type(31) {
   background-position: -5670px;
 }
 
