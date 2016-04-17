@@ -1,4 +1,8 @@
-/* Gallery Module */
+/*
+*
+* ********   Gallery Module    ***********
+*
+*/
 
 #gallery-nav {
 	margin-top: 40px;
@@ -57,8 +61,29 @@
 
 $thumbnail-width: 189px;
 $thumbnail-height: 126.5px;
-$thumbnail-url: 'img/gallery-izolace.jpg';
-	
+$thumbnail-url: 
+	'img/gallery-izolace.jpg',
+	'img/gallery-izolace.jpg',
+	'img/gallery-izolace.jpg',
+	'img/gallery-izolace.jpg',
+	'img/gallery-izolace.jpg';
+
+.izolace-vozu .gallery__thumbnail {
+	background-image: url('#{nth($thumbnail-url, 1)}');
+}
+.sestava-sedadel .gallery__thumbnail {
+	background-image: url('#{nth($thumbnail-url, 2)}');
+}
+.toaletni-kout .gallery__thumbnail {
+	background-image: url('#{nth($thumbnail-url, 3)}');
+}
+.kuchynska-skrin .gallery__thumbnail {
+	background-image: url('#{nth($thumbnail-url, 4)}');
+}
+.postel .gallery__thumbnail {
+	background-image: url('#{nth($thumbnail-url, 5)}');
+}
+
 .gallery__thumbnail {
 	display: inline-block;
 	width: $thumbnail-width;
@@ -66,7 +91,6 @@ $thumbnail-url: 'img/gallery-izolace.jpg';
 	background-color: grey;
 	margin: 5px;
 	transition: 0.3s;
-	background-image: url('#{$thumbnail-url}');
 	background-size: auto $thumbnail-height;
 
 	&:hover {
@@ -76,7 +100,7 @@ $thumbnail-url: 'img/gallery-izolace.jpg';
 }
 
 @for $i from 1 through 31  {
-	.gallery__thumbnail:nth-child(#{$i}) {
+	.gallery__thumbnail:nth-of-type(#{$i}) {
 		background-position: -($thumbnail-width) * $i + $thumbnail-width; 
 	}
 }
