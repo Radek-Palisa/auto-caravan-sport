@@ -1,13 +1,18 @@
-// Slogan slide up
+//
+// --- Slogan slide up ---
+//
 $(window).load(function () {
 	setTimeout(function () {
 		$(".slogan").show("slide", {direction: "down"}, 1500);
 	}, 800);
-}); 
+});
+
 
 var $root = $('html, body');
 
-// Smooth scroll to Below Landing Section
+//
+// --- Smooth scroll to Below Landing Section ---
+//
 $('.arrow-link').click(function() {
 	$root.animate({
 		scrollTop: $( $.attr(this, 'href') ).offset().top
@@ -15,7 +20,9 @@ $('.arrow-link').click(function() {
 	return false;
 });
 
-// Hide arrow link
+//
+// --- Hide arrow link ---
+//
 /* 
 $(window).bind('scroll', function() {
 	if ($(window).scrollTop() > 200) {
@@ -27,23 +34,40 @@ $(window).bind('scroll', function() {
 });
 */
 
-// Fallback for non-hover devices
+//
+// --- Fallback for non-hover devices ---
+//
 $('.grid__cell').on('click', function(e) {
 	//find the current chosen element
 	// var currentItem = $(this).siblings('.siblingElements')
 	$(this).children().toggleClass('js-slide-in');
+	$('.show-slides__txt').text('Ukaž vše');
 });
 $(document).on('click', function(event) {
   if (!$(event.target).closest('.grid__container').length) {
 	  $('.slide-in').removeClass('js-slide-in');
+	  $('.show-slides__txt').text('Ukaž vše');
   }
 });
-$('.show-slides').on('click', function(e){
-	$('.slide-in').toggleClass('js-slide-in');
+
+//
+// --- Button to show/hide all slide-ins ---
+//
+$('.show-slides').on('click', function(e) {
+	if ($('.slide-in').length === $('.js-slide-in').length) {
+		$('.slide-in').removeClass('js-slide-in');
+		$('.show-slides__txt').text('Ukaž vše');
+	}
+	else {
+		$('.slide-in').addClass('js-slide-in');
+		$('.show-slides__txt').text('Nechci číst');
+	}
 });
 
-// Debounce function to improve performance on scroll listener
+//
+// --- Debounce function to improve performance on scroll listener
 // https://davidwalsh.name/javascript-debounce-function
+//
 function debounce(func, wait, immediate) {
 	var timeout;
 	return function() {
@@ -74,7 +98,8 @@ var myEfficientFn = debounce(function() {
 
 window.addEventListener('scroll', myEfficientFn);
 
-// Toggle function for Soucasne k prodeji vs Predchozi prace
+//
+// --- Toggle function for Soucasne k prodeji vs Predchozi prace
 $(document).ready(function(){
 	$(".nabidka-nav h1").click(function(e){
 		if (!$(this).hasClass("active")) {
@@ -84,7 +109,9 @@ $(document).ready(function(){
 	});
 });
 
-// Tabs for Gallery
+//
+// --- Tabs for Gallery ---
+//
 $(document).ready(function(){
 	$("#gallery-nav li").click(function(e){
 		if (!$(this).hasClass("active")) {

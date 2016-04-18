@@ -692,15 +692,18 @@ main {
   bottom: -27px;
   cursor: pointer;
 }
-.show-slides img {
+.show-slides__icon {
   display: inline-block;
   width: 30px;
   margin-bottom: -9px;
   margin-right: 8px;
 }
-.show-slides span {
+.show-slides__txt {
   font-size: 15px;
   color: #6B6B6B;
+}
+.show-slides:hover {
+  font-weight: bold;
 }
 
 .slogan {
