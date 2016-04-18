@@ -1,18 +1,8 @@
 //
-// --- Slogan slide up ---
-//
-$(window).load(function () {
-	setTimeout(function () {
-		$(".slogan").show("slide", {direction: "down"}, 1500);
-	}, 800);
-});
-
-
-var $root = $('html, body');
-
-//
 // --- Smooth scroll to Below Landing Section ---
 //
+var $root = $('html, body');
+
 $('.arrow-link').click(function() {
 	$root.animate({
 		scrollTop: $( $.attr(this, 'href') ).offset().top

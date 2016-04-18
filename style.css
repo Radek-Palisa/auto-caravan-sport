@@ -604,8 +604,8 @@ main {
   bottom: 0;
   left: 100%;
   width: 100%;
-  padding: 19px;
-  background-color: rgba(0, 0, 0, 0.7);
+  padding: 15px 19px 19px 19px;
+  background-color: rgba(0, 0, 0, 0.8);
   color: white;
   transition: 0.8s;
 }
@@ -619,7 +619,10 @@ main {
 }
 .slide-in__text {
   margin: 0;
-  line-height: 1.3em;
+  line-height: 1.4em;
+}
+.slide-in__text--aligncenter {
+  text-align: center;
 }
 
 .grid__cell--hover:hover .slide-in {
@@ -707,8 +710,7 @@ main {
 }
 
 .slogan {
-  display: none;
-  width: 280px;
+  text-align: right;
   height: 21px;
   position: absolute;
   bottom: -55px;

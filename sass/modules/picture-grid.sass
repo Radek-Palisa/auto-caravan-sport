@@ -44,16 +44,16 @@
 
 .slide-in
 	position: absolute
-	top: 0 
+	top: 0
 	bottom: 0
 	left: 100%
 	
 	width: 100%
-	padding: 19px
-	background-color: rgba(0,0,0,0.7)
+	padding: 15px 19px 19px 19px
+	background-color: rgba(0,0,0,0.8)
 	color: white
 	transition: 0.8s
-	
+
 	&__title
 		text-align: center
 		margin-top: 0
@@ -64,7 +64,10 @@
 
 	&__text
 		margin: 0
-		line-height: 1.3em
+		line-height: 1.4em
+		
+		&--aligncenter
+			text-align: center
 
 .grid__cell--hover:hover .slide-in
 	transition: 0.8s
@@ -74,7 +77,7 @@
 	left: 0
 
 /* For Desktop Screens */
-@media screen and (min-width: $break-desktop)	
+@media screen and (min-width: $break-desktop)
 	.picture-grid
 		background-image: url('img/picture-grid_desktop.jpg')
 		
