@@ -761,13 +761,12 @@ main {
 
 .homepage-article {
   flex-wrap: wrap;
-  width: 30%;
-  margin-right: 3%;
-  margin-bottom: 1%;
-  padding: 0 20px 10px;
-  background-color: rgba(0, 0, 0, 0.26);
-  /* box-shadow: 1px 1px 2px 1px #0C0C0C; */
-  color: white;
+  width: 29%;
+  margin-right: 6.5%;
+  padding: 0 10px 8px;
+  background-color: rgba(4, 17, 62, 0.5);
+  box-shadow: 1px 1px 2px 1px #151515;
+  border-radius: 1px;
 }
 .homepage-article:nth-child(3) {
   margin-right: 0;
@@ -775,13 +774,12 @@ main {
 
 .article__wrap {
   width: 100%;
-  color: white;
 }
 .article__wrap h1 {
   margin: 0 auto;
-  width: 195px;
-  padding: 10px 0;
-  background-color: #102775;
+  width: 100%;
+  padding: 12px 0;
+  background-color: rgb(14, 39, 123);
   font-size: 1em;
   font-family: open sans;
   color: #E2E2E2;
@@ -789,21 +787,27 @@ main {
 }
 .article__wrap p {
   line-height: 1.4;
-  margin-top: 20px;
-  color: #FBF8F8;
+  margin-top: 15px;
+  color: white;
 }
 
 .article__img-wrap {
-  width: 100%;
-  margin: 55px 0;
+  margin: 35px auto;
+  width: 200px;
+  height: 200px;
   text-align: center;
+  border: dashed 2px white;
+  border-radius: 100%;
 }
 .article__img-wrap .logo {
+  width: 80%;
   position: static;
+  margin: 43px auto 0;
 }
 .article__img-wrap .home-nabidka {
-  width: 50%;
-  margin: 0 auto;
+  width: 90%;
+  margin: 50px auto;
+  border-radius: 100%;
 }
 .article__img-wrap .home-predprace {
   width: 50%;
@@ -811,8 +815,8 @@ main {
   display: inline-block;
 }
 .article__img-wrap .home-socicon {
-  margin: 40px 15px;
-  width: 16%;
+  margin: 78px 15px;
+  width: 21%;
   display: inline-block;
 }
 
