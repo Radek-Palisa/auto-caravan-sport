@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
@@ -441,8 +440,7 @@ p {
 .logo, .nav {
   position: absolute;
   bottom: 50%;
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%);
+  transform: translateY(50%);
 }
 
 .logo {
@@ -473,13 +471,11 @@ p {
 /* Header - Landing Page Specific */
 .picture-grid .logo {
   bottom: 103%;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  transform: translateY(0);
 }
 .picture-grid .nav {
   bottom: 105%;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  transform: translateY(0);
 }
 
 /* Header - Hero section */
@@ -682,7 +678,11 @@ main {
     margin-right: 0;
   }
 }
-/* Landing Page */
+/* */
+/* */
+/* ******** Landing Page ******** */
+/* */
+/* */
 .landing-page {
   min-height: 650px;
   height: 100vh;
@@ -707,6 +707,9 @@ main {
 }
 .show-slides:hover {
   font-weight: bold;
+}
+.show-slides:active .show-slides__icon {
+  width: 28px;
 }
 
 .slogan {
@@ -738,8 +741,7 @@ main {
 .arrow {
   margin: 0 auto;
   width: 35px;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 /* Below Landing Section */
@@ -749,20 +751,14 @@ main {
   padding: 100px 20px;
 }
 .below-landing__content {
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  flex-wrap: wrap;
   max-width: 1080px;
   margin: 0 auto;
 }
 
 .homepage-article {
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  flex-wrap: wrap;
   width: 49.5%;
   margin-right: 1%;
   margin-bottom: 1%;
@@ -863,7 +859,7 @@ main {
   text-align: center;
 }
 
-/* P┼Öedchoz├ş pr├íce */
+/* Predchozi prace */
 .predchozi-prace article:after {
   content: '';
   display: block;
@@ -972,8 +968,7 @@ main {
 }
 .gallery__thumbnail:hover {
   transition: 0.3s;
-  -webkit-filter: brightness(130%);
-          filter: brightness(130%);
+  filter: brightness(130%);
 }
 
 .gallery__thumbnail:nth-of-type(1) {
@@ -1131,8 +1126,7 @@ main {
 .footer--right {
   position: absolute;
   bottom: 50%;
-  -webkit-transform: translateY(50%);
-          transform: translateY(50%);
+  transform: translateY(50%);
 }
 
 .footer--left {
@@ -1140,8 +1134,7 @@ main {
 }
 .footer--middle {
   left: 50%;
-  -webkit-transform: translate(-50%, 50%);
-          transform: translate(-50%, 50%);
+  transform: translate(-50%, 50%);
 }
 .footer--right {
   right: 30px;
@@ -1179,3 +1172,5 @@ main {
 .footer__credits a {
   color: #ABB0FF;
 }
+
+/*# sourceMappingURL=style.css.map */
