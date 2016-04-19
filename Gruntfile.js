@@ -2,7 +2,18 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
-
+		
+		connect: {
+			server: {
+				options: {
+					port: 9001,
+					base: '.',
+					open: true,
+					livereload: true
+				}
+			}
+		},
+		
 		/**
 		 * Jade
 		 */
@@ -28,13 +39,13 @@ module.exports = function(grunt) {
 		  dev: {
 		    options: {
 		      style: 'expanded',
-		      sourcemap: 'none',
+		      sourcemap: 'auto',
 		    },
 		    files: {
 		      'style.css': 'sass/main.scss'
 		    }
 		  },
-			
+		  /* Concatenate CSS when done with development	
 		  dist: {
 			options: {
 			  style: 'compressed',
@@ -43,7 +54,8 @@ module.exports = function(grunt) {
 			files: {
 			  'style-min.css': 'sass/main.scss'
 			}
-		  }			
+		  }
+		  */
 		},
 
 		/**
@@ -73,7 +85,7 @@ module.exports = function(grunt) {
 			},
 			css: {
 				files: 'sass/**/*.{scss,sass}',
-				tasks: ['sass', 'autoprefixer']
+				tasks: ['sass'] // add ,'autoprefixer' here to switch it on, its off cos it disables source-mapping
 			}, //css
 			html: {
 				files: '*.html',
@@ -88,5 +100,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-jade');
-	grunt.registerTask('default','Convert Jade templates into html templates',['jade','watch']);
+	grunt.loadNpmTasks('grunt-contrib-connect');
+	grunt.registerTask('default',['jade','connect','watch']);
 }
