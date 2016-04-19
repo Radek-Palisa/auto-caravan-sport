@@ -86,7 +86,7 @@ module.exports = function(grunt) {
 			css: {
 				files: 'sass/**/*.{scss,sass}',
 				tasks: ['sass'] // add ,'autoprefixer' here to switch it on, its off cos it disables source-mapping
-			}, //css
+			},
 			html: {
 				files: '*.html',
 			},
