@@ -61,17 +61,21 @@
 /* Below Landing Section */
 
 .below-landing 
-	min-height: 100vh
+	min-height: 90vh
 	// background-color: #efefee
-	padding: 100px 20px
 	background-image: url(./img/below-landing_dark_30q.jpg)
 	background-size: cover
 	background-attachment: fixed
+	position: relative
 
 	&__content
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%,-50%)
 		display: flex
 		flex-wrap: wrap
-		max-width: 1200px
+		width: 1200px
 		margin: 0 auto
 		
 .homepage-article
@@ -107,7 +111,7 @@
 
 .article__img-wrap
 	position: relative
-	margin: 35px auto
+	margin: 45px auto
 	width: 180px
 	height: 180px
 	text-align: center
