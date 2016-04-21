@@ -764,7 +764,7 @@ main {
   width: 29%;
   margin-right: 6.5%;
   padding: 0 10px 8px;
-  background-color: rgba(4, 17, 62, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   box-shadow: 1px 1px 2px 1px #151515;
   border-radius: 1px;
 }
@@ -779,7 +779,7 @@ main {
   margin: 0 auto;
   width: 100%;
   padding: 12px 0;
-  background-color: rgb(14, 39, 123);
+  background-color: #102775;
   font-size: 1em;
   font-family: open sans;
   color: #E2E2E2;
@@ -792,32 +792,22 @@ main {
 }
 
 .article__img-wrap {
+  position: relative;
   margin: 35px auto;
-  width: 200px;
-  height: 200px;
   text-align: center;
   border: dashed 2px white;
   border-radius: 100%;
 }
-.article__img-wrap .logo {
+.article__img-wrap img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 80%;
-  position: static;
-  margin: 43px auto 0;
-}
-.article__img-wrap .home-nabidka {
-  width: 90%;
-  margin: 50px auto;
+  height: 80%;
+  padding: 40px 0;
+  background-color: white;
   border-radius: 100%;
-}
-.article__img-wrap .home-predprace {
-  width: 50%;
-  padding: 29px;
-  display: inline-block;
-}
-.article__img-wrap .home-socicon {
-  margin: 78px 15px;
-  width: 21%;
-  display: inline-block;
 }
 
 /* Nabidka Page styles */

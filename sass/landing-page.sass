@@ -106,29 +106,21 @@
 		color: white
 
 .article__img-wrap
+	position: relative
 	margin: 35px auto
-	width: 200px
-	height: 200px
+	width: 180px
+	height: 180px
 	text-align: center
 	border: dashed 2px white
 	border-radius: 100%
 
-	.logo
+	img
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
 		width: 80%
-		position: static
-		margin: 43px auto 0
-
-	.home-nabidka
-		width: 90%
-		margin: 50px auto
-		border-radius: 100%		
-
-	.home-predprace
-		width: 50%
-		padding: 29px
-		display: inline-block
-		
-	.home-socicon
-		margin: 78px 15px
-		width: 21%
-		display: inline-block
+		height: 80%
+		padding: 40px 0
+		background-color: white
+		border-radius: 100%
