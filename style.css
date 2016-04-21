@@ -746,26 +746,25 @@ main {
 
 /* Below Landing Section */
 .below-landing {
-  min-height: 100vh;
-  padding: 100px 20px;
-  background-image: url(./img/below-landing_dark_30q.jpg);
+  min-height: 110vh;
+  padding-top: 15px;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), transparent), url(./img/below-landing.jpg);
   background-size: cover;
-  background-attachment: fixed;
+  background-position: 0 150px;
+  background-repeat: no-repeat;
 }
 .below-landing__content {
+  margin: 15px auto 0;
   display: flex;
   flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1180px;
 }
 
 .homepage-article {
   flex-wrap: wrap;
   width: 29%;
   margin-right: 6.5%;
-  padding: 0 10px 8px;
-  background-color: rgba(0, 0, 0, 0.5);
-  box-shadow: 1px 1px 2px 1px #151515;
+  padding: 0 10px;
   border-radius: 1px;
 }
 .homepage-article:nth-child(3) {
@@ -778,11 +777,9 @@ main {
 .article__wrap h1 {
   margin: 0 auto;
   width: 100%;
-  padding: 12px 0;
-  background-color: #102775;
+  padding: 15px 0;
   font-size: 1em;
   font-family: open sans;
-  color: #E2E2E2;
   text-align: center;
 }
 .article__wrap p {
@@ -793,10 +790,11 @@ main {
 
 .article__img-wrap {
   position: relative;
-  margin: 35px auto;
+  width: 100%;
+  height: 85px;
   text-align: center;
-  border: dashed 2px white;
-  border-radius: 100%;
+  background-color: white;
+  box-shadow: 1px 1px 2px 1px #151515;
 }
 .article__img-wrap img {
   position: absolute;
@@ -805,9 +803,7 @@ main {
   transform: translate(-50%, -50%);
   width: 80%;
   height: 80%;
-  padding: 40px 0;
-  background-color: white;
-  border-radius: 100%;
+  padding: 10px 0;
 }
 
 /* Nabidka Page styles */
@@ -1110,14 +1106,14 @@ main {
 
 .footer {
   position: relative;
-  height: 100px;
+  height: 10vh;
   font-size: 14px;
   color: #e1e1e1;
-  background: url("img/picture-grid_desktop.jpg"), url("img/picture-grid_desktop.jpg");
+  background-color: rgba(0, 0, 0, 0.7);
+  /* background: url('img/picture-grid_desktop.jpg'), url('img/picture-grid_desktop.jpg') */
   background-size: 1000px auto;
   background-position: left top -47px, left 1010px bottom -29px;
   background-repeat: no-repeat;
-  box-shadow: inset 0 0 0 1000px rgba(17, 18, 25, 0.95);
 }
 
 .footer--left,
@@ -1147,7 +1143,7 @@ main {
   width: 30px;
   display: inline-block;
   margin-left: 7px;
-  margin-bottom: 18px;
+  margin-bottom: 10px;
 }
 .footer__nav ul {
   margin: 0;
