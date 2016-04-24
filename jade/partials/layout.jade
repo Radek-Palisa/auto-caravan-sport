@@ -40,3 +40,7 @@ html
 
 		script(src="js/functions.js")
 		script(src="//localhost:9001/livereload.js")
+		
+		block local-scripts
+			script.
+				window.addEventListener('scroll', hideHeader);

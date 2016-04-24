@@ -745,22 +745,34 @@ main {
 }
 
 /* Below Landing Section */
-.below-landing {
-  min-height: 110vh;
-  padding-top: 15px;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), transparent), url(./img/below-landing.jpg);
+.jumbotron {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.92)), url(./img/below-landing.jpg);
   background-size: cover;
-  background-position: 0 150px;
   background-repeat: no-repeat;
+  background-position: center;
+}
+
+.below-landing {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 25px;
 }
 .below-landing__content {
-  margin: 15px auto 0;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  max-width: 1180px;
+  width: 1180px;
 }
 
 .homepage-article {
+  /* opacity: 0; */
   flex-wrap: wrap;
   width: 29%;
   margin-right: 6.5%;
@@ -774,36 +786,33 @@ main {
 .article__wrap {
   width: 100%;
 }
-.article__wrap h1 {
-  margin: 0 auto;
-  width: 100%;
-  padding: 15px 0;
-  font-size: 1em;
-  font-family: open sans;
-  text-align: center;
-}
 .article__wrap p {
   line-height: 1.4;
-  margin-top: 15px;
+  margin-top: 27px;
   color: white;
 }
 
 .article__img-wrap {
   position: relative;
   width: 100%;
-  height: 85px;
-  text-align: center;
+  height: 65px;
+  line-height: 65px;
   background-color: white;
   box-shadow: 1px 1px 2px 1px #151515;
 }
 .article__img-wrap img {
+  display: none;
   position: absolute;
-  left: 50%;
+  left: 15px;
   top: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
-  height: 80%;
-  padding: 10px 0;
+  transform: translateY(-50%);
+  height: 40%;
+}
+.article__img-wrap h1 {
+  margin: 0 auto;
+  font-size: 1em;
+  font-family: open sans;
+  text-align: center;
 }
 
 /* Nabidka Page styles */
@@ -1109,7 +1118,8 @@ main {
   height: 10vh;
   font-size: 14px;
   color: #e1e1e1;
-  background-color: rgba(0, 0, 0, 0.7);
+  border-top: solid 1px rgba(56, 56, 56, 0.43);
+  background-color: rgba(0, 0, 0, 0.3);
   /* background: url('img/picture-grid_desktop.jpg'), url('img/picture-grid_desktop.jpg') */
   background-size: 1000px auto;
   background-position: left top -47px, left 1010px bottom -29px;

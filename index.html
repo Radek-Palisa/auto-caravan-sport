@@ -15,6 +15,7 @@
     <script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
   </head>
   <body>
+    <section class="jumbotron"></section>
     <!-- Landing Page-->
     <section class="landing-page">
       <div class="picture-grid">
@@ -87,22 +88,25 @@
       <div class="below-landing__content">
         <article class="homepage-article">
           <div class="article__wrap">
-            <h1>O firmě</h1>
-            <div class="article__img-wrap"><img src="./img/home.svg" class="index-icon"></div>
+            <div class="article__img-wrap"><img src="./img/home.svg" class="index-icon">
+              <h1>O firmě</h1>
+            </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt nulla officia et accusantium perspiciatis ratione quis, obcaecati, mollitia in laboriosam tenetur odit sint unde quia inventore velit necessitatibus rerum, distinctio.</p>
           </div>
         </article>
         <article class="homepage-article">
           <div class="article__wrap">
-            <h1>Co nabízím</h1>
-            <div class="article__img-wrap"><img src="./img/van.svg" class="index-icon"></div>
+            <div class="article__img-wrap"><img src="./img/van.svg" class="index-icon">
+              <h1>Co nabízím</h1>
+            </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis asperiores, labore quo tempora placeat dolorem libero id alias accusamus odio aut excepturi, similique fugit. Perspiciatis accusamus nostrum a! Velit, quibusdam.</p>
           </div>
         </article>
         <article class="homepage-article">
           <div class="article__wrap">
-            <h1>Zkontaktujte mně</h1>
-            <div class="article__img-wrap"><img src="./img/envelope.svg" class="index-icon"></div>
+            <div class="article__img-wrap"><img src="./img/envelope.svg" class="index-icon">
+              <h1>Zkontaktujte mně</h1>
+            </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum molestias, dolores eaque ullam perferendis consequatur? Totam deserunt itaque culpa laudantium, cumque, dolor tempore optio harum placeat similique temporibus molestiae fugiat!</p>
           </div>
         </article>
@@ -124,5 +128,6 @@
     </footer>
     <script src="js/functions.js"></script>
     <script src="//localhost:9001/livereload.js"></script>
+    <script>window.addEventListener('scroll', showArticles)</script>
   </body>
 </html>
