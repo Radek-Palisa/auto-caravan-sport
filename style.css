@@ -772,7 +772,7 @@ main {
 }
 
 .homepage-article {
-  /* opacity: 0; */
+  opacity: 0;
   flex-wrap: wrap;
   width: 29%;
   margin-right: 6.5%;
@@ -781,6 +781,10 @@ main {
 }
 .homepage-article:nth-child(3) {
   margin-right: 0;
+}
+
+.in-view {
+  opacity: 1;
 }
 
 .article__wrap {

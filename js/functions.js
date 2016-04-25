@@ -113,13 +113,13 @@ function showArticles() {
 	var parent_top_position = $parent_element.offset().top;
     var element_bottom_within_parent = parent_top_position + 100 + element_height;
 	var element_half_within_parent = parent_top_position + 100 + (element_height/2);
- 	/*
+ 	
 	if (element_half_within_parent <= window_bottom_position){
 		$(".homepage-article").each(function(index) {
-			$(this).delay(150*index).fadeTo(1200);
+			$(this).delay(200*index).fadeTo(1000, 1);
 		});
-	}  */
-	 
+	}
+	/* 
     //check to see if this current container is within viewport
     if ((element_bottom_position >= window_top_position) &&
         (element_top_position <= window_bottom_position)) {
@@ -127,19 +127,19 @@ function showArticles() {
     } else {
       $element.removeClass('in-view');
     }
-
+	*/
     if ((element_bottom_within_parent <= window_bottom_position) && (parent_top_position + (parent_height*0.9) >= window_bottom_position)) { 	
-		$(this).css({
+		$element.css({
 			'position': 'fixed',
 			'top': 'auto',
 			'bottom': '0'})
 	} else if (parent_top_position + (parent_height*0.9) < window_bottom_position) {
-		$(this).css({
+		$element.css({
 			'position': 'absolute',
 			'top': 'auto',
 			'bottom': '10%'})
 	} else {
-		$(this).removeAttr('style');
+		$element.removeAttr('style');
 	}
 };
 
