@@ -6,7 +6,7 @@ var $root = $('html, body');
 $('.arrow-link').click(function() {
 	$root.animate({
 		scrollTop: $( $.attr(this, 'href') ).offset().top
-	}, 600);
+	}, 1500, 'easeOutQuart');
 	return false;
 });
 
@@ -73,9 +73,11 @@ function debounce(func, wait, immediate) {
 	};
 };
 
-var myEfficientFn = debounce(function() {
+//
+// --- Hide Header with Scroll Down ---
+//
+var hideHeader = debounce(function() {
 	
-	// Header disappers with scroll down
 	if ($(this).scrollTop()> $('.header__wrapper').height())
 	 {
 		$('.header__banner').slideUp(500);
@@ -86,7 +88,60 @@ var myEfficientFn = debounce(function() {
 	 }
 }, 200);
 
-window.addEventListener('scroll', myEfficientFn);
+/*
+var showArticles = debounce(function(){
+	
+	if ($(this).scrollTop()> $('.landing-page').height()*0.75)
+	 {
+		$('.homepage-article').fadeIn(700);
+	 }
+}, 200);
+*/
+var $animation_elements = $('.below-landing__content');
+var $window = $(window);
+var $parent_element = $('.below-landing');
+
+function showArticles() {
+	var window_height = $window.height();
+	var window_top_position = $window.scrollTop();
+	var window_bottom_position = (window_top_position + window_height);
+    var $element = $('.below-landing__content');
+    var element_height = $element.outerHeight();
+    var element_top_position = $element.offset().top;
+    var element_bottom_position = (element_top_position + element_height);
+	var parent_height = $parent_element.outerHeight();
+	var parent_top_position = $parent_element.offset().top;
+    var element_bottom_within_parent = parent_top_position + 100 + element_height;
+	var element_half_within_parent = parent_top_position + 100 + (element_height/2);
+ 	
+	if (element_half_within_parent <= window_bottom_position){
+		$(".homepage-article").each(function(index) {
+			$(this).delay(200*index).fadeTo(1000, 1);
+		});
+	}
+	/* 
+    //check to see if this current container is within viewport
+    if ((element_bottom_position >= window_top_position) &&
+        (element_top_position <= window_bottom_position)) {
+      $element.addClass('in-view');
+    } else {
+      $element.removeClass('in-view');
+    }
+	*/
+    if ((element_bottom_within_parent <= window_bottom_position) && (parent_top_position + (parent_height*0.9) >= window_bottom_position)) { 	
+		$element.css({
+			'position': 'fixed',
+			'top': 'auto',
+			'bottom': '0'})
+	} else if (parent_top_position + (parent_height*0.9) < window_bottom_position) {
+		$element.css({
+			'position': 'absolute',
+			'top': 'auto',
+			'bottom': '10%'})
+	} else {
+		$element.removeAttr('style');
+	}
+};
 
 //
 // --- Toggle function for Soucasne k prodeji vs Predchozi prace

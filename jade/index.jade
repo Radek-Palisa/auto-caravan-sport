@@ -3,6 +3,8 @@ extends partials/layout.jade
 block header-wrapper
 
 block content
+
+	section.jumbotron
 	// Landing Page
 	section.landing-page
 		.picture-grid
@@ -65,24 +67,30 @@ block content
 		.below-landing__content
 			article.homepage-article
 				.article__wrap
-					h1 O firmě
+					.article__img-wrap
+						img.index-icon(src="./img/home.svg")
+						h1 O firmě
+					
 					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt nulla officia et accusantium perspiciatis ratione quis, obcaecati, mollitia in laboriosam tenetur odit sint unde quia inventore velit necessitatibus rerum, distinctio.
-				.article__img-wrap
-					div.logo.logo--fonts
-						h1 A.C.S. s.r.o.
-						p Auto Caravan Sport
+			
 				
 			article.homepage-article
 				.article__wrap
-					h1 Co nabízím
+					.article__img-wrap
+						img.index-icon(src="./img/van.svg")
+						h1 Co nabízím
+					
 					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis asperiores, labore quo tempora placeat dolorem libero id alias accusamus odio aut excepturi, similique fugit. Perspiciatis accusamus nostrum a! Velit, quibusdam.
-				.article__img-wrap
-					img.home-nabidka(src="./img/ford-custom.jpg", alt="ford custom")
+			
 				
 			article.homepage-article
 				.article__wrap
-					h1 Zkontaktujte mně
+					.article__img-wrap
+						img.index-icon(src="./img/envelope.svg")
+						h1 Zkontaktujte mně
+					
 					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum molestias, dolores eaque ullam perferendis consequatur? Totam deserunt itaque culpa laudantium, cumque, dolor tempore optio harum placeat similique temporibus molestiae fugiat!
-				.article__img-wrap
-					img.home-socicon(src="./img/email-icon.jpeg")
-					img.home-socicon(src="./img/fb-icon.png")
+			
+block local-scripts
+	script.
+		window.addEventListener('scroll', showArticles)
