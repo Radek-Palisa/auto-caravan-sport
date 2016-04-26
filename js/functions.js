@@ -113,21 +113,14 @@ function showArticles() {
 	var parent_top_position = $parent_element.offset().top;
     var element_bottom_within_parent = parent_top_position + 100 + element_height;
 	var element_half_within_parent = parent_top_position + 100 + (element_height/2);
- 	
+ 	/*
 	if (element_half_within_parent <= window_bottom_position){
 		$(".homepage-article").each(function(index) {
 			$(this).delay(200*index).fadeTo(1000, 1);
 		});
 	}
-	/* 
-    //check to see if this current container is within viewport
-    if ((element_bottom_position >= window_top_position) &&
-        (element_top_position <= window_bottom_position)) {
-      $element.addClass('in-view');
-    } else {
-      $element.removeClass('in-view');
-    }
 	*/
+	/*
     if ((element_bottom_within_parent <= window_bottom_position) && (parent_top_position + (parent_height*0.9) >= window_bottom_position)) { 	
 		$element.css({
 			'position': 'fixed',
@@ -141,6 +134,7 @@ function showArticles() {
 	} else {
 		$element.removeAttr('style');
 	}
+	*/
 };
 
 //
@@ -168,3 +162,18 @@ $(document).ready(function(){
 		}
 	});
 });
+
+var fadeStart=100 // 100px scroll or less will equiv to 1 opacity
+	,fadeUntil=200 // 200px scroll or more will equiv to 0 opacity
+	,fading = $('#home-page');
+
+	$(window).bind('scroll', function(){
+		var offset = $(document).scrollTop()
+			,opacity=1;
+		if( offset<=fadeStart ){
+			opacity=0;
+		}else if( offset<=fadeUntil ){
+			opacity=1-offset/fadeUntil;
+		}
+		fading.css('opacity', opacity).html(opacity);
+	});

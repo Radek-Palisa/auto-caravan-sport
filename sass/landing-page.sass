@@ -1,12 +1,152 @@
+.jumbotron
+	position: fixed
+	width: 100%
+	height: 100%
+	background: linear-gradient(transparent 83%, rgba(0, 0, 0, 0.7)), url(./img/below-landing.jpg)
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: top
+
+.index-header
+	position: fixed
+	z-index: 2
+	top: 0
+	width: 100%
+	height: auto
+
+.hero__header
+	position: absolute
+	top: 0
+	z-index: 2
+	width: 40%
+	height: 20vh
+	box-shadow: none
+	background: linear-gradient(170deg, #eaeaea, transparent 30%)
+
+	// Try inverse shadow
+	// box-shadow: 0 -1px 23px #6f6f6f
+	// background-color: none
+	// background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0) 60%)
+
+	.logo
+		margin-left: 5vw
+		
+	.logo h1
+		color: white
+		text-shadow: 1px 1px 4px #191850
+		
+	.logo p
+		color: white
+		text-shadow: 1px 1px 4px black
+		
+.header__wrapper
+	position: absolute
+	top: 0
+	right: 5vw
+	z-index: 4
+	height: 20vh
+	width: 500px
+	
+	.nav ul li a
+		color: white
+
+//
+// *** Slogan ***
+//
+
+.slogan
+	height: 100vh
+	position: relative
+	
+.slogan__txt
+	position: absolute
+	bottom: 5%
+	right: 10%
+	width: 1180px
+	margin: 0
+	text-align: right
+	font-weight: bold
+	font-style: italic
+	font-size: 32px
+	letter-spacing: 0.4px
+	color: white
+
+//
+//
+/* ***** Below Landing Section *****/
+//
+//
+
+.below-landing
+	position: relative
+	z-index: 3
+	height: 100vh
+	padding-top: 20vh
+	background-color: rgba(0,0,0,0.7)
+
+	&__content
+		margin: 0 auto
+		display: flex
+		flex-wrap: wrap
+		width: 1180px
+		
+.homepage-article
+	opacity: 1
+	// transition: all 1500ms linear
+	flex-wrap: wrap
+	width: 29%
+	margin-right: 6.5%
+	padding: 0 10px
+	border-radius: 1px
+	
+	&:nth-child(3)
+		margin-right: 0
+
+.in-view
+	opacity: 1
+
+.article__wrap
+	width: 100%
+		
+	p
+		margin: 0
+		line-height: 1.4
+		color: white
+
+.article__img-wrap
+	position: relative
+	width: 100%
+	height: 60px
+	line-height: 60px
+	// box-shadow: 1px 1px 2px 1px #151515
+
+	img
+		display: none
+		position: absolute
+		left: 15px
+		top: 50%
+		transform: translateY(-50%)
+		height: 40%
+	
+	h1
+		margin: 0 auto
+		// background-color: #102775
+		font-size: 1.2em
+		font-family: open sans
+		color: white
+		text-align: center
+
+
+/**/
+/* ******** Picture Grid ******** */
 /**/
 /**/
-/* ******** Landing Page ******** */
-/**/
-/**/
+
 .landing-page
 	min-height: 650px
 	height: 100vh
 	position: relative
+	z-index: 3
 
 .show-slides
 	position: absolute
@@ -30,16 +170,6 @@
 	&:active .show-slides__icon
 		width: 28px
 
-.slogan
-	text-align: right
-	height: 21px
-	position: absolute
-	bottom: -55px
-	right: 0
-	font-style: italic
-	font-size: 18px
-	color: #AF7848
-
 .arrow-link
 	position: absolute
 	width: 70px
@@ -57,77 +187,3 @@
 	margin: 0 auto
 	width: 35px
 	transform: rotate(180deg)
-
-/* Below Landing Section */
-
-.jumbotron
-	position: fixed
-	width: 100%
-	height: 100%
-	background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.92)), url(./img/below-landing.jpg)
-	background-size: cover
-	background-repeat: no-repeat
-	background-position: center
-
-.below-landing
-	position: relative
-	min-height: 100vh
-	padding-top: 25px
-	// background-color: #efefee
-
-	&__content
-		position: absolute
-		top: 100px
-		left: 50%
-		transform: translateX(-50%)
-		margin: 0 auto
-		display: flex
-		flex-wrap: wrap
-		width: 1180px
-		
-.homepage-article
-	opacity: 0
-	// transition: all 1500ms linear
-	flex-wrap: wrap
-	width: 29%
-	margin-right: 6.5%
-	padding: 0 10px
-	border-radius: 1px
-	
-	&:nth-child(3)
-		margin-right: 0
-
-.in-view
-	opacity: 1
-
-.article__wrap
-	width: 100%
-		
-	p
-		line-height: 1.4
-		margin-top: 27px
-		color: white
-
-.article__img-wrap
-	position: relative
-	width: 100%
-	height: 65px
-	line-height: 65px
-	background-color: white
-	box-shadow: 1px 1px 2px 1px #151515
-
-	img
-		display: none
-		position: absolute
-		left: 15px
-		top: 50%
-		transform: translateY(-50%)
-		height: 40%
-	
-	h1
-		margin: 0 auto
-		// background-color: #102775
-		font-size: 1em
-		font-family: open sans
-		// color: white
-		text-align: center
