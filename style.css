@@ -695,6 +695,11 @@ main {
   background-position: top;
 }
 
+.jumbotron--undock {
+  position: absolute;
+  top: 100%;
+}
+
 .index-header {
   position: fixed;
   z-index: 2;
