@@ -80,11 +80,11 @@ var hideHeader = debounce(function() {
 	
 	if ($(this).scrollTop()> $('.header__wrapper').height())
 	 {
-		$('.header__banner').slideUp(500);
+		$('.header__banner').fadeOut(500);
 	 }
 	else
 	 {
-	  $('.header__banner').slideDown(500);
+	  $('.header__banner').fadeIn(500);
 	 }
 }, 200);
 

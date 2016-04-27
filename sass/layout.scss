@@ -9,11 +9,12 @@
 	&__banner {
 		position: fixed;
 		top: 0; left: 0; right: 0;
+		z-index: 5;
 	}
 	
 	&__wrapper {
 		position: relative;
-		max-width: 1000px;
+		max-width: 1300px;
 		margin: 0 auto;
 		height: 17vh;
 	}

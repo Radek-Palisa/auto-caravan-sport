@@ -22,17 +22,21 @@ p {
 .logo--fonts {
 	
 	h1 {
+		color: white;
 		font-family: tahoma;
 		font-size: 28px;
 		font-size: 2.4vw;
 		font-style: oblique;
+		text-shadow: 1px 1px 4px #191850
 	}
 	
 	p {
+		color: white;
 		font-family: verdana;
 		font-size: 1em;
 		font-size: 1.3vw;
 		letter-spacing: 0.5px;
+		text-shadow: 1px 1px 4px black;
 	}
 }
 
