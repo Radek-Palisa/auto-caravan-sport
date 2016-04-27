@@ -100,7 +100,7 @@ var showArticles = debounce(function(){
 var $animation_elements = $('.below-landing__content');
 var $window = $(window);
 var $parent_element = $('.below-landing');
-
+/*
 function showArticles() {
 	var window_height = $window.height();
 	var window_top_position = $window.scrollTop();
@@ -135,7 +135,7 @@ function showArticles() {
 		$element.removeAttr('style');
 	}
 	*/
-};
+//};
 
 //
 // --- Toggle function for Soucasne k prodeji vs Predchozi prace
@@ -163,17 +163,29 @@ $(document).ready(function(){
 	});
 });
 
-var fadeStart=100 // 100px scroll or less will equiv to 1 opacity
-	,fadeUntil=200 // 200px scroll or more will equiv to 0 opacity
-	,fading = $('#home-page');
+var fadeInStart = 0 // 100px scroll or less will equiv to 1 opacity
+	,fadeUntil= 500 // 200px scroll or more will equiv to 0 opacity
+	,revealing = $('#home-page')
+	,fadingStart = 700
+	,fadingEnd = 1050;
+var $window = $(window);
+var windowHalf = $window.height() / 2;
+var $homepageArticle = $('.homepage-article');
 
 	$(window).bind('scroll', function(){
 		var offset = $(document).scrollTop()
-			,opacity=1;
-		if( offset<=fadeStart ){
-			opacity=0;
-		}else if( offset<=fadeUntil ){
-			opacity=1-offset/fadeUntil;
+			,opacity = 0;
+		if (offset >= fadeUntil) {
+			opacity = 1;
+		} else if (offset <= fadeUntil && offset >= 0) {
+			opacity = 0+offset/fadeUntil;
 		}
-		fading.css('opacity', opacity).html(opacity);
+		revealing.css('opacity', opacity);
+		$homepageArticle.css('opacity', '0');
+		
+		if (offset >= windowHalf) {
+			$(".homepage-article").each(function(index) {
+			$(this).delay(200*index).fadeTo(1000, 1);
+		});
+		}
 	});
