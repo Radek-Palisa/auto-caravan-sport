@@ -1,12 +1,139 @@
+.jumbotron
+	position: fixed
+	top: 0
+	width: 100%
+	height: 100%
+	// background: linear-gradient(transparent 83%, rgba(0, 0, 0, 0.7)), url(./img/below-landing.jpg)
+	// Black to Transparent to Black under Degree
+	$linear-gradient: 'linear-gradient(-7deg, rgba(0, 0, 0, 0.55), transparent, rgba(0, 0, 0, 0.68))'
+	$linear-gradient: 'linear-gradient(172deg, rgba(0, 0, 0, 0.65), transparent 30%, transparent 65%, rgba(0, 0, 0, 0.5))'
+	$linear-gradient: 'linear-gradient(172deg,rgb(21, 21, 21), rgba(0, 0, 0, 0.65) 5%, transparent 30%, transparent 65%, rgba(0, 0, 0, 0.5))'
+	background: url(./img/below-landing.jpg)
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: top
+
+	
+.jumbotron--undock
+	position: absolute
+	top: 100%
+
+.hero__header
+	position: absolute
+	top: 0
+	width: 40%
+	height: 20vh
+	box-shadow: none
+	// background: linear-gradient(170deg, #eaeaea, transparent 30%)
+
+	// Try inverse shadow
+	// box-shadow: 0 -1px 23px #6f6f6f
+	// background-color: none
+	// background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0) 60%)
+		
+	.logo h1
+		color: white
+		text-shadow: 1px 1px 4px #191850
+		
+	.logo p
+		color: white
+		text-shadow: 1px 1px 4px black
+
+//
+// *** Slogan ***
+//
+
+.slogan
+	height: 100vh
+	position: relative
+	
+.slogan__txt
+	width: 1180px
+	margin: 0 auto
+	text-align: right
+	font-weight: bold
+	font-style: italic
+	font-size: 32px
+	letter-spacing: 0.4px
+	color: white
+
+//
+//
+/* ***** Below Landing Section *****/
+//
+//
+
+.below-landing
+	position: relative
+	z-index: 3
+	height: 100vh
+	margin-top: 80vh
+	padding-top: 4vh
+	background-color: rgba(0,0,0,0)
+
+	&__content
+		margin: 20vh auto 0
+		display: flex
+		flex-wrap: wrap
+		width: 1180px
+	
+.homepage-article
+	opacity: 1
+	// transition: all 1500ms linear
+	flex-wrap: wrap
+	width: 29%
+	margin-right: 6.5%
+	padding: 0 10px
+	border-radius: 1px
+	
+	&:nth-child(3)
+		margin-right: 0
+
+.in-view
+	opacity: 1
+
+.article__wrap
+	width: 100%
+		
+	p
+		margin: 0
+		line-height: 1.4
+		color: white
+
+.article__img-wrap
+	position: relative
+	width: 100%
+	height: 60px
+	line-height: 60px
+	// box-shadow: 1px 1px 2px 1px #151515
+
+	img
+		display: none
+		position: absolute
+		left: 15px
+		top: 50%
+		transform: translateY(-50%)
+		height: 40%
+	
+	h1
+		margin: 0 auto
+		// background-color: #102775
+		font-size: 1.2em
+		font-family: open sans
+		color: white
+		text-align: center
+
+
+/**/
+/* ******** Picture Grid ******** */
 /**/
 /**/
-/* ******** Landing Page ******** */
-/**/
-/**/
+
 .landing-page
 	min-height: 650px
 	height: 100vh
 	position: relative
+	z-index: 3
 
 .show-slides
 	position: absolute
@@ -30,16 +157,6 @@
 	&:active .show-slides__icon
 		width: 28px
 
-.slogan
-	text-align: right
-	height: 21px
-	position: absolute
-	bottom: -55px
-	right: 0
-	font-style: italic
-	font-size: 18px
-	color: #AF7848
-
 .arrow-link
 	position: absolute
 	width: 70px
@@ -57,69 +174,3 @@
 	margin: 0 auto
 	width: 35px
 	transform: rotate(180deg)
-
-/* Below Landing Section */
-
-.below-landing 
-	min-height: 100vh
-
-	background-color: #efefee
-	padding: 100px 20px
-
-	&__content
-		display: flex
-		flex-wrap: wrap
-		max-width: 1080px
-		margin: 0 auto
-		
-.homepage-article
-	flex-wrap: wrap
-	width: 49.5%
-	margin-right: 1%
-	margin-bottom: 1%
-	padding: 0 30px 10px
-	// border: dashed 1px grey
-	background-color: white
-	box-shadow: 3px 3px 2px 1px #ccc
-	
-	&:nth-child(even)
-		margin-right: 0
-
-.article__wrap
-	width: 100%
-
-	h1
-		margin-top: 0
-		width: 40%
-		padding: 10px 0
-		background-color: #102775
-		font-size: 1em
-		font-family: open sans
-		color: #E2E2E2
-		text-align: center
-		
-	p
-		line-height: 1.4
-		margin-top: 20px
-		color: #545454
-
-.article__img-wrap
-	width: 100%
-	text-align: center
-	
-	.logo
-		position: static
-	
-	.home-nabidka
-		width: 50%
-		margin: 0 auto
-		
-	.home-predprace
-		width: 50%
-		padding: 29px
-		display: inline-block
-		
-	.home-socicon
-		width: 20%
-		padding: 10px 20px
-		display: inline-block

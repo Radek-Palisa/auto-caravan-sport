@@ -33,9 +33,14 @@ html
 						li: a(href="ofirme.html") O firmě
 						li: a(href="kontakt.html") Kontakt
 				.footer--right
-					img.home-socicon.footer__socicon(src="./img/email-icon.jpeg")
-					img.home-socicon.footer__socicon(src="./img/fb-icon.png")
+					img.home-socicon.footer__socicon(src="./img/email-icon.svg")
+					img.home-socicon.footer__socicon(src="./img/fb-icon.svg")
 					p.footer__credits Web: 
 						a(href="https://www.linkedin.com/in/radek-palisa-96332886", target="_blank") Radek Palisa
 
 		script(src="js/functions.js")
+		// script(src="//localhost:9001/livereload.js")
+		
+		block local-scripts
+			script.
+				// window.addEventListener('scroll', hideHeader);

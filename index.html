@@ -15,21 +15,57 @@
     <script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
   </head>
   <body>
-    <!-- Landing Page-->
-    <section class="landing-page">
-      <div class="picture-grid">
-        <div class="logo logo--fonts">
-          <h1>A.C.S. s.r.o.</h1>
-          <p>Auto Caravan Sport</p>
+    <section class="jumbotron"></section>
+    <div class="header__banner">
+      <div class="header__wrapper">
+        <div class="hero__header">
+          <div class="logo logo--fonts">
+            <h1>A.C.S. s.r.o.</h1>
+            <p>Auto Caravan Sport</p>
+          </div>
         </div>
-        <nav role="navigation" class="nav nav--fonts">
+        <div role="navigation" class="nav nav nav--fonts">
           <ul>
             <li><a href="index.html">Domů</a></li>
             <li><a href="nabidka.html">Nabídka</a></li>
             <li><a href="ofirme.html">O firmě</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
           </ul>
-        </nav>
+        </div>
+      </div>
+    </div>
+    <section id="home-page" class="below-landing">
+      <p class="slogan__txt">Vítejte v mém světě dodávkové velikosti</br>...ani malé ani velké.</p>
+      <div class="below-landing__content">
+        <article class="homepage-article">
+          <div class="article__wrap">
+            <div class="article__img-wrap"><img src="./img/home.svg" class="index-icon">
+              <h1>O firmě</h1>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt nulla officia et accusantium perspiciatis ratione quis, obcaecati, mollitia in laboriosam tenetur odit sint unde quia inventore velit necessitatibus rerum, distinctio.</p>
+          </div>
+        </article>
+        <article class="homepage-article">
+          <div class="article__wrap">
+            <div class="article__img-wrap"><img src="./img/van.svg" class="index-icon">
+              <h1>Co nabízím</h1>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis asperiores, labore quo tempora placeat dolorem libero id alias accusamus odio aut excepturi, similique fugit. Perspiciatis accusamus nostrum a! Velit, quibusdam.</p>
+          </div>
+        </article>
+        <article class="homepage-article">
+          <div class="article__wrap">
+            <div class="article__img-wrap"><img src="./img/envelope.svg" class="index-icon">
+              <h1>Zkontaktujte mně</h1>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum molestias, dolores eaque ullam perferendis consequatur? Totam deserunt itaque culpa laudantium, cumque, dolor tempore optio harum placeat similique temporibus molestiae fugiat!</p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- Landing Page-->
+    <section class="landing-page">
+      <div class="picture-grid">
         <div class="grid__container">
           <div class="grid__cell grid__cell--hover grid__cell--top-start">
             <div class="slide-in">
@@ -77,42 +113,11 @@
           </div>
           <div class="show-slides"> <img src="img/eye.svg" class="show-slides__icon"><span class="show-slides__txt">Ukaž vše</span></div>
         </div>
-        <p class="slogan">Vítejte v mém světě dodávkové velikosti</br>...ani malé ani velké.</p>
       </div>
       <!-- picture grid end--><a href="#home-page" class="arrow-link"><img src="img/ctrl.svg" alt="" class="arrow"></a>
     </section>
-    <!-- landing container end-->
-    <!-- Second Page-->
-    <section id="home-page" class="below-landing">
-      <div class="below-landing__content">
-        <article class="homepage-article">
-          <div class="article__wrap">
-            <h1>O firmě</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt nulla officia et accusantium perspiciatis ratione quis, obcaecati, mollitia in laboriosam tenetur odit sint unde quia inventore velit necessitatibus rerum, distinctio.</p>
-          </div>
-          <div class="article__img-wrap">
-            <div class="logo logo--fonts">
-              <h1>A.C.S. s.r.o.</h1>
-              <p>Auto Caravan Sport</p>
-            </div>
-          </div>
-        </article>
-        <article class="homepage-article">
-          <div class="article__wrap">
-            <h1>Co nabízím</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis asperiores, labore quo tempora placeat dolorem libero id alias accusamus odio aut excepturi, similique fugit. Perspiciatis accusamus nostrum a! Velit, quibusdam.</p>
-          </div>
-          <div class="article__img-wrap"><img src="./img/ford-custom.jpg" alt="ford custom" class="home-nabidka"></div>
-        </article>
-        <article class="homepage-article">
-          <div class="article__wrap">
-            <h1>Zkontaktujte mně</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum molestias, dolores eaque ullam perferendis consequatur? Totam deserunt itaque culpa laudantium, cumque, dolor tempore optio harum placeat similique temporibus molestiae fugiat!</p>
-          </div>
-          <div class="article__img-wrap"><img src="./img/email-icon.jpeg" class="home-socicon"><img src="./img/fb-icon.png" class="home-socicon"></div>
-        </article>
-      </div>
-    </section>
+    <!-- landing container end
+    -->
     <footer class="footer">
       <p class="footer__copyright footer--middle">Auto Caravan Sport s.r.o. 2016</p>
       <nav class="footer__nav footer--left">
@@ -123,10 +128,12 @@
           <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
       </nav>
-      <div class="footer--right"><img src="./img/email-icon.jpeg" class="home-socicon footer__socicon"><img src="./img/fb-icon.png" class="home-socicon footer__socicon">
+      <div class="footer--right"><img src="./img/email-icon.svg" class="home-socicon footer__socicon"><img src="./img/fb-icon.svg" class="home-socicon footer__socicon">
         <p class="footer__credits">Web: <a href="https://www.linkedin.com/in/radek-palisa-96332886" target="_blank">Radek Palisa</a></p>
       </div>
     </footer>
     <script src="js/functions.js"></script>
+    <!-- script(src="//localhost:9001/livereload.js")-->
+    <script>window.addEventListener('scroll', showArticles)</script>
   </body>
 </html>

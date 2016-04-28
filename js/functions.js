@@ -6,7 +6,7 @@ var $root = $('html, body');
 $('.arrow-link').click(function() {
 	$root.animate({
 		scrollTop: $( $.attr(this, 'href') ).offset().top
-	}, 600);
+	}, 1500, 'easeOutQuart');
 	return false;
 });
 
@@ -73,20 +73,20 @@ function debounce(func, wait, immediate) {
 	};
 };
 
-var myEfficientFn = debounce(function() {
+//
+// --- Hide Header with Scroll Down ---
+//
+var hideHeader = debounce(function() {
 	
-	// Header disappers with scroll down
 	if ($(this).scrollTop()> $('.header__wrapper').height())
 	 {
-		$('.header__banner').slideUp(500);
+		$('.header__banner').fadeOut(500);
 	 }
 	else
 	 {
-	  $('.header__banner').slideDown(500);
+	  $('.header__banner').fadeIn(500);
 	 }
 }, 200);
-
-window.addEventListener('scroll', myEfficientFn);
 
 //
 // --- Toggle function for Soucasne k prodeji vs Predchozi prace
@@ -113,3 +113,49 @@ $(document).ready(function(){
 		}
 	});
 });
+
+var fadeInStart = 0 // 100px scroll or less will equiv to 1 opacity
+	,fadeUntil= 300 // 200px scroll or more will equiv to 0 opacity
+	,revealing = $('#home-page')
+	,fadingStart = 700
+	,fadingEnd = 1050;
+var $window = $(window);
+var windowHalf = $window.height() / 2;
+var $jumbotron = $('.jumbotron');
+var $indexHeader = $('.header__banner');
+var $homepageArticle = $('.homepage-article');
+var homepageArticle_top = $homepageArticle.offset().top
+var fadeInEnd = homepageArticle_top + 270;
+$homepageArticle.css('opacity', '0');
+
+	$(window).bind('scroll', function(){
+		var offset = $(document).scrollTop();
+		var opacity = 0;
+		/*
+		if (offset > 200) {
+			$indexHeader.fadeOut();
+		} else {
+			$indexHeader.fadeIn();
+		}
+		*/
+		if (offset >= fadeUntil) {
+			opacity = 0.9;
+		} else if (offset <= fadeUntil) {
+			opacity = Math.min(0.9, 0+offset/fadeUntil);
+		}
+		
+		revealing.css('background-color', 'rgba(0,0,0, '+ opacity +'');
+		
+		if (offset >= windowHalf) {
+			$homepageArticle.each(function(index) {
+			$(this).delay(200*index).fadeTo(1000, 1);
+		});
+		}
+		/*
+		if (offset >= $window.height()) {
+			$jumbotron.addClass('jumbotron--undock');
+		} else {
+			$jumbotron.removeClass('jumbotron--undock');
+		}
+		*/
+	});
