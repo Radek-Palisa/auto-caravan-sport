@@ -1,4 +1,7 @@
 /* Header partial */
+.header__banner {
+	background-image: linear-gradient(172deg,rgb(21, 21, 21), rgba(0, 0, 0, 0.65) 5%, transparent 30%, transparent 65%, rgba(0, 0, 0, 0.5));
+}
 
 .logo, .nav {
 	position: absolute;
@@ -57,24 +60,24 @@
 	background-attachment: fixed;
 	
 	&--gallery-bg {
-		background-image: linear-gradient(172deg, #151515, rgba(0, 0, 0, 0.65) 5%, transparent 30%, transparent 65%, rgba(0, 0, 0, 0.5)), url(img/gallery-bg_3872w_35q.jpg);
+		background-image: url(img/gallery-bg_3872w_35q.jpg);
 	}
 	
 	&--nabidka-bg {
-		background-image: linear-gradient(172deg, #151515, rgba(0, 0, 0, 0.65) 5%, transparent 30%, transparent 65%, rgba(0, 0, 0, 0.5)), url(img/nabidka-bg-1600w-45q.jpg);
+		background-image: url(img/nabidka-bg-1600w-45q.jpg);
 		transition: all 0.5s ease-in-out;
 	}
 	
 	&--predchoziprace-bg {
-		background-image: linear-gradient(172deg, #151515, rgba(0, 0, 0, 0.65) 5%, transparent 30%, transparent 65%, rgba(0, 0, 0, 0.5)), url(img/predchoziprace-bg_3872w_10q.jpg);
+		background-image: url(img/predchoziprace-bg_3872w_10q.jpg);
 		transition: all 0.5s ease-in-out;
 	}
 	
 	&--ofirme-bg {
-		background-image: linear-gradient(172deg, #151515, rgba(0, 0, 0, 0.65) 5%, transparent 30%, transparent 65%, rgba(0, 0, 0, 0.5)), url(img/ofirme.jpg);
+		background-image: url(img/ofirme.jpg);
 	}
 	
 	&--kontakt-bg {
-		background-image: linear-gradient(172deg, #151515, rgba(0, 0, 0, 0.65) 5%, transparent 30%, transparent 65%, rgba(0, 0, 0, 0.5)), url(img/kontakt-bg_3872w_10q.jpg);
+		background-image: url(img/kontakt-bg_3872w_10q.jpg);
 	}
 }

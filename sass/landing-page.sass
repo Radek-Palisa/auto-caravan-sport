@@ -1,13 +1,14 @@
 .jumbotron
 	position: fixed
+	top: 0
 	width: 100%
 	height: 100%
 	// background: linear-gradient(transparent 83%, rgba(0, 0, 0, 0.7)), url(./img/below-landing.jpg)
 	// Black to Transparent to Black under Degree
-	$linear-gradient: 'linear-gradient(-7deg, rgba(0, 0, 0, 0.55), transparent, rgba(0, 0, 0, 0.68)),'
-	$linear-gradient: 'linear-gradient(172deg, rgba(0, 0, 0, 0.65), transparent 30%, transparent 65%, rgba(0, 0, 0, 0.5)),'
-	$linear-gradient: 'linear-gradient(172deg,rgb(21, 21, 21), rgba(0, 0, 0, 0.65) 5%, transparent 30%, transparent 65%, rgba(0, 0, 0, 0.5)),'
-	background: #{$linear-gradient} url(./img/below-landing.jpg)
+	$linear-gradient: 'linear-gradient(-7deg, rgba(0, 0, 0, 0.55), transparent, rgba(0, 0, 0, 0.68))'
+	$linear-gradient: 'linear-gradient(172deg, rgba(0, 0, 0, 0.65), transparent 30%, transparent 65%, rgba(0, 0, 0, 0.5))'
+	$linear-gradient: 'linear-gradient(172deg,rgb(21, 21, 21), rgba(0, 0, 0, 0.65) 5%, transparent 30%, transparent 65%, rgba(0, 0, 0, 0.5))'
+	background: url(./img/below-landing.jpg)
 	background-size: cover
 	background-repeat: no-repeat
 	background-position: top
@@ -47,11 +48,8 @@
 	position: relative
 	
 .slogan__txt
-	position: absolute
-	bottom: 5%
-	right: 10%
 	width: 1180px
-	margin: 0
+	margin: 0 auto
 	text-align: right
 	font-weight: bold
 	font-style: italic
@@ -69,11 +67,12 @@
 	position: relative
 	z-index: 3
 	height: 100vh
-	padding-top: 20vh
-	background-color: rgba(0,0,0,0.9)
+	margin-top: 80vh
+	padding-top: 4vh
+	background-color: rgba(0,0,0,0)
 
 	&__content
-		margin: 0 auto
+		margin: 20vh auto 0
 		display: flex
 		flex-wrap: wrap
 		width: 1180px

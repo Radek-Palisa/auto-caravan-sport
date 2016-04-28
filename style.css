@@ -442,6 +442,10 @@ p {
 }
 
 /* Header partial */
+.header__banner {
+  background-image: linear-gradient(172deg, #151515, rgba(0, 0, 0, 0.65) 5%, transparent 30%, transparent 65%, rgba(0, 0, 0, 0.5));
+}
+
 .logo, .nav {
   position: absolute;
   bottom: 50%;
@@ -489,21 +493,21 @@ p {
   background-attachment: fixed;
 }
 .header--gallery-bg {
-  background-image: linear-gradient(172deg, #151515, rgba(0, 0, 0, 0.65) 5%, transparent 30%, transparent 65%, rgba(0, 0, 0, 0.5)), url(img/gallery-bg_3872w_35q.jpg);
+  background-image: url(img/gallery-bg_3872w_35q.jpg);
 }
 .header--nabidka-bg {
-  background-image: linear-gradient(172deg, #151515, rgba(0, 0, 0, 0.65) 5%, transparent 30%, transparent 65%, rgba(0, 0, 0, 0.5)), url(img/nabidka-bg-1600w-45q.jpg);
+  background-image: url(img/nabidka-bg-1600w-45q.jpg);
   transition: all 0.5s ease-in-out;
 }
 .header--predchoziprace-bg {
-  background-image: linear-gradient(172deg, #151515, rgba(0, 0, 0, 0.65) 5%, transparent 30%, transparent 65%, rgba(0, 0, 0, 0.5)), url(img/predchoziprace-bg_3872w_10q.jpg);
+  background-image: url(img/predchoziprace-bg_3872w_10q.jpg);
   transition: all 0.5s ease-in-out;
 }
 .header--ofirme-bg {
-  background-image: linear-gradient(172deg, #151515, rgba(0, 0, 0, 0.65) 5%, transparent 30%, transparent 65%, rgba(0, 0, 0, 0.5)), url(img/ofirme.jpg);
+  background-image: url(img/ofirme.jpg);
 }
 .header--kontakt-bg {
-  background-image: linear-gradient(172deg, #151515, rgba(0, 0, 0, 0.65) 5%, transparent 30%, transparent 65%, rgba(0, 0, 0, 0.5)), url(img/kontakt-bg_3872w_10q.jpg);
+  background-image: url(img/kontakt-bg_3872w_10q.jpg);
 }
 
 /* Layout for all pages except Landing */
@@ -516,14 +520,14 @@ p {
 .header__banner {
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
-  z-index: 5;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
 }
 .header__wrapper {
   position: relative;
   margin: 0 4%;
-  height: 20vh;
+  height: 15vh;
 }
 
 main {
@@ -685,9 +689,10 @@ main {
 }
 .jumbotron {
   position: fixed;
+  top: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(172deg,rgb(21, 21, 21), rgba(0, 0, 0, 0.65) 5%, transparent 30%, transparent 65%, rgba(0, 0, 0, 0.5)), url(./img/below-landing.jpg);
+  background: url(./img/below-landing.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -702,7 +707,7 @@ main {
   position: absolute;
   top: 0;
   width: 40%;
-  height: 20vh;
+  height: 15vh;
   box-shadow: none;
 }
 .hero__header .logo h1 {
@@ -720,11 +725,8 @@ main {
 }
 
 .slogan__txt {
-  position: absolute;
-  bottom: 5%;
-  right: 10%;
   width: 1180px;
-  margin: 0;
+  margin: 0 auto;
   text-align: right;
   font-weight: bold;
   font-style: italic;
@@ -738,11 +740,12 @@ main {
   position: relative;
   z-index: 3;
   height: 100vh;
-  padding-top: 20vh;
-  background-color: rgba(0, 0, 0, 0.9);
+  margin-top: 80vh;
+  padding-top: 4vh;
+  background-color: transparent;
 }
 .below-landing__content {
-  margin: 0 auto;
+  margin: 20vh auto 0;
   display: flex;
   flex-wrap: wrap;
   width: 1180px;

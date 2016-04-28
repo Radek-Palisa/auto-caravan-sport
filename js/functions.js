@@ -88,55 +88,6 @@ var hideHeader = debounce(function() {
 	 }
 }, 200);
 
-/*
-var showArticles = debounce(function(){
-	
-	if ($(this).scrollTop()> $('.landing-page').height()*0.75)
-	 {
-		$('.homepage-article').fadeIn(700);
-	 }
-}, 200);
-*/
-// var $animation_elements = $('.below-landing__content');
-// var $window = $(window);
-//var $parent_element = $('.below-landing');
-/*
-function showArticles() {
-	var window_height = $window.height();
-	var window_top_position = $window.scrollTop();
-	var window_bottom_position = (window_top_position + window_height);
-    var $element = $('.below-landing__content');
-    var element_height = $element.outerHeight();
-    var element_top_position = $element.offset().top;
-    var element_bottom_position = (element_top_position + element_height);
-	var parent_height = $parent_element.outerHeight();
-	var parent_top_position = $parent_element.offset().top;
-    var element_bottom_within_parent = parent_top_position + 100 + element_height;
-	var element_half_within_parent = parent_top_position + 100 + (element_height/2);
- 	/*
-	if (element_half_within_parent <= window_bottom_position){
-		$(".homepage-article").each(function(index) {
-			$(this).delay(200*index).fadeTo(1000, 1);
-		});
-	}
-	*/
-	/*
-    if ((element_bottom_within_parent <= window_bottom_position) && (parent_top_position + (parent_height*0.9) >= window_bottom_position)) { 	
-		$element.css({
-			'position': 'fixed',
-			'top': 'auto',
-			'bottom': '0'})
-	} else if (parent_top_position + (parent_height*0.9) < window_bottom_position) {
-		$element.css({
-			'position': 'absolute',
-			'top': 'auto',
-			'bottom': '10%'})
-	} else {
-		$element.removeAttr('style');
-	}
-	*/
-//};
-
 //
 // --- Toggle function for Soucasne k prodeji vs Predchozi prace
 $(document).ready(function(){
@@ -164,14 +115,14 @@ $(document).ready(function(){
 });
 
 var fadeInStart = 0 // 100px scroll or less will equiv to 1 opacity
-	,fadeUntil= 500 // 200px scroll or more will equiv to 0 opacity
+	,fadeUntil= 300 // 200px scroll or more will equiv to 0 opacity
 	,revealing = $('#home-page')
 	,fadingStart = 700
 	,fadingEnd = 1050;
 var $window = $(window);
 var windowHalf = $window.height() / 2;
 var $jumbotron = $('.jumbotron');
-var $indexHeader = $('.index-header');
+var $indexHeader = $('.header__banner');
 var $homepageArticle = $('.homepage-article');
 var homepageArticle_top = $homepageArticle.offset().top
 var fadeInEnd = homepageArticle_top + 270;
@@ -179,18 +130,18 @@ $homepageArticle.css('opacity', '0');
 
 	$(window).bind('scroll', function(){
 		var offset = $(document).scrollTop();
-		var opacity = 0.2;
-		
-		if (offset > 100) {
+		var opacity = 0;
+		/*
+		if (offset > 200) {
 			$indexHeader.fadeOut();
 		} else {
 			$indexHeader.fadeIn();
 		}
-		
+		*/
 		if (offset >= fadeUntil) {
-			opacity = 0.8;
+			opacity = 0.9;
 		} else if (offset <= fadeUntil) {
-			opacity = Math.min(0.8, 0.2+offset/fadeUntil);
+			opacity = Math.min(0.9, 0+offset/fadeUntil);
 		}
 		
 		revealing.css('background-color', 'rgba(0,0,0, '+ opacity +'');
