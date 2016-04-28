@@ -1,56 +1,4 @@
 /* Header partial */
-.header__banner {
-	background-image: linear-gradient(172deg,rgb(21, 21, 21), rgba(0, 0, 0, 0.65) 5%, transparent 30%, transparent 65%, rgba(0, 0, 0, 0.5));
-}
-
-.logo, .nav {
-	position: absolute;
-	bottom: 50%;
-	transform: translateY(50%);
-}
-
-.logo {
-	left: 0; 
-	line-height: 1.1;
-	color: #192D77;
-	
-	h1, p {
-		margin: 0;
-	}
-}
-
-.nav {
-	right: 0;
-	
-	ul {
-		padding: 0;
-		margin: 0;
-		
-		li {
-			display: inline-block;
-			margin-left: 22px;
-			
-			a {
-				color: white;
-				text-decoration: none;
-			}
-		}
-	}
-}
-
-/* Header - Landing Page Specific */
-
-.picture-grid {
-	.logo {
-		bottom: 103%;
-		transform: translateY(0);
-	}
-	
-	.nav {
-		bottom: 105%;
-		transform: translateY(0);
-	}
-}
 
 /* Header - Hero section */
 
@@ -78,5 +26,58 @@
 	
 	&--kontakt-bg {
 		background-image: url(img/kontakt-bg_3872w_10q.jpg);
+	}
+}
+
+.header__banner {
+	// background: linear-gradient(transparent 83%, rgba(0, 0, 0, 0.7)), url(./img/below-landing.jpg)
+	// Black to Transparent to Black under Degree
+	$linear-gradient: linear-gradient(-7deg, rgba(0, 0, 0, 0.55), transparent, rgba(0, 0, 0, 0.68));
+	$linear-gradient: linear-gradient(172deg, rgba(0, 0, 0, 0.65), transparent 30%, transparent 65%, rgba(0, 0, 0, 0.5));
+	$linear-gradient: linear-gradient(172deg,rgb(21, 21, 21), rgba(0, 0, 0, 0.65) 5%, transparent 30%, transparent 65%, rgba(0, 0, 0, 0.5));
+	$linear-gradient: linear-gradient(172deg,rgb(21, 21, 21), rgba(0, 0, 0, 0.65) 5%, transparent 30%, transparent 65%, rgba(0, 0, 0, 0.5));
+	background-image: $linear-gradient;
+}
+
+.logo {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 30%;
+	height: 30vh;
+	line-height: 1.1;
+	color: #192D77;
+	
+	h1, p {
+		margin: 0;
+	}
+
+	h1 {
+		color: white;
+		text-shadow: 1px 1px 4px black;
+	}
+	p {
+		color: white;
+		text-shadow: 1px 1px 4px black;
+	}
+}
+
+.nav {
+	text-align: right;
+	margin-top: 2em;
+	margin-right: 3em;
+	
+	ul {
+		padding: 0;
+		margin: 0;
+		
+		li {
+			display: inline-block;
+			margin-left: 25px;
+			
+			a {
+				color: #E2E2E2;
+			}
+		}
 	}
 }
