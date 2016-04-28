@@ -413,16 +413,20 @@ p {
 }
 
 .logo--fonts h1 {
+  color: white;
   font-family: tahoma;
   font-size: 28px;
   font-size: 2.4vw;
   font-style: oblique;
+  text-shadow: 1px 1px 4px #191850;
 }
 .logo--fonts p {
+  color: white;
   font-family: verdana;
   font-size: 1em;
   font-size: 1.3vw;
   letter-spacing: 0.5px;
+  text-shadow: 1px 1px 4px black;
 }
 
 .nav--fonts {
@@ -438,10 +442,6 @@ p {
 }
 
 /* Header partial */
-.header__banner {
-  background-color: white;
-}
-
 .logo, .nav {
   position: absolute;
   bottom: 50%;
@@ -469,7 +469,7 @@ p {
   margin-left: 22px;
 }
 .nav ul li a {
-  color: grey;
+  color: white;
   text-decoration: none;
 }
 
@@ -489,21 +489,21 @@ p {
   background-attachment: fixed;
 }
 .header--gallery-bg {
-  background-image: url(img/gallery-bg_3872w_35q.jpg);
+  background-image: linear-gradient(172deg, #151515, rgba(0, 0, 0, 0.65) 5%, transparent 30%, transparent 65%, rgba(0, 0, 0, 0.5)), url(img/gallery-bg_3872w_35q.jpg);
 }
 .header--nabidka-bg {
-  background-image: url(img/nabidka-bg-1600w-45q.jpg);
+  background-image: linear-gradient(172deg, #151515, rgba(0, 0, 0, 0.65) 5%, transparent 30%, transparent 65%, rgba(0, 0, 0, 0.5)), url(img/nabidka-bg-1600w-45q.jpg);
   transition: all 0.5s ease-in-out;
 }
 .header--predchoziprace-bg {
-  background-image: url(img/predchoziprace-bg_3872w_10q.jpg);
+  background-image: linear-gradient(172deg, #151515, rgba(0, 0, 0, 0.65) 5%, transparent 30%, transparent 65%, rgba(0, 0, 0, 0.5)), url(img/predchoziprace-bg_3872w_10q.jpg);
   transition: all 0.5s ease-in-out;
 }
 .header--ofirme-bg {
-  background-image: url(img/ofirme.jpg);
+  background-image: linear-gradient(172deg, #151515, rgba(0, 0, 0, 0.65) 5%, transparent 30%, transparent 65%, rgba(0, 0, 0, 0.5)), url(img/ofirme.jpg);
 }
 .header--kontakt-bg {
-  background-image: url(img/kontakt-bg_3872w_10q.jpg);
+  background-image: linear-gradient(172deg, #151515, rgba(0, 0, 0, 0.65) 5%, transparent 30%, transparent 65%, rgba(0, 0, 0, 0.5)), url(img/kontakt-bg_3872w_10q.jpg);
 }
 
 /* Layout for all pages except Landing */
@@ -518,12 +518,12 @@ p {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 5;
 }
 .header__wrapper {
   position: relative;
-  max-width: 1000px;
-  margin: 0 auto;
-  height: 17vh;
+  margin: 0 4%;
+  height: 20vh;
 }
 
 main {
@@ -687,9 +687,7 @@ main {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: linear-gradient(-7deg, rgba(0, 0, 0, 0.55), transparent, rgba(0, 0, 0, 0.68)), url(./img/below-landing.jpg);
-  background: linear-gradient(172deg, rgba(0, 0, 0, 0.65), transparent 30%, transparent 65%, rgba(0, 0, 0, 0.5)), url(./img/below-landing.jpg);
-  background: linear-gradient(172deg, #151515, rgba(0, 0, 0, 0.65) 5%, transparent 30%, transparent 65%, rgba(0, 0, 0, 0.5)), url(./img/below-landing.jpg);
+  background: linear-gradient(172deg,rgb(21, 21, 21), rgba(0, 0, 0, 0.65) 5%, transparent 30%, transparent 65%, rgba(0, 0, 0, 0.5)), url(./img/below-landing.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -700,24 +698,12 @@ main {
   top: 100%;
 }
 
-.index-header {
-  position: fixed;
-  z-index: 2;
-  top: 0;
-  width: 100%;
-  height: auto;
-}
-
 .hero__header {
   position: absolute;
   top: 0;
-  z-index: 2;
   width: 40%;
   height: 20vh;
   box-shadow: none;
-}
-.hero__header .logo {
-  margin-left: 5vw;
 }
 .hero__header .logo h1 {
   color: white;
@@ -726,18 +712,6 @@ main {
 .hero__header .logo p {
   color: white;
   text-shadow: 1px 1px 4px black;
-}
-
-.header__wrapper {
-  position: absolute;
-  top: 0;
-  right: 11vw;
-  z-index: 4;
-  height: 20vh;
-  width: 500px;
-}
-.header__wrapper .nav ul li a {
-  color: white;
 }
 
 .slogan {
