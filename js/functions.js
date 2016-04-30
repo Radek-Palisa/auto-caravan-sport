@@ -11,20 +11,6 @@ $('.arrow-link').click(function() {
 });
 
 //
-// --- Hide arrow link ---
-//
-/* 
-$(window).bind('scroll', function() {
-	if ($(window).scrollTop() > 200) {
-		$('.arrow-link').hide(150);
-	}
-	else {
-		$('.arrow-link').show();
-	}
-});
-*/
-
-//
 // --- Fallback for non-hover devices ---
 //
 $('.grid__cell').on('click', function(e) {
@@ -76,6 +62,7 @@ function debounce(func, wait, immediate) {
 //
 // --- Hide Header with Scroll Down ---
 //
+/*
 var hideHeader = debounce(function() {
 	
 	if ($(this).scrollTop()> $('.header__wrapper').height())
@@ -87,7 +74,7 @@ var hideHeader = debounce(function() {
 	  $('.header__banner').fadeIn(500);
 	 }
 }, 200);
-
+*/
 //
 // --- Toggle function for Soucasne k prodeji vs Predchozi prace
 $(document).ready(function(){
@@ -115,35 +102,33 @@ $(document).ready(function(){
 });
 
 var fadeInStart = 0 // 100px scroll or less will equiv to 1 opacity
-	,fadeUntil= 300 // 200px scroll or more will equiv to 0 opacity
+	,fadeUntil= 500 // 200px scroll or more will equiv to 0 opacity
 	,revealing = $('#home-page')
 	,fadingStart = 700
 	,fadingEnd = 1050;
 var $window = $(window);
 var windowHalf = $window.height() / 2;
 var $jumbotron = $('.jumbotron');
-var $indexHeader = $('.header__banner');
+var $logo = $('.logo');
+var $belowLanding = $('.below-landing');
 var $homepageArticle = $('.homepage-article');
-var homepageArticle_top = $homepageArticle.offset().top
-var fadeInEnd = homepageArticle_top + 270;
 $homepageArticle.css('opacity', '0');
 
 	$(window).bind('scroll', function(){
 		var offset = $(document).scrollTop();
-		var opacity = 0;
-		/*
-		if (offset > 200) {
-			$indexHeader.fadeOut();
-		} else {
-			$indexHeader.fadeIn();
+		var opacity = 0.6;
+		var headerPos = -50;
+		
+		if (offset > 0) {
+			headerPos = Math.min(70,-50+(offset/2));
 		}
-		*/
+		
 		if (offset >= fadeUntil) {
 			opacity = 0.9;
 		} else if (offset <= fadeUntil) {
-			opacity = Math.min(0.9, 0+offset/fadeUntil);
+			opacity = Math.min(0.9, 0.6+offset/fadeUntil);
 		}
-		
+		$logo.css('transform', 'translate(-50%,'+headerPos+'%)');
 		revealing.css('background-color', 'rgba(0,0,0, '+ opacity +'');
 		
 		if (offset >= windowHalf) {
@@ -159,3 +144,8 @@ $homepageArticle.css('opacity', '0');
 		}
 		*/
 	});
+
+function SlideUpOnLoad() {
+	$belowLanding.addClass('slide-up');
+}
+setTimeout(SlideUpOnLoad,2000)

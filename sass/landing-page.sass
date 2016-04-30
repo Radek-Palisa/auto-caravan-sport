@@ -11,6 +11,9 @@
 .jumbotron--undock
 	position: absolute
 	top: 100%
+	
+.index__banner
+	height: 100vh !important
 
 //
 // *** Slogan ***
@@ -40,16 +43,20 @@
 	position: relative
 	z-index: 3
 	height: 100vh
-	margin-top: 80vh
+	margin-top: 100vh
 	padding-top: 4vh
-	background-color: rgba(0,0,0,0)
+	background-color: rgba(0,0,0,0.6)
 
 	&__content
 		margin: 20vh auto 0
 		display: flex
 		flex-wrap: wrap
 		width: 1180px
-	
+
+.slide-up
+	margin-top: 80vh
+	transition: margin-top 1s ease-in-out
+
 .homepage-article
 	opacity: 1
 	// transition: all 1500ms linear

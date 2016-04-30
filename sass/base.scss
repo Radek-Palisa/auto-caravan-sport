@@ -22,21 +22,35 @@ p {
 .logo--fonts {
 	
 	h1 {
+		display: none;
 		color: white;
 		font-family: tahoma;
 		font-size: 28px;
 		font-size: 4.4vw;
 		font-style: oblique;
-		text-shadow: 1px 1px 4px #191850
+		text-shadow: 1px 1px 4px black;
 	}
 	
 	p {
+		width: 714px;
 		color: white;
-		font-family: verdana;
+		font-family: roboto;
 		font-size: 1em;
 		font-size: 2.5vw;
-		letter-spacing: 0.4px;
-		text-shadow: 1px 1px 4px black;
+		font-size: 4.5vw;
+		letter-spacing: 1px;
+		text-shadow: 1px 1px 2px black;
+		font-weight: 600;
+	}
+	
+	span {
+		display: block;
+		width: 463px;
+		margin: 7px auto 0;
+		border-top: solid 2px white;
+		font-size: 30px;
+		font-weight: 600;
+		color: white;
 	}
 }
 
