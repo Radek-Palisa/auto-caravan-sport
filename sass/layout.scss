@@ -1,27 +1,10 @@
 /* Layout for all pages except Landing */
 
-.header {
-	position: absolute;
-	top: 0;
-	width: 100%;
-	height: 100vh;
-	
-	&__banner {
-		position: absolute;
-		top: 0;
-		width: 100%;
-		height: 70vh;
-		z-index: 3;
-	}
-	
-	&__wrapper {
-			
-	}
-}
+// Header: height 74vh, position: relative
 
 main {
 	position: relative;
-	margin: 70vh auto 0;
+	margin: 0 auto;
 	padding-bottom: 12px;
 	background-color: white;
 	width: 100%;

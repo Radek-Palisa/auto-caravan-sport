@@ -15,24 +15,21 @@
     <script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
   </head>
   <body>
-    <section class="jumbotron"></section>
-    <div class="header__banner index__banner">
-      <div class="header__wrapper">
-        <div class="logo logo--fonts">
-          <h1>A.C.S. s.r.o.</h1>
-          <p>Auto Caravan Sport</p>
-          <div class="underline"><span class="line"></span><span class="underline__txt">s.r.o.</span><span class="line"></span></div>
-        </div>
-        <nav role="navigation" class="nav nav--fonts">
-          <ul>
-            <li><a href="index.html">Domů</a></li>
-            <li><a href="nabidka.html">Nabídka</a></li>
-            <li><a href="ofirme.html">O firmě</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-          </ul>
-        </nav>
+    <header style="height: 74vh" class="header header--index-bg">
+      <div class="logo logo--fonts">
+        <h1>A.C.S. s.r.o.</h1>
+        <p>Auto Caravan Sport</p>
+        <div class="underline"><span class="line"></span><span class="underline__txt">s.r.o.</span><span class="line"></span></div>
       </div>
-    </div>
+      <nav role="navigation" class="nav nav--fonts">
+        <ul>
+          <li><a href="index.html">Domů</a></li>
+          <li><a href="nabidka.html">Nabídka</a></li>
+          <li><a href="ofirme.html">O firmě</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
     <section id="home-page" class="below-landing">
       <p class="slogan__txt">Vítejte v mém světě dodávkové velikosti</br>...ani malé ani velké.</p>
       <div class="below-landing__content">
@@ -60,10 +57,10 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum molestias, dolores eaque ullam perferendis consequatur? Totam deserunt itaque culpa laudantium, cumque, dolor tempore optio harum placeat similique temporibus molestiae fugiat!</p>
           </div>
         </article>
-      </div>
+      </div><a href="#picture-grid" class="arrow-link"><img src="img/ctrl.svg" alt="" class="arrow"></a>
     </section>
     <!-- Landing Page-->
-    <section class="landing-page">
+    <section id="picture-grid" class="landing-page">
       <div class="picture-grid">
         <div class="grid__container">
           <div class="grid__cell grid__cell--hover grid__cell--top-start">
@@ -113,7 +110,7 @@
           <div class="show-slides"> <img src="img/eye.svg" class="show-slides__icon"><span class="show-slides__txt">Ukaž vše</span></div>
         </div>
       </div>
-      <!-- picture grid end--><a href="#home-page" class="arrow-link"><img src="img/ctrl.svg" alt="" class="arrow"></a>
+      <!-- picture grid end-->
     </section>
     <!-- landing container end
     -->

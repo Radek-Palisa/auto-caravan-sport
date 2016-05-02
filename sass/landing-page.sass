@@ -1,61 +1,35 @@
-.jumbotron
-	position: fixed
-	top: 0
-	width: 100%
-	height: 100%
-	background: url(./img/below-landing.jpg)
-	background-size: cover
-	background-repeat: no-repeat
-	background-position: top
+//
+//
+/* ***** INDEX PAGE *****/
+//
+//
 
-.jumbotron--undock
-	position: absolute
-	top: 100%
-	
 .index__banner
-	height: 100vh !important
-
-//
-// *** Slogan ***
-//
-
-.slogan
-	height: 100vh
-	position: relative
-	
-.slogan__txt
-	width: 1180px
-	margin: 0 auto
-	text-align: right
-	font-weight: bold
-	font-style: italic
-	font-size: 32px
-	letter-spacing: 0.4px
-	color: white
-
-//
-//
-/* ***** Below Landing Section *****/
-//
-//
+	height: 74vh !important
 
 .below-landing
 	position: relative
 	z-index: 3
 	height: 100vh
-	margin-top: 100vh
-	padding-top: 4vh
-	background-color: rgba(0,0,0,0.6)
+	background-color: #ECECEC
 
-	&__content
-		margin: 20vh auto 0
-		display: flex
-		flex-wrap: wrap
-		width: 1180px
+.slogan__txt
+	height: 26vh
+	margin: 0 auto
+	padding: 7vh 70px 0
+	text-align: right
+	font-weight: bold
+	font-style: italic
+	font-size: 32px
+	letter-spacing: 0.4px
+	color: #212121
+	background-color: white
 
-.slide-up
-	margin-top: 80vh
-	transition: margin-top 1s ease-in-out
+.below-landing__content
+	margin: 10vh auto 0
+	display: flex
+	flex-wrap: wrap
+	width: 1180px
 
 .homepage-article
 	opacity: 1
@@ -78,7 +52,7 @@
 	p
 		margin: 0
 		line-height: 1.4
-		color: white
+		color: black
 
 .article__img-wrap
 	position: relative
@@ -100,9 +74,28 @@
 		// background-color: #102775
 		font-size: 1.2em
 		font-family: open sans
-		color: white
 		text-align: center
+		color: black
 
+.arrow-link
+	position: absolute
+	width: 70px
+	height: 70px
+	bottom: 20px
+	left: 50%
+	margin-left: -35px
+	border-radius: 100%
+	border: solid 2px black
+	transition: 0.6s
+
+.arrow-link:hover
+	background-color: rgb(204, 204, 204)
+	transition: 0.6s
+
+.arrow
+	margin: 11px auto 0
+	width: 35px
+	transform: rotate(180deg)
 
 /**/
 /* ******** Picture Grid ******** */
@@ -136,21 +129,3 @@
 	
 	&:active .show-slides__icon
 		width: 28px
-
-.arrow-link
-	position: absolute
-	width: 70px
-	height: 45px
-	bottom: 20px
-	left: 50%
-	margin-left: -35px
-	transition: 0.8s
-
-.arrow-link:hover
-	background-color: rgba(0,0,0,0.2)
-	transition: 0.8s
-
-.arrow
-	margin: 0 auto
-	width: 35px
-	transform: rotate(180deg)

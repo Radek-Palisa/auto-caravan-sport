@@ -1,29 +1,11 @@
 extends partials/layout.jade
 
-block header-wrapper
+block header
+	header.header.header--index-bg(style="height: 74vh")
+		include partials/header.jade
 
 block content
 
-	section.jumbotron
-
-	.header__banner.index__banner
-		.header__wrapper
-			.logo.logo--fonts
-				h1 A.C.S. s.r.o.
-				p Auto Caravan Sport
-				.underline
-					span.line
-					span.underline__txt s.r.o.
-					span.line
-
-
-			nav.nav.nav--fonts(role="navigation")
-				ul
-					li: a(href="index.html") Domů
-					li: a(href="nabidka.html") Nabídka
-					li: a(href="ofirme.html") O firmě
-					li: a(href="kontakt.html") Kontakt
-	
 	section.below-landing#home-page
 		p.slogan__txt Vítejte v mém světě dodávkové velikosti</br>...ani malé ani velké.
 		.below-landing__content
@@ -32,19 +14,17 @@ block content
 					.article__img-wrap
 						img.index-icon(src="./img/home.svg")
 						h1 O firmě
-					
+						
 					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt nulla officia et accusantium perspiciatis ratione quis, obcaecati, mollitia in laboriosam tenetur odit sint unde quia inventore velit necessitatibus rerum, distinctio.
-			
 				
 			article.homepage-article
 				.article__wrap
 					.article__img-wrap
 						img.index-icon(src="./img/van.svg")
 						h1 Co nabízím
-					
+						
 					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis asperiores, labore quo tempora placeat dolorem libero id alias accusamus odio aut excepturi, similique fugit. Perspiciatis accusamus nostrum a! Velit, quibusdam.
-			
-				
+					
 			article.homepage-article
 				.article__wrap
 					.article__img-wrap
@@ -52,14 +32,16 @@ block content
 						h1 Zkontaktujte mně
 					
 					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum molestias, dolores eaque ullam perferendis consequatur? Totam deserunt itaque culpa laudantium, cumque, dolor tempore optio harum placeat similique temporibus molestiae fugiat!
+		a.arrow-link(href="#picture-grid")
+			img.arrow(src="img/ctrl.svg", alt="")
 	// Landing Page
-	section.landing-page
+	section.landing-page#picture-grid
 		.picture-grid
 			.grid__container
 				.grid__cell.grid__cell--hover.grid__cell--top-start
 					.slide-in
 						p.slide-in__text.slide-in__text--aligncenter <strong>Vítejte</strong></br>na stránkách firmy</br>A.C.S.
-
+						
 				.grid__cell.grid__cell--hover.grid__cell--middle
 					.slide-in
 						h1.slide-in__title Využití
@@ -97,10 +79,6 @@ block content
 					img.show-slides__icon(src="img/eye.svg")
 					span.show-slides__txt Ukaž vše
 		// picture grid end
-		
-		a.arrow-link(href="#home-page")
-			img.arrow(src="img/ctrl.svg", alt="")
-	
 	// landing container end
 			
 block local-scripts

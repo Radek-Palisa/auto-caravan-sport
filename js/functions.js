@@ -107,7 +107,7 @@ var fadeInStart = 0 // 100px scroll or less will equiv to 1 opacity
 	,fadingStart = 700
 	,fadingEnd = 1050;
 var $window = $(window);
-var windowHalf = $window.height() / 2;
+var windowHalf = $window.height() * 0.4;
 var $jumbotron = $('.jumbotron');
 var $logo = $('.logo');
 var $belowLanding = $('.below-landing');
@@ -120,16 +120,17 @@ $homepageArticle.css('opacity', '0');
 		var headerPos = -50;
 		
 		if (offset > 0) {
-			headerPos = Math.min(1000,-50+(offset/3));
+			headerPos = Math.min(1000,-50+(offset/3.5));
 		}
-		
+		/*
 		if (offset >= fadeUntil) {
 			opacity = 0.9;
 		} else if (offset <= fadeUntil) {
 			opacity = Math.min(0.9, 0.6+offset/fadeUntil);
 		}
+		*/
 		$logo.css('transform', 'translate(-50%,'+headerPos+'%)');
-		revealing.css('background-color', 'rgba(0,0,0, '+ opacity +'');
+		// revealing.css('background-color', 'rgba(0,0,0, '+ opacity +'');
 		
 		if (offset >= windowHalf) {
 			$homepageArticle.each(function(index) {
@@ -145,7 +146,9 @@ $homepageArticle.css('opacity', '0');
 		*/
 	});
 
+/*
 function SlideUpOnLoad() {
 	$belowLanding.addClass('slide-up');
 }
 setTimeout(SlideUpOnLoad,1000)
+*/
