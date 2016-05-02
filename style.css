@@ -422,7 +422,7 @@ p {
   text-shadow: 1px 1px 4px black;
 }
 .logo--fonts p {
-  width: 714px;
+  width: 556px;
   color: white;
   font-family: roboto;
   font-size: 1em;
@@ -432,12 +432,18 @@ p {
   text-shadow: 1px 1px 2px black;
   font-weight: 600;
 }
-.logo--fonts span {
-  display: block;
-  width: 463px;
-  margin: 7px auto 0;
-  border-top: solid 2px white;
-  font-size: 30px;
+.logo--fonts .underline {
+  display: flex;
+  justify-content: center;
+}
+.logo--fonts .underline .line {
+  border-bottom: solid 2px white;
+  width: 44%;
+  height: 14px;
+}
+.logo--fonts .underline__txt {
+  width: 12%;
+  font-size: 20px;
   font-weight: 600;
   color: white;
 }

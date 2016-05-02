@@ -120,7 +120,7 @@ $homepageArticle.css('opacity', '0');
 		var headerPos = -50;
 		
 		if (offset > 0) {
-			headerPos = Math.min(70,-50+(offset/2));
+			headerPos = Math.min(1000,-50+(offset/3));
 		}
 		
 		if (offset >= fadeUntil) {
@@ -148,4 +148,4 @@ $homepageArticle.css('opacity', '0');
 function SlideUpOnLoad() {
 	$belowLanding.addClass('slide-up');
 }
-setTimeout(SlideUpOnLoad,2000)
+setTimeout(SlideUpOnLoad,1000)
