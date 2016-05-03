@@ -424,9 +424,8 @@ p {
 .logo--fonts p {
   color: white;
   font-family: roboto;
-  font-size: 1em;
-  font-size: 2.5vw;
-  font-size: 4.5vw;
+  font-size: 6vw;
+  font-size: 80px;
   letter-spacing: 1px;
   text-shadow: 1px 1px 2px black;
   font-weight: 600;
@@ -434,17 +433,30 @@ p {
 .logo--fonts .underline {
   display: flex;
   justify-content: center;
-}
-.logo--fonts .underline .line {
-  border-bottom: solid 2px white;
-  width: 44%;
-  height: 14px;
+  overflow: hidden;
 }
 .logo--fonts .underline__txt {
-  width: 12%;
-  font-size: 20px;
+  position: relative;
+  font-size: 1.6vw;
+  font-size: 28px;
   font-weight: 600;
   color: white;
+}
+.logo--fonts .underline__txt:after, .logo--fonts .underline__txt:before {
+  display: none;
+  content: "";
+  position: absolute;
+  border-top: 2px solid white;
+  top: 50%;
+  width: 350px;
+}
+.logo--fonts .underline__txt:before {
+  right: 100%;
+  margin-right: 10px;
+}
+.logo--fonts .underline__txt:after {
+  left: 100%;
+  margin-left: 10px;
 }
 
 .nav--fonts {
@@ -464,7 +476,7 @@ p {
 /* Header partial */
 .header {
   position: relative;
-  height: 70vh;
+  height: 500px;
   background-size: cover;
 }
 .header--index-bg {
@@ -497,10 +509,11 @@ p {
   position: absolute;
   left: 50%;
   top: 50%;
+  top: 67%;
   transform: translate(-50%, -50%);
-  padding: 20px 30px;
   line-height: 1.1;
   text-align: center;
+  white-space: nowrap;
 }
 .logo h1, .logo p {
   margin: 0;
@@ -518,6 +531,7 @@ p {
 .nav ul li {
   display: inline-block;
   margin-left: 25px;
+  padding-bottom: 2px;
 }
 .nav ul li a {
   color: #E2E2E2;
@@ -525,6 +539,13 @@ p {
   font-weight: bold;
   font-size: 14px;
   letter-spacing: 1px;
+}
+
+.header--index-bg li:nth-child(1),
+.header--nabidka-bg li:nth-child(2),
+.header--ofirme-bg li:nth-child(3),
+.header--kontakt-bg li:nth-child(4) {
+  border-bottom: solid 2px #644D19;
 }
 
 /* Layout for all pages except Landing */
@@ -704,7 +725,7 @@ main {
   font-style: italic;
   font-size: 32px;
   letter-spacing: 0.4px;
-  color: #212121;
+  color: #757684;
   background-color: white;
 }
 
