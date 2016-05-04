@@ -13,14 +13,8 @@ html
 		script(type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js")
 		
 	body
-		
-		block header-wrapper
-			header.header.header--nabidka-bg
-				div.header__banner
-					div.header__wrapper
-						
-						include header.jade
-		
+		block header
+
 		block content
 		
 		block footer
@@ -35,11 +29,10 @@ html
 				.footer--right
 					img.home-socicon.footer__socicon(src="./img/email-icon.svg")
 					img.home-socicon.footer__socicon(src="./img/fb-icon.svg")
-					p.footer__credits Web: 
-						a(href="https://www.linkedin.com/in/radek-palisa-96332886", target="_blank") Radek Palisa
+				p.footer__credits Web: 
+					a(href="https://www.linkedin.com/in/radek-palisa-96332886", target="_blank") Radek Palisa
 
 		script(src="js/functions.js")
-		// script(src="//localhost:9001/livereload.js")
 		
 		block local-scripts
 			script.

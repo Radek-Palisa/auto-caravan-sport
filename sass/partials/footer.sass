@@ -10,8 +10,7 @@
 	
 	font-size: 14px
 	color: #e1e1e1
-	border-top: solid 1px rgba(56,56,56,0.43)
-	background-color: rgba(0,0,0,0.3)
+	background-color: grey
 	/* background: url('img/picture-grid_desktop.jpg'), url('img/picture-grid_desktop.jpg')
 	background-size: 1000px auto
 	background-position: left top -47px, left 1010px bottom -29px
@@ -20,7 +19,7 @@
 	
 .footer--left,
 .footer--middle,
-.footer--right,
+.footer__credits,
 	position: absolute
 	bottom: 50%
 	transform: translateY(50%)
@@ -32,8 +31,13 @@
 		left: 50%
 		transform: translate(-50%, 50%)
 	&--right
+		position: absolute
+		bottom: 101%
 		right: 30px
 		text-align: right
+		z-index: 3
+	&__credits
+		right: 30px
 
 .footer
 		
