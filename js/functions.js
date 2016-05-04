@@ -112,7 +112,7 @@ var $jumbotron = $('.jumbotron');
 var $logo = $('.logo');
 var $belowLanding = $('.below-landing');
 var $homepageArticle = $('.homepage-article');
-$homepageArticle.css('opacity', '0');
+// $homepageArticle.css('opacity', '0');
 
 	$(window).bind('scroll', function(){
 		var offset = $(document).scrollTop();
@@ -131,12 +131,13 @@ $homepageArticle.css('opacity', '0');
 		*/
 		$logo.css('transform', 'translate(-50%,'+headerPos+'%)');
 		// revealing.css('background-color', 'rgba(0,0,0, '+ opacity +'');
-		
+		/*
 		if (offset >= windowHalf) {
 			$homepageArticle.each(function(index) {
 			$(this).delay(200*index).fadeTo(1000, 1);
 		});
 		}
+		*/
 		/*
 		if (offset >= $window.height()) {
 			$jumbotron.addClass('jumbotron--undock');

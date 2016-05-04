@@ -477,6 +477,7 @@ p {
 .header {
   position: relative;
   height: 500px;
+  height: 60vh;
   background-size: cover;
 }
 .header--index-bg {
@@ -508,8 +509,8 @@ p {
 .logo {
   position: absolute;
   left: 50%;
-  top: 50%;
   top: 67%;
+  top: 50%;
   transform: translate(-50%, -50%);
   line-height: 1.1;
   text-align: center;
@@ -710,10 +711,8 @@ main {
 }
 
 .below-landing {
-  position: relative;
-  z-index: 3;
-  height: 100vh;
   background-color: #ECECEC;
+  padding-bottom: 20px;
 }
 
 .slogan__txt {
@@ -730,7 +729,7 @@ main {
 }
 
 .below-landing__content {
-  margin: 10vh auto 0;
+  margin: 70px auto;
   display: flex;
   flex-wrap: wrap;
   width: 1180px;
@@ -760,6 +759,22 @@ main {
   line-height: 1.4;
   color: black;
 }
+.article__wrap p:nth-of-type(2), .article__wrap p:nth-of-type(3) {
+  margin: 1em auto;
+  text-align: center;
+}
+.article__wrap a {
+  display: block;
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px 15px;
+  border: 1px solid black;
+  box-shadow: 1px 1px 4px black;
+  text-align: center;
+  font-family: roboto;
+  font-weight: bold;
+  color: black;
+}
 
 .article__img-wrap {
   position: relative;
@@ -783,13 +798,19 @@ main {
   color: black;
 }
 
+.learn-more {
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.2em;
+  line-height: 1.2;
+}
+
 .arrow-link {
-  position: absolute;
-  width: 70px;
-  height: 70px;
-  bottom: 20px;
-  left: 50%;
-  margin-left: -35px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
   border-radius: 100%;
   border: solid 2px black;
   transition: 0.6s;
@@ -801,7 +822,7 @@ main {
 }
 
 .arrow {
-  margin: 11px auto 0;
+  margin: 0 auto;
   width: 35px;
   transform: rotate(180deg);
 }
