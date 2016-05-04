@@ -15,7 +15,7 @@
 	$linear-gradient: linear-gradient(transparent, rgba(0,0,0,0.2), transparent);
 
 	&--index-bg {
-		background-image: $linear-gradient, url(./img/below-landing.jpg);
+		background-image: url(./img/below-landing.jpg);
 		background-position: center 29%;
 	}
 	&--gallery-bg {
