@@ -11,40 +11,73 @@ block content
 		.below-landing__content
 			article.homepage-article
 				.article__wrap
-					.article__img-wrap
+					//.article__img-wrap
+						p ?
+					h1 Co je Karavaning
+
+			article.homepage-article
+				.article__wrap
+					//.article__img-wrap
 						img.index-icon(src="./img/home.svg")
-						h1 O firmě
-						
-					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt nulla officia et accusantium perspiciatis ratione quis, obcaecati, mollitia in laboriosam tenetur odit sint unde quia inventore velit necessitatibus rerum, distinctio.
-					p Přečtěte si více o mně a mé firmě:
-					a(href="./ofirme.html") O firmě
+					h1 O firmě
+					// p Přečtěte si více o mně a mé firmě:
+					// a(href="./ofirme.html") O firmě
 				
 			article.homepage-article
 				.article__wrap
-					.article__img-wrap
+					//.article__img-wrap.van-icon
 						img.index-icon(src="./img/van.svg")
-						h1 Co nabízím
-						
-					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis asperiores, labore quo tempora placeat dolorem libero id alias accusamus odio aut excepturi, similique fugit. Perspiciatis accusamus nostrum a! Velit, quibusdam.
-					p Podívejte se na detaily mé současné práce:
-					a(href="./nabidka.html") Současná nabídka
-					p Podívejtě se na ukázky mých předchozích přestaveb
-					a(href="./nabidka.html") Předchozí práce
+					h1 Co nabízím	
+					// p Podívejte se na detaily mé současné práce:
+					// a(href="./nabidka.html") Současná nabídka
+					// p Podívejtě se na ukázky mých předchozích přestaveb
+					// a(href="./nabidka.html") Předchozí práce
 					
 			article.homepage-article
 				.article__wrap
-					.article__img-wrap
+					// .article__img-wrap
 						img.index-icon(src="./img/envelope.svg")
-						h1 Zkontaktujte mně
+					h1 Předchozí práce
+					// p Máte otázky? Neváhajte se na mě obrátit!
+					// a(href="./kontakt.html") Napište mi
 					
-					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum molestias, dolores eaque ullam perferendis consequatur? Totam deserunt itaque culpa laudantium, cumque, dolor tempore optio harum placeat similique temporibus molestiae fugiat!
-					p Máte otázky? Neváhajte se na mě obrátit!
-					a(href="./kontakt.html") Napište mi
-					
-		p.learn-more Zjistěte více o karavaningu a výhodách menšího vozidla<br>v interaktivní prezentaci níže
+		// p.learn-more Zjistěte více o karavaningu a výhodách menšího vozidla<br>v interaktivní prezentaci níže
 		a.arrow-link(href="#picture-grid")
 			img.arrow(src="img/ctrl.svg", alt="")
-	// Landing Page
+
+	section.nabidka
+		h1 Ford Custom A.C.S.
+
+	section.mezisekce
+		article.sekce.sekce-nabidka
+			.podsekce.podsekce-img
+				.rslides-container
+						ul.rslides
+							li: img(src="img/soucasna-nabidka/050.jpg" alt="")
+							li: img(src="img/soucasna-nabidka/001.jpg" alt="")
+							li: img(src="img/soucasna-nabidka/049.jpg" alt="")
+							li: img(src="img/soucasna-nabidka/003.jpg" alt="")
+							li: img(src="img/soucasna-nabidka/005.jpg" alt="")
+			.podsekce.podsekce-txt.podsekce--margin
+				h1 Současně k prodeji
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus praesentium placeat obcaecati natus provident laboriosam, atque, facere exercitationem fugit fugiat architecto aliquid deserunt veritatis doloremque. Nihil molestiae, aperiam necessitatibus a.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil et quidem quia fugiat dolores saepe, repellat magni. Commodi, facilis minima excepturi magni accusantium, amet. Magni at quae eius numquam suscipit.
+				p Podívejte se podrobný popis a foto-dokumentaci:
+				a.podsekce__link(href="./nabidka.html") Zjistěte více
+		article.sekce.sekce-predchoziprace
+			.podsekce.podsekce-txt
+				h1 Předchozí práce
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus praesentium placeat obcaecati natus provident laboriosam, atque, facere exercitationem fugit fugiat architecto aliquid deserunt veritatis doloremque. Nihil molestiae, aperiam necessitatibus a.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil et quidem quia fugiat dolores saepe, repellat magni. Commodi, facilis minima excepturi magni accusantium, amet. Magni at quae eius numquam suscipit.
+				p Podívejte se na ukázky mé předchozí práce:
+				a.podsekce__link(href="./nabidka.html") Zjistěte více
+			.podsekce.podsekce-img.podsekce-predchoziprace.podsekce--margin
+				img(src="./img/predchozi-prace/index.jpg", alt="")
+				img(src="./img/predchozi-prace/102.jpg", alt="")
+				img(src="./img/predchozi-prace/202.jpg", alt="")
+	section.about
+
+	section.mezisekce
+
+	// Picture Grid
 	section.landing-page#picture-grid
 		.picture-grid
 			.grid__container
@@ -90,7 +123,9 @@ block content
 					span.show-slides__txt Ukaž vše
 		// picture grid end
 	// landing container end
-			
+	
+	section.contact
+
 block local-scripts
 	// script.
 		// window.addEventListener('scroll', showArticles)
