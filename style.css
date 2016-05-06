@@ -476,8 +476,7 @@ p {
 /* Header partial */
 .header {
   position: relative;
-  height: 500px;
-  height: 77vh;
+  height: 360px;
   background-size: cover;
 }
 .header--index-bg {
@@ -542,13 +541,14 @@ p {
   letter-spacing: 1px;
 }
 
+/*
 .header--index-bg li:nth-child(1),
 .header--nabidka-bg li:nth-child(2),
 .header--ofirme-bg li:nth-child(3),
 .header--kontakt-bg li:nth-child(4) {
-  border-bottom: solid 2px #644D19;
+	border-bottom: solid 2px #644D19;
 }
-
+*/
 /* Layout for all pages except Landing */
 main {
   position: relative;
@@ -578,13 +578,10 @@ main {
 }
 
 .picture-grid {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  position: relative;
   width: 1000px;
   height: 398px;
-  margin-left: -500px;
-  margin-top: -199px;
+  margin: 50px auto;
   background-image: url("img/picture-grid_laptop.jpg");
   background-size: contain;
   /* For Retina */
@@ -678,8 +675,6 @@ main {
   .picture-grid {
     width: 1300px;
     height: 517px;
-    margin-left: -650px;
-    margin-top: -258.5px;
   }
 
   .grid__cell {
@@ -712,7 +707,7 @@ main {
 
 .below-landing {
   background-color: white;
-  padding-bottom: 65px;
+  padding-bottom: 140px;
 }
 
 .slogan__txt {
@@ -721,7 +716,7 @@ main {
   padding: 6vh 70px 0;
   text-align: center;
   font-style: italic;
-  font-size: 30px;
+  font-size: 24px;
   letter-spacing: 0.4px;
   color: #757684;
 }
@@ -921,6 +916,7 @@ main {
   position: absolute;
   width: 60%;
   box-shadow: 1px 1px 9px black;
+  transition: all 0.2s ease-in-out;
 }
 .podsekce-predchoziprace img:nth-of-type(2) {
   top: 15%;
@@ -933,7 +929,10 @@ main {
   z-index: 3;
 }
 .podsekce-predchoziprace img:hover {
+  transform: scale(1.1);
+  transition: all 0.2s ease-in-out;
   z-index: 4;
+  box-shadow: 1px 1px 15px black;
 }
 
 .podsekce__link {
@@ -949,11 +948,28 @@ main {
   background-color: #ffe600;
 }
 
+/* **** About **** */
 .about {
-  height: 500px;
+  height: 600px;
   background-image: url(img/ofirme.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: center 61%;
+}
+
+.about-txt {
+  height: 100%;
+  margin-left: 50%;
+  background-color: rgba(0, 0, 0, 0.4);
+  line-height: 1.4;
+  color: white;
+}
+.about-txt__wrap {
+  max-width: 450px;
+  margin: 0 auto;
+  padding-top: 80px;
+}
+.about-txt__wrap h2 {
+  text-align: center;
 }
 
 /* */
@@ -961,9 +977,14 @@ main {
 /* */
 /* */
 .landing-page {
-  height: 600px;
   position: relative;
+  padding: 60px 0;
   z-index: 3;
+}
+.landing-page h2 {
+  width: 1000px;
+  margin: 1em auto;
+  text-align: center;
 }
 
 .show-slides {
@@ -991,10 +1012,57 @@ main {
 
 /* **** Contact **** */
 .contact {
-  height: 500px;
-  background-image: url(img/predchoziprace-bg_3872w_10q.jpg);
+  height: 80vh;
+  padding-top: 50px;
+  background-image: linear-gradient(113deg, rgba(0, 0, 0, 0.9) 61%, transparent 62%, transparent 81%, black 82%), linear-gradient(rgba(0, 0, 0, 0.9) 5%, transparent 6%, transparent 94%, rgba(0, 0, 0, 0.9) 95%), url(img/kontakt-bg_4999w_50q.jpg);
+  background-image: linear-gradient(113deg, rgba(0, 0, 0, 0.9) 59%, transparent 65%, transparent 79%, black 84%), linear-gradient(rgba(0, 0, 0, 0.9) 7%, transparent 21%), url(img/kontakt-bg_4999w_50q.jpg);
+  background-image: linear-gradient(113deg, rgba(0, 0, 0, 0.9) 59%, transparent 65%, transparent 79%, black 84%), url(img/kontakt-bg_4999w_50q.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: bottom left 84%;
+  background-repeat: no-repeat;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin-left: 20%;
+  color: #C6C6C6;
+}
+.contact-form h2 {
+  text-align: center;
+  color: white;
+  margin: 0;
+}
+
+.form__name, .form__email, .form__zprava {
+  padding-left: 10px;
+  border: 2px solid white;
+  margin: 1em 0;
+}
+
+.form__name {
+  float: left;
+  width: 40%;
+}
+
+.form__email {
+  float: right;
+  width: 40%;
+}
+
+.form__zprava {
+  clear: both;
+  height: 150px;
+}
+
+.form__sent {
+  width: 25%;
+  padding: 10px 0;
+  margin: 0 auto;
+  border: 2px solid white;
+  text-align: center;
+}
+.form__sent a {
+  color: white;
 }
 
 /* Nabidka Page styles */
@@ -1405,10 +1473,10 @@ main {
 
 .footer {
   position: relative;
-  height: 8vh;
+  height: 20vh;
   font-size: 14px;
   color: #e1e1e1;
-  background-color: grey;
+  background-color: #020202;
   /* background: url('img/picture-grid_desktop.jpg'), url('img/picture-grid_desktop.jpg') */
   background-size: 1000px auto;
   background-position: left top -47px, left 1010px bottom -29px;

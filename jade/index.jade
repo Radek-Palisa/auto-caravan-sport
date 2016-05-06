@@ -2,7 +2,18 @@ extends partials/layout.jade
 
 block header
 	header.header.header--index-bg
-		include partials/header.jade
+		.logo.logo--fonts
+			h1 A.C.S. s.r.o.
+			p Auto Caravan Sport
+			.underline
+				span.underline__txt s.r.o.
+
+		nav.nav.nav--fonts(role="navigation")
+			ul
+				// li: a(href="index.html") Domů
+				li: a(href="#offer") Nabídka
+				li: a(href="#about") O firmě
+				li: a(href="#contact") Kontakt
 
 block content
 
@@ -47,38 +58,10 @@ block content
 
 	section.nabidka
 		h1 Ford Custom A.C.S.
-
-	section.mezisekce
-		article.sekce.sekce-nabidka
-			.podsekce.podsekce-img
-				.rslides-container
-						ul.rslides
-							li: img(src="img/soucasna-nabidka/050.jpg" alt="")
-							li: img(src="img/soucasna-nabidka/001.jpg" alt="")
-							li: img(src="img/soucasna-nabidka/049.jpg" alt="")
-							li: img(src="img/soucasna-nabidka/003.jpg" alt="")
-							li: img(src="img/soucasna-nabidka/005.jpg" alt="")
-			.podsekce.podsekce-txt.podsekce--margin
-				h1 Současně k prodeji
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus praesentium placeat obcaecati natus provident laboriosam, atque, facere exercitationem fugit fugiat architecto aliquid deserunt veritatis doloremque. Nihil molestiae, aperiam necessitatibus a.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil et quidem quia fugiat dolores saepe, repellat magni. Commodi, facilis minima excepturi magni accusantium, amet. Magni at quae eius numquam suscipit.
-				p Podívejte se podrobný popis a foto-dokumentaci:
-				a.podsekce__link(href="./nabidka.html") Zjistěte více
-		article.sekce.sekce-predchoziprace
-			.podsekce.podsekce-txt
-				h1 Předchozí práce
-				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus praesentium placeat obcaecati natus provident laboriosam, atque, facere exercitationem fugit fugiat architecto aliquid deserunt veritatis doloremque. Nihil molestiae, aperiam necessitatibus a.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil et quidem quia fugiat dolores saepe, repellat magni. Commodi, facilis minima excepturi magni accusantium, amet. Magni at quae eius numquam suscipit.
-				p Podívejte se na ukázky mé předchozí práce:
-				a.podsekce__link(href="./nabidka.html") Zjistěte více
-			.podsekce.podsekce-img.podsekce-predchoziprace.podsekce--margin
-				img(src="./img/predchozi-prace/index.jpg", alt="")
-				img(src="./img/predchozi-prace/102.jpg", alt="")
-				img(src="./img/predchozi-prace/202.jpg", alt="")
-	section.about
-
-	section.mezisekce
-
+	
 	// Picture Grid
 	section.landing-page#picture-grid
+		h2 Proč karavaning v malé dodávce
 		.picture-grid
 			.grid__container
 				.grid__cell.grid__cell--hover.grid__cell--top-start
@@ -124,7 +107,51 @@ block content
 		// picture grid end
 	// landing container end
 	
-	section.contact
+	section.mezisekce#offer
+		article.sekce.sekce-nabidka
+			.podsekce.podsekce-img
+				.rslides-container
+						ul.rslides
+							li: img(src="img/soucasna-nabidka/050.jpg" alt="")
+							li: img(src="img/soucasna-nabidka/001.jpg" alt="")
+							li: img(src="img/soucasna-nabidka/049.jpg" alt="")
+							li: img(src="img/soucasna-nabidka/003.jpg" alt="")
+							li: img(src="img/soucasna-nabidka/005.jpg" alt="")
+			.podsekce.podsekce-txt.podsekce--margin
+				h1 Současně k prodeji
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus praesentium placeat obcaecati natus provident laboriosam, atque, facere exercitationem fugit fugiat architecto aliquid deserunt veritatis doloremque. Nihil molestiae, aperiam necessitatibus a.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil et quidem quia fugiat dolores saepe, repellat magni. Commodi, facilis minima excepturi magni accusantium, amet. Magni at quae eius numquam suscipit.
+				p Podívejte se podrobný popis a foto-dokumentaci:
+				a.podsekce__link(href="./nabidka.html") Zjistěte více
+		article.sekce.sekce-predchoziprace
+			.podsekce.podsekce-txt
+				h1 Předchozí práce
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus praesentium placeat obcaecati natus provident laboriosam, atque, facere exercitationem fugit fugiat architecto aliquid deserunt veritatis doloremque. Nihil molestiae, aperiam necessitatibus a.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil et quidem quia fugiat dolores saepe, repellat magni. Commodi, facilis minima excepturi magni accusantium, amet. Magni at quae eius numquam suscipit.
+				p Podívejte se na ukázky mé předchozí práce:
+				a.podsekce__link(href="./nabidka.html") Zjistěte více
+			.podsekce.podsekce-img.podsekce-predchoziprace.podsekce--margin
+				img(src="./img/predchozi-prace/index.jpg", alt="")
+				img(src="./img/predchozi-prace/102.jpg", alt="")
+				img(src="./img/predchozi-prace/202.jpg", alt="")
+
+	section.about#about
+		article.about-txt
+			.about-txt__wrap
+				h2  O firmě
+				p Myšlenka začala v roce 1996 po zakoupení staršího vozu Ford Transit a jeho postupné přestavbě. Nadšení pro volnost prožití svého volného času se stávala silnější a po zamilování se do windsurfingu a později do kitingu, bylo rozhodnuto. Přece jenom byt odkázán na nabídky cestovek, které se nepochlubí negativní stránkou své nabízené lokality, nebo příjezdy do neznámých oblastí. No prostě auto je pro mne něco víc než jen převoz z místa do místa. Proto jsem začal uvazovat o typu a velikosti co by mne uspokojilo. V teto věci bych karavaning  přirovnal k hudbě. Hudba poskytuje radost obrovské spoustě posluchačů a každý si najde tu svou. Tak karavaning má široký rozsah zájmů a je třeba si vybrat ten svůj. Já jsem si vybral a ten Vám chci předvést.
+
+	section.mezisekce
+	
+	section.contact#contact
+		.contact-form
+			h2 Pojd´me spolupracovat
+			.form__name
+				p Jméno
+			.form__email
+				p Email
+			.form__zprava
+				p Napište mi co Vás zaujalo...
+			.form__sent 
+				a(href="#") Poslat
 
 block local-scripts
 	// script.

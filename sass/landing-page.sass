@@ -9,7 +9,7 @@
 
 .below-landing
 	background-color: white
-	padding-bottom: 65px
+	padding-bottom: 140px
 
 .slogan__txt
 	width: 1180px
@@ -18,7 +18,7 @@
 	text-align: center
 	// font-weight: bold
 	font-style: italic
-	font-size: 30px
+	font-size: 24px
 	letter-spacing: 0.4px
 	color: #757684
 
@@ -211,6 +211,7 @@
 		position: absolute
 		width: 60%
 		box-shadow: 1px 1px 9px black
+		transition: all 0.2s ease-in-out
 
 		&:nth-of-type(2)
 			top: 15%
@@ -222,7 +223,11 @@
 			z-index: 3
 
 		&:hover
+			transform: scale(1.1)
+			transition: all 0.2s ease-in-out
 			z-index: 4
+			box-shadow: 1px 1px 15px black
+			
 
 .podsekce__link
 	display: block
@@ -237,20 +242,48 @@
 	color: black
 	background-color: rgb(255,230,0)
 
+//
+//
+/* **** About **** */
+//
+//
 .about
-	height: 500px
+	height: 600px
+	// padding-top: 20px
+
 	background-image: url(img/ofirme.jpg)
 	background-size: cover
-	background-position: center
+	background-position: center 61%
+
+.about-txt
+	height: 100%
+	margin-left: 50%
+	background-color: rgba(0,0,0,0.4)
+	line-height: 1.4
+	color: white
+
+	&__wrap
+		max-width: 450px
+		margin: 0 auto
+		padding-top: 80px
+
+		h2 
+			text-align: center
+
 /**/
 /* ******** Picture Grid ******** */
 /**/
 /**/
 
 .landing-page
-	height: 600px
 	position: relative
+	padding: 60px 0
 	z-index: 3
+
+	h2
+		width: 1000px
+		margin: 1em auto
+		text-align: center
 
 .show-slides
 	position: absolute
@@ -281,7 +314,46 @@
 //
 
 .contact
-	height: 500px
-	background-image: url(img/predchoziprace-bg_3872w_10q.jpg)
+	height: 80vh
+	padding-top: 50px
+	background-image: linear-gradient(113deg, rgba(0, 0, 0, 0.9) 61%, transparent 62%, transparent 81%, black 82%), linear-gradient(rgba(0, 0, 0, 0.9) 5%, transparent 6%, transparent 94%, rgba(0,0,0,0.9) 95%), url(img/kontakt-bg_4999w_50q.jpg)
+	background-image: linear-gradient(113deg, rgba(0, 0, 0, 0.9) 59%, transparent 65%, transparent 79%, black 84%), linear-gradient(rgba(0, 0, 0, 0.9) 7%, transparent 21%), url(img/kontakt-bg_4999w_50q.jpg)
+	background-image: linear-gradient(113deg, rgba(0, 0, 0, 0.9) 59%, transparent 65%, transparent 79%, black 84%), url(img/kontakt-bg_4999w_50q.jpg)
 	background-size: cover
-	background-position: center
+	background-position: bottom left 84%
+	background-repeat: no-repeat
+
+.contact-form
+	max-width: 500px
+	margin-left: 20%
+	color: #C6C6C6
+
+	h2
+		text-align: center
+		color: white
+		margin: 0
+
+.form__name, .form__email, .form__zprava
+	padding-left: 10px
+	border: 2px solid white
+	margin: 1em 0
+.form__name
+	float: left
+	width: 40%
+.form__email
+	float: right
+	width: 40%
+
+.form__zprava
+	clear: both
+	height: 150px
+
+.form__sent
+	width: 25%
+	padding: 10px 0
+	margin: 0 auto
+	border: 2px solid white
+	text-align: center
+
+	a 
+		color: white
