@@ -3,14 +3,8 @@
 .header {
 	position: relative;
 	height: 360px;
-
 	background-size: cover;
 	
-	$linear-gradient: linear-gradient(-7deg, rgba(0, 0, 0, 0.55), transparent, rgba(0, 0, 0, 0.68));
-	$linear-gradient: linear-gradient(172deg, rgba(0, 0, 0, 0.65), transparent 30%, transparent 65%, rgba(0, 0, 0, 0.5));
-	$linear-gradient: linear-gradient(172deg,rgb(21, 21, 21), rgba(0, 0, 0, 0.65) 5%, transparent 30%, transparent 65%, rgba(0, 0, 0, 0.5));
-	$linear-gradient:linear-gradient(184deg, rgba(120, 120, 121, 0.69), transparent 40%);
-	$linear-gradient: linear-gradient(184deg, rgba(120, 120, 121, 0.62), transparent 25%);
 	$linear-gradient: linear-gradient(transparent, rgba(0,0,0,0.2), transparent);
 
 	&--index-bg {
@@ -83,16 +77,3 @@
 		}
 	}
 }
-
-//
-// Nav underlines indicating current page
-//
-
-/*
-.header--index-bg li:nth-child(1),
-.header--nabidka-bg li:nth-child(2),
-.header--ofirme-bg li:nth-child(3),
-.header--kontakt-bg li:nth-child(4) {
-	border-bottom: solid 2px #644D19;
-}
-*/

@@ -1,4 +1,19 @@
+/**/
+/* ******** Picture Grid ******** */
+/**/
+/**/
+
 .picture-grid
+	position: relative
+	padding: 60px 0
+	z-index: 3
+
+	h2
+		width: 1000px
+		margin: 1em auto
+		text-align: center
+
+.picture-grid__wrap
 	position: relative
 
 	$pic-grid-width: 1000px
@@ -77,19 +92,17 @@
 
 /* For Desktop Screens */
 @media screen and (min-width: $break-desktop)
-	.picture-grid
+	.picture-grid__wrap
 		background-image: url('img/picture-grid_desktop.jpg')
 		
 	/* For Retina Desktop */
 	@media screen and (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)
-		.picture-grid
+		.picture-grid__wrap
 			background-image: url('img/picture-grid_desktop_2x.jpg')
 
 @media screen and (min-width: $break-desktop)
-	.landing-container
-		min-height: 750px
 
-	.picture-grid
+	.picture-grid__wrap
 		$pic-grid-width: 1300px
 		$pic-grid-height: 517px
 		width: $pic-grid-width
@@ -120,3 +133,27 @@
 			&--bottom-end
 				width: 143px
 				margin-right: 0
+
+// Bottom button styles
+
+.show-slides
+	position: absolute
+	left: 0
+	bottom: -27px
+	cursor: pointer
+	
+	&__icon
+		display: inline-block
+		width: 30px
+		margin-bottom: -9px
+		margin-right: 8px
+		
+	&__txt
+		font-size: 15px
+		color: #6B6B6B
+		
+	&:hover
+		font-weight: bold
+	
+	&:active .show-slides__icon
+		width: 28px

@@ -1,21 +1,59 @@
-@import "normalize";
+@import "vendor/normalize";
 
 @import "base";
 
-@import "partials/header";
+// Index Page
 
-@import "layout";
+@import "1-header";
 
-@import "modules/main-heading";
+@import "2-sub-header";
 
-@import "modules/picture-grid";
+@import "3-jumbotron";
 
-@import "landing-page";
+@import "4-picture-grid";
 
-@import "nabidka";
+@import "5-offer";
 
-@import "modules/gallery";
+@import "6-about";
 
-@import "modules/contact-form";
+@import "7-contact";
 
-@import "partials/footer";
+@import "8-footer";
+
+// Sub-pages
+
+/* Layout for sub-pages */
+
+main {
+	position: relative;
+	margin: 0 auto;
+	padding-bottom: 12px;
+	background-color: white;
+	width: 100%;
+}
+
+.content {
+	max-width: 1200px;
+	margin: 0 auto;
+	position: relative;
+	padding: 20px 100px 0;
+}
+
+/* Sub-pages Headings */
+
+.heading__wrap {
+	width: 1000px;
+	margin: 0 auto;
+	padding: 45px 0;
+	text-align: right;
+}
+
+.heading {
+	margin: 0;
+}
+
+@import "sub-pages/nabidka";
+
+@import "sub-pages/gallery";
+
+

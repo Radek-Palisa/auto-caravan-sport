@@ -26,8 +26,6 @@ module.exports = function(grunt) {
 			    'nabidka.html' : 'jade/nabidka.jade',
 				'gallery.html' : 'jade/gallery.jade',
 				'index.html' : 'jade/index.jade',
-				'kontakt.html' : 'jade/kontakt.jade',
-				'ofirme.html' : 'jade/ofirme.jade'
 			}
 		  }
 		},

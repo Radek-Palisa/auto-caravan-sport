@@ -15,7 +15,7 @@
     <script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
   </head>
   <body>
-    <header class="header header--index-bg">
+    <header id="header" class="header header--index-bg">
       <div class="logo logo--fonts">
         <h1>A.C.S. s.r.o.</h1>
         <p>Auto Caravan Sport</p>
@@ -24,61 +24,43 @@
       <nav role="navigation" class="nav nav--fonts">
         <ul>
           <!-- li: a(href="index.html") Domů-->
-          <li><a href="#offer">Nabídka</a></li>
+          <li><a href="#product">Nabídka</a></li>
           <li><a href="#about">O firmě</a></li>
           <li><a href="#contact">Kontakt</a></li>
         </ul>
       </nav>
     </header>
-    <section id="home-page" class="below-landing">
+    <section class="sub-header">
       <p class="slogan__txt">Vítejte v mém světě dodávkové velikosti</br>...ani malé ani velké.</p>
-      <div class="below-landing__content">
-        <article class="homepage-article">
+      <nav role="navigation" class="sub-header__content"><a href="#picture-grid" class="sub-header__nav">
           <div class="article__wrap">
-            <!--.article__img-wrapp ?
-            -->
             <h1>Co je Karavaning</h1>
-          </div>
-        </article>
-        <article class="homepage-article">
+          </div></a><a href="#product" class="sub-header__nav">
           <div class="article__wrap">
-            <!--.article__img-wrapimg.index-icon(src="./img/home.svg")
-            -->
-            <h1>O firmě</h1>
-            <!-- p Přečtěte si více o mně a mé firmě:-->
-            <!-- a(href="./ofirme.html") O firmě-->
-          </div>
-        </article>
-        <article class="homepage-article">
-          <div class="article__wrap">
-            <!--.article__img-wrap.van-iconimg.index-icon(src="./img/van.svg")
-            -->
             <h1>Co nabízím	</h1>
-            <!-- p Podívejte se na detaily mé současné práce:-->
-            <!-- a(href="./nabidka.html") Současná nabídka-->
-            <!-- p Podívejtě se na ukázky mých předchozích přestaveb-->
-            <!-- a(href="./nabidka.html") Předchozí práce-->
-          </div>
-        </article>
-        <article class="homepage-article">
+          </div></a><a href="#product" class="sub-header__nav">
           <div class="article__wrap">
-            <!-- .article__img-wrapimg.index-icon(src="./img/envelope.svg")
-            -->
             <h1>Předchozí práce</h1>
-            <!-- p Máte otázky? Neváhajte se na mě obrátit!-->
-            <!-- a(href="./kontakt.html") Napište mi-->
-          </div>
-        </article>
+          </div></a><a href="#about" class="sub-header__nav">
+          <div class="article__wrap">
+            <h1>O firmě</h1>
+          </div></a></nav><a href="#picture-grid" class="arrow-link"><img src="img/ctrl.svg" alt="" class="arrow"></a>
+    </section>
+    <!---->
+    <!-- Jumbotron-->
+    <!---->
+    <section class="jumbotron">
+      <div class="jumbotron__txt">
+        <h3>Ford Custom A.C.S.</h3>
+        <p> Lorem ipsum dolor sit amet. Consectetur adipisicing elit. Adipisci minus autem distinctio voluptatem.</p>
       </div>
-      <!-- p.learn-more Zjistěte více o karavaningu a výhodách menšího vozidla<br>v interaktivní prezentaci níže--><a href="#picture-grid" class="arrow-link"><img src="img/ctrl.svg" alt="" class="arrow"></a>
     </section>
-    <section class="nabidka">
-      <h1>Ford Custom A.C.S.</h1>
-    </section>
+    <!---->
     <!-- Picture Grid-->
-    <section id="picture-grid" class="landing-page">
+    <!---->
+    <section id="picture-grid" class="picture-grid">
       <h2>Proč karavaning v malé dodávce</h2>
-      <div class="picture-grid">
+      <div class="picture-grid__wrap">
         <div class="grid__container">
           <div class="grid__cell grid__cell--hover grid__cell--top-start">
             <div class="slide-in">
@@ -127,11 +109,12 @@
           <div class="show-slides"> <img src="img/eye.svg" class="show-slides__icon"><span class="show-slides__txt">Ukaž vše</span></div>
         </div>
       </div>
-      <!-- picture grid end-->
     </section>
-    <!-- landing container end-->
-    <section id="offer" class="mezisekce">
-      <article class="sekce sekce-nabidka">
+    <!---->
+    <!-- Product-->
+    <!---->
+    <section id="product">
+      <article class="product sekce-nabidka">
         <div class="podsekce podsekce-img">
           <div class="rslides-container">
             <ul class="rslides">
@@ -149,15 +132,20 @@
           <p>Podívejte se podrobný popis a foto-dokumentaci:</p><a href="./nabidka.html" class="podsekce__link">Zjistěte více</a>
         </div>
       </article>
-      <article class="sekce sekce-predchoziprace">
+      <article class="product sekce-prev-work">
         <div class="podsekce podsekce-txt">
           <h1>Předchozí práce</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus praesentium placeat obcaecati natus provident laboriosam, atque, facere exercitationem fugit fugiat architecto aliquid deserunt veritatis doloremque. Nihil molestiae, aperiam necessitatibus a.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil et quidem quia fugiat dolores saepe, repellat magni. Commodi, facilis minima excepturi magni accusantium, amet. Magni at quae eius numquam suscipit.</p>
           <p>Podívejte se na ukázky mé předchozí práce:</p><a href="./nabidka.html" class="podsekce__link">Zjistěte více</a>
         </div>
-        <div class="podsekce podsekce-img podsekce-predchoziprace podsekce--margin"><img src="./img/predchozi-prace/index.jpg" alt=""><img src="./img/predchozi-prace/102.jpg" alt=""><img src="./img/predchozi-prace/202.jpg" alt=""></div>
+        <div class="podsekce podsekce-img podsekce-predchoziprace podsekce--margin">
+          <div class="inner"><img src="./img/predchozi-prace/index.jpg" alt=""><img src="./img/predchozi-prace/102.jpg" alt=""><img src="./img/predchozi-prace/202.jpg" alt=""></div>
+        </div>
       </article>
     </section>
+    <!---->
+    <!-- About-->
+    <!---->
     <section id="about" class="about">
       <article class="about-txt">
         <div class="about-txt__wrap">
@@ -166,7 +154,9 @@
         </div>
       </article>
     </section>
-    <section class="mezisekce"></section>
+    <!---->
+    <!-- Contact-->
+    <!---->
     <section id="contact" class="contact">
       <div class="contact-form">
         <h2>Pojd´me spolupracovat</h2>
@@ -186,10 +176,10 @@
       <p class="footer__copyright footer--middle">Auto Caravan Sport s.r.o. 2016</p>
       <nav class="footer__nav footer--left">
         <ul>
-          <li><a href="index.html">Domů</a></li>
-          <li><a href="nabidka.html">Nabídka</a></li>
-          <li><a href="ofirme.html">O firmě</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="#header">Nahoru</a></li>
+          <li><a href="#product">Nabídka</a></li>
+          <li><a href="#about">O firmě</a></li>
+          <li><a href="#contact">Kontakt</a></li>
         </ul>
       </nav>
       <div class="footer--right"><img src="./img/email-icon.svg" class="home-socicon footer__socicon"><img src="./img/fb-icon.svg" class="home-socicon footer__socicon"></div>

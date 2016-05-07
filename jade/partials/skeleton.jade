@@ -13,19 +13,17 @@ html
 		script(type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js")
 		
 	body
-		block header
-
-		block content
+		block body
 		
 		block footer
 			footer.footer
 				p.footer__copyright.footer--middle Auto Caravan Sport s.r.o. 2016
 				nav.footer__nav.footer--left
 					ul
-						li: a(href="index.html") Domů
-						li: a(href="nabidka.html") Nabídka
-						li: a(href="ofirme.html") O firmě
-						li: a(href="kontakt.html") Kontakt
+						li: a(href="#header") Nahoru
+						li: a(href="#product") Nabídka
+						li: a(href="#about") O firmě
+						li: a(href="#contact") Kontakt
 				.footer--right
 					img.home-socicon.footer__socicon(src="./img/email-icon.svg")
 					img.home-socicon.footer__socicon(src="./img/fb-icon.svg")

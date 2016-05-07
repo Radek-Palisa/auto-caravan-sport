@@ -12,17 +12,6 @@ $(function() {
     }
   });
 });
-//
-// --- Smooth scroll to Below Landing Section ---
-//
-var $root = $('html, body');
-
-$('.arrow-link').click(function() {
-	$root.animate({
-		scrollTop: $( $.attr(this, 'href') ).offset().top
-	}, 1500, 'easeOutQuart');
-	return false;
-});
 
 //
 // --- Fallback for non-hover devices ---
@@ -152,18 +141,4 @@ var $homepageArticle = $('.homepage-article');
 		});
 		}
 		*/
-		/*
-		if (offset >= $window.height()) {
-			$jumbotron.addClass('jumbotron--undock');
-		} else {
-			$jumbotron.removeClass('jumbotron--undock');
-		}
-		*/
 	});
-
-/*
-function SlideUpOnLoad() {
-	$belowLanding.addClass('slide-up');
-}
-setTimeout(SlideUpOnLoad,1000)
-*/

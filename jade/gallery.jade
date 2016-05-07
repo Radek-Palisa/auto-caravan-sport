@@ -1,10 +1,21 @@
-extends partials/layout.jade
+extends partials/skeleton.jade
 
-block header
+block body
+
 	header.header.header--gallery-bg
-		include partials/header.jade
+		.logo.logo--fonts
+			h1 A.C.S. s.r.o.
+			p Auto Caravan Sport
+			.underline
+				span.underline__txt s.r.o.
 
-block content
+		nav.nav.nav--fonts(role="navigation")
+			ul
+				li: a(href="index.html") Domů
+				li: a(href="nabidka.html") Nabídka
+				li: a(href="index.html#about") O firmě
+				li: a(href="index.html#contact") Kontakt
+
 	main
 		.heading__wrap
 				div(class="")
@@ -52,3 +63,18 @@ block content
 					section.postel
 						- for (var x = 0; x < 28; x++)
 							a.gallery__thumbnail(href="#")
+
+block footer
+	footer.footer
+		p.footer__copyright.footer--middle Auto Caravan Sport s.r.o. 2016
+		nav.footer__nav.footer--left
+			ul
+				li: a(href="index.html") Domů
+				li: a(href="nabidka.html") Nabídka
+				li: a(href="index.html#about") O firmě
+				li: a(href="index.html#contact") Kontakt
+		.footer--right
+			img.home-socicon.footer__socicon(src="./img/email-icon.svg")
+			img.home-socicon.footer__socicon(src="./img/fb-icon.svg")
+		p.footer__credits Web: 
+			a(href="https://www.linkedin.com/in/radek-palisa-96332886", target="_blank") Radek Palisa
