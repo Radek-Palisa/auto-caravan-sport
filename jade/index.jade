@@ -9,9 +9,9 @@ block body
 			.underline
 				span.underline__txt s.r.o.
 
-		nav.nav.nav--fonts(role="navigation")
+		// nav.nav.nav--fonts(role="navigation")
 			ul
-				// li: a(href="index.html") Domů
+				li: a(href="index.html") Domů
 				li: a(href="#product") Nabídka
 				li: a(href="#about") O firmě
 				li: a(href="#contact") Kontakt
@@ -27,13 +27,17 @@ block body
 				.article__wrap
 					h1 Co nabízím	
 					
-			a.sub-header__nav(href="#product")
+			a.sub-header__nav(href="#prev-work")
 				.article__wrap
 					h1 Předchozí práce
 
 			a.sub-header__nav(href="#about")
 				.article__wrap
 					h1 O firmě
+
+			a.sub-header__nav(href="#contact")
+				.article__wrap
+					h1 Kontakt
 					
 		a.arrow-link(href="#picture-grid")
 			img.arrow(src="img/ctrl.svg", alt="")
@@ -41,7 +45,7 @@ block body
 	//
 	// Jumbotron
 	//
-	section.jumbotron
+	article.jumbotron
 		.jumbotron__txt
 			h3 Ford Custom A.C.S.
 			p  Lorem ipsum dolor sit amet. Consectetur adipisicing elit. Adipisci minus autem distinctio voluptatem.
@@ -49,7 +53,7 @@ block body
 	//
 	// Picture Grid
 	//
-	section.picture-grid#picture-grid
+	article.picture-grid#picture-grid
 		h2 Proč karavaning v malé dodávce
 		.picture-grid__wrap
 			.grid__container
@@ -97,9 +101,10 @@ block body
 	//
 	// Product
 	//
-	section#product
-		article.product.sekce-nabidka
-			.podsekce.podsekce-img
+	article.product.sekce-nabidka.height#product
+		h1.product__heading Co nabízím
+		.flex
+			section.podsekce.podsekce-img
 				.rslides-container
 						ul.rslides
 							li: img(src="img/soucasna-nabidka/050.jpg" alt="")
@@ -107,18 +112,21 @@ block body
 							li: img(src="img/soucasna-nabidka/049.jpg" alt="")
 							li: img(src="img/soucasna-nabidka/003.jpg" alt="")
 							li: img(src="img/soucasna-nabidka/005.jpg" alt="")
-			.podsekce.podsekce-txt.podsekce--margin
-				h1 Současně k prodeji
+			section.podsekce.podsekce-txt
+				h1 Ford Custom A.C.S.
 				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus praesentium placeat obcaecati natus provident laboriosam, atque, facere exercitationem fugit fugiat architecto aliquid deserunt veritatis doloremque. Nihil molestiae, aperiam necessitatibus a.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil et quidem quia fugiat dolores saepe, repellat magni. Commodi, facilis minima excepturi magni accusantium, amet. Magni at quae eius numquam suscipit.
 				p Podívejte se podrobný popis a foto-dokumentaci:
 				a.podsekce__link(href="./nabidka.html") Zjistěte více
-		article.product.sekce-prev-work
-			.podsekce.podsekce-txt
-				h1 Předchozí práce
+
+	article.prev-work.sekce-prev-work.height#prev-work
+		h1.prev-work__headline Předchozí práce
+		.flex
+			section.podsekce.podsekce-txt
+				h1 Variace Fordu Transit s krátkým rozvorem
 				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus praesentium placeat obcaecati natus provident laboriosam, atque, facere exercitationem fugit fugiat architecto aliquid deserunt veritatis doloremque. Nihil molestiae, aperiam necessitatibus a.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil et quidem quia fugiat dolores saepe, repellat magni. Commodi, facilis minima excepturi magni accusantium, amet. Magni at quae eius numquam suscipit.
 				p Podívejte se na ukázky mé předchozí práce:
 				a.podsekce__link(href="./nabidka.html") Zjistěte více
-			.podsekce.podsekce-img.podsekce-predchoziprace.podsekce--margin
+			section.podsekce.podsekce-img.podsekce-predchoziprace
 				.inner
 					img(src="./img/predchozi-prace/index.jpg", alt="")
 					img(src="./img/predchozi-prace/102.jpg", alt="")
@@ -127,8 +135,8 @@ block body
 	//
 	// About
 	//
-	section.about#about
-		article.about-txt
+	article.about#about
+		section.about-txt
 			.about-txt__wrap
 				h2  O firmě
 				p Myšlenka začala v roce 1996 po zakoupení staršího vozu Ford Transit a jeho postupné přestavbě. Nadšení pro volnost prožití svého volného času se stávala silnější a po zamilování se do windsurfingu a později do kitingu, bylo rozhodnuto. Přece jenom byt odkázán na nabídky cestovek, které se nepochlubí negativní stránkou své nabízené lokality, nebo příjezdy do neznámých oblastí. No prostě auto je pro mne něco víc než jen převoz z místa do místa. Proto jsem začal uvazovat o typu a velikosti co by mne uspokojilo. V teto věci bych karavaning  přirovnal k hudbě. Hudba poskytuje radost obrovské spoustě posluchačů a každý si najde tu svou. Tak karavaning má široký rozsah zájmů a je třeba si vybrat ten svůj. Já jsem si vybral a ten Vám chci předvést.
@@ -136,7 +144,7 @@ block body
 	//
 	// Contact
 	//
-	section.contact#contact
+	article.contact#contact
 		.contact-form
 			h2 Pojd´me spolupracovat
 			.form__name

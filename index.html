@@ -21,14 +21,14 @@
         <p>Auto Caravan Sport</p>
         <div class="underline"><span class="underline__txt">s.r.o.</span></div>
       </div>
-      <nav role="navigation" class="nav nav--fonts">
-        <ul>
-          <!-- li: a(href="index.html") Domů-->
-          <li><a href="#product">Nabídka</a></li>
-          <li><a href="#about">O firmě</a></li>
-          <li><a href="#contact">Kontakt</a></li>
-        </ul>
-      </nav>
+      <!-- nav.nav.nav--fonts(role="navigation")
+      ul
+      	li: a(href="index.html") Domů
+      	li: a(href="#product") Nabídka
+      	li: a(href="#about") O firmě
+      	li: a(href="#contact") Kontakt
+      
+      -->
     </header>
     <section class="sub-header">
       <p class="slogan__txt">Vítejte v mém světě dodávkové velikosti</br>...ani malé ani velké.</p>
@@ -38,27 +38,30 @@
           </div></a><a href="#product" class="sub-header__nav">
           <div class="article__wrap">
             <h1>Co nabízím	</h1>
-          </div></a><a href="#product" class="sub-header__nav">
+          </div></a><a href="#prev-work" class="sub-header__nav">
           <div class="article__wrap">
             <h1>Předchozí práce</h1>
           </div></a><a href="#about" class="sub-header__nav">
           <div class="article__wrap">
             <h1>O firmě</h1>
+          </div></a><a href="#contact" class="sub-header__nav">
+          <div class="article__wrap">
+            <h1>Kontakt</h1>
           </div></a></nav><a href="#picture-grid" class="arrow-link"><img src="img/ctrl.svg" alt="" class="arrow"></a>
     </section>
     <!---->
     <!-- Jumbotron-->
     <!---->
-    <section class="jumbotron">
+    <article class="jumbotron">
       <div class="jumbotron__txt">
         <h3>Ford Custom A.C.S.</h3>
         <p> Lorem ipsum dolor sit amet. Consectetur adipisicing elit. Adipisci minus autem distinctio voluptatem.</p>
       </div>
-    </section>
+    </article>
     <!---->
     <!-- Picture Grid-->
     <!---->
-    <section id="picture-grid" class="picture-grid">
+    <article id="picture-grid" class="picture-grid">
       <h2>Proč karavaning v malé dodávce</h2>
       <div class="picture-grid__wrap">
         <div class="grid__container">
@@ -109,13 +112,14 @@
           <div class="show-slides"> <img src="img/eye.svg" class="show-slides__icon"><span class="show-slides__txt">Ukaž vše</span></div>
         </div>
       </div>
-    </section>
+    </article>
     <!---->
     <!-- Product-->
     <!---->
-    <section id="product">
-      <article class="product sekce-nabidka">
-        <div class="podsekce podsekce-img">
+    <article id="product" class="product sekce-nabidka height">
+      <h1 class="product__heading">Co nabízím</h1>
+      <div class="flex">
+        <section class="podsekce podsekce-img">
           <div class="rslides-container">
             <ul class="rslides">
               <li><img src="img/soucasna-nabidka/050.jpg" alt=""></li>
@@ -125,39 +129,42 @@
               <li><img src="img/soucasna-nabidka/005.jpg" alt=""></li>
             </ul>
           </div>
-        </div>
-        <div class="podsekce podsekce-txt podsekce--margin">
-          <h1>Současně k prodeji</h1>
+        </section>
+        <section class="podsekce podsekce-txt">
+          <h1>Ford Custom A.C.S.</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus praesentium placeat obcaecati natus provident laboriosam, atque, facere exercitationem fugit fugiat architecto aliquid deserunt veritatis doloremque. Nihil molestiae, aperiam necessitatibus a.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil et quidem quia fugiat dolores saepe, repellat magni. Commodi, facilis minima excepturi magni accusantium, amet. Magni at quae eius numquam suscipit.</p>
           <p>Podívejte se podrobný popis a foto-dokumentaci:</p><a href="./nabidka.html" class="podsekce__link">Zjistěte více</a>
-        </div>
-      </article>
-      <article class="product sekce-prev-work">
-        <div class="podsekce podsekce-txt">
-          <h1>Předchozí práce</h1>
+        </section>
+      </div>
+    </article>
+    <article id="prev-work" class="prev-work sekce-prev-work height">
+      <h1 class="prev-work__headline">Předchozí práce</h1>
+      <div class="flex">
+        <section class="podsekce podsekce-txt">
+          <h1>Variace Fordu Transit s krátkým rozvorem</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus praesentium placeat obcaecati natus provident laboriosam, atque, facere exercitationem fugit fugiat architecto aliquid deserunt veritatis doloremque. Nihil molestiae, aperiam necessitatibus a.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil et quidem quia fugiat dolores saepe, repellat magni. Commodi, facilis minima excepturi magni accusantium, amet. Magni at quae eius numquam suscipit.</p>
           <p>Podívejte se na ukázky mé předchozí práce:</p><a href="./nabidka.html" class="podsekce__link">Zjistěte více</a>
-        </div>
-        <div class="podsekce podsekce-img podsekce-predchoziprace podsekce--margin">
+        </section>
+        <section class="podsekce podsekce-img podsekce-predchoziprace">
           <div class="inner"><img src="./img/predchozi-prace/index.jpg" alt=""><img src="./img/predchozi-prace/102.jpg" alt=""><img src="./img/predchozi-prace/202.jpg" alt=""></div>
-        </div>
-      </article>
-    </section>
+        </section>
+      </div>
+    </article>
     <!---->
     <!-- About-->
     <!---->
-    <section id="about" class="about">
-      <article class="about-txt">
+    <article id="about" class="about">
+      <section class="about-txt">
         <div class="about-txt__wrap">
           <h2> O firmě</h2>
           <p>Myšlenka začala v roce 1996 po zakoupení staršího vozu Ford Transit a jeho postupné přestavbě. Nadšení pro volnost prožití svého volného času se stávala silnější a po zamilování se do windsurfingu a později do kitingu, bylo rozhodnuto. Přece jenom byt odkázán na nabídky cestovek, které se nepochlubí negativní stránkou své nabízené lokality, nebo příjezdy do neznámých oblastí. No prostě auto je pro mne něco víc než jen převoz z místa do místa. Proto jsem začal uvazovat o typu a velikosti co by mne uspokojilo. V teto věci bych karavaning  přirovnal k hudbě. Hudba poskytuje radost obrovské spoustě posluchačů a každý si najde tu svou. Tak karavaning má široký rozsah zájmů a je třeba si vybrat ten svůj. Já jsem si vybral a ten Vám chci předvést.</p>
         </div>
-      </article>
-    </section>
+      </section>
+    </article>
     <!---->
     <!-- Contact-->
     <!---->
-    <section id="contact" class="contact">
+    <article id="contact" class="contact">
       <div class="contact-form">
         <h2>Pojd´me spolupracovat</h2>
         <div class="form__name">
@@ -171,7 +178,7 @@
         </div>
         <div class="form__sent"> <a href="#">Poslat</a></div>
       </div>
-    </section>
+    </article>
     <footer class="footer">
       <p class="footer__copyright footer--middle">Auto Caravan Sport s.r.o. 2016</p>
       <nav class="footer__nav footer--left">

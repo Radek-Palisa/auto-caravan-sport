@@ -1,10 +1,19 @@
 //
 // Co nabizim
 //
-
-.product
+.flex
 	display: flex
 	justify-content: center
+	align-items: center
+
+.height
+	height: 600px
+
+.product__heading, .prev-work__headline
+	text-align: center
+	font-size: 1.2em
+	color: #FFA700
+	margin-bottom: 60px
 
 .sekce-nabidka
 	background-color: lavender
@@ -13,14 +22,14 @@
 .sekce-prev-work
 	padding: 60px 0 60px
 
+.podsekce
+	margin: 0 70px
 .podsekce-img
-	width: 450px
 
 	.rslides-container
+		margin: 0 auto
+		width: 450px
 		box-shadow: 1px 1px 12px black
-
-.podsekce--margin
-	margin-left: 80px
 
 .podsekce-txt
 	max-width: 450px
@@ -28,7 +37,7 @@
 
 	h1
 		font-size: 1.2em
-		text-align: left
+		text-align: center
 		margin-top: 0
 	
 	p 
@@ -43,12 +52,12 @@
 //
 
 .podsekce-predchoziprace 
-	height: 299px
-	position: relative
 	
 	.inner
 		position: relative
-		height: 100%
+		width: 450px
+		height: 299px
+		margin: 0 auto
 
 	img
 		position: absolute
