@@ -38,8 +38,11 @@ block body
 			a.sub-header__nav(href="#contact")
 				.article__wrap
 					h1 Kontakt
-					
-		a.arrow-link(href="#picture-grid")
+		p.arrow-container 
+			svg.sub-header-svg(viewbox="0 0 100 100")
+				path.sub-header__arrow(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
+				
+		// a.arrow-link(href="#picture-grid")
 			img.arrow(src="img/ctrl.svg", alt="")
 
 	//
@@ -58,41 +61,65 @@ block body
 		.picture-grid__wrap
 			.grid__container
 				.grid__cell.grid__cell--hover.grid__cell--top-start
-					.slide-in
-						p.slide-in__text.slide-in__text--aligncenter <strong>Vítejte</strong></br>na stránkách firmy</br>A.C.S.
+					.card
+						figure.front
+							img(src="./img/picture-grid/pic-grid_01.jpg", alt="")
+						figure.back.slide-in
+							p.slide-in__text.slide-in__text--aligncenter <strong>Vítejte</strong></br>na stránkách firmy</br>A.C.S.
 						
 				.grid__cell.grid__cell--hover.grid__cell--middle
-					.slide-in
-						h1.slide-in__title Využití
-						p.slide-in__text Auta jsou ideální pro dálniční cestování, polykání kilometrů,  neustálé přesuny. Poskytují určitý komfort potřeb k pobytu, jak na městských parkovištích, kempech, tak i ve volné přírodě. Malá velikost vozidla usnadňuje nalodit vozidlo na trajekt a hlavně, za rozumnou cenu.
+					.card
+						figure.front
+							img(src="./img/picture-grid/pic-grid_02.jpg", alt="")
+						figure.back.slide-in
+							h1.slide-in__title Využití
+							p.slide-in__text Auta jsou ideální pro dálniční cestování, polykání kilometrů,  neustálé přesuny. Poskytují určitý komfort potřeb k pobytu, jak na městských parkovištích, kempech, tak i ve volné přírodě. Malá velikost vozidla usnadňuje nalodit vozidlo na trajekt a hlavně, za rozumnou cenu.
 
 				.grid__cell.grid__cell--hover.grid__cell--middle
-					.slide-in
-						h1.slide-in__title Dostupnost
-						p.slide-in__text S vozem se dostanete i na těžko přístupná místa jako centra velkoměst, parkoviště v historických částech nebo podobné spleti úzkých uliček. Přece jenom je dodávka méně nápadná než velký obytný vůz.
+					.card
+						figure.front
+							img(src="./img/picture-grid/pic-grid_03.jpg", alt="")
+						figure.back.slide-in
+							h1.slide-in__title Dostupnost
+							p.slide-in__text S vozem se dostanete i na těžko přístupná místa jako centra velkoměst, parkoviště v historických částech nebo podobné spleti úzkých uliček. Přece jenom je dodávka méně nápadná než velký obytný vůz.
 						
 				.grid__cell.grid__cell--hover.grid__cell--top-end
-					.slide-in
-						h1.slide-in__title Kvalita
-						p.slide-in__text U všech přestaveb jsou použity certifikované komponenty od firmy REIMO a splňují bezpečnostní a technické parametry.
+					.card
+						figure.front
+							img(src="./img/picture-grid/pic-grid_04.jpg", alt="")
+						figure.back.slide-in
+							h1.slide-in__title Kvalita
+							p.slide-in__text U všech přestaveb jsou použity certifikované komponenty od firmy REIMO a splňují bezpečnostní a technické parametry.
 				
 				.grid__cell.grid__cell--hover.grid__cell--bottom-start
-					.slide-in
-						h1.slide-in__title Skladnost
-						p.slide-in__text Malá velikost vozidla usnadnuje nalodit vozidlo na trajekt a setri penize na dalnicncich poplatcich.
+					.card
+						figure.front
+							img(src="./img/picture-grid/pic-grid_05.jpg", alt="")
+						figure.back.slide-in
+							h1.slide-in__title Skladnost
+							p.slide-in__text Malá velikost vozidla usnadnuje nalodit vozidlo na trajekt a setri penize na dalnicncich poplatcich.
 					
 				.grid__cell.grid__cell--hover.grid__cell--middle
-					.slide-in
-						h1.slide-in__title Komfort
-						p.slide-in__text Ať už cestujete kamkoliv, vozíte si sebou pohodlí domova. V autě můžete spát, vařit, sprchovat se a samozřejmostí je vestavěný chemický záchod a možnost připojit se na elektřinu.
+					.card
+						figure.front
+							img(src="./img/picture-grid/pic-grid_06.jpg", alt="")
+						figure.back.slide-in
+							h1.slide-in__title Komfort
+							p.slide-in__text Ať už cestujete kamkoliv, vozíte si sebou pohodlí domova. V autě můžete spát, vařit, sprchovat se a samozřejmostí je vestavěný chemický záchod a možnost připojit se na elektřinu.
 	
 				.grid__cell.grid__cell--hover.grid__cell--middle
-					.slide-in
-						h1.slide-in__title Jednoduché cestování
-						p.slide-in__text Vozy A.C.S. umožňují cestování s důrazem na minimálnost a funkčnost. Je to kompromis mezi hotelovým pokojem v turistickém středisku a stanováním ve volné přírodě.
+					.card
+						figure.front
+							img(src="./img/picture-grid/pic-grid_07.jpg", alt="")
+						figure.back.slide-in
+							h1.slide-in__title Jednoduché cestování
+							p.slide-in__text Vozy A.C.S. umožňují cestování s důrazem na minimálnost a funkčnost. Je to kompromis mezi hotelovým pokojem v turistickém středisku a stanováním ve volné přírodě.
 	
 				.grid__cell.grid__cell--hover.grid__cell--bottom-end
-					.slide-in
+					.card
+						figure.front
+							img(src="./img/picture-grid/pic-grid_08.jpg", alt="")
+						figure.back.slide-in
 					
 				.show-slides 
 					img.show-slides__icon(src="img/eye.svg")
@@ -101,7 +128,7 @@ block body
 	//
 	// Product
 	//
-	article.product.sekce-nabidka.height#product
+	article.product.sekce-nabidka#product
 		h1.product__heading Co nabízím
 		.flex
 			section.podsekce.podsekce-img
@@ -112,6 +139,10 @@ block body
 							li: img(src="img/soucasna-nabidka/049.jpg" alt="")
 							li: img(src="img/soucasna-nabidka/003.jpg" alt="")
 							li: img(src="img/soucasna-nabidka/005.jpg" alt="")
+						svg.product-svg(viewbox="0 0 100 100")
+							path.product-svg__arrow(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
+						svg.product-svg(viewbox="0 0 100 100")
+							path.product-svg__arrow(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
 			section.podsekce.podsekce-txt
 				h1 Ford Custom A.C.S.
 				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus praesentium placeat obcaecati natus provident laboriosam, atque, facere exercitationem fugit fugiat architecto aliquid deserunt veritatis doloremque. Nihil molestiae, aperiam necessitatibus a.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil et quidem quia fugiat dolores saepe, repellat magni. Commodi, facilis minima excepturi magni accusantium, amet. Magni at quae eius numquam suscipit.

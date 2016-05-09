@@ -5,12 +5,12 @@
 
 .picture-grid
 	position: relative
-	padding: 50px 0
+	padding: 80px 0
 	z-index: 3
 
 	h2
 		width: 1000px
-		margin: 1em auto
+		margin: 0 auto
 		text-align: center
 		font-size: 1.2em
 		color: #FFA700
@@ -22,15 +22,15 @@
 	$pic-grid-height: 398px
 	width: $pic-grid-width
 	height: $pic-grid-height
-	margin: 70px auto
+	margin: 50px auto
 	// margin-left: -($pic-grid-width / 2)
 	// margin-top: -($pic-grid-height / 2)
 
-	background-image: url('img/picture-grid_laptop.jpg')
-	background-size: contain
+	// background-image: url('img/picture-grid_laptop.jpg')
+	// background-size: contain
 	/* For Retina */
-	@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)
-		background-image: url('img/picture-grid_laptop_2x.jpg')
+	// @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)
+		// background-image: url('img/picture-grid_laptop_2x.jpg')
 
 .grid__cell
 	position: relative // for the slide-in divs
@@ -38,7 +38,9 @@
 	float: left
 	height: 194px
 	margin-right: 10px
+	cursor: pointer
 	overflow: hidden
+	-webkit-perspective: 800
 
 	&--top-start
 		width: 110px
@@ -58,17 +60,45 @@
 		width: 110px
 		margin-right: 0
 
+.card
+	width: 100%
+	height: 100%
+	position: absolute
+	-webkit-transform-style: preserve-3d
+	-webkit-transform-origin: right center
+	-webkit-transition: -webkit-transform 1s
+
+	figure
+		display: block
+		position: absolute
+		width: 100%
+		height: 100%
+		margin: 0 // check normalise for figure
+		-webkit-backface-visibility: hidden
+
+.front
+	height: 100%
+	text-align: center
+
+.back
+	background-color: #DBDBE8
+	color: black
+	-webkit-transform: rotateY(180deg)
+
+.flipped
+	-webkit-transform: translateX(-100%) rotateY(-180deg)
+
 .slide-in
 	position: absolute
 	top: 0
 	bottom: 0
-	left: 100%
+	// left: 100%
 	
 	width: 100%
 	padding: 15px 19px 19px 19px
-	background-color: rgba(0,0,0,0.8)
-	color: white
-	transition: 0.8s
+	// background-color: rgba(0,0,0,0.8)
+	// color: white
+	// transition: 0.8s
 
 	&__title
 		text-align: center
@@ -85,7 +115,7 @@
 		&--aligncenter
 			text-align: center
 
-.grid__cell--hover:hover .slide-in
+// .grid__cell--hover:hover .slide-in
 	transition: 0.8s
 	left: 0
 
@@ -93,16 +123,16 @@
 	left: 0
 
 /* For Desktop Screens */
-@media screen and (min-width: $break-desktop)
+/* @media screen and (min-width: $break-desktop)
 	.picture-grid__wrap
 		background-image: url('img/picture-grid_desktop.jpg')
 		
-	/* For Retina Desktop */
+	* For Retina Desktop *
 	@media screen and (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)
 		.picture-grid__wrap
 			background-image: url('img/picture-grid_desktop_2x.jpg')
 
-@media screen and (min-width: $break-desktop)
+/* @media screen and (min-width: $break-desktop)
 
 	.picture-grid__wrap
 		$pic-grid-width: 1300px

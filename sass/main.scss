@@ -1,5 +1,7 @@
 @import "vendor/normalize";
 
+@import "vendor/rslider";
+
 @import "base";
 
 // Index Page
@@ -52,8 +54,8 @@ main {
 	margin: 0;
 }
 
-@import "sub-pages/nabidka";
+@import "sub-pages/product-page";
 
-@import "sub-pages/gallery";
+@import "sub-pages/gallery-page";
 
 

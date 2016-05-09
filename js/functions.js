@@ -19,12 +19,12 @@ $(function() {
 $('.grid__cell').on('click', function(e) {
 	//find the current chosen element
 	// var currentItem = $(this).siblings('.siblingElements')
-	$(this).children().toggleClass('js-slide-in');
+	$(this).children().toggleClass('flipped');
 	$('.show-slides__txt').text('Ukaž vše');
 });
 $(document).on('click', function(event) {
   if (!$(event.target).closest('.grid__container').length) {
-	  $('.slide-in').removeClass('js-slide-in');
+	  $('.card').removeClass('flipped');
 	  $('.show-slides__txt').text('Ukaž vše');
   }
 });
@@ -33,12 +33,12 @@ $(document).on('click', function(event) {
 // --- Button to show/hide all slide-ins ---
 //
 $('.show-slides').on('click', function(e) {
-	if ($('.slide-in').length === $('.js-slide-in').length) {
-		$('.slide-in').removeClass('js-slide-in');
+	if ($('.card').length === $('.flipped').length) {
+		$('.card').removeClass('flipped');
 		$('.show-slides__txt').text('Ukaž vše');
 	}
 	else {
-		$('.slide-in').addClass('js-slide-in');
+		$('.card').addClass('flipped');
 		$('.show-slides__txt').text('Nechci číst');
 	}
 });
@@ -142,3 +142,17 @@ var $homepageArticle = $('.homepage-article');
 		}
 		*/
 	});
+
+function showFirstCard() {
+	var $pictureGrid = $('.picture-grid__wrap');
+	var pictureGrid_bottom = $pictureGrid.offset().top + $pictureGrid.height();
+	var GridInView = pictureGrid_bottom - $window.height();
+	var offset = $(document).scrollTop();
+
+	if (offset > GridInView) {
+			$('.card').first().addClass('flipped');
+			$(window).off('scroll', showFirstCard);
+	}
+}
+
+$(window).on("scroll", showFirstCard);
