@@ -80,6 +80,7 @@ var hideHeader = debounce(function() {
 */
 //
 // --- Toggle function for Soucasne k prodeji vs Predchozi prace
+/*
 $(document).ready(function(){
 	$(".nabidka-nav h1").click(function(e){
 		if (!$(this).hasClass("active")) {
@@ -88,7 +89,7 @@ $(document).ready(function(){
 		}
 	});
 });
-
+*/
 //
 // --- Tabs for Gallery ---
 //
@@ -121,10 +122,11 @@ var $homepageArticle = $('.homepage-article');
 		var offset = $(document).scrollTop();
 		var opacity = 0.6;
 		var headerPos = -50;
-		
+		/*
 		if (offset > 0) {
 			headerPos = Math.min(1000,-50+(offset/3.5));
 		}
+		*/
 		/*
 		if (offset >= fadeUntil) {
 			opacity = 0.9;
@@ -132,7 +134,7 @@ var $homepageArticle = $('.homepage-article');
 			opacity = Math.min(0.9, 0.6+offset/fadeUntil);
 		}
 		*/
-		$logo.css('transform', 'translate(-50%,'+headerPos+'%)');
+		// $logo.css('transform', 'translate(-50%,'+headerPos+'%)');
 		// revealing.css('background-color', 'rgba(0,0,0, '+ opacity +'');
 		/*
 		if (offset >= windowHalf) {

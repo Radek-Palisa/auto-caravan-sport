@@ -1,26 +1,39 @@
 /* Nabidka Page styles */
-.heading2{
-	font-size: 1em !important
-}
-.nabidka-nav {
-	cursor: pointer;
+
+//
+// Styles common for Nabidka, Predchozi-prace, and Gallery page
+//
+
+.sub-page-nav {
+	width: 1000px;
+	margin: 24px auto;
+
+	a {
+		font-size: 18px;
+
+		span {
+			font-size: 27px;
+		}
+	}
+
+	&--float {
+		float: right;
+	}
 }
 
-.nabidka-nav { 
-	.active {
-		color: #212121;
-	}
-	.non-active {
-		color: grey;
-	}
+.heading--fonts {
+	font-family: Open Sans, Arial, sans-serif;
+	font-size: 2em;
+	font-style: italic;
+	color: #212121;
 }
 
-.nabidka-tabs section { 
-	display: none;
+//
+/* Mabidka Page */
+//
 
-	&.active {
-	display: block;
-	}
+.for-offer .rslides {
+	height: 500px;
 }
 
 .nabidka-tabs .content {
@@ -34,6 +47,9 @@
 		}
 	}
 	
+	h1 {
+		text-align: center;
+	}
 	p {
 		line-height: 1.4;
 		width: 50%;

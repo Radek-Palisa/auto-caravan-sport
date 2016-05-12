@@ -15,26 +15,25 @@
     <script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
   </head>
   <body>
-    <header class="header header--gallery-bg">
+    <header class="header header--index-bg">
       <div class="logo logo--fonts">
         <h1>A.C.S. s.r.o.</h1>
         <p>Auto Caravan Sport</p>
         <div class="underline"><span class="underline__txt">s.r.o.</span></div>
       </div>
-      <nav role="navigation" class="nav nav--fonts">
-        <ul>
-          <li><a href="index.html">Domů</a></li>
-          <li><a href="nabidka.html">Nabídka</a></li>
-          <li><a href="index.html#about">O firmě</a></li>
-          <li><a href="index.html#contact">Kontakt</a></li>
-        </ul>
-      </nav>
+      <!-- nav.nav.nav--fonts(role="navigation")
+      ul
+      	li: a(href="index.html") Domů
+      	li: a(href="nabidka.html") Nabídka
+      	li: a(href="index.html#about") O firmě
+      	li: a(href="index.html#contact") Kontakt
+      
+      -->
     </header>
     <main>
+      <nav class="sub-page-nav"><a href="index.html"><span>&#x2190;</span> Zpět na domovskou stránku</a><a href="nabidka.html" class="sub-page-nav--float">Co nabízím <span>&#x2192;</span></a></nav>
       <div class="heading__wrap">
-        <div>
-          <h1 class="heading heading--fonts">Dokumentace Ford Custom A.C.S.</h1>
-        </div>
+        <h1 class="heading--fonts">Dokumentace Ford Custom A.C.S.</h1>
       </div>
       <section class="content">
         <nav id="gallery-nav">
@@ -96,9 +95,10 @@
     <script>
       $(function() {
       	$(".rslides").responsiveSlides({
-      		auto: false,
+      		auto: true,
       		speed: 700,
       		timeout: 7000,
+      		pager: true,
       		nav: true,
       		pause: true,
       		namespace: 'centered-btns'

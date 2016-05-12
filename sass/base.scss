@@ -15,74 +15,10 @@ img {
 
 /* Typography */
 
+$headline-color: rgb(255, 205, 13);
+// $headline-color: #FFA700;
+
 p {
 	font-family: roboto;
 }
 
-.logo--fonts {
-	
-	h1 {
-		display: none;
-		color: white;
-		font-family: tahoma;
-		font-size: 28px;
-		font-size: 4.4vw;
-		font-style: oblique;
-		text-shadow: 1px 1px 4px black;
-	}
-	
-	p {
-		color: white;
-		font-family: roboto;
-		font-size: 6vw;
-		font-size: 80px;
-		letter-spacing: 1px;
-		text-shadow: 1px 1px 2px black;
-		font-weight: 600;
-	}
-	
-	.underline {
-		display: flex;
-		justify-content: center;
-		overflow: hidden;
-		
-		&__txt {
-			position: relative;
-			font-size: 1.6vw;
-			font-size: 28px;
-			font-weight: 600;
-			color: white;
-
-			&:after, &:before {
-				display: none;
-				content: "";
-				position: absolute;
-				border-top: 2px solid white;
-				top: 50%;
-				width: 350px;
-			}
-			&:before {
-				right: 100%;
-				margin-right: 10px;
-			}
-			&:after {
-				left: 100%;
-				margin-left: 10px;
-			}
-		}
-	}
-}
-
-.nav--fonts {
-	font-size: 17px;
-	letter-spacing: 0.5px;
-	font-family: roboto;
-	text-transform: uppercase;
-}
-
-.heading--fonts {
-	font-family: Open Sans, Arial, sans-serif;
-	font-size: 2em;
-	font-style: italic;
-	color: #212121;
-}

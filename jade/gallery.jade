@@ -2,14 +2,14 @@ extends partials/skeleton.jade
 
 block body
 
-	header.header.header--gallery-bg
+	header.header.header--index-bg
 		.logo.logo--fonts
 			h1 A.C.S. s.r.o.
 			p Auto Caravan Sport
 			.underline
 				span.underline__txt s.r.o.
 
-		nav.nav.nav--fonts(role="navigation")
+		// nav.nav.nav--fonts(role="navigation")
 			ul
 				li: a(href="index.html") Domů
 				li: a(href="nabidka.html") Nabídka
@@ -17,9 +17,11 @@ block body
 				li: a(href="index.html#contact") Kontakt
 
 	main
+		nav.sub-page-nav
+				a(href="index.html") <span>&#x2190;</span> Zpět na domovskou stránku
+				a.sub-page-nav--float(href="nabidka.html") Co nabízím <span>&#x2192;</span>
 		.heading__wrap
-				div(class="")
-					h1.heading.heading--fonts Dokumentace Ford Custom A.C.S.
+			h1.heading--fonts Dokumentace Ford Custom A.C.S.
 		section.content
 			nav#gallery-nav
 				li.active Izolace vozu

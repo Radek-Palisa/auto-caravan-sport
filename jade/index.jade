@@ -3,13 +3,13 @@ extends partials/skeleton.jade
 block body
 
 	header.header.header--index-bg#header
-		.logo.logo--fonts
+		.logo
 			h1 A.C.S. s.r.o.
 			p Auto Caravan Sport
 			.underline
 				span.underline__txt s.r.o.
 
-		// nav.nav.nav--fonts(role="navigation")
+		// nav.nav(role="navigation")
 			ul
 				li: a(href="index.html") Domů
 				li: a(href="#product") Nabídka
@@ -25,11 +25,7 @@ block body
 
 			a.sub-header__nav(href="#product")
 				.article__wrap
-					h1 Co nabízím	
-					
-			a.sub-header__nav(href="#prev-work")
-				.article__wrap
-					h1 Předchozí práce
+					h1 Má práce	
 
 			a.sub-header__nav(href="#about")
 				.article__wrap
@@ -51,74 +47,74 @@ block body
 	article.jumbotron
 		.jumbotron__txt
 			h3 Ford Custom A.C.S.
-			p  Lorem ipsum dolor sit amet. Consectetur adipisicing elit. Adipisci minus autem distinctio voluptatem.
+			p  Lorem ipsum dolor sit amet. Consectetur adipisicing elit. Adipisci minus autem distinctio voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 	
 	//
 	// Picture Grid
 	//
 	article.picture-grid#picture-grid
-		h2 Proč karavaning v malé dodávce
+		h2 Karavaning v malé dodávce
 		.picture-grid__wrap
 			.grid__container
 				.grid__cell.grid__cell--hover.grid__cell--top-start
-					.card
+					.card.card-1
 						figure.front
-							img(src="./img/picture-grid/pic-grid_01.jpg", alt="")
+							// img(src="./img/picture-grid/pic-grid_01.jpg", alt="")
 						figure.back.slide-in
 							p.slide-in__text.slide-in__text--aligncenter <strong>Vítejte</strong></br>na stránkách firmy</br>A.C.S.
 						
 				.grid__cell.grid__cell--hover.grid__cell--middle
-					.card
+					.card.card-2
 						figure.front
-							img(src="./img/picture-grid/pic-grid_02.jpg", alt="")
+							// img(src="./img/picture-grid/pic-grid_02.jpg", alt="")
 						figure.back.slide-in
 							h1.slide-in__title Využití
 							p.slide-in__text Auta jsou ideální pro dálniční cestování, polykání kilometrů,  neustálé přesuny. Poskytují určitý komfort potřeb k pobytu, jak na městských parkovištích, kempech, tak i ve volné přírodě. Malá velikost vozidla usnadňuje nalodit vozidlo na trajekt a hlavně, za rozumnou cenu.
 
 				.grid__cell.grid__cell--hover.grid__cell--middle
-					.card
+					.card.card-3
 						figure.front
-							img(src="./img/picture-grid/pic-grid_03.jpg", alt="")
+							// img(src="./img/picture-grid/pic-grid_03.jpg", alt="")
 						figure.back.slide-in
 							h1.slide-in__title Dostupnost
 							p.slide-in__text S vozem se dostanete i na těžko přístupná místa jako centra velkoměst, parkoviště v historických částech nebo podobné spleti úzkých uliček. Přece jenom je dodávka méně nápadná než velký obytný vůz.
 						
 				.grid__cell.grid__cell--hover.grid__cell--top-end
-					.card
+					.card.card-4
 						figure.front
-							img(src="./img/picture-grid/pic-grid_04.jpg", alt="")
+							// img(src="./img/picture-grid/pic-grid_04.jpg", alt="")
 						figure.back.slide-in
 							h1.slide-in__title Kvalita
 							p.slide-in__text U všech přestaveb jsou použity certifikované komponenty od firmy REIMO a splňují bezpečnostní a technické parametry.
 				
 				.grid__cell.grid__cell--hover.grid__cell--bottom-start
-					.card
+					.card.card-5
 						figure.front
-							img(src="./img/picture-grid/pic-grid_05.jpg", alt="")
+							// img(src="./img/picture-grid/pic-grid_05.jpg", alt="")
 						figure.back.slide-in
 							h1.slide-in__title Skladnost
 							p.slide-in__text Malá velikost vozidla usnadnuje nalodit vozidlo na trajekt a setri penize na dalnicncich poplatcich.
 					
 				.grid__cell.grid__cell--hover.grid__cell--middle
-					.card
+					.card.card-6
 						figure.front
-							img(src="./img/picture-grid/pic-grid_06.jpg", alt="")
+							// img(src="./img/picture-grid/pic-grid_06.jpg", alt="")
 						figure.back.slide-in
 							h1.slide-in__title Komfort
 							p.slide-in__text Ať už cestujete kamkoliv, vozíte si sebou pohodlí domova. V autě můžete spát, vařit, sprchovat se a samozřejmostí je vestavěný chemický záchod a možnost připojit se na elektřinu.
 	
 				.grid__cell.grid__cell--hover.grid__cell--middle
-					.card
+					.card.card-7
 						figure.front
-							img(src="./img/picture-grid/pic-grid_07.jpg", alt="")
+							// img(src="./img/picture-grid/pic-grid_07.jpg", alt="")
 						figure.back.slide-in
 							h1.slide-in__title Jednoduché cestování
 							p.slide-in__text Vozy A.C.S. umožňují cestování s důrazem na minimálnost a funkčnost. Je to kompromis mezi hotelovým pokojem v turistickém středisku a stanováním ve volné přírodě.
 	
 				.grid__cell.grid__cell--hover.grid__cell--bottom-end
-					.card
+					.card.card-8
 						figure.front
-							img(src="./img/picture-grid/pic-grid_08.jpg", alt="")
+							// img(src="./img/picture-grid/pic-grid_08.jpg", alt="")
 						figure.back.slide-in
 					
 				.show-slides 
@@ -129,16 +125,16 @@ block body
 	// Product
 	//
 	article.product.sekce-nabidka#product
-		h1.product__heading Co nabízím
-		.flex
+		h1.product__heading Má práce
+		.flex.margin-bottom
 			section.podsekce.podsekce-img
 				.rslides-container
 						ul.rslides
-							li: img(src="img/soucasna-nabidka/050.jpg" alt="")
-							li: img(src="img/soucasna-nabidka/001.jpg" alt="")
-							li: img(src="img/soucasna-nabidka/049.jpg" alt="")
-							li: img(src="img/soucasna-nabidka/003.jpg" alt="")
-							li: img(src="img/soucasna-nabidka/005.jpg" alt="")
+							li: img(src="img/soucasna-nabidka/010.jpg" alt="")
+
+							- for (var x = 1; x < 10; x++)
+								li: img(src="img/soucasna-nabidka/00#{x}.jpg" alt="")
+
 						svg.product-svg(viewbox="0 0 100 100")
 							path.product-svg__arrow(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
 						svg.product-svg(viewbox="0 0 100 100")
@@ -148,12 +144,13 @@ block body
 				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus praesentium placeat obcaecati natus provident laboriosam, atque, facere exercitationem fugit fugiat architecto aliquid deserunt veritatis doloremque. Nihil molestiae, aperiam necessitatibus a.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil et quidem quia fugiat dolores saepe, repellat magni. Commodi, facilis minima excepturi magni accusantium, amet. Magni at quae eius numquam suscipit.
 				p Podívejte se podrobný popis a foto-dokumentaci:
 				a.podsekce__link(href="./nabidka.html") Zjistěte více
-
+		hr
 	article.prev-work.sekce-prev-work.height#prev-work
-		h1.prev-work__headline Předchozí práce
+		// h1.prev-work__headline Předchozí práce
 		.flex
 			section.podsekce.podsekce-txt
-				h1 Variace Fordu Transit s krátkým rozvorem
+				h1 Předchozí práce
+				// h1 Variace Fordu Transit s krátkým rozvorem
 				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus praesentium placeat obcaecati natus provident laboriosam, atque, facere exercitationem fugit fugiat architecto aliquid deserunt veritatis doloremque. Nihil molestiae, aperiam necessitatibus a.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil et quidem quia fugiat dolores saepe, repellat magni. Commodi, facilis minima excepturi magni accusantium, amet. Magni at quae eius numquam suscipit.
 				p Podívejte se na ukázky mé předchozí práce:
 				a.podsekce__link(href="./nabidka.html") Zjistěte více
@@ -167,17 +164,33 @@ block body
 	// About
 	//
 	article.about#about
+		h1.about__headline O firmě
 		section.about-txt
 			.about-txt__wrap
-				h2  O firmě
+				h2  Jak to začalo
 				p Myšlenka začala v roce 1996 po zakoupení staršího vozu Ford Transit a jeho postupné přestavbě. Nadšení pro volnost prožití svého volného času se stávala silnější a po zamilování se do windsurfingu a později do kitingu, bylo rozhodnuto. Přece jenom byt odkázán na nabídky cestovek, které se nepochlubí negativní stránkou své nabízené lokality, nebo příjezdy do neznámých oblastí. No prostě auto je pro mne něco víc než jen převoz z místa do místa. Proto jsem začal uvazovat o typu a velikosti co by mne uspokojilo. V teto věci bych karavaning  přirovnal k hudbě. Hudba poskytuje radost obrovské spoustě posluchačů a každý si najde tu svou. Tak karavaning má široký rozsah zájmů a je třeba si vybrat ten svůj. Já jsem si vybral a ten Vám chci předvést.
 	
+	article
+		.sub-about
+			.profile-pic Profilova fotka
+			p.profile__txt Jmenuji se <strong>Libor Palisa</strong>.<br>Cestovávní a sport vždy hrály douležitou roli v mém životě. Firma A.C.S je skloubení těchto zájmů s praktičností...
 	//
 	// Contact
 	//
 	article.contact#contact
+		h1.contact__headline Kontakt
+		.contact-wrapper
+			h2 Pojdme spolupracovat
+			p Email: libor.palisa@gmail.com
+			p Facebook: Auto Caravan Sport
+			p adresa
+			p Sokoloska 2530
+			p Kromeriz
+			p 767 01
+			
+	article.sub-contact
 		.contact-form
-			h2 Pojd´me spolupracovat
+			h2.sub-contact__headline Napište mi
 			.form__name
 				p Jméno
 			.form__email
@@ -185,8 +198,7 @@ block body
 			.form__zprava
 				p Napište mi co Vás zaujalo...
 			.form__sent 
-				a(href="#") Poslat
-
+				a(href="#") Odeslat
 block local-scripts
 	// script.
 		// window.addEventListener('scroll', showArticles)
