@@ -3,33 +3,32 @@
 /* **** About **** */
 //
 //
-.about
+
+.article-about__h1
+	background-color: lavender
+
+	&::after
+		background-color: lavender
+
+.about__content
 	position: relative
-	height: 80vh
+	height: 78vh
 	// padding-top: 20px
 
 	background-image: url(img/ofirme.jpg)
 	background-size: cover
 	background-position: center 61%
-	// background-attachment: fixed
-
-.about__headline
-	text-align: center
-	font-size: 1.2em
-	color: $headline-color
-	padding: 80px 0 50px
-	margin: 0
-
+	background-attachment: fixed
 .about-txt
 	position: absolute
 	top: 50%
 	transform: translateY(-50%)
 	left: 59%
 	// margin-left: 55%
-	border-radius: 1%
-	background-color: rgba(224, 224, 224, 0.8)
+	// border-radius: 1%
+	// background-color: rgba(224, 224, 224, 0.8)
 	line-height: 1.4
-	color: #383838
+	color: #EFEFEF
 
 	&__wrap
 		max-width: 520px
@@ -55,12 +54,10 @@
 	width: 200px
 	height: 200px
 	margin-right: 80px
-	border: 2px dashed grey
 	border-radius: 50%
-	text-align: center
-	line-height: 200px
-	color: grey
-	font-style: italic
+	background-image: url(./img/profile.jpg)
+	background-position: 55% 62%
+	background-size: 317%
 
 .profile__txt
 	max-width: 450px

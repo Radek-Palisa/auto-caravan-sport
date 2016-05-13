@@ -4,8 +4,10 @@
 //
 //
 
-.contact
-	height: 70vh
+.contact__content
+	display: flex
+	align-items: center
+	height: 78vh
 	padding-top: 50px
 	background-image: linear-gradient(113deg, rgba(0, 0, 0, 0.9) 61%, transparent 62%, transparent 81%, black 82%), linear-gradient(rgba(0, 0, 0, 0.9) 5%, transparent 6%, transparent 94%, rgba(0,0,0,0.9) 95%), url(img/kontakt-bg_4999w_50q.jpg)
 	background-image: linear-gradient(113deg, rgba(0, 0, 0, 0.9) 59%, transparent 65%, transparent 79%, black 84%), linear-gradient(rgba(0, 0, 0, 0.9) 7%, transparent 21%), url(img/kontakt-bg_4999w_50q.jpg)
@@ -14,14 +16,8 @@
 	background-position: bottom left 84%
 	background-repeat: no-repeat
 
-.contact__headline
-	text-align: center
-	font-size: 1.2em
-	color: $headline-color
-	margin-bottom: 90px
-
 .contact-wrapper
-	max-width: 500px
+	width: 500px
 	margin-left: 16%
 
 	h2
@@ -51,7 +47,7 @@
 
 .form__name, .form__email, .form__zprava
 	padding-left: 10px
-	border: 2px solid $headline-color
+	border: 3px solid $headline-color
 	margin: 2em 0 1em
 .form__name
 	float: left

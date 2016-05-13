@@ -1,33 +1,38 @@
 //
 // Co nabizim
-//
-.flex
+//	
+
+.work__content
+	// Display
 	display: flex
-	justify-content: center
-	align-items: center
-
-.margin-bottom
-	margin-bottom: 25px
-.height
-	height: 535px
-
-.product__heading, .prev-work__headline
-	text-align: center
-	font-size: 1.2em
-	color: $headline-color
-	margin-bottom: 60px
-
-.sekce-nabidka
-	height: 95vh
+	justify-content: space-around
+	// Position
+	padding: 100px 4%
 	background-color: lavender
-	padding: 85px 0 100px
 
-// .sekce-prev-work
-	height: 95vh
-	padding: 80px 0 60px
+.work__content article
+	width: 450px
+	padding: 0 20px
 
-.podsekce
-	margin: 30px 100px
+	img 
+		width: 100%
+		height: auto
+
+.foto-1
+	background-image: url(./img/soucasna-nabidka/010.jpg)
+	background-size: cover
+	background-position: center
+
+.foto-2
+	background-image: url(./img/predchozi-prace/P6190018.jpg)
+	background-size: cover
+	background-position: center 81%
+
+.foto-3
+	background-image: url(./img/predchozi-prace/P1010031.jpg)
+	background-size: cover
+	background-position: bottom
+
 .podsekce-img
 
 	.rslides-container
@@ -56,7 +61,7 @@
 		transform: rotate(180deg)
 
 	&__arrow
-		fill: #FFE600
+		fill: #f6d922
 
 .podsekce-txt
 	max-width: 450px
@@ -65,7 +70,7 @@
 	h1
 		font-size: 1.2em
 		text-align: center
-		margin-top: 0
+		// margin-top: 0
 	
 	p 
 		line-height: 1.4
@@ -74,46 +79,45 @@
 		margin: 1em auto
 		text-align: center
 
-hr
-	width: 1000px
 //
 // Previous work
 //
-.prev-work
-	background-color: lavender
 
 .podsekce-predchoziprace 
-	
+	overflow: hidden
+	height: 200px
+
 	.inner
-		position: relative
-		width: 450px
-		height: 299px
-		margin: 0 auto
+		// position: relative
+		// width: 450px
+		// height: 299px
+		// margin: 0 auto
 
 	img
-		position: absolute
-		width: 60%
-		box-shadow: 1px 1px 9px black
-		transition: all 0.2s ease-in-out
+	
+		// position: absolute
+		//width: 60%
+		//box-shadow: 1px 1px 9px black
+		//transition: all 0.2s ease-in-out
 
-		&:nth-of-type(2)
-			top: 15%
-			left: 20%
-			z-index: 2
-		&:nth-of-type(3)
-			top: 30%
-			left: 40%
-			z-index: 3
+		//&:nth-of-type(2)
+			//top: 15%
+			//left: 20%
+			//z-index: 2
+		//&:nth-of-type(3)
+			//top: 30%
+			//left: 40%
+			//z-index: 3
 		
-		&:hover
-			transform: scale(1.1)
-			transition: all 0.2s ease-in-out
-			z-index: 4
-			box-shadow: 1px 1px 15px black
+		//&:hover
+			//transform: scale(1.1)
+			//transition: all 0.2s ease-in-out
+			//z-index: 4
+			//box-shadow: 1px 1px 15px black
 
 .podsekce__link
 	display: block
-	width: 200px
+	width: 120px
 	margin: 0 auto
 	padding: 10px 15px
 	// border: 1px solid black
@@ -121,8 +125,8 @@ hr
 	text-align: center
 	font-family: roboto
 	font-weight: bold
-	color: black
-	background-color: rgb(255,230,0)
+	color: #202020
+	background-color: #f6d922
 
 	&:hover
 		box-shadow: 1px 1px 12px black

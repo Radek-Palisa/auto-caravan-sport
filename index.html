@@ -33,16 +33,28 @@
     <section class="sub-header">
       <p class="slogan__txt">Vítejte v mém světě dodávkové velikosti</br>...ani malé ani velké.</p>
       <nav role="navigation" class="sub-header__content"><a href="#picture-grid" class="sub-header__nav">
-          <div class="article__wrap">
-            <h1>Co je Karavaning</h1>
+          <div class="nav-item__wrap">
+            <svg viewbox="0 0 100 100" class="nav-item__svg">
+              <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
+            </svg>
+            <h1 class="nav-item__h1--1st">Co je Karavaning</h1>
           </div></a><a href="#product" class="sub-header__nav">
-          <div class="article__wrap">
+          <div class="nav-item__wrap">
+            <svg viewbox="0 0 100 100" class="nav-item__svg">
+              <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
+            </svg>
             <h1>Má práce	</h1>
           </div></a><a href="#about" class="sub-header__nav">
-          <div class="article__wrap">
+          <div class="nav-item__wrap">
+            <svg viewbox="0 0 100 100" class="nav-item__svg">
+              <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
+            </svg>
             <h1>O firmě</h1>
           </div></a><a href="#contact" class="sub-header__nav">
-          <div class="article__wrap">
+          <div class="nav-item__wrap">
+            <svg viewbox="0 0 100 100" class="nav-item__svg">
+              <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
+            </svg>
             <h1>Kontakt</h1>
           </div></a></nav>
       <p class="arrow-container"> 
@@ -162,68 +174,77 @@
     <!---->
     <!-- Product-->
     <!---->
-    <article id="product" class="product sekce-nabidka">
-      <h1 class="product__heading">Má práce</h1>
-      <div class="flex margin-bottom">
-        <section class="podsekce podsekce-img">
-          <div class="rslides-container">
-            <ul class="rslides">
-              <li><img src="img/soucasna-nabidka/010.jpg" alt=""></li>
-              <li><img src="img/soucasna-nabidka/001.jpg" alt=""></li>
-              <li><img src="img/soucasna-nabidka/002.jpg" alt=""></li>
-              <li><img src="img/soucasna-nabidka/003.jpg" alt=""></li>
-              <li><img src="img/soucasna-nabidka/004.jpg" alt=""></li>
-              <li><img src="img/soucasna-nabidka/005.jpg" alt=""></li>
-              <li><img src="img/soucasna-nabidka/006.jpg" alt=""></li>
-              <li><img src="img/soucasna-nabidka/007.jpg" alt=""></li>
-              <li><img src="img/soucasna-nabidka/008.jpg" alt=""></li>
-              <li><img src="img/soucasna-nabidka/009.jpg" alt=""></li>
-            </ul>
-            <svg viewbox="0 0 100 100" class="product-svg">
-              <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z" class="product-svg__arrow"></path>
-            </svg>
-            <svg viewbox="0 0 100 100" class="product-svg">
-              <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z" class="product-svg__arrow"></path>
-            </svg>
-          </div>
-        </section>
-        <section class="podsekce podsekce-txt">
-          <h1>Ford Custom A.C.S.</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus praesentium placeat obcaecati natus provident laboriosam, atque, facere exercitationem fugit fugiat architecto aliquid deserunt veritatis doloremque. Nihil molestiae, aperiam necessitatibus a.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil et quidem quia fugiat dolores saepe, repellat magni. Commodi, facilis minima excepturi magni accusantium, amet. Magni at quae eius numquam suscipit.</p>
-          <p>Podívejte se podrobný popis a foto-dokumentaci:</p><a href="./nabidka.html" class="podsekce__link">Zjistěte více</a>
-        </section>
-      </div>
-      <hr>
-    </article>
-    <article id="prev-work" class="prev-work sekce-prev-work height">
-      <!-- h1.prev-work__headline Předchozí práce-->
-      <div class="flex">
-        <section class="podsekce podsekce-txt">
-          <h1>Předchozí práce</h1>
-          <!-- h1 Variace Fordu Transit s krátkým rozvorem-->
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus praesentium placeat obcaecati natus provident laboriosam, atque, facere exercitationem fugit fugiat architecto aliquid deserunt veritatis doloremque. Nihil molestiae, aperiam necessitatibus a.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil et quidem quia fugiat dolores saepe, repellat magni. Commodi, facilis minima excepturi magni accusantium, amet. Magni at quae eius numquam suscipit.</p>
-          <p>Podívejte se na ukázky mé předchozí práce:</p><a href="./nabidka.html" class="podsekce__link">Zjistěte více</a>
-        </section>
-        <section class="podsekce podsekce-img podsekce-predchoziprace">
-          <div class="inner"><img src="./img/predchozi-prace/index.jpg" alt=""><img src="./img/predchozi-prace/102.jpg" alt=""><img src="./img/predchozi-prace/202.jpg" alt=""></div>
-        </section>
+    <article id="product" class="product my-work">
+      <h1 class="index-article__h1">Má práce</h1>
+      <div class="work__content">
+        <article class="current-work">
+          <section class="podsekce-img podsekce-predchoziprace foto-1">
+            <!-- img(src="img/soucasna-nabidka/010.jpg" alt="")-->
+            <!-- .rslides-container
+            ul.rslides
+            	li: img(src="img/soucasna-nabidka/010.jpg" alt="")
+            
+            	- for (var x = 1; x < 10; x++)
+            		li: img(src="img/soucasna-nabidka/00.jpg" alt="")
+            
+            // svg.product-svg(viewbox="0 0 100 100")
+            	path.product-svg__arrow(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
+            // svg.product-svg(viewbox="0 0 100 100")
+            	path.product-svg__arrow(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
+            -->
+          </section>
+          <section class="podsekce-txt">
+            <h1>Ford Transit Custom</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus praesentium placeat obcaecati natus provident laboriosam, atque, facere exercitationem fugit fugiat architecto aliquid deserunt veritatis doloremque. Nihil molestiae, aperiam necessitatibus a.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil et quidem quia fugiat dolores saepe, repellat magni. Commodi, facilis minima excepturi magni accusantium, amet. Magni at quae eius numquam suscipit.</p>
+            <p>Podívejte se podrobný popis a foto-dokumentaci:</p><a href="./nabidka.html" class="podsekce__link">Více</a>
+          </section>
+        </article>
+        <article id="prev-work" class="prev-work sekce-prev-work">
+          <section class="podsekce-img podsekce-predchoziprace foto-2">
+            <!-- .inner
+            // img(src="./img/predchozi-prace/index.jpg", alt="")
+            img(src="./img/predchozi-prace/P1010031.jpg", alt="")
+            // img(src="./img/predchozi-prace/202.jpg", alt="")
+            -->
+          </section>
+          <section class="podsekce-txt">
+            <h1>Ford Transit 2001</h1>
+            <!-- h1 Variace Fordu Transit s krátkým rozvorem-->
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus praesentium placeat obcaecati natus provident laboriosam, atque, facere exercitationem fugit fugiat architecto aliquid deserunt veritatis doloremque. Nihil molestiae, aperiam necessitatibus a.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil et quidem quia fugiat dolores saepe, repellat magni. Commodi, facilis minima excepturi magni accusantium, amet. Magni at quae eius numquam suscipit.</p>
+            <p>Podívejte se na ukázky mé předchozí práce:</p><a href="./nabidka.html" class="podsekce__link">Více</a>
+          </section>
+        </article>
+        <article class="prev-work sekce-prev-work">
+          <section class="podsekce-img podsekce-predchoziprace foto-3">
+            <!-- .innerimg(src="./img/predchozi-prace/index.jpg", alt="")
+            -->
+          </section>
+          <section class="podsekce-txt">
+            <h1>Ford Transit 1991</h1>
+            <!-- h1 Variace Fordu Transit s krátkým rozvorem-->
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus praesentium placeat obcaecati natus provident laboriosam, atque, facere exercitationem fugit fugiat architecto aliquid deserunt veritatis doloremque. Nihil molestiae, aperiam necessitatibus a.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil et quidem quia fugiat dolores saepe, repellat magni. Commodi, facilis minima excepturi magni accusantium, amet. Magni at quae eius numquam suscipit.</p>
+            <p>Podívejte se na ukázky mé předchozí práce:</p><a href="./nabidka.html" class="podsekce__link">Více</a>
+          </section>
+        </article>
       </div>
     </article>
     <!---->
     <!-- About-->
     <!---->
     <article id="about" class="about">
-      <h1 class="about__headline">O firmě</h1>
-      <section class="about-txt">
-        <div class="about-txt__wrap">
-          <h2> Jak to začalo</h2>
-          <p>Myšlenka začala v roce 1996 po zakoupení staršího vozu Ford Transit a jeho postupné přestavbě. Nadšení pro volnost prožití svého volného času se stávala silnější a po zamilování se do windsurfingu a později do kitingu, bylo rozhodnuto. Přece jenom byt odkázán na nabídky cestovek, které se nepochlubí negativní stránkou své nabízené lokality, nebo příjezdy do neznámých oblastí. No prostě auto je pro mne něco víc než jen převoz z místa do místa. Proto jsem začal uvazovat o typu a velikosti co by mne uspokojilo. V teto věci bych karavaning  přirovnal k hudbě. Hudba poskytuje radost obrovské spoustě posluchačů a každý si najde tu svou. Tak karavaning má široký rozsah zájmů a je třeba si vybrat ten svůj. Já jsem si vybral a ten Vám chci předvést.</p>
-        </div>
+      <h1 class="index-article__h1 article-about__h1">O firmě</h1>
+      <section class="about__content">
+        <section class="about-txt">
+          <div class="about-txt__wrap">
+            <h2> Jak to začalo</h2>
+            <p>Myšlenka začala v roce 1996 po zakoupení staršího vozu Ford Transit a jeho postupné přestavbě. Nadšení pro volnost prožití svého volného času se stávala silnější a po zamilování se do windsurfingu a později do kitingu, bylo rozhodnuto. Přece jenom byt odkázán na nabídky cestovek, které se nepochlubí negativní stránkou své nabízené lokality, nebo příjezdy do neznámých oblastí. No prostě auto je pro mne něco víc než jen převoz z místa do místa. Proto jsem začal uvazovat o typu a velikosti co by mne uspokojilo. V teto věci bych karavaning  přirovnal k hudbě. Hudba poskytuje radost obrovské spoustě posluchačů a každý si najde tu svou. Tak karavaning má široký rozsah zájmů a je třeba si vybrat ten svůj. Já jsem si vybral a ten Vám chci předvést.</p>
+          </div>
+        </section>
       </section>
     </article>
     <article>
       <div class="sub-about">
-        <div class="profile-pic">Profilova fotka</div>
+        <div class="profile-pic"></div>
         <p class="profile__txt">Jmenuji se <strong>Libor Palisa</strong>.<br>Cestovávní a sport vždy hrály douležitou roli v mém životě. Firma A.C.S je skloubení těchto zájmů s praktičností...</p>
       </div>
     </article>
@@ -231,16 +252,18 @@
     <!-- Contact-->
     <!---->
     <article id="contact" class="contact">
-      <h1 class="contact__headline">Kontakt</h1>
-      <div class="contact-wrapper">
-        <h2>Pojdme spolupracovat</h2>
-        <p>Email: libor.palisa@gmail.com</p>
-        <p>Facebook: Auto Caravan Sport</p>
-        <p>adresa</p>
-        <p>Sokoloska 2530</p>
-        <p>Kromeriz</p>
-        <p>767 01</p>
-      </div>
+      <h1 class="index-article__h1">Kontakt</h1>
+      <section class="contact__content">
+        <div class="contact-wrapper">
+          <h2>Pojdme spolupracovat</h2>
+          <p>Email: libor.palisa@gmail.com</p>
+          <p>Facebook: Auto Caravan Sport</p>
+          <p>adresa</p>
+          <p>Sokoloska 2530</p>
+          <p>Kromeriz</p>
+          <p>767 01</p>
+        </div>
+      </section>
     </article>
     <article class="sub-contact">
       <div class="contact-form">
@@ -275,10 +298,10 @@
     <script>
       $(function() {
       	$(".rslides").responsiveSlides({
-      		auto: true,
+      		auto: false,
       		speed: 700,
       		timeout: 7000,
-      		pager: true,
+      		pager: false,
       		nav: true,
       		pause: true,
       		namespace: 'centered-btns'
