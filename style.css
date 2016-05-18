@@ -1074,24 +1074,31 @@ p {
 
 .work__content {
   display: flex;
-  justify-content: space-around;
-  padding: 100px 4%;
+  justify-content: center;
+  padding: 80px 4% 60px;
   background-color: lavender;
+  background-color: #EAEAEA;
+  background-color: #f3f3f3;
 }
 
-.work__content article {
-  width: 450px;
-  padding: 0 20px;
+.my-work__item {
+  width: 400px;
+  margin: 0.6%;
 }
-.work__content article img {
+.my-work__item img {
   width: 100%;
   height: auto;
+}
+.my-work__item .podsekce-txt {
+  padding: 1em 20px 1.5em;
+  background-color: white;
+  border: 1px solid #DFDEDE;
 }
 
 .foto-1 {
   background-image: url(./img/soucasna-nabidka/010.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: top;
 }
 
 .foto-2 {
@@ -1101,11 +1108,16 @@ p {
 }
 
 .foto-3 {
-  background-image: url(./img/predchozi-prace/P1010031.jpg);
+  background-image: url(./img/predchozi-prace/lefkas_073.jpg);
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
 }
 
+.podsekce-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .podsekce-img .rslides-container {
   margin: 0 auto;
   width: 450px;
@@ -1143,6 +1155,9 @@ p {
 .podsekce-txt h1 {
   font-size: 1.2em;
   text-align: center;
+  font-family: Open Sans;
+  color: #397c88;
+  font-weight: normal;
 }
 .podsekce-txt p {
   line-height: 1.4;
@@ -1154,40 +1169,94 @@ p {
 
 .podsekce-predchoziprace {
   overflow: hidden;
-  height: 200px;
+  height: 250px;
 }
 
 .podsekce__link {
-  display: block;
-  width: 120px;
   margin: 0 auto;
-  padding: 10px 15px;
   box-shadow: 1px 1px 4px black;
   text-align: center;
   font-family: roboto;
   font-weight: bold;
   color: #202020;
+  color: white;
   background-color: #f6d922;
+  background-color: #397c88;
+  padding: 6px 0 6px 5px;
 }
 .podsekce__link:hover {
   box-shadow: 1px 1px 12px black;
 }
+.podsekce__link p {
+  display: inline-block;
+  margin: 0;
+  padding: 0 30px;
+  border-left: 1px solid white;
+  text-align: center;
+  font-size: 1em;
+}
+
+.podsekce__svg {
+  display: inline-block;
+  width: 1em;
+  transform: translate(-3px, 3px) rotate(180deg);
+  transition: all 0.2s ease-in-out;
+}
+.podsekce__svg path {
+  fill: white;
+}
+
+.podsekce__link {
+  margin: 0 auto;
+  border: 1px solid #62A8B5;
+  box-shadow: none;
+  text-align: center;
+  font-family: roboto;
+  font-weight: bold;
+  color: #202020;
+  color: white;
+  background-color: #f6d922;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 3px 0 3px 5px;
+}
+.podsekce__link:hover {
+  box-shadow: 1px 1px 12px black;
+}
+.podsekce__link p {
+  display: inline-block;
+  margin: 0;
+  padding: 5px 20px;
+  border-left: 1px solid #62A8B5;
+  text-align: center;
+  font-size: 1.1em;
+  letter-spacing: 0.5px;
+}
+
+.podsekce__svg {
+  display: inline-block;
+  width: 18px;
+  margin: 1px;
+  transform: translate(-3px, 3px) rotate(180deg);
+  transition: all 0.2s ease-in-out;
+}
+.podsekce__svg path {
+  fill: #62A8B5;
+}
 
 /* **** About **** */
 .article-about__h1 {
-  background-color: lavender;
+  background-color: #f3f3f3;
 }
 .article-about__h1::after {
-  background-color: lavender;
+  background-color: #f3f3f3;
 }
 
 .about__content {
   position: relative;
   height: 78vh;
-  background-image: url(img/ofirme.jpg);
+  background-image: url(img/about_framed.jpg);
   background-size: cover;
   background-position: center 61%;
-  background-attachment: fixed;
 }
 
 .about-txt {
@@ -1210,20 +1279,20 @@ p {
 
 .sub-about {
   margin: 0 auto;
-  padding: 80px 0;
+  padding: 70px 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .profile-pic {
-  width: 200px;
-  height: 200px;
+  width: 190px;
+  height: 190px;
   margin-right: 80px;
   border-radius: 50%;
   background-image: url(./img/profile.jpg);
-  background-position: 55% 62%;
-  background-size: 317%;
+  background-position: 55% 58%;
+  background-size: 358%;
 }
 
 .profile__txt {

@@ -135,7 +135,7 @@ block body
 	article.product.my-work#product
 		h1.index-article__h1 Má práce
 		.work__content
-			article.current-work
+			article.current-work.my-work__item
 				section.podsekce-img.podsekce-predchoziprace.foto-1
 					// img(src="img/soucasna-nabidka/010.jpg" alt="")
 					// .rslides-container
@@ -149,35 +149,56 @@ block body
 								path.product-svg__arrow(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
 							// svg.product-svg(viewbox="0 0 100 100")
 								path.product-svg__arrow(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
+					a.podsekce__link(href="./nabidka.html") 
+						svg.podsekce__svg(viewbox="0 0 100 100")
+							path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
+						p Ford Transit Custom
 				section.podsekce-txt
-					h1 Ford Transit Custom
-					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus praesentium placeat obcaecati natus provident laboriosam, atque, facere exercitationem fugit fugiat architecto aliquid deserunt veritatis doloremque. Nihil molestiae, aperiam necessitatibus a.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil et quidem quia fugiat dolores saepe, repellat magni. Commodi, facilis minima excepturi magni accusantium, amet. Magni at quae eius numquam suscipit.
-					p Podívejte se podrobný popis a foto-dokumentaci:
-					a.podsekce__link(href="./nabidka.html") Více
+					// h1 Ford Transit Custom
+					p Má nejnovější práce, <strong>kterou současně nabízím k prodeji</strong>. Prodloužená verze tohoto vozu mi poskytla dostatačný prostror pro instalaci sprchového koutu s vestavěnou toaletou. Ideální pro cestování ve dvou, ale s možností i pro více osob. Přečtěte si více a prohlídněte si kompletní foto-dokumentaci:
+					// p Podívejte se podrobný popis a foto-dokumentaci:
+					// a.podsekce__link(href="./nabidka.html") 
+						svg.podsekce__svg(viewbox="0 0 100 100")
+							path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
+						p Více
 
-			article.prev-work.sekce-prev-work#prev-work
+			article.prev-work.sekce-prev-work.my-work__item#prev-work
 				section.podsekce-img.podsekce-predchoziprace.foto-2
 					// .inner
 						// img(src="./img/predchozi-prace/index.jpg", alt="")
 						img(src="./img/predchozi-prace/P1010031.jpg", alt="")
 						// img(src="./img/predchozi-prace/202.jpg", alt="")
+					a.podsekce__link(href="./nabidka.html") 
+						svg.podsekce__svg(viewbox="0 0 100 100")
+							path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
+						p Ford Transit 2011
 				section.podsekce-txt
-					h1 Ford Transit 2001
+					// h1 Ford Transit 2001
 					// h1 Variace Fordu Transit s krátkým rozvorem
-					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus praesentium placeat obcaecati natus provident laboriosam, atque, facere exercitationem fugit fugiat architecto aliquid deserunt veritatis doloremque. Nihil molestiae, aperiam necessitatibus a.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil et quidem quia fugiat dolores saepe, repellat magni. Commodi, facilis minima excepturi magni accusantium, amet. Magni at quae eius numquam suscipit.
-					p Podívejte se na ukázky mé předchozí práce:
-					a.podsekce__link(href="./nabidka.html") Více
+					p Populární model Fordu Transit z roku 2001 posloužil pro dvě z mých předchozích prací. Nastavil jsem je o spací místa pro 4 osoby, kuchyňsky modul a záchod. Vyklápěcí střecha činila vozidlo kompaktnější do té míry, že téměř nešlo poznat, že jde o obytný vůz. Přečtete si více o tomto voze:
+					// p Podívejte se na ukázky mé předchozí práce:
+					// a.podsekce__link(href="./nabidka.html")
+						svg.podsekce__svg(viewbox="0 0 100 100")
+							path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
+						p Více
 
-			article.prev-work.sekce-prev-work
+			article.prev-work.sekce-prev-work.my-work__item
 				section.podsekce-img.podsekce-predchoziprace.foto-3
 					// .inner
 						img(src="./img/predchozi-prace/index.jpg", alt="")
+					a.podsekce__link(href="./nabidka.html")
+						svg.podsekce__svg(viewbox="0 0 100 100")
+							path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
+						p Ford Transit 1991
 				section.podsekce-txt
-					h1 Ford Transit 1991
+					// h1 Ford Transit 1991
 					// h1 Variace Fordu Transit s krátkým rozvorem
-					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus praesentium placeat obcaecati natus provident laboriosam, atque, facere exercitationem fugit fugiat architecto aliquid deserunt veritatis doloremque. Nihil molestiae, aperiam necessitatibus a.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil et quidem quia fugiat dolores saepe, repellat magni. Commodi, facilis minima excepturi magni accusantium, amet. Magni at quae eius numquam suscipit.
-					p Podívejte se na ukázky mé předchozí práce:
-					a.podsekce__link(href="./nabidka.html") Více
+					p První práce, kterou jsem používal s mojí 4-člennou rodinou přes 10 let a později prodal. Vysoká střecha ukrývala spaní pro dva ale zároveň umožňovala stát uvnitř při používání vestavěné kuchynské linky. Do vozidla jsem zabudoval vodní nádrž pro mytí nádobí a venkovní sprchování. Více o tomto voze: 
+					// p Podívejte se na ukázky mé předchozí práce:
+					// a.podsekce__link(href="./nabidka.html")
+						svg.podsekce__svg(viewbox="0 0 100 100")
+							path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
+						p Více
 
 	//
 	// About
