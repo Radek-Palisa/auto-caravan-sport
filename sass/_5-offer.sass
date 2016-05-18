@@ -1,24 +1,28 @@
 //
 // Co nabizim
 //	
-
+.my-work
+	background-color: lavender
+	background-color: #EAEAEA
+	background-color: #f3f3f3
+	
 .work__content
 	// Display
 	display: flex
 	justify-content: center
 	// Position
-	padding: 80px 4% 60px
-	background-color: lavender
-	background-color: #EAEAEA
-	background-color: #f3f3f3
+	padding: 0 4% 8%
 
 .my-work__item
 	width: 400px
-	margin: 0.6%
+	margin: 0 0.6%
 
 	img 
 		width: 100%
 		height: auto
+
+	a:hover .podsekce__link
+		background-color: rgba(0,0,0,0.6)
 
 	.podsekce-txt
 		padding: 1em 20px 1.5em
@@ -89,6 +93,9 @@
 	p 
 		line-height: 1.4
 
+		a
+			text-decoration: underline
+
 	p:nth-of-type(2)
 		margin: 1em auto
 		text-align: center
@@ -147,8 +154,8 @@
 	padding: 6px 0 6px 5px
 	// border: 1px solid white
 
-	&:hover
-		box-shadow: 1px 1px 12px black
+	// &:hover
+		// box-shadow: 1px 1px 12px black
 
 	p 
 		display: inline-block
@@ -188,9 +195,6 @@
 
 	padding: 3px 0 3px 5px
 	// border: 1px solid white
-
-	&:hover
-		box-shadow: 1px 1px 12px black
 
 	p 
 		display: inline-block

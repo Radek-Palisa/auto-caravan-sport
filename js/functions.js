@@ -79,18 +79,6 @@ var hideHeader = debounce(function() {
 }, 200);
 */
 //
-// --- Toggle function for Soucasne k prodeji vs Predchozi prace
-/*
-$(document).ready(function(){
-	$(".nabidka-nav h1").click(function(e){
-		if (!$(this).hasClass("active")) {
-			$(".header").toggleClass("header--nabidka-bg header--predchoziprace-bg");
-			$(".nabidka-nav h1,.nabidka-tabs section").toggleClass("active non-active");
-		}
-	});
-});
-*/
-//
 // --- Tabs for Gallery ---
 //
 $(document).ready(function(){
@@ -117,11 +105,17 @@ var $logo = $('.logo');
 var $belowLanding = $('.below-landing');
 var $homepageArticle = $('.homepage-article');
 // $homepageArticle.css('opacity', '0');
+var $about = $('.about');
+var aboutTop = $about.offset().top;
+var aboutInView =  aboutTop - $window.height();
+var aboutHeight = $about.outerHeight();
+var aboutOffView = aboutTop + aboutHeight;
 
 	$(window).bind('scroll', function(){
 		var offset = $(document).scrollTop();
 		var opacity = 0.6;
 		var headerPos = -50;
+		var bgPosition = 210;
 		/*
 		if (offset > 0) {
 			headerPos = Math.min(1000,-50+(offset/3.5));
@@ -143,6 +137,11 @@ var $homepageArticle = $('.homepage-article');
 		});
 		}
 		*/
+		if (offset >= aboutInView) {
+			bgPosition = bgPosition-((offset-aboutInView)/6);
+		}
+		$about.css('background-position', 'center '+bgPosition+'%');
+
 	});
 
 function showFirstCard() {
