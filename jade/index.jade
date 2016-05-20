@@ -52,7 +52,7 @@ block body
 	//
 	// Jumbotron
 	//
-	article.jumbotron
+	// article.jumbotron
 		.jumbotron__txt
 			h3 Ford Custom A.C.S.
 			p  Lorem ipsum dolor sit amet. Consectetur adipisicing elit. Adipisci minus autem distinctio voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -60,74 +60,61 @@ block body
 	//
 	// Picture Grid
 	//
-	article.picture-grid#picture-grid
-		h2.index-article__h1 Karavaning v malé dodávce
-		.picture-grid__wrap
-			.grid__container
-				.grid__cell.grid__cell--hover.grid__cell--top-start
-					.card.card-1
-						figure.front
-							// img(src="./img/picture-grid/pic-grid_01.jpg", alt="")
-						figure.back.slide-in
-							p.slide-in__text.slide-in__text--aligncenter <strong>Vítejte</strong></br>na stránkách firmy</br>A.C.S.
-						
-				.grid__cell.grid__cell--hover.grid__cell--middle
-					.card.card-2
-						figure.front
-							// img(src="./img/picture-grid/pic-grid_02.jpg", alt="")
-						figure.back.slide-in
-							h1.slide-in__title Využití
-							p.slide-in__text Auta jsou ideální pro dálniční cestování, polykání kilometrů,  neustálé přesuny. Poskytují určitý komfort potřeb k pobytu, jak na městských parkovištích, kempech, tak i ve volné přírodě. Malá velikost vozidla usnadňuje nalodit vozidlo na trajekt a hlavně, za rozumnou cenu.
+	article.presentation#picture-grid
+		h2.index-article__h1.article-presentation__h1 Karavaning v malé dodávce
+		.presentation__content.my-flipster
+			ul
+				li.js-el-height
+					figure
+						// img(src="./img/picture-grid/pic-grid_02.jpg", alt="")
+						figcaption
+							h1 Využití
+							p Auta jsou ideální pro dálniční cestování, polykání kilometrů,  neustálé přesuny. Poskytují určitý komfort potřeb k pobytu, jak na městských parkovištích, kempech, tak i ve volné přírodě. Malá velikost vozidla usnadňuje nalodit vozidlo na trajekt a hlavně, za rozumnou cenu.
+						.img-container.img-container-2
 
-				.grid__cell.grid__cell--hover.grid__cell--middle
-					.card.card-3
-						figure.front
-							// img(src="./img/picture-grid/pic-grid_03.jpg", alt="")
-						figure.back.slide-in
-							h1.slide-in__title Dostupnost
-							p.slide-in__text S vozem se dostanete i na těžko přístupná místa jako centra velkoměst, parkoviště v historických částech nebo podobné spleti úzkých uliček. Přece jenom je dodávka méně nápadná než velký obytný vůz.
-						
-				.grid__cell.grid__cell--hover.grid__cell--top-end
-					.card.card-4
-						figure.front
-							// img(src="./img/picture-grid/pic-grid_04.jpg", alt="")
-						figure.back.slide-in
-							h1.slide-in__title Kvalita
-							p.slide-in__text U všech přestaveb jsou použity certifikované komponenty od firmy REIMO a splňují bezpečnostní a technické parametry.
+				li
+					figure
+						// img(src="./img/picture-grid/pic-grid_03.jpg", alt="")
+						figcaption
+							h1 Dostupnost
+							p S vozem se dostanete i na těžko přístupná místa jako centra velkoměst, parkoviště v historických částech nebo podobné spleti úzkých uliček. Přece jenom je dodávka méně nápadná než velký obytný vůz.
+						.img-container.img-container-3
 				
-				.grid__cell.grid__cell--hover.grid__cell--bottom-start
-					.card.card-5
-						figure.front
-							// img(src="./img/picture-grid/pic-grid_05.jpg", alt="")
-						figure.back.slide-in
-							h1.slide-in__title Skladnost
-							p.slide-in__text Malá velikost vozidla usnadnuje nalodit vozidlo na trajekt a setri penize na dalnicncich poplatcich.
-					
-				.grid__cell.grid__cell--hover.grid__cell--middle
-					.card.card-6
-						figure.front
-							// img(src="./img/picture-grid/pic-grid_06.jpg", alt="")
-						figure.back.slide-in
-							h1.slide-in__title Komfort
-							p.slide-in__text Ať už cestujete kamkoliv, vozíte si sebou pohodlí domova. V autě můžete spát, vařit, sprchovat se a samozřejmostí je vestavěný chemický záchod a možnost připojit se na elektřinu.
-	
-				.grid__cell.grid__cell--hover.grid__cell--middle
-					.card.card-7
-						figure.front
-							// img(src="./img/picture-grid/pic-grid_07.jpg", alt="")
-						figure.back.slide-in
-							h1.slide-in__title Jednoduché cestování
-							p.slide-in__text Vozy A.C.S. umožňují cestování s důrazem na minimálnost a funkčnost. Je to kompromis mezi hotelovým pokojem v turistickém středisku a stanováním ve volné přírodě.
-	
-				.grid__cell.grid__cell--hover.grid__cell--bottom-end
-					.card.card-8
-						figure.front
-							// img(src="./img/picture-grid/pic-grid_08.jpg", alt="")
-						figure.back.slide-in
-					
-				.show-slides 
-					img.show-slides__icon(src="img/eye.svg")
-					span.show-slides__txt Ukaž vše
+				li
+					figure
+						figcaption
+							h1 Vítejte na stránkách firmy Auto Caravan Sport s.r.o.
+							p Jmenuji se Libor Palisa a skrze tuto firmu si naplňuji svoji vášeň pro specifický způsob cestování: říkejme mu Karavaning.  Karavaning je cestování založené na principu minimalismu a přesto maximálně možném pohodlí. Pro tento účel provádím přestavby vozidel dodávkové velikosti.
+						.img-container.img-container-1
+							// img(src="./img/picture-grid/pic-grid_03.jpg", alt="")
+
+				li
+					figure
+						// img(src="./img/picture-grid/pic-grid_04.jpg", alt="")
+						figcaption
+							h1 Kvalita
+							p U všech přestaveb jsou použity certifikované komponenty od firmy REIMO a splňují bezpečnostní a technické parametry.
+						.img-container.img-container-4
+		
+				//figure
+					// img(src="./img/picture-grid/pic-grid_05.jpg", alt="")
+					figcaption
+						h1 Skladnost
+						p Malá velikost vozidla usnadnuje nalodit vozidlo na trajekt a setri penize na dalnicncich poplatcich.
+				
+				li
+					figure
+						// img(src="./img/picture-grid/pic-grid_06.jpg", alt="")
+						figcaption
+							h1 Komfort
+							p Ať už cestujete kamkoliv, vozíte si sebou pohodlí domova. V autě můžete spát, vařit, sprchovat se a samozřejmostí je vestavěný chemický záchod a možnost připojit se na elektřinu.
+						.img-container.img-container-5
+
+				//figure
+					// img(src="./img/picture-grid/pic-grid_07.jpg", alt="")
+					figcaption
+						h1 Jednoduché cestování
+						p Vozy A.C.S. umožňují cestování s důrazem na minimálnost a funkčnost. Je to kompromis mezi hotelovým pokojem v turistickém středisku a stanováním ve volné přírodě.
 	
 	//
 	// Product
@@ -162,11 +149,11 @@ block body
 						.podsekce__link(href="./nabidka.html") 
 							svg.podsekce__svg(viewbox="0 0 100 100")
 								path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
-							p Ford Transit 2011
+							p Ford Transit 2000
 				section.podsekce-txt
-					// h1 Ford Transit 2001
+					// h1 Ford Transit 2000
 					// h1 Variace Fordu Transit s krátkým rozvorem
-					p Populární model Fordu Transit z roku 2001 posloužil pro dvě z mých předchozích prací. Nastavil jsem je o spací místa pro 4 osoby, kuchyňsky modul a záchod. Vyklápěcí střecha činila vozidlo kompaktnější do té míry, že téměř nešlo poznat, že jde o obytný vůz. Přečtete si více o tomto voze <a href="./predchozi-prace.html">zde</a>.
+					p Populární model Fordu Transit z roku 2000 posloužil pro dvě z mých předchozích prací. Nastavil jsem je o spací místa pro 4 osoby, kuchyňsky modul a záchod. Vyklápěcí střecha činila vozidlo kompaktnější do té míry, že téměř nešlo poznat, že jde o obytný vůz. Přečtete si více o tomto voze <a href="./predchozi-prace.html">zde</a>.
 					// p Podívejte se na ukázky mé předchozí práce:
 					// a.podsekce__link(href="./nabidka.html")
 						svg.podsekce__svg(viewbox="0 0 100 100")
@@ -181,11 +168,11 @@ block body
 						.podsekce__link(href="./nabidka.html")
 							svg.podsekce__svg(viewbox="0 0 100 100")
 								path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
-							p Ford Transit 1991
+							p Ford Transit 1996
 				section.podsekce-txt
-					// h1 Ford Transit 1991
+					// h1 Ford Transit 1996
 					// h1 Variace Fordu Transit s krátkým rozvorem
-					p První práce, kterou jsem používal s mojí 4-člennou rodinou přes 10 let a později prodal. Vysoká střecha ukrývala spaní pro dva ale zároveň umožňovala stát uvnitř při používání vestavěné kuchynské linky. Do vozidla jsem zabudoval vodní nádrž pro mytí nádobí a venkovní sprchování. Více o tomto voze <a href="./predchozi-prace.html">zde</a>.
+					p První práce, kterou jsem osobně používal s mojí 4-člennou rodinou přes 10 let a později prodal. Vysoká střecha ukrývala spaní pro dva ale zároveň umožňovala stát uvnitř při používání vestavěné kuchynské linky. Do vozidla jsem zabudoval vodní nádrž pro mytí nádobí a venkovní sprchování. Více o tomto voze <a href="./predchozi-prace.html">zde</a>.
 					// p Podívejte se na ukázky mé předchozí práce:
 					// a.podsekce__link(href="./nabidka.html")
 						svg.podsekce__svg(viewbox="0 0 100 100")
@@ -206,7 +193,7 @@ block body
 	article
 		.sub-about
 			.profile-pic
-			p.profile__txt Jmenuji se <strong>Libor Palisa</strong>.<br>Cestovávní a sport vždy hrály douležitou roli v mém životě. Firma A.C.S je skloubení těchto zájmů s praktičností...
+			p.profile__txt <strong>O mně</strong><br>Jsem vyučený automechanik a povoláním autolakýrník. Cestovávní a sport vždy hrály douležitou roli v mém životě. Firma A.C.S je skloubení těchto zájmů s praktičností...
 	//
 	// Contact
 	//

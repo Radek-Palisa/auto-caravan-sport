@@ -1,5 +1,7 @@
 @import "vendor/normalize";
 
+@import "vendor/flipster";
+
 @import "vendor/rslider";
 
 @import "base";
@@ -12,9 +14,9 @@
 
 @import "3-jumbotron";
 
-@import "4-picture-grid";
+@import "4-presentation";
 
-@import "5-offer";
+@import "5-work";
 
 @import "6-about";
 
@@ -23,37 +25,6 @@
 @import "8-footer";
 
 // Sub-pages
-
-/* Layout for sub-pages */
-
-main {
-	position: relative;
-	margin: 0 auto;
-	padding-bottom: 12px;
-	background-color: white;
-	width: 100%;
-}
-
-.content {
-	max-width: 1200px;
-	margin: 0 auto;
-	position: relative;
-	padding: 20px 100px 0;
-}
-
-/* Sub-pages Headings */
-
-.heading__wrap {
-	// width: 1000px;
-	margin: 0 auto;
-	padding: 45px 0;
-	text-align: center;
-	background-color: lavender;
-}
-
-.heading--fonts {
-	margin: 0;
-}
 
 @import "sub-pages/product-page";
 

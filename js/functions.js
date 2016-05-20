@@ -14,36 +14,6 @@ $(function() {
 });
 
 //
-// --- Fallback for non-hover devices ---
-//
-$('.grid__cell').on('click', function(e) {
-	//find the current chosen element
-	// var currentItem = $(this).siblings('.siblingElements')
-	$(this).children().toggleClass('flipped');
-	$('.show-slides__txt').text('Ukaž vše');
-});
-$(document).on('click', function(event) {
-  if (!$(event.target).closest('.grid__container').length) {
-	  $('.card').removeClass('flipped');
-	  $('.show-slides__txt').text('Ukaž vše');
-  }
-});
-
-//
-// --- Button to show/hide all slide-ins ---
-//
-$('.show-slides').on('click', function(e) {
-	if ($('.card').length === $('.flipped').length) {
-		$('.card').removeClass('flipped');
-		$('.show-slides__txt').text('Ukaž vše');
-	}
-	else {
-		$('.card').addClass('flipped');
-		$('.show-slides__txt').text('Nechci číst');
-	}
-});
-
-//
 // --- Debounce function to improve performance on scroll listener
 // https://davidwalsh.name/javascript-debounce-function
 //
@@ -63,22 +33,6 @@ function debounce(func, wait, immediate) {
 };
 
 //
-// --- Hide Header with Scroll Down ---
-//
-/*
-var hideHeader = debounce(function() {
-	
-	if ($(this).scrollTop()> $('.header__wrapper').height())
-	 {
-		$('.header__banner').fadeOut(500);
-	 }
-	else
-	 {
-	  $('.header__banner').fadeIn(500);
-	 }
-}, 200);
-*/
-//
 // --- Tabs for Gallery ---
 //
 $(document).ready(function(){
@@ -93,67 +47,47 @@ $(document).ready(function(){
 	});
 });
 
-var fadeInStart = 0 // 100px scroll or less will equiv to 1 opacity
-	,fadeUntil= 500 // 200px scroll or more will equiv to 0 opacity
-	,revealing = $('#home-page')
-	,fadingStart = 700
-	,fadingEnd = 1050;
 var $window = $(window);
-var windowHalf = $window.height() * 0.4;
-var $jumbotron = $('.jumbotron');
+var windowHeight = $window.height();
 var $logo = $('.logo');
-var $belowLanding = $('.below-landing');
-var $homepageArticle = $('.homepage-article');
-// $homepageArticle.css('opacity', '0');
+
+
+// Parallax sliding - Presentation section vars
+var $pres = $('.presentation');
+var presTop = $pres.offset().top;
+var presInView = presTop - windowHeight;
+var presHeight = $pres.outerHeight();
+var presOffView = presTop + presHeight;
+
+// Parallax sliding - About Section vars
 var $about = $('.about');
 var aboutTop = $about.offset().top;
-var aboutInView =  aboutTop - $window.height();
+var jsElHeight = $('.js-el-height').outerHeight() * 4;
+var aboutInView =  aboutTop - jsElHeight - windowHeight;
 var aboutHeight = $about.outerHeight();
 var aboutOffView = aboutTop + aboutHeight;
 
 	$(window).bind('scroll', function(){
-		var offset = $(document).scrollTop();
-		var opacity = 0.6;
+		var wScroll = $(document).scrollTop();
 		var headerPos = -50;
-		var bgPosition = 210;
+		var bgPosPres = 150;
+		
 		/*
 		if (offset > 0) {
 			headerPos = Math.min(1000,-50+(offset/3.5));
 		}
+		$logo.css('transform', 'translate(-50%,'+headerPos+'%)');
 		*/
-		/*
-		if (offset >= fadeUntil) {
-			opacity = 0.9;
-		} else if (offset <= fadeUntil) {
-			opacity = Math.min(0.9, 0.6+offset/fadeUntil);
-		}
-		*/
-		// $logo.css('transform', 'translate(-50%,'+headerPos+'%)');
-		// revealing.css('background-color', 'rgba(0,0,0, '+ opacity +'');
-		/*
-		if (offset >= windowHalf) {
-			$homepageArticle.each(function(index) {
-			$(this).delay(200*index).fadeTo(1000, 1);
-		});
-		}
-		*/
-		if (offset >= aboutInView) {
-			bgPosition = bgPosition-((offset-aboutInView)/6);
-		}
-		$about.css('background-position', 'center '+bgPosition+'%');
 
+		if (wScroll >= presInView) {
+			bgPosPres = bgPosPres-((wScroll-presInView)/6);
+		}
+		$pres.css('background-position', 'center '+bgPosPres+'%');
+
+		var bgPosAbout = 210;
+
+		if (wScroll >= aboutInView) {
+			bgPosAbout = bgPosAbout-((wScroll-aboutInView)/6);
+		}
+		$about.css('background-position', 'center '+bgPosAbout+'%');
 	});
-
-function showFirstCard() {
-	var $pictureGrid = $('.picture-grid__wrap');
-	var pictureGrid_bottom = $pictureGrid.offset().top + $pictureGrid.height();
-	var GridInView = pictureGrid_bottom - $window.height();
-	var offset = $(document).scrollTop();
-
-	if (offset > GridInView) {
-			$('.card').first().addClass('flipped');
-			$(window).off('scroll', showFirstCard);
-	}
-}
-
-$(window).on("scroll", showFirstCard);

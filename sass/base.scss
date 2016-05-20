@@ -1,11 +1,16 @@
 $break-laptop: 1150px;
 $break-desktop: 1600px;
+$base-line-height: 1.4;
 
 html {
   box-sizing: border-box;
 }
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+body {
+	line-height: $base-line-height;
 }
 
 img {
