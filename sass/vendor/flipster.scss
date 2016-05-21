@@ -259,12 +259,15 @@
 .flipster--flat .flipster__item--past,
 .flipster--flat .flipster__item--future {
   opacity: 0.5;
+  opacity: 0.4 //my own adjustment
 }
 .flipster--flat .flipster__item--past .flipster__item__content {
   transform: scale(0.75);
+  transform: scale(0.4); //my adjustment
 }
 .flipster--flat .flipster__item--future .flipster__item__content {
   transform: scale(0.75);
+  transform: scale(0.4); //my adjustment
 }
 /* @end */
 

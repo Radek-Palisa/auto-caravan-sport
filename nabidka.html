@@ -203,7 +203,14 @@
     <script src="js/responsiveslides.min.js"></script>
     <script>
       $(function() {
-      	$('.my-flipster').flipster();
+      	$('.my-flipster').flipster({
+      		style: 'flat',
+      		buttons: true,
+      		spacing: -0.5,
+      		scrollwheel: false,
+      		loop: true,
+      		start: 'center'
+      	});
       	$(".rslides").responsiveSlides({
       		auto: false,
       		speed: 700,

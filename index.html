@@ -107,11 +107,10 @@
             <figure>
               <figcaption>
                 <h1>Vítejte na stránkách firmy Auto Caravan Sport s.r.o.</h1>
+                <div class="img-container img-container-1"></div>
+                <!-- img(src="./img/picture-grid/pic-grid_03.jpg", alt="")-->
                 <p>Jmenuji se Libor Palisa a skrze tuto firmu si naplňuji svoji vášeň pro specifický způsob cestování: říkejme mu Karavaning.  Karavaning je cestování založené na principu minimalismu a přesto maximálně možném pohodlí. Pro tento účel provádím přestavby vozidel dodávkové velikosti.</p>
               </figcaption>
-              <div class="img-container img-container-1">
-                <!-- img(src="./img/picture-grid/pic-grid_03.jpg", alt="")-->
-              </div>
             </figure>
           </li>
           <li>
@@ -301,7 +300,14 @@
     <script src="js/responsiveslides.min.js"></script>
     <script>
       $(function() {
-      	$('.my-flipster').flipster();
+      	$('.my-flipster').flipster({
+      		style: 'flat',
+      		buttons: true,
+      		spacing: -0.5,
+      		scrollwheel: false,
+      		loop: true,
+      		start: 'center'
+      	});
       	$(".rslides").responsiveSlides({
       		auto: false,
       		speed: 700,
