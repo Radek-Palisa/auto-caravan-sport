@@ -24,10 +24,9 @@ module.exports = function(grunt) {
 			},
 			files: {
 			    'nabidka.html' : 'jade/nabidka.jade',
+			    'predchozi-prace.html' : 'jade/predchozi-prace.jade',
 				'gallery.html' : 'jade/gallery.jade',
 				'index.html' : 'jade/index.jade',
-				'kontakt.html' : 'jade/kontakt.jade',
-				'ofirme.html' : 'jade/ofirme.jade'
 			}
 		  }
 		},

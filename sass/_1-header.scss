@@ -1,0 +1,139 @@
+/* Header partial */
+
+.header {
+	position: relative;
+	height: 345px;
+	background-size: cover;
+	
+	$linear-gradient: linear-gradient(transparent, rgba(0,0,0,0.2), transparent);
+
+	&--index-bg {
+
+		background-image: linear-gradient(140deg, rgba(0,0,0,0), rgba(0,0,0,0.33)), url(./img/header/3.jpg);
+		background-position: center 59%;
+
+
+		background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.4)), url(./img/header/mastny2.jpg);
+		background-position: center 61%;
+
+		background-image: url(./img/header/below-landing.jpg);
+		background-position: center 22%;
+
+		background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url(./img/header/1.jpg);
+		background-position: center 77%;
+
+		background-image: url(./img/header/5.jpg);
+		background-position: center bottom;
+	}
+	&--gallery-bg {
+		background-image: $linear-gradient, url(img/gallery-bg_3872w_35q.jpg);
+	}
+	
+	&--nabidka-bg {
+		background-image: $linear-gradient, url(img/nabidka-bg-1600w-45q.jpg);
+		background-position: center 24%;
+		
+		background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url(./img/header/1.jpg);
+		background-position: center 77%;
+	}
+	
+	&--predchoziprace-bg {
+		background-image: $linear-gradient, url(img/kontakt-bg_3872w_10q.jpg);
+		background-position: center 24%;
+	}
+}
+
+.logo {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	line-height: 1.1;
+	text-align: center;
+	white-space: nowrap;
+	
+	h1, p {
+		margin: 0;
+	}
+
+	h1 {
+		display: none;
+		color: white;
+		font-family: tahoma;
+		font-size: 28px;
+		font-size: 4.4vw;
+		font-style: oblique;
+		text-shadow: 1px 1px 4px black;
+	}
+
+	p {
+		color: white;
+		font-family: roboto;
+		font-size: 6vw;
+		font-size: 80px;
+		letter-spacing: 1px;
+		text-shadow: 1px 1px 2px black;
+		font-weight: 600;
+	}
+
+	.underline {
+		display: flex;
+		justify-content: center;
+		overflow: hidden;
+		
+		&__txt {
+			position: relative;
+			font-size: 1.6vw;
+			font-size: 28px;
+			font-weight: 600;
+			color: white;
+
+			&:after, &:before {
+				display: none;
+				content: "";
+				position: absolute;
+				border-top: 2px solid white;
+				top: 50%;
+				width: 350px;
+			}
+			&:before {
+				right: 100%;
+				margin-right: 10px;
+			}
+			&:after {
+				left: 100%;
+				margin-left: 10px;
+			}
+		}
+	}
+}
+
+.nav {
+	padding-top: 30px;
+	margin-right: 30px;
+	text-align: right;
+	// Typography
+	font-size: 17px;
+	letter-spacing: 0.5px;
+	font-family: roboto;
+	text-transform: uppercase;
+	
+	ul {
+		padding: 0;
+		margin: 0;
+		
+		li {
+			display: inline-block;
+			margin-left: 25px;
+			padding-bottom: 2px;
+			
+			a {
+				color: #E2E2E2;
+				color: #644D19;
+				font-weight: bold;
+				font-size: 14px;
+				letter-spacing: 1px;
+			}
+		}
+	}
+}

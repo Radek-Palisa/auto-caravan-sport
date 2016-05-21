@@ -1,0 +1,217 @@
+//
+// Co nabizim
+//	
+.my-work
+	background-color: lavender
+	background-color: #EAEAEA
+	background-color: #f3f3f3
+	
+.work__content
+	// Display
+	display: flex
+	justify-content: center
+	// Position
+	padding: 0 4% 8%
+
+.my-work__item
+	width: 400px
+	margin: 0 0.6%
+
+	img 
+		width: 100%
+		height: auto
+
+	a:hover .podsekce__link
+		background-color: rgba(0,0,0,0.6)
+
+	.podsekce-txt
+		padding: 1em 20px 1.5em
+		background-color: white
+		border: 1px solid #DFDEDE
+
+.foto-1
+	background-image: url(./img/soucasna-nabidka/010.jpg)
+	background-size: cover
+	background-position: top
+
+.foto-2
+	background-image: url(./img/predchozi-prace/P6190018.jpg)
+	background-size: cover
+	background-position: center 81%
+
+.foto-3
+	background-image: url(./img/predchozi-prace/lefkas_073.jpg)
+	background-size: cover
+	background-position: center
+
+.podsekce-img
+
+	display: flex
+	justify-content: center
+	align-items: center
+
+	.rslides-container
+		margin: 0 auto
+		width: 450px
+
+		.centered-btns_nav
+			margin: -45px
+			background: none
+
+	.rslides
+		box-shadow: 1px 1px 12px black
+
+.product-svg
+	position: absolute
+	top: 50%
+	width: 38px
+	height: 61px
+	
+	&:nth-of-type(1)
+		margin: -47px 0 0 -45px
+
+	&:nth-of-type(2)
+		right: 0
+		margin: -47px -45px 0 0
+		transform: rotate(180deg)
+
+	&__arrow
+		fill: #f6d922
+
+.podsekce-txt
+	max-width: 450px
+	color: #474141
+
+	h1
+		font-size: 1.2em
+		text-align: center
+		font-family: Open Sans
+		color: #397c88
+		font-weight: normal
+		// margin-top: 0
+	
+	p 
+		line-height: 1.4
+
+		a
+			text-decoration: underline
+
+	p:nth-of-type(2)
+		margin: 1em auto
+		text-align: center
+
+//
+// Previous work
+//
+
+.podsekce-predchoziprace 
+	overflow: hidden
+	height: 250px
+
+	.inner
+		// position: relative
+		// width: 450px
+		// height: 299px
+		// margin: 0 auto
+
+	img
+	
+		// position: absolute
+		//width: 60%
+		//box-shadow: 1px 1px 9px black
+		//transition: all 0.2s ease-in-out
+
+		//&:nth-of-type(2)
+			//top: 15%
+			//left: 20%
+			//z-index: 2
+		//&:nth-of-type(3)
+			//top: 30%
+			//left: 40%
+			//z-index: 3
+		
+		//&:hover
+			//transform: scale(1.1)
+			//transition: all 0.2s ease-in-out
+			//z-index: 4
+			//box-shadow: 1px 1px 15px black
+
+.podsekce__link
+	//display: block
+	// width: 123px
+	margin: 0 auto
+	// padding: 10px 15px
+	// border: 1px solid black
+	box-shadow: 1px 1px 4px black
+	text-align: center
+	font-family: roboto
+	font-weight: bold
+	color: #202020
+	color: white
+	background-color: #f6d922
+	background-color: #397c88
+
+	padding: 6px 0 6px 5px
+	// border: 1px solid white
+
+	// &:hover
+		// box-shadow: 1px 1px 12px black
+
+	p 
+		display: inline-block
+		margin: 0
+		padding: 0 30px
+		border-left: 1px solid white
+		text-align: center
+		font-size: 1em
+
+
+.podsekce__svg
+	display: inline-block
+	width: 1em
+	transform: translate(-3px, 3px) rotate(180deg)
+	transition: all 0.2s ease-in-out
+
+	path
+		fill: white
+
+// Podsekce link for button inside images version!!
+// it just overwites above
+
+.podsekce__link
+	// display: block
+	// width: 230px
+	margin: 0 auto
+	// padding: 10px 15px
+	border: 1px solid #62A8B5
+	box-shadow: none
+	text-align: center
+	font-family: roboto
+	font-weight: bold
+	color: #202020
+	color: white
+	background-color: #f6d922
+	background-color: rgba(0,0,0,0.5)
+
+	padding: 3px 0 3px 5px
+	// border: 1px solid white
+
+	p 
+		display: inline-block
+		margin: 0
+		padding: 5px 20px
+		border-left: 1px solid #62A8B5
+		text-align: center
+		font-size: 1.1em
+		letter-spacing: 0.5px
+
+
+.podsekce__svg
+	display: inline-block
+	width: 18px
+	margin: 1px
+	transform: translate(-3px, 3px) rotate(180deg)
+	transition: all 0.2s ease-in-out
+
+	path
+		fill: #62A8B5

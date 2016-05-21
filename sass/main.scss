@@ -1,21 +1,33 @@
-@import "normalize";
+@import "vendor/normalize";
+
+@import "vendor/flipster";
+
+@import "vendor/rslider";
 
 @import "base";
 
-@import "partials/header";
+// Index Page
 
-@import "layout";
+@import "1-header";
 
-@import "modules/main-heading";
+@import "2-sub-header";
 
-@import "modules/picture-grid";
+@import "3-jumbotron";
 
-@import "landing-page";
+@import "4-presentation";
 
-@import "nabidka";
+@import "5-work";
 
-@import "modules/gallery";
+@import "6-about";
 
-@import "modules/contact-form";
+@import "7-contact";
 
-@import "partials/footer";
+@import "8-footer";
+
+// Sub-pages
+
+@import "sub-pages/product-page";
+
+@import "sub-pages/gallery-page";
+
+

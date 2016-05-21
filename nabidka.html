@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,300,500,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,300italic,400italic,600italic,700italic,800,800italic&amp;subset=latin-ext" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
@@ -21,62 +21,170 @@
         <p>Auto Caravan Sport</p>
         <div class="underline"><span class="underline__txt">s.r.o.</span></div>
       </div>
-      <nav role="navigation" class="nav nav--fonts">
-        <ul>
-          <li><a href="index.html">Domů</a></li>
-          <li><a href="nabidka.html">Nabídka</a></li>
-          <li><a href="ofirme.html">O firmě</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-      </nav>
+      <!-- nav.nav.nav--fonts(role="navigation")
+      ul
+      	li: a(href="index.html") Domů
+      	li: a(href="nabidka.html") Nabídka
+      	li: a(href="index.html#about") O firmě
+      	li: a(href="index.html#contact") Kontakt
+      
+      -->
     </header>
-    <main class="nabidka-tabs">
-      <div class="heading__wrap">
-        <div class="nabidka-nav">
-          <h1 class="heading heading--fonts active">Současně k prodeji</h1>
-          <h1 class="heading heading--fonts heading2 non-active">Předchozí práce</h1>
+    <main class="ford-custom-page">
+      <!-- nav.sub-page-nav
+      a(href="index.html") <span>&#x2190;</span> Zpět na domovskou stránku
+      a.sub-page-nav--float(href="predchozi-prace.html") Předchozí práce <span>&#x2192;</span>
+      -->
+      <header class="heading__wrap">
+        <h1 class="heading--fonts">Současně k prodeji</h1>
+      </header>
+      <article class="ford-custom">
+        <div class="slider-wrapper box-shadow">
+          <section class="rslides-container">
+            <ul class="rslides">
+              <li><img src="img/soucasna-nabidka/001.jpg" alt=""></li>
+              <li><img src="img/soucasna-nabidka/002.jpg" alt=""></li>
+              <li><img src="img/soucasna-nabidka/003.jpg" alt=""></li>
+              <li><img src="img/soucasna-nabidka/004.jpg" alt=""></li>
+              <li><img src="img/soucasna-nabidka/005.jpg" alt=""></li>
+              <li><img src="img/soucasna-nabidka/006.jpg" alt=""></li>
+              <li><img src="img/soucasna-nabidka/007.jpg" alt=""></li>
+              <li><img src="img/soucasna-nabidka/008.jpg" alt=""></li>
+              <li><img src="img/soucasna-nabidka/009.jpg" alt=""></li>
+              <li><img src="img/soucasna-nabidka/010.jpg" alt=""></li>
+            </ul>
+          </section>
         </div>
-      </div>
-      <div class="content">
-        <section class="active">
-          <h1>Ford Custom A.C.S</h1>
-          <article>
-            <div class="rslides-container">
-              <ul class="rslides">
-                <li><img src="img/soucasna-nabidka/001.jpg" alt=""></li>
-                <li><img src="img/soucasna-nabidka/049.jpg" alt=""></li>
-                <li><img src="img/soucasna-nabidka/050.jpg" alt=""></li>
-                <li><img src="img/soucasna-nabidka/003.jpg" alt=""></li>
-                <li><img src="img/soucasna-nabidka/005.jpg" alt=""></li>
-              </ul>
-            </div>
-            <p>Typ vestavby je použit v prodloužené verzi Fordu Transit CUSTOM. Mohlo tedy dojít k umístění kompletního toaletního koutu. Nejdůležitější část vozu je zatím před přestavbou a to je střecha. Počítáme u tohoto typu vozu s vysokou plastovou střechou. Výrobci střech zatím dělají jen na krátké verze vozidel a pevně věříme, že k výrobě střechy na tento prodloužený typ přece jen dojde. Pro mne však tato verze je zatím přijatelná, protože jezdím už jenom s manželkou a hodně využívám střešních nosičů pro surfařské vybavení, jsem s touto verzi spokojen. Je to klasicky kombi-van, se zaizolovanou karoserii a v ložném prostoru vybaven sociálním koutem. Počet sedících v tomto vozidle je 7+1, po montáži postele se počet sníží na 2+1.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas a qui, sapiente quod, nemo at accusamus blanditiis ex beatae, corrupti veritatis minima ipsum expedita. Perspiciatis praesentium ea impedit asperiores cum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus corporis sed laborum iste veniam, sit quasi deleniti, voluptas adipisci a, simil</p>
-          </article><a href="gallery.html" class="gallery-link">Kompletní dokumentace Ford Custom A.C.S.</a>
+        <section class="ford-custom__txt box-shadow">
+          <!-- h1 Ford Custom A.C.S-->
+          <p>Tento typ vestavby je použit v prodloužené verzi Fordu Transit CUSTOM. Mohlo tedy dojít k umístění kompletního toaletního koutu. Nejdůležitější část vozu je zatím před přestavbou a to je střecha. Počítáme u tohoto typu vozu s vysokou plastovou střechou. Výrobci střech zatím dělají jen na krátké verze vozidel a pevně věříme, že k výrobě střechy na tento prodloužený typ přece jen dojde. Pro mne však tato verze je zatím přijatelná, protože jezdím už jenom s manželkou a hodně využívám střešních nosičů pro surfařské vybavení, jsem s touto verzi spokojen. Je to klasicky kombi-van, se zaizolovanou karoserii a v ložném prostoru vybaven sociálním koutem. Počet sedících v tomto vozidle je 7+1, po montáži postele se počet sníží na 2+1.</p>
         </section>
-        <section class="predchozi-prace non-active">
-          <article>
-            <h1>Ford Transit (krátký rozvor) s vysokou střechou</h1>
-            <div class="rslides-predchozi">
-              <ul class="rslides">
-                <li><img src="img/predchozi-prace/202.JPG" alt=""></li>
-                <li><img src="img/predchozi-prace/204.JPG" alt=""></li>
-              </ul>
-            </div>
-            <p>Jedna z nejrozšířenějších verzí spis pro střední a dlouhé dodávky. Většinou dále v zadní části byl ještě prostor pro koupelnový kout a připadnou garáž. Postel se rozklápí a opírá na přední otočná sedadla. Udělal jsem tuto verzi do krátkého rozvoru, třeba kvůli tomu, že manželka mohla v  zadní části vařit nebo já se převlékat do neoprenu a děti si tak mohly nerušeně hrát ve předu u stolu. Vzadu byl i mobilní záchod, což melo také své diskrétnější výhody. Plastová vysoká střecha měla tu výhodu, že byla ve vozidle permanentní stojná výška.  Na údržbu je proti zvedací střeše jednodušší ale vozidlo bylo o 80 centimetru vyšší a to zas melo své nevýhody.</p>
-          </article>
-          <article>
-            <h1>Ford Transit (krátký rozvor) se zvedací střechou</h1>
-            <div class="rslides-predchozi">
-              <ul class="rslides">
-                <li><img src="img/predchozi-prace/102.JPG" alt=""></li>
-                <li><img src="img/predchozi-prace/103.JPG" alt=""></li>
-              </ul>
-            </div>
-            <p>Další z nejrozšířenějších verzi a to pro krátké dodávky. Postel se rozklápí do zadní casti vozu, neni tedy potreba obou otocnych prednich sedadel. Tato postel umoznuje daleko vice ulozneho prostoru nez u predchoziho modelu. Skrinky tvori soustavnou stenu od sedadla ridice az po zadni zvedaci dvere. Zvedaci strecha ma sve vyhody a to ve svem hornim prostoru pro spani. Steny zvedacky jsou kolme, kdez to u pevne se  z uzuji. Vetraci okna jsou tu velika, ve vedrech je tu vyhoda ale v chladnejsich a ve vetru, je to jen stan. Velka vyhoda a to beze sporu je vyska vozu, jak odporu vetru na ceste, tak prujezdu 2m branou.</p>
-          </article>
+      </article>
+      <article class="specs">
+        <h1>Ford Transit Custom kombi van<br>specifikace</h1>
+        <section class="custom-specs box-shadow">
+          <h2 class="specs__h2">Od výrobce:</h2><img src="./img/sub-pages/van.jpg" alt="">
+          <table>
+            <tr>
+              <td>Objem motoru:</td>
+              <td>2198 ccm</td>
+            </tr>
+            <tr>
+              <td>Výkon:</td>
+              <td>92,00kW</td>
+            </tr>
+            <tr>
+              <td>Převodovka:</td>
+              <td>M6</td>
+            </tr>
+            <tr>
+              <td>Rozvor:</td>
+              <td>3300</td>
+            </tr>
+            <tr>
+              <td>Pohon:</td>
+              <td>pohon předních kol</td>
+            </tr>
+            <tr>
+              <td>Délka/šířka/výška:</td>
+              <td>5339/2032/1976 </td>
+            </tr>
+            <tr>
+              <td>Počet míst:</td>
+              <td>2-7</td>
+            </tr>
+          </table>
+          <ul>
+            <li>Elektronický stabilizační systém ESP</li>
+            <li>Airbag řidiče a spolujezdce</li>
+            <li>Systém Stop-Start  vč.palubního počítače</li>
+            <li>Elektricky ovládaná přední okna </li>
+            <li>Dálkově ovládané centrální zamykání</li>
+            <li>Ford Easy Fuel – bezzátkový systém doplňování paliva</li>
+            <li>Světla pro denní svícení</li>
+            <li>Zdvojený akumulátor             </li>
+            <li>Přídavné elektrické topení</li>
+            <li>Měření poklesu tlaku v pneumatikách</li>
+            <li>15" ocelová kola s plnými kryty kol</li>
+            <li>Přední klimatizace vč. Pylového filtru</li>
+            <li>Autorádio AM/FM, vstup AUX, USB, Bluetooth</li>
+            <li>Tempomat včetně nastavitelného omezovače rychlosti</li>
+            <li>Kožený volant a hlavice řadící páky</li>
+            <li>Sada pro lepší viditelnost – vyhřívané čelní sklo, ukazatel hladiny kapaliny v ostřikovači, elektricky ovládaná a vyhřívaná zrcátka</li>
+            <li>Projektorové přední světlomety</li>
+            <li>Statická odbočovací světla</li>
+            <li>Přední mlhová světla</li>
+            <li>Výklopná okna v druhé řadě</li>
+            <li>Zásuvka 230V/150W</li>
+            <li>Tažné zařízení, 13pólová zásuvka</li>
+          </ul>
         </section>
-      </div>
+        <section class="acs-specs box-shadow">
+          <h2 class="specs__h2">A.C.S. specifikace:</h2><img src="./img/sub-pages/005b.jpg" alt="">
+          <table>
+            <tr>
+              <td>Rozměry vysunovací postele:</td>
+              <td>1950 x 1250 mm </td>
+            </tr>
+            <tr>
+              <td>úložný prostor pod postelí:</td>
+              <td>850l</td>
+            </tr>
+            <tr>
+              <td>Posuvná kuchyňská skříň:</td>
+              <td>dvouplotýnkový vařič + dřez<br>Lednička 50l<br>skříňka na nádobí 35l<br>výsuvný pomocný stůl</td>
+            </tr>
+            <tr>
+              <td>Toaletní sprchový kout s wc</td>
+              <td>Kazetové wc<br>teplá a studená voda(ohřívač vody na 220V<br>na přání)<br>Sprcha vnitřní a venkovní<br>Skříňky úlož.prostor 60l+80l+60l</td>
+            </tr>
+            <tr>
+              <td>plyn:</td>
+              <td>2 X 2,8 kg plynové láhve (pouze vaření)</td>
+            </tr>
+            <tr>
+              <td>nádrž na čistou vodu:</td>
+              <td>50l</td>
+            </tr>
+            <tr>
+              <td>nádrž na odpadní vodu:</td>
+              <td>75l</td>
+            </tr>
+          </table><img src="./img/sub-pages/006a.jpg" alt="">
+        </section>
+      </article>
+      <nav class="secondary-nav">
+        <p>Kam dále?<br>Podívejte se na kompletní foto-dokumentaci jednodlivých částí tohoto vozu anebo se podívejte na mé předchozí práce:</p>
+        <div class="work__content">
+          <article class="current-work my-work__item"><a href="./gallery.html">
+              <section class="podsekce-img podsekce-predchoziprace foto-1">
+                <div class="podsekce__link">
+                  <svg viewbox="0 0 100 100" class="podsekce__svg">
+                    <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
+                  </svg>
+                  <p>Foto-dokumentace Ford Custom</p>
+                </div>
+              </section></a></article>
+          <article class="prev-work sekce-prev-work my-work__item"><a href="./predchozi-prace.html">
+              <section class="podsekce-img podsekce-predchoziprace foto-2">
+                <div class="podsekce__link">
+                  <svg viewbox="0 0 100 100" class="podsekce__svg">
+                    <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
+                  </svg>
+                  <p>Ford Transit 2000</p>
+                </div>
+              </section></a></article>
+          <article class="prev-work sekce-prev-work my-work__item"><a href="./predchozi-prace.html">
+              <section class="podsekce-img podsekce-predchoziprace foto-3">
+                <div class="podsekce__link">
+                  <svg viewbox="0 0 100 100" class="podsekce__svg">
+                    <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
+                  </svg>
+                  <p>Ford Transit 1996</p>
+                </div>
+              </section></a></article>
+        </div>
+      </nav>
     </main>
     <footer class="footer">
       <p class="footer__copyright footer--middle">Auto Caravan Sport s.r.o. 2016</p>
@@ -84,26 +192,36 @@
         <ul>
           <li><a href="index.html">Domů</a></li>
           <li><a href="nabidka.html">Nabídka</a></li>
-          <li><a href="ofirme.html">O firmě</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="index.html#about">O firmě</a></li>
+          <li><a href="index.html#contact">Kontakt</a></li>
         </ul>
       </nav>
       <div class="footer--right"><img src="./img/email-icon.svg" class="home-socicon footer__socicon"><img src="./img/fb-icon.svg" class="home-socicon footer__socicon"></div>
       <p class="footer__credits">Web: <a href="https://www.linkedin.com/in/radek-palisa-96332886" target="_blank">Radek Palisa</a></p>
     </footer>
-    <script src="js/functions.js"></script>
+    <script src="js/flipster.js"></script>
     <script src="js/responsiveslides.min.js"></script>
     <script>
       $(function() {
+      	$('.my-flipster').flipster({
+      		style: 'flat',
+      		buttons: true,
+      		spacing: -0.5,
+      		scrollwheel: false,
+      		loop: true,
+      		start: 'center'
+      	});
       	$(".rslides").responsiveSlides({
       		auto: false,
-      		pager: true,
+      		speed: 700,
+      		timeout: 7000,
+      		pager: false,
       		nav: true,
+      		pause: true,
       		namespace: 'centered-btns'
       	});
       });
-      
     </script>
-    <script>// window.addEventListener('scroll', hideHeader);</script>
+    <script src="js/functions.js"></script>
   </body>
 </html>

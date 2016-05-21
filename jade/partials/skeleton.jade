@@ -6,44 +6,51 @@ html
 		meta(charset="utf-8")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
 		link(href='https://fonts.googleapis.com/css?family=Fira+Sans:400,300,500,700&subset=latin,latin-ext' rel='stylesheet' type='text/css')
-		link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=latin,latin-ext' rel='stylesheet' type='text/css')
+		link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,300italic,400italic,600italic,700italic,800,800italic&subset=latin-ext' rel='stylesheet' type='text/css')
 		link(href='https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css')
 		link(rel="stylesheet" href="style.css")
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js")
 		script(type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js")
 		
 	body
-		block header
-
-		block content
+		block body
 		
 		block footer
 			footer.footer
 				p.footer__copyright.footer--middle Auto Caravan Sport s.r.o. 2016
 				nav.footer__nav.footer--left
 					ul
-						li: a(href="index.html") Domů
-						li: a(href="nabidka.html") Nabídka
-						li: a(href="ofirme.html") O firmě
-						li: a(href="kontakt.html") Kontakt
+						li: a(href="#header") Nahoru
+						li: a(href="#product") Nabídka
+						li: a(href="#about") O firmě
+						li: a(href="#contact") Kontakt
 				.footer--right
 					img.home-socicon.footer__socicon(src="./img/email-icon.svg")
 					img.home-socicon.footer__socicon(src="./img/fb-icon.svg")
 				p.footer__credits Web: 
 					a(href="https://www.linkedin.com/in/radek-palisa-96332886", target="_blank") Radek Palisa
 
-		script(src="js/functions.js")
+		script(src="js/flipster.js")
 		script(src="js/responsiveslides.min.js")
 		script.
 			$(function() {
+				$('.my-flipster').flipster({
+					style: 'flat',
+					buttons: true,
+					spacing: -0.5,
+					scrollwheel: false,
+					loop: true,
+					start: 'center'
+				});
 				$(".rslides").responsiveSlides({
 					auto: false,
-					pager: true,
+					speed: 700,
+					timeout: 7000,
+					pager: false,
 					nav: true,
+					pause: true,
 					namespace: 'centered-btns'
 				});
 			});
+		script(src="js/functions.js")
 		
-		block local-scripts
-			script.
-				// window.addEventListener('scroll', hideHeader);

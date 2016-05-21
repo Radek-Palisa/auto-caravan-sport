@@ -1,14 +1,27 @@
-extends partials/layout.jade
+extends partials/skeleton.jade
 
-block header
-	header.header.header--gallery-bg
-		include partials/header.jade
+block body
 
-block content
+	header.header.header--index-bg
+		.logo.logo--fonts
+			h1 A.C.S. s.r.o.
+			p Auto Caravan Sport
+			.underline
+				span.underline__txt s.r.o.
+
+		// nav.nav.nav--fonts(role="navigation")
+			ul
+				li: a(href="index.html") Domů
+				li: a(href="nabidka.html") Nabídka
+				li: a(href="index.html#about") O firmě
+				li: a(href="index.html#contact") Kontakt
+
 	main
+		nav.sub-page-nav
+				a(href="index.html") <span>&#x2190;</span> Zpět na domovskou stránku
+				a.sub-page-nav--float(href="nabidka.html") Co nabízím <span>&#x2192;</span>
 		.heading__wrap
-				div(class="")
-					h1.heading.heading--fonts Dokumentace Ford Custom A.C.S.
+			h1.heading--fonts Dokumentace Ford Custom A.C.S.
 		section.content
 			nav#gallery-nav
 				li.active Izolace vozu
@@ -52,3 +65,18 @@ block content
 					section.postel
 						- for (var x = 0; x < 28; x++)
 							a.gallery__thumbnail(href="#")
+
+block footer
+	footer.footer
+		p.footer__copyright.footer--middle Auto Caravan Sport s.r.o. 2016
+		nav.footer__nav.footer--left
+			ul
+				li: a(href="index.html") Domů
+				li: a(href="nabidka.html") Nabídka
+				li: a(href="index.html#about") O firmě
+				li: a(href="index.html#contact") Kontakt
+		.footer--right
+			img.home-socicon.footer__socicon(src="./img/email-icon.svg")
+			img.home-socicon.footer__socicon(src="./img/fb-icon.svg")
+		p.footer__credits Web: 
+			a(href="https://www.linkedin.com/in/radek-palisa-96332886", target="_blank") Radek Palisa

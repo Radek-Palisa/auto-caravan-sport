@@ -8,144 +8,317 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,300,500,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,300italic,400italic,600italic,700italic,800,800italic&amp;subset=latin-ext" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
   </head>
   <body>
-    <header class="header header--index-bg">
-      <div class="logo logo--fonts">
+    <header id="header" class="header header--index-bg">
+      <div class="logo">
         <h1>A.C.S. s.r.o.</h1>
         <p>Auto Caravan Sport</p>
         <div class="underline"><span class="underline__txt">s.r.o.</span></div>
       </div>
-      <nav role="navigation" class="nav nav--fonts">
-        <ul>
-          <li><a href="index.html">Domů</a></li>
-          <li><a href="nabidka.html">Nabídka</a></li>
-          <li><a href="ofirme.html">O firmě</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-      </nav>
+      <!-- nav.nav(role="navigation")
+      ul
+      	li: a(href="index.html") Domů
+      	li: a(href="#product") Nabídka
+      	li: a(href="#about") O firmě
+      	li: a(href="#contact") Kontakt
+      
+      -->
     </header>
-    <section id="home-page" class="below-landing">
+    <section class="sub-header">
       <p class="slogan__txt">Vítejte v mém světě dodávkové velikosti</br>...ani malé ani velké.</p>
-      <div class="below-landing__content">
-        <article class="homepage-article">
-          <div class="article__wrap">
-            <div class="article__img-wrap"><img src="./img/home.svg" class="index-icon">
-              <h1>O firmě</h1>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt nulla officia et accusantium perspiciatis ratione quis, obcaecati, mollitia in laboriosam tenetur odit sint unde quia inventore velit necessitatibus rerum, distinctio.</p>
-            <p>Přečtěte si více o mně a mé firmě:</p><a href="./ofirme.html">O firmě</a>
-          </div>
-        </article>
-        <article class="homepage-article">
-          <div class="article__wrap">
-            <div class="article__img-wrap"><img src="./img/van.svg" class="index-icon">
-              <h1>Co nabízím</h1>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis asperiores, labore quo tempora placeat dolorem libero id alias accusamus odio aut excepturi, similique fugit. Perspiciatis accusamus nostrum a! Velit, quibusdam.</p>
-            <p>Podívejte se na detaily mé současné práce:</p><a href="./nabidka.html">Současná nabídka</a>
-            <p>Podívejtě se na ukázky mých předchozích přestaveb</p><a href="./nabidka.html">Předchozí práce</a>
-          </div>
-        </article>
-        <article class="homepage-article">
-          <div class="article__wrap">
-            <div class="article__img-wrap"><img src="./img/envelope.svg" class="index-icon">
-              <h1>Zkontaktujte mně</h1>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum molestias, dolores eaque ullam perferendis consequatur? Totam deserunt itaque culpa laudantium, cumque, dolor tempore optio harum placeat similique temporibus molestiae fugiat!</p>
-            <p>Máte otázky? Neváhajte se na mě obrátit!</p><a href="./kontakt.html">Napište mi</a>
-          </div>
-        </article>
-      </div>
-      <p class="learn-more">Zjistěte více o karavaningu a výhodách menšího vozidla<br>v interaktivní prezentaci níže</p><a href="#picture-grid" class="arrow-link"><img src="img/ctrl.svg" alt="" class="arrow"></a>
+      <nav role="navigation" class="sub-header__content"><a href="#picture-grid" class="sub-header__nav">
+          <div class="nav-item__wrap">
+            <svg viewbox="0 0 100 100" class="nav-item__svg">
+              <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
+            </svg>
+            <h1 class="nav-item__h1--1st">Co je Karavaning</h1>
+          </div></a><a href="#product" class="sub-header__nav">
+          <div class="nav-item__wrap">
+            <svg viewbox="0 0 100 100" class="nav-item__svg">
+              <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
+            </svg>
+            <h1>Má práce	</h1>
+          </div></a><a href="#about" class="sub-header__nav">
+          <div class="nav-item__wrap">
+            <svg viewbox="0 0 100 100" class="nav-item__svg">
+              <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
+            </svg>
+            <h1>O firmě</h1>
+          </div></a><a href="#contact" class="sub-header__nav">
+          <div class="nav-item__wrap">
+            <svg viewbox="0 0 100 100" class="nav-item__svg">
+              <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
+            </svg>
+            <h1>Kontakt</h1>
+          </div></a></nav>
+      <p class="arrow-container"> 
+        <svg viewbox="0 0 100 100" class="sub-header-svg">
+          <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z" class="sub-header__arrow"></path>
+        </svg>
+      </p>
+      <!-- a.arrow-link(href="#picture-grid")
+      img.arrow(src="img/ctrl.svg", alt="")
+      
+      -->
     </section>
-    <!-- Landing Page-->
-    <section id="picture-grid" class="landing-page">
-      <div class="picture-grid">
-        <div class="grid__container">
-          <div class="grid__cell grid__cell--hover grid__cell--top-start">
-            <div class="slide-in">
-              <p class="slide-in__text slide-in__text--aligncenter"><strong>Vítejte</strong></br>na stránkách firmy</br>A.C.S.</p>
-            </div>
-          </div>
-          <div class="grid__cell grid__cell--hover grid__cell--middle">
-            <div class="slide-in">
-              <h1 class="slide-in__title">Využití</h1>
-              <p class="slide-in__text">Auta jsou ideální pro dálniční cestování, polykání kilometrů,  neustálé přesuny. Poskytují určitý komfort potřeb k pobytu, jak na městských parkovištích, kempech, tak i ve volné přírodě. Malá velikost vozidla usnadňuje nalodit vozidlo na trajekt a hlavně, za rozumnou cenu.</p>
-            </div>
-          </div>
-          <div class="grid__cell grid__cell--hover grid__cell--middle">
-            <div class="slide-in">
-              <h1 class="slide-in__title">Dostupnost</h1>
-              <p class="slide-in__text">S vozem se dostanete i na těžko přístupná místa jako centra velkoměst, parkoviště v historických částech nebo podobné spleti úzkých uliček. Přece jenom je dodávka méně nápadná než velký obytný vůz.</p>
-            </div>
-          </div>
-          <div class="grid__cell grid__cell--hover grid__cell--top-end">
-            <div class="slide-in">
-              <h1 class="slide-in__title">Kvalita</h1>
-              <p class="slide-in__text">U všech přestaveb jsou použity certifikované komponenty od firmy REIMO a splňují bezpečnostní a technické parametry.</p>
-            </div>
-          </div>
-          <div class="grid__cell grid__cell--hover grid__cell--bottom-start">
-            <div class="slide-in">
-              <h1 class="slide-in__title">Skladnost</h1>
-              <p class="slide-in__text">Malá velikost vozidla usnadnuje nalodit vozidlo na trajekt a setri penize na dalnicncich poplatcich.</p>
-            </div>
-          </div>
-          <div class="grid__cell grid__cell--hover grid__cell--middle">
-            <div class="slide-in">
-              <h1 class="slide-in__title">Komfort</h1>
-              <p class="slide-in__text">Ať už cestujete kamkoliv, vozíte si sebou pohodlí domova. V autě můžete spát, vařit, sprchovat se a samozřejmostí je vestavěný chemický záchod a možnost připojit se na elektřinu.</p>
-            </div>
-          </div>
-          <div class="grid__cell grid__cell--hover grid__cell--middle">
-            <div class="slide-in">
-              <h1 class="slide-in__title">Jednoduché cestování</h1>
-              <p class="slide-in__text">Vozy A.C.S. umožňují cestování s důrazem na minimálnost a funkčnost. Je to kompromis mezi hotelovým pokojem v turistickém středisku a stanováním ve volné přírodě.</p>
-            </div>
-          </div>
-          <div class="grid__cell grid__cell--hover grid__cell--bottom-end">
-            <div class="slide-in"></div>
-          </div>
-          <div class="show-slides"> <img src="img/eye.svg" class="show-slides__icon"><span class="show-slides__txt">Ukaž vše</span></div>
-        </div>
-      </div>
-      <!-- picture grid end-->
-    </section>
-    <!-- landing container end
+    <!---->
+    <!-- Jumbotron-->
+    <!---->
+    <!-- article.jumbotron
+    .jumbotron__txt
+    	h3 Ford Custom A.C.S.
+    	p  Lorem ipsum dolor sit amet. Consectetur adipisicing elit. Adipisci minus autem distinctio voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    
     -->
+    <!---->
+    <!-- Picture Grid-->
+    <!---->
+    <article id="picture-grid" class="presentation">
+      <h2 class="index-article__h1 article-presentation__h1">Karavaning v malé dodávce</h2>
+      <div class="presentation__content my-flipster">
+        <ul>
+          <li class="js-el-height">
+            <figure>
+              <!-- img(src="./img/picture-grid/pic-grid_02.jpg", alt="")-->
+              <figcaption>
+                <h1>Využití</h1>
+                <p>Auta jsou ideální pro dálniční cestování, polykání kilometrů,  neustálé přesuny. Poskytují určitý komfort potřeb k pobytu, jak na městských parkovištích, kempech, tak i ve volné přírodě. Malá velikost vozidla usnadňuje nalodit vozidlo na trajekt a hlavně, za rozumnou cenu.</p>
+              </figcaption>
+              <div class="img-container img-container-2"></div>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <!-- img(src="./img/picture-grid/pic-grid_03.jpg", alt="")-->
+              <figcaption>
+                <h1>Dostupnost</h1>
+                <p>S vozem se dostanete i na těžko přístupná místa jako centra velkoměst, parkoviště v historických částech nebo podobné spleti úzkých uliček. Přece jenom je dodávka méně nápadná než velký obytný vůz.</p>
+              </figcaption>
+              <div class="img-container img-container-3"></div>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <figcaption>
+                <h1>Vítejte na stránkách firmy Auto Caravan Sport s.r.o.</h1>
+                <div class="img-container img-container-1"></div>
+                <!-- img(src="./img/picture-grid/pic-grid_03.jpg", alt="")-->
+                <p>Jmenuji se Libor Palisa a skrze tuto firmu si naplňuji svoji vášeň pro specifický způsob cestování: říkejme mu Karavaning.  Karavaning je cestování založené na principu minimalismu a přesto maximálně možném pohodlí. Pro tento účel provádím přestavby vozidel dodávkové velikosti.</p>
+              </figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <!-- img(src="./img/picture-grid/pic-grid_04.jpg", alt="")-->
+              <figcaption>
+                <h1>Kvalita</h1>
+                <p>U všech přestaveb jsou použity certifikované komponenty od firmy REIMO a splňují bezpečnostní a technické parametry.</p>
+              </figcaption>
+              <div class="img-container img-container-4"></div>
+            </figure>
+          </li>
+          <!--figure
+          // img(src="./img/picture-grid/pic-grid_05.jpg", alt="")
+          figcaption
+          	h1 Skladnost
+          	p Malá velikost vozidla usnadnuje nalodit vozidlo na trajekt a setri penize na dalnicncich poplatcich.
+          
+          -->
+          <li>
+            <figure>
+              <!-- img(src="./img/picture-grid/pic-grid_06.jpg", alt="")-->
+              <figcaption>
+                <h1>Komfort</h1>
+                <p>Ať už cestujete kamkoliv, vozíte si sebou pohodlí domova. V autě můžete spát, vařit, sprchovat se a samozřejmostí je vestavěný chemický záchod a možnost připojit se na elektřinu.</p>
+              </figcaption>
+              <div class="img-container img-container-5"></div>
+            </figure>
+          </li>
+          <!--figure
+          // img(src="./img/picture-grid/pic-grid_07.jpg", alt="")
+          figcaption
+          	h1 Jednoduché cestování
+          	p Vozy A.C.S. umožňují cestování s důrazem na minimálnost a funkčnost. Je to kompromis mezi hotelovým pokojem v turistickém středisku a stanováním ve volné přírodě.
+          
+          -->
+        </ul>
+      </div>
+    </article>
+    <!---->
+    <!-- Product-->
+    <!---->
+    <article id="product" class="product my-work">
+      <h1 class="index-article__h1">Má práce</h1>
+      <div class="work__content">
+        <article class="current-work my-work__item"><a href="./nabidka.html">
+            <section class="podsekce-img podsekce-predchoziprace foto-1">
+              <!-- img(src="img/soucasna-nabidka/010.jpg" alt="")-->
+              <div href="./nabidka.html" class="podsekce__link"> 
+                <svg viewbox="0 0 100 100" class="podsekce__svg">
+                  <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
+                </svg>
+                <p>Ford Transit Custom</p>
+              </div>
+            </section></a>
+          <section class="podsekce-txt">
+            <!-- h1 Ford Transit Custom-->
+            <p>Má nejnovější práce, <strong>kterou současně nabízím k prodeji</strong>. Prodloužená verze tohoto vozu mi poskytla dostatačný prostror pro instalaci sprchového koutu s vestavěnou toaletou. Ideální pro cestování ve dvou, ale s možností i pro více osob. Přečtěte si více a prohlídněte si kompletní foto-dokumentaci <a href="./nabidka.html">zde</a>.</p>
+            <!-- p Podívejte se podrobný popis a foto-dokumentaci:-->
+            <!-- a.podsekce__link(href="./nabidka.html") 
+            svg.podsekce__svg(viewbox="0 0 100 100")
+            	path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
+            p Více
+            
+            -->
+          </section>
+        </article>
+        <article id="prev-work" class="prev-work sekce-prev-work my-work__item"><a href="./predchozi-prace.html">
+            <section class="podsekce-img podsekce-predchoziprace foto-2">
+              <!-- .inner
+              // img(src="./img/predchozi-prace/index.jpg", alt="")
+              img(src="./img/predchozi-prace/P1010031.jpg", alt="")
+              // img(src="./img/predchozi-prace/202.jpg", alt="")
+              -->
+              <div href="./nabidka.html" class="podsekce__link"> 
+                <svg viewbox="0 0 100 100" class="podsekce__svg">
+                  <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
+                </svg>
+                <p>Ford Transit 2000</p>
+              </div>
+            </section></a>
+          <section class="podsekce-txt">
+            <!-- h1 Ford Transit 2000-->
+            <!-- h1 Variace Fordu Transit s krátkým rozvorem-->
+            <p>Populární model Fordu Transit z roku 2000 posloužil pro dvě z mých předchozích prací. Nastavil jsem je o spací místa pro 4 osoby, kuchyňsky modul a záchod. Vyklápěcí střecha činila vozidlo kompaktnější do té míry, že téměř nešlo poznat, že jde o obytný vůz. Přečtete si více o tomto voze <a href="./predchozi-prace.html">zde</a>.</p>
+            <!-- p Podívejte se na ukázky mé předchozí práce:-->
+            <!-- a.podsekce__link(href="./nabidka.html")
+            svg.podsekce__svg(viewbox="0 0 100 100")
+            	path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
+            p Více
+            
+            -->
+          </section>
+        </article>
+        <article class="prev-work sekce-prev-work my-work__item"><a href="./predchozi-prace.html">
+            <section class="podsekce-img podsekce-predchoziprace foto-3">
+              <!-- .innerimg(src="./img/predchozi-prace/index.jpg", alt="")
+              -->
+              <div href="./nabidka.html" class="podsekce__link">
+                <svg viewbox="0 0 100 100" class="podsekce__svg">
+                  <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
+                </svg>
+                <p>Ford Transit 1996</p>
+              </div>
+            </section></a>
+          <section class="podsekce-txt">
+            <!-- h1 Ford Transit 1996-->
+            <!-- h1 Variace Fordu Transit s krátkým rozvorem-->
+            <p>První práce, kterou jsem osobně používal s mojí 4-člennou rodinou přes 10 let a později prodal. Vysoká střecha ukrývala spaní pro dva ale zároveň umožňovala stát uvnitř při používání vestavěné kuchynské linky. Do vozidla jsem zabudoval vodní nádrž pro mytí nádobí a venkovní sprchování. Více o tomto voze <a href="./predchozi-prace.html">zde</a>.</p>
+            <!-- p Podívejte se na ukázky mé předchozí práce:-->
+            <!-- a.podsekce__link(href="./nabidka.html")
+            svg.podsekce__svg(viewbox="0 0 100 100")
+            	path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
+            p Více
+            
+            -->
+          </section>
+        </article>
+      </div>
+    </article>
+    <!---->
+    <!-- About-->
+    <!---->
+    <article id="about" class="about">
+      <h1 class="index-article__h1 article-about__h1">O firmě</h1>
+      <section class="about__content">
+        <section class="about-txt">
+          <div class="about-txt__wrap">
+            <h2> Jak to začalo</h2>
+            <p>Myšlenka začala v roce 1996 po zakoupení staršího vozu Ford Transit a jeho postupné přestavbě. Nadšení pro volnost prožití svého volného času se stávala silnější a po zamilování se do windsurfingu a později do kitingu, bylo rozhodnuto. Přece jenom byt odkázán na nabídky cestovek, které se nepochlubí negativní stránkou své nabízené lokality, nebo příjezdy do neznámých oblastí. No prostě auto je pro mne něco víc než jen převoz z místa do místa. Proto jsem začal uvazovat o typu a velikosti co by mne uspokojilo. V teto věci bych karavaning  přirovnal k hudbě. Hudba poskytuje radost obrovské spoustě posluchačů a každý si najde tu svou. Tak karavaning má široký rozsah zájmů a je třeba si vybrat ten svůj. Já jsem si vybral a ten Vám chci předvést.</p>
+          </div>
+        </section>
+      </section>
+    </article>
+    <article>
+      <div class="sub-about">
+        <div class="profile-pic"></div>
+        <p class="profile__txt"><strong>O mně</strong><br>Jsem vyučený automechanik a povoláním autolakýrník. Cestovávní a sport vždy hrály douležitou roli v mém životě. Firma A.C.S je skloubení těchto zájmů s praktičností...</p>
+      </div>
+    </article>
+    <!---->
+    <!-- Contact-->
+    <!---->
+    <article id="contact" class="contact">
+      <h1 class="index-article__h1 article-contact__h1">Kontakt</h1>
+      <section class="contact__content">
+        <div class="contact-wrapper">
+          <h2>Pojdme spolupracovat</h2>
+          <p>Email: libor.palisa@gmail.com</p>
+          <p>Facebook: Auto Caravan Sport</p>
+          <p>adresa</p>
+          <p>Sokoloska 2530</p>
+          <p>Kromeriz</p>
+          <p>767 01</p>
+        </div>
+      </section>
+    </article>
+    <article class="sub-contact">
+      <div class="contact-form">
+        <h2 class="sub-contact__headline">Napište mi</h2>
+        <div class="form__name">
+          <p>Jméno</p>
+        </div>
+        <div class="form__email">
+          <p>Email</p>
+        </div>
+        <div class="form__zprava">
+          <p>Napište mi co Vás zaujalo...</p>
+        </div>
+        <div class="form__sent"> <a href="#">Odeslat</a></div>
+      </div>
+    </article>
     <footer class="footer">
       <p class="footer__copyright footer--middle">Auto Caravan Sport s.r.o. 2016</p>
       <nav class="footer__nav footer--left">
         <ul>
-          <li><a href="index.html">Domů</a></li>
-          <li><a href="nabidka.html">Nabídka</a></li>
-          <li><a href="ofirme.html">O firmě</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="#header">Nahoru</a></li>
+          <li><a href="#product">Nabídka</a></li>
+          <li><a href="#about">O firmě</a></li>
+          <li><a href="#contact">Kontakt</a></li>
         </ul>
       </nav>
       <div class="footer--right"><img src="./img/email-icon.svg" class="home-socicon footer__socicon"><img src="./img/fb-icon.svg" class="home-socicon footer__socicon"></div>
       <p class="footer__credits">Web: <a href="https://www.linkedin.com/in/radek-palisa-96332886" target="_blank">Radek Palisa</a></p>
     </footer>
-    <script src="js/functions.js"></script>
+    <script src="js/flipster.js"></script>
     <script src="js/responsiveslides.min.js"></script>
     <script>
       $(function() {
+      	$('.my-flipster').flipster({
+      		style: 'flat',
+      		buttons: true,
+      		spacing: -0.5,
+      		scrollwheel: false,
+      		loop: true,
+      		start: 'center'
+      	});
       	$(".rslides").responsiveSlides({
       		auto: false,
-      		pager: true,
+      		speed: 700,
+      		timeout: 7000,
+      		pager: false,
       		nav: true,
+      		pause: true,
       		namespace: 'centered-btns'
       	});
       });
-      
     </script>
-    <!-- script.// window.addEventListener('scroll', showArticles)
-    -->
+    <script src="js/functions.js"></script>
   </body>
 </html>

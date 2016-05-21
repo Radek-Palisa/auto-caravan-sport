@@ -8,33 +8,32 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,300,500,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,300italic,400italic,600italic,700italic,800,800italic&amp;subset=latin-ext" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
   </head>
   <body>
-    <header class="header header--gallery-bg">
+    <header class="header header--index-bg">
       <div class="logo logo--fonts">
         <h1>A.C.S. s.r.o.</h1>
         <p>Auto Caravan Sport</p>
         <div class="underline"><span class="underline__txt">s.r.o.</span></div>
       </div>
-      <nav role="navigation" class="nav nav--fonts">
-        <ul>
-          <li><a href="index.html">Domů</a></li>
-          <li><a href="nabidka.html">Nabídka</a></li>
-          <li><a href="ofirme.html">O firmě</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-      </nav>
+      <!-- nav.nav.nav--fonts(role="navigation")
+      ul
+      	li: a(href="index.html") Domů
+      	li: a(href="nabidka.html") Nabídka
+      	li: a(href="index.html#about") O firmě
+      	li: a(href="index.html#contact") Kontakt
+      
+      -->
     </header>
     <main>
+      <nav class="sub-page-nav"><a href="index.html"><span>&#x2190;</span> Zpět na domovskou stránku</a><a href="nabidka.html" class="sub-page-nav--float">Co nabízím <span>&#x2192;</span></a></nav>
       <div class="heading__wrap">
-        <div>
-          <h1 class="heading heading--fonts">Dokumentace Ford Custom A.C.S.</h1>
-        </div>
+        <h1 class="heading--fonts">Dokumentace Ford Custom A.C.S.</h1>
       </div>
       <section class="content">
         <nav id="gallery-nav">
@@ -84,26 +83,36 @@
         <ul>
           <li><a href="index.html">Domů</a></li>
           <li><a href="nabidka.html">Nabídka</a></li>
-          <li><a href="ofirme.html">O firmě</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="index.html#about">O firmě</a></li>
+          <li><a href="index.html#contact">Kontakt</a></li>
         </ul>
       </nav>
       <div class="footer--right"><img src="./img/email-icon.svg" class="home-socicon footer__socicon"><img src="./img/fb-icon.svg" class="home-socicon footer__socicon"></div>
       <p class="footer__credits">Web: <a href="https://www.linkedin.com/in/radek-palisa-96332886" target="_blank">Radek Palisa</a></p>
     </footer>
-    <script src="js/functions.js"></script>
+    <script src="js/flipster.js"></script>
     <script src="js/responsiveslides.min.js"></script>
     <script>
       $(function() {
+      	$('.my-flipster').flipster({
+      		style: 'flat',
+      		buttons: true,
+      		spacing: -0.5,
+      		scrollwheel: false,
+      		loop: true,
+      		start: 'center'
+      	});
       	$(".rslides").responsiveSlides({
       		auto: false,
-      		pager: true,
+      		speed: 700,
+      		timeout: 7000,
+      		pager: false,
       		nav: true,
+      		pause: true,
       		namespace: 'centered-btns'
       	});
       });
-      
     </script>
-    <script>// window.addEventListener('scroll', hideHeader);</script>
+    <script src="js/functions.js"></script>
   </body>
 </html>
