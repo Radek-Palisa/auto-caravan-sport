@@ -24,19 +24,34 @@ block body
 			h1.heading--fonts Současně k prodeji
 
 		article.ford-custom
-			.slider-wrapper.box-shadow
-				section.rslides-container
-					ul.rslides
-						li: img(src="img/soucasna-nabidka/001.jpg" alt="")
-						li: img(src="img/soucasna-nabidka/002.jpg" alt="")
-						li: img(src="img/soucasna-nabidka/003.jpg" alt="")
-						li: img(src="img/soucasna-nabidka/004.jpg" alt="")
-						li: img(src="img/soucasna-nabidka/005.jpg" alt="")
-						li: img(src="img/soucasna-nabidka/006.jpg" alt="")
-						li: img(src="img/soucasna-nabidka/007.jpg" alt="")
-						li: img(src="img/soucasna-nabidka/008.jpg" alt="")
-						li: img(src="img/soucasna-nabidka/009.jpg" alt="")
-						li: img(src="img/soucasna-nabidka/010.jpg" alt="")
+			.my-flipster.ford-custom__flipster
+				ul
+					
+					li
+						.img__container: img(src="img/soucasna-nabidka/002.jpg" alt="")
+					li
+						.img__container: img(src="img/soucasna-nabidka/003.jpg" alt="")
+					li
+						.img__container: img(src="img/soucasna-nabidka/004.jpg" alt="")
+					li
+						.img__container: img(src="img/soucasna-nabidka/001.jpg" alt="")
+					li
+						.img__container: img(src="img/soucasna-nabidka/005.jpg" alt="")
+					li
+						.img__container: img(src="img/soucasna-nabidka/006.jpg" alt="")
+					li
+						.img__container: img(src="img/soucasna-nabidka/008.jpg" alt="")
+					// li
+						.img__container: img(src="img/soucasna-nabidka/010.jpg" alt="")
+					//li: img(src="img/soucasna-nabidka/002.jpg" alt="")
+					//li: img(src="img/soucasna-nabidka/003.jpg" alt="")
+					//li: img(src="img/soucasna-nabidka/004.jpg" alt="")
+					//li: img(src="img/soucasna-nabidka/005.jpg" alt="")
+					// li: img(src="img/soucasna-nabidka/006.jpg" alt="")
+					// li: img(src="img/soucasna-nabidka/007.jpg" alt="")
+					// li: img(src="img/soucasna-nabidka/008.jpg" alt="")
+					// li: img(src="img/soucasna-nabidka/009.jpg" alt="")
+					// li: img(src="img/soucasna-nabidka/010.jpg" alt="")
 			section.ford-custom__txt.box-shadow
 				// h1 Ford Custom A.C.S
 				p Tento typ vestavby je použit v prodloužené verzi Fordu Transit CUSTOM. Mohlo tedy dojít k umístění kompletního toaletního koutu. Nejdůležitější část vozu je zatím před přestavbou a to je střecha. Počítáme u tohoto typu vozu s vysokou plastovou střechou. Výrobci střech zatím dělají jen na krátké verze vozidel a pevně věříme, že k výrobě střechy na tento prodloužený typ přece jen dojde. Pro mne však tato verze je zatím přijatelná, protože jezdím už jenom s manželkou a hodně využívám střešních nosičů pro surfařské vybavení, jsem s touto verzi spokojen. Je to klasicky kombi-van, se zaizolovanou karoserii a v ložném prostoru vybaven sociálním koutem. Počet sedících v tomto vozidle je 7+1, po montáži postele se počet sníží na 2+1.
@@ -161,3 +176,16 @@ block footer
 			img.home-socicon.footer__socicon(src="./img/fb-icon.svg")
 		p.footer__credits Web: 
 			a(href="https://www.linkedin.com/in/radek-palisa-96332886", target="_blank") Radek Palisa
+
+block local-scripts
+	script.
+		$(function() {
+			$('.my-flipster').flipster({
+				style: 'flat',
+				buttons: true,
+				spacing: -0.39,
+				scrollwheel: false,
+				loop: true,
+				start: 'center'
+			});
+		});
