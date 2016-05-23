@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,300italic,400italic,600italic,700italic,800,800italic&amp;subset=latin-ext" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
   </head>
   <body>
@@ -81,65 +81,44 @@
     <!---->
     <article id="picture-grid" class="presentation">
       <h2 class="index-article__h1 article-presentation__h1">Karavaning v malé dodávce</h2>
-      <div class="presentation__content my-flipster">
+      <div class="presentation__content">
+        <section class="welcome">
+          <h2>Vítejte na stránkách mé firmy Auto Caravan Sport s.r.o.</h2>
+          <p>Jmenuji se Libor Palisa a skrze tuto firmu si naplňuji svoji vášeň pro specifický způsob cestování: říkejme mu Karavaning.  Karavaning je cestování založené na principu minimalismu a přesto maximálně možném pohodlí. Pro tento účel provádím přestavby vozidel dodávkové velikosti.</p>
+          <div class="welcome__img"></div>
+          <div class="pres__btn">
+            <svg viewbox="0 0 100 100" class="pres__btn__1st">
+              <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
+            </svg>
+            <svg viewbox="0 0 100 100" class="pres__btn__2nd">
+              <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
+            </svg>
+          </div>
+        </section>
         <ul>
-          <li class="js-el-height">
-            <figure>
-              <!-- img(src="./img/picture-grid/pic-grid_02.jpg", alt="")-->
-              <figcaption>
-                <h1>Využití</h1>
-                <p>Auta jsou ideální pro dálniční cestování, polykání kilometrů,  neustálé přesuny. Poskytují určitý komfort potřeb k pobytu, jak na městských parkovištích, kempech, tak i ve volné přírodě. Malá velikost vozidla usnadňuje nalodit vozidlo na trajekt a hlavně, za rozumnou cenu.</p>
-              </figcaption>
-              <div class="img-container img-container-2"></div>
-            </figure>
+          <li>
+            <div class="img-container img-container-2"></div>
+            <p><strong>Využití</strong>: Auta jsou ideální pro dálniční cestování, polykání kilometrů,  neustálé přesuny. Poskytují určitý komfort potřeb k pobytu, jak na městských parkovištích, kempech, tak i ve volné přírodě. Malá velikost vozidla usnadňuje nalodit vozidlo na trajekt a hlavne za rozumnou cenu</p>
           </li>
           <li>
-            <figure>
-              <!-- img(src="./img/picture-grid/pic-grid_03.jpg", alt="")-->
-              <figcaption>
-                <h1>Dostupnost</h1>
-                <p>S vozem se dostanete i na těžko přístupná místa jako centra velkoměst, parkoviště v historických částech nebo podobné spleti úzkých uliček. Přece jenom je dodávka méně nápadná než velký obytný vůz.</p>
-              </figcaption>
-              <div class="img-container img-container-3"></div>
-            </figure>
+            <div class="img-container img-container-3"></div>
+            <p><strong>Dostupnost</strong>: S vozem se dostanete i na těžko přístupná místa jako centra velkoměst, parkoviště v historických částech nebo podobné spleti úzkých uliček. Přece jenom je dodávka méně nápadná než velký obytný vůz.</p>
           </li>
           <li>
-            <figure>
-              <figcaption>
-                <h1>Vítejte na stránkách firmy Auto Caravan Sport s.r.o.</h1>
-                <div class="img-container img-container-1"></div>
-                <!-- img(src="./img/picture-grid/pic-grid_03.jpg", alt="")-->
-                <p>Jmenuji se Libor Palisa a skrze tuto firmu si naplňuji svoji vášeň pro specifický způsob cestování: říkejme mu Karavaning.  Karavaning je cestování založené na principu minimalismu a přesto maximálně možném pohodlí. Pro tento účel provádím přestavby vozidel dodávkové velikosti.</p>
-              </figcaption>
-            </figure>
+            <div class="img-container img-container-4"></div>
+            <p><strong>Kvalita</strong>: U všech přestaveb jsou použity certifikované komponenty od firmy REIMO a splňují bezpečnostní a technické parametry. Dalsi text az nekam --------------------------------------------------------------------------------------------------------------------- sem.</p>
           </li>
           <li>
-            <figure>
-              <!-- img(src="./img/picture-grid/pic-grid_04.jpg", alt="")-->
-              <figcaption>
-                <h1>Kvalita</h1>
-                <p>U všech přestaveb jsou použity certifikované komponenty od firmy REIMO a splňují bezpečnostní a technické parametry.</p>
-              </figcaption>
-              <div class="img-container img-container-4"></div>
-            </figure>
+            <div class="img-container img-container-5"></div>
+            <p><strong>Komfort</strong>: Ať už cestujete kamkoliv, vozíte si sebou pohodlí domova. V autě můžete spát, vařit, sprchovat se a samozřejmostí je vestavěný chemický záchod a možnost připojit se na elektřinu.</p>
           </li>
           <!--figure
           // img(src="./img/picture-grid/pic-grid_05.jpg", alt="")
           figcaption
           	h1 Skladnost
-          	p Malá velikost vozidla usnadnuje nalodit vozidlo na trajekt a setri penize na dalnicncich poplatcich.
+          	p Malá velikost vozidla usnadnuje nalodit vozidlo na trajekt a setri penize na dalnicncich poplatcich.					
           
           -->
-          <li>
-            <figure>
-              <!-- img(src="./img/picture-grid/pic-grid_06.jpg", alt="")-->
-              <figcaption>
-                <h1>Komfort</h1>
-                <p>Ať už cestujete kamkoliv, vozíte si sebou pohodlí domova. V autě můžete spát, vařit, sprchovat se a samozřejmostí je vestavěný chemický záchod a možnost připojit se na elektřinu.</p>
-              </figcaption>
-              <div class="img-container img-container-5"></div>
-            </figure>
-          </li>
           <!--figure
           // img(src="./img/picture-grid/pic-grid_07.jpg", alt="")
           figcaption
@@ -300,14 +279,14 @@
     <script src="js/responsiveslides.min.js"></script>
     <script>
       $(function() {
-      	$('.my-flipster').flipster({
-      		style: 'flat',
-      		buttons: true,
-      		spacing: -0.5,
-      		scrollwheel: false,
-      		loop: true,
-      		start: 'center'
-      	});
+      	// $('.my-flipster').flipster({
+      		//style: 'flat',
+      		//buttons: true,
+      		//spacing: -0.5,
+      		//scrollwheel: false,
+      		//loop: true,
+      		//start: 'center'
+      	//});
       	$(".rslides").responsiveSlides({
       		auto: false,
       		speed: 700,
