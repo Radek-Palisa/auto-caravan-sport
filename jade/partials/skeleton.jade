@@ -30,27 +30,29 @@ html
 				p.footer__credits Web: 
 					a(href="https://www.linkedin.com/in/radek-palisa-96332886", target="_blank") Radek Palisa
 
+		script(src="js/functions.js")
 		script(src="js/flipster.js")
 		script(src="js/responsiveslides.min.js")
-		script.
-			$(function() {
-				$('.my-flipster').flipster({
-					style: 'flat',
-					buttons: true,
-					spacing: -0.5,
-					scrollwheel: false,
-					loop: true,
-					start: 'center'
+		block local-scripts
+			script.
+				$(function() {
+					$('.my-flipster').flipster({
+						style: 'flat',
+						buttons: true,
+						spacing: -0.5,
+						scrollwheel: false,
+						loop: true,
+						start: 'center'
+					});
+					$(".rslides").responsiveSlides({
+						auto: false,
+						speed: 700,
+						timeout: 7000,
+						pager: false,
+						nav: true,
+						pause: true,
+						namespace: 'centered-btns'
+					});
 				});
-				$(".rslides").responsiveSlides({
-					auto: false,
-					speed: 700,
-					timeout: 7000,
-					pager: false,
-					nav: true,
-					pause: true,
-					namespace: 'centered-btns'
-				});
-			});
-		script(src="js/functions.js")
+		
 		

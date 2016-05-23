@@ -1716,18 +1716,27 @@ p {
   color: #4E4E4E;
 }
 
-.ford-custom {
-  display: flex;
+.ford-custom__flipster {
+  margin-bottom: 60px;
 }
 
-.ford-custom .slider-wrapper {
-  width: 60%;
-  margin: 0 1em 0 2em;
+.img__container {
+  width: 700px;
+}
+
+.ford-custom .flipster--flat .flipster__item--past, .ford-custom .flipster--flat .flipster__item--future {
+  opacity: 0.7;
+}
+
+.ford-custom .flipster--flat .flipster__item--past .flipster__item__content {
+  transform: scale(0.6);
+}
+
+.ford-custom .flipster--flat .flipster__item--future .flipster__item__content {
+  transform: scale(0.6);
 }
 
 .ford-custom__txt {
-  width: 40%;
-  margin-right: 2em;
   padding: 2em;
   display: flex;
   align-items: center;
@@ -1739,7 +1748,7 @@ p {
 .ford-custom__txt p {
   width: 475px;
   line-height: 1.5;
-  font-size: 1.1em;
+  font-size: 1em;
   color: #4E4E4E;
   color: white;
 }
