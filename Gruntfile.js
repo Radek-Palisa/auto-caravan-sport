@@ -23,7 +23,7 @@ module.exports = function(grunt) {
 			  pretty: true,
 			},
 			files: {
-			    'nabidka.html' : 'jade/nabidka.jade',
+			    'ford-custom.html' : 'jade/ford-custom.jade',
 			    'predchozi-prace.html' : 'jade/predchozi-prace.jade',
 				'gallery.html' : 'jade/gallery.jade',
 				'index.html' : 'jade/index.jade',

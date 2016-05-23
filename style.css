@@ -1300,6 +1300,7 @@ p {
   background-color: lavender;
   background-color: #EAEAEA;
   background-color: #f3f3f3;
+  padding: 2% 0;
 }
 
 .work__content {
@@ -1326,7 +1327,7 @@ p {
 }
 
 .foto-1 {
-  background-image: url(./img/soucasna-nabidka/010.jpg);
+  background-image: url(./img/ford-custom/010.jpg);
   background-size: cover;
   background-position: top;
 }
@@ -1703,7 +1704,11 @@ p {
 .heading--fonts {
   font-family: Open Sans, Arial, sans-serif;
   font-size: 2em;
-  font-style: italic;
+}
+
+.sub-page {
+  background-color: #EAEAEA;
+  color: #4E4E4E;
 }
 
 /* Mabidka Page Styles only */
@@ -1711,12 +1716,7 @@ p {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
-.ford-custom-page {
-  background-color: #EAEAEA;
-  color: #4E4E4E;
-}
-
-.ford-custom__flipster {
+.flipster--margin {
   margin-bottom: 60px;
 }
 
@@ -1724,19 +1724,19 @@ p {
   width: 700px;
 }
 
-.ford-custom .flipster--flat .flipster__item--past, .ford-custom .flipster--flat .flipster__item--future {
+.sub-page__flipster .flipster--flat .flipster__item--past, .ford-custom .flipster--flat .flipster__item--future {
   opacity: 0.7;
 }
 
-.ford-custom .flipster--flat .flipster__item--past .flipster__item__content {
+.sub-page__flipster .flipster--flat .flipster__item--past .flipster__item__content {
   transform: scale(0.6);
 }
 
-.ford-custom .flipster--flat .flipster__item--future .flipster__item__content {
+.sub-page__flipster .flipster--flat .flipster__item--future .flipster__item__content {
   transform: scale(0.6);
 }
 
-.ford-custom__txt {
+.sub-page__txt {
   padding: 2em;
   display: flex;
   align-items: center;
@@ -1745,7 +1745,7 @@ p {
   background-color: #666B9C;
   background-color: #49597A;
 }
-.ford-custom__txt p {
+.sub-page__txt p {
   width: 475px;
   line-height: 1.5;
   font-size: 1em;
@@ -1754,9 +1754,6 @@ p {
 }
 
 .specs {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   padding-bottom: 2em;
 }
 .specs h1 {
@@ -1778,13 +1775,10 @@ p {
 }
 
 .custom-specs, .acs-specs {
+  margin: 0 auto 2em;
   width: 41em;
   padding: 2em 2em;
   background-color: white;
-}
-
-.custom-specs {
-  margin-right: 1em;
 }
 
 .custom-specs img {
@@ -1816,21 +1810,6 @@ p {
 }
 
 /* Predchozi prace */
-.predchozi-prace article:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-.rslides-predchozi {
-  position: relative;
-  width: 45%;
-  float: right;
-}
-.rslides-predchozi .rslides {
-  height: auto;
-}
-
 /*
 *
 * ********   Gallery Module    ***********
