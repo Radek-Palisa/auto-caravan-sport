@@ -10,6 +10,7 @@
 .work__ul
 	display: flex
 	justify-content: center
+	flex-wrap: wrap
 	margin: 0
 	padding: 0 4% 8%
 
@@ -19,6 +20,9 @@
 
 	a:hover .podsekce__link
 		background-color: rgba(0,0,0,0.6)
+
+.work__item--clear
+	width: 100%
 
 .work__link
 	position: relative
@@ -41,8 +45,17 @@
 	background-position: center
 
 .galerie__link--bg
+	width: 800px
+	margin: 0 auto
 	background-image: url(./img/ford-custom/010.jpg)
-	background-position: top
+	background-position: center top -80px
+
+.galerie__link--under-txt
+	width: 100%
+	text-align: center
+	font-size: 14px
+	margin: 1.5em auto
+
 
 .work__link__h
 	position: absolute
