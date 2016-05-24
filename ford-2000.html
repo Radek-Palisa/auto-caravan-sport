@@ -15,7 +15,7 @@
     <script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
   </head>
   <body>
-    <header class="header header--index-bg">
+    <header class="header header--nabidka-bg">
       <div class="logo logo--fonts">
         <h1>A.C.S. s.r.o.</h1>
         <p>Auto Caravan Sport</p>
@@ -24,7 +24,7 @@
       <!-- nav.nav.nav--fonts(role="navigation")
       ul
       	li: a(href="index.html") Domů
-      	li: a(href="ford-custom.html") Nabídka
+      	li: a(href="index.html#work") Má práce
       	li: a(href="index.html#about") O firmě
       	li: a(href="index.html#contact") Kontakt
       
@@ -72,41 +72,33 @@
         </div>
         <section class="sub-page__txt box-shadow">
           <p>Další z nejrozšířenějších verzi a to pro krátké dodávky. Postel se rozklápí do zadní casti vozu, neni tedy potreba obou otocnych prednich sedadel. Tato postel umoznuje daleko vice ulozneho prostoru nez u predchoziho modelu. Skrinky tvori soustavnou stenu od sedadla ridice az po zadni zvedaci dvere. Zvedaci strecha ma sve vyhody a to ve svem hornim prostoru pro spani. Steny zvedacky jsou kolme, kdez to u pevne se  z uzuji. Vetraci okna jsou tu velika, ve vedrech je tu vyhoda ale v chladnejsich a ve vetru, je to jen stan. Velka vyhoda a to beze sporu je vyska vozu, jak odporu vetru na ceste, tak prujezdu 2m branou.</p>
-          <!--h1 Ford Transit (krátký rozvor) s vysokou střechou-->
-          <!-- p Jedna z nejrozšířenějších verzí spis pro střední a dlouhé dodávky. Většinou dále v zadní části byl ještě prostor pro koupelnový kout a připadnou garáž. Postel se rozklápí a opírá na přední otočná sedadla. Udělal jsem tuto verzi do krátkého rozvoru, třeba kvůli tomu, že manželka mohla v  zadní části vařit nebo já se převlékat do neoprenu a děti si tak mohly nerušeně hrát ve předu u stolu. Vzadu byl i mobilní záchod, což melo také své diskrétnější výhody. Plastová vysoká střecha měla tu výhodu, že byla ve vozidle permanentní stojná výška.  Na údržbu je proti zvedací střeše jednodušší ale vozidlo bylo o 80 centimetru vyšší a to zas melo své nevýhody.-->
         </section>
       </article>
       <nav class="secondary-nav">
         <p>Kam dále?<br>Podívejte se na kompletní foto-dokumentaci jednodlivých částí tohoto vozu anebo se podívejte na mé předchozí práce:</p>
-        <div class="work__content">
-          <article class="prev-work sekce-prev-work my-work__item"><a href="./ford-custom.html">
-              <section class="podsekce-img podsekce-predchoziprace foto-2">
-                <div class="podsekce__link">
-                  <svg viewbox="0 0 100 100" class="podsekce__svg">
-                    <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
-                  </svg>
-                  <p>Ford Transit Custom</p>
-                </div>
-              </section></a></article>
-          <article class="current-work my-work__item"><a href="./gallery.html">
-              <section class="podsekce-img podsekce-predchoziprace foto-1">
-                <div class="podsekce__link">
-                  <svg viewbox="0 0 100 100" class="podsekce__svg">
-                    <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
-                  </svg>
-                  <p>Foto-dokumentace Ford Custom</p>
-                </div>
-              </section></a></article>
-          <article class="prev-work sekce-prev-work my-work__item"><a href="./predchozi-prace.html">
-              <section class="podsekce-img podsekce-predchoziprace foto-3">
-                <div class="podsekce__link">
-                  <svg viewbox="0 0 100 100" class="podsekce__svg">
-                    <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
-                  </svg>
-                  <p>Ford Transit 1996</p>
-                </div>
-              </section></a></article>
-        </div>
+        <ul class="work__ul">
+          <li class="work__item"><a href="./ford-custom.html" class="work__link ford-custom__link--bg">
+              <div class="work__link__h">
+                <svg viewbox="0 0 100 100" class="podsekce__svg">
+                  <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
+                </svg>
+                <p>Ford Transit Custom</p>
+              </div></a></li>
+          <li class="work__item"><a href="./ford-custom-galerie.html" class="work__link galerie__link--bg">
+              <div class="work__link__h">
+                <svg viewbox="0 0 100 100" class="podsekce__svg">
+                  <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
+                </svg>
+                <p>Foto-dokumentace Ford Custom</p>
+              </div></a></li>
+          <li class="work__item"><a href="./ford-1996.html" class="work__link ford-1996__link--bg">
+              <div class="work__link__h">
+                <svg viewbox="0 0 100 100" class="podsekce__svg">
+                  <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
+                </svg>
+                <p>Ford Transit 1996</p>
+              </div></a></li>
+        </ul>
       </nav>
     </main>
     <footer class="footer">
@@ -114,7 +106,7 @@
       <nav class="footer__nav footer--left">
         <ul>
           <li><a href="index.html">Domů</a></li>
-          <li><a href="nabidka.html">Nabídka</a></li>
+          <li><a href="index.html#work">Má práce</a></li>
           <li><a href="index.html#about">O firmě</a></li>
           <li><a href="index.html#contact">Kontakt</a></li>
         </ul>
@@ -130,19 +122,10 @@
       	$('.my-flipster').flipster({
       		style: 'flat',
       		buttons: true,
-      		spacing: -0.5,
+      		spacing: 0.03,
       		scrollwheel: false,
       		loop: true,
       		start: 'center'
-      	});
-      	$(".rslides").responsiveSlides({
-      		auto: false,
-      		speed: 700,
-      		timeout: 7000,
-      		pager: false,
-      		nav: true,
-      		pause: true,
-      		namespace: 'centered-btns'
       	});
       });
     </script>

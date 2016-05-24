@@ -20,10 +20,10 @@ html
 				p.footer__copyright.footer--middle Auto Caravan Sport s.r.o. 2016
 				nav.footer__nav.footer--left
 					ul
-						li: a(href="#header") Nahoru
-						li: a(href="#product") Nabídka
-						li: a(href="#about") O firmě
-						li: a(href="#contact") Kontakt
+						li: a(href="index.html") Domů
+						li: a(href="index.html#work") Má práce
+						li: a(href="index.html#about") O firmě
+						li: a(href="index.html#contact") Kontakt
 				.footer--right
 					img.home-socicon.footer__socicon(src="./img/email-icon.svg")
 					img.home-socicon.footer__socicon(src="./img/fb-icon.svg")
@@ -39,19 +39,10 @@ html
 					$('.my-flipster').flipster({
 						style: 'flat',
 						buttons: true,
-						spacing: -0.5,
+						spacing: 0.03,
 						scrollwheel: false,
 						loop: true,
 						start: 'center'
-					});
-					$(".rslides").responsiveSlides({
-						auto: false,
-						speed: 700,
-						timeout: 7000,
-						pager: false,
-						nav: true,
-						pause: true,
-						namespace: 'centered-btns'
 					});
 				});
 		

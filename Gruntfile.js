@@ -24,9 +24,10 @@ module.exports = function(grunt) {
 			},
 			files: {
 			    'ford-custom.html' : 'jade/ford-custom.jade',
-			    'predchozi-prace.html' : 'jade/predchozi-prace.jade',
-				'gallery.html' : 'jade/gallery.jade',
-				'index.html' : 'jade/index.jade',
+			    'ford-2000.html' : 'jade/ford-2000.jade',
+			    'ford-1996.html' : 'jade/ford-1996.jade',
+				'ford-custom-galerie.html' : 'jade/ford-custom-galerie.jade',
+				'index.html' : 'jade/index.jade'
 			}
 		  }
 		},

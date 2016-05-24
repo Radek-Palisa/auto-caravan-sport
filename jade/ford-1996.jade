@@ -1,0 +1,54 @@
+extends partials/skeleton.jade
+
+block body
+
+	header.header.header--nabidka-bg
+		.logo.logo--fonts
+			h1 A.C.S. s.r.o.
+			p Auto Caravan Sport
+			.underline
+				span.underline__txt s.r.o
+
+	main.sub-page
+		// nav.sub-page-nav
+			a(href="index.html") <span>&#x2190;</span> Zpět na domovskou stránku
+			a.sub-page-nav--float(href="predchozi-prace.html") Předchozí práce <span>&#x2192;</span>
+		header.heading__wrap
+			h1.heading--fonts Ford Transit 1996
+
+		article.sub-page__flipster
+			.my-flipster.flipster--margin
+				ul
+
+					li
+						.img__container: img(src="img/ford-1996/203.jpg" alt="")
+					li
+						.img__container: img(src="img/ford-1996/204.jpg" alt="")
+					li
+						.img__container: img(src="img/ford-1996/205.jpg" alt="")
+					li
+						.img__container: img(src="img/ford-1996/206.jpg" alt="")
+					li
+						.img__container: img(src="img/ford-1996/202.jpg" alt="")
+					li
+						.img__container: img(src="img/ford-1996/207.jpg" alt="")
+					li
+						.img__container: img(src="img/ford-1996/208.jpg" alt="")
+					li
+						.img__container: img(src="img/ford-1996/209.jpg" alt="")
+					li
+						.img__container: img(src="img/ford-1996/210.jpg" alt="")
+
+			section.sub-page__txt.box-shadow
+				// h1 Ford Transit 1996
+				p Jedna z nejrozšířenějších verzí spis pro střední a dlouhé dodávky. Většinou dále v zadní části byl ještě prostor pro koupelnový kout a připadnou garáž. Postel se rozklápí a opírá na přední otočná sedadla. Udělal jsem tuto verzi do krátkého rozvoru, třeba kvůli tomu, že manželka mohla v  zadní části vařit nebo já se převlékat do neoprenu a děti si tak mohly nerušeně hrát ve předu u stolu. Vzadu byl i mobilní záchod, což melo také své diskrétnější výhody. Plastová vysoká střecha měla tu výhodu, že byla ve vozidle permanentní stojná výška.  Na údržbu je proti zvedací střeše jednodušší ale vozidlo bylo o 80 centimetru vyšší a to zas melo své nevýhody.
+
+		nav.secondary-nav
+			p Kam dále?<br>Podívejte se na kompletní foto-dokumentaci jednodlivých částí tohoto vozu anebo se podívejte na mé předchozí práce:
+			ul.work__ul
+
+				include partials/sub-nav-custom.jade
+
+				include partials/sub-nav-galerie.jade
+
+				include partials/sub-nav-2000.jade

@@ -12,20 +12,20 @@ block body
 		// nav.nav(role="navigation")
 			ul
 				li: a(href="index.html") Domů
-				li: a(href="#product") Nabídka
+				li: a(href="#work") Nabídka
 				li: a(href="#about") O firmě
 				li: a(href="#contact") Kontakt
 
 	section.sub-header
 		p.slogan__txt Vítejte v mém světě dodávkové velikosti</br>...ani malé ani velké.
 		nav.sub-header__content(role="navigation")
-			a.sub-header__nav(href="#picture-grid")
+			a.sub-header__nav(href="#presentation")
 				.nav-item__wrap
 					svg.nav-item__svg(viewbox="0 0 100 100")
 						path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
 					h1.nav-item__h1--1st Co je Karavaning
 
-			a.sub-header__nav(href="#product")
+			a.sub-header__nav(href="#work")
 				.nav-item__wrap
 					svg.nav-item__svg(viewbox="0 0 100 100")
 						path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
@@ -46,7 +46,7 @@ block body
 			svg.sub-header-svg(viewbox="0 0 100 100")
 				path.sub-header__arrow(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
 				
-		// a.arrow-link(href="#picture-grid")
+		// a.arrow-link(href="#presentation")
 			img.arrow(src="img/ctrl.svg", alt="")
 
 	//
@@ -58,9 +58,9 @@ block body
 			p  Lorem ipsum dolor sit amet. Consectetur adipisicing elit. Adipisci minus autem distinctio voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 	
 	//
-	// Picture Grid
+	// Presentation
 	//
-	article.presentation#picture-grid
+	article.presentation#presentation
 		h2.index-article__h1.article-presentation__h1 Karavaning v malé dodávce
 		.presentation__content.my-flipster
 			ul
@@ -118,40 +118,34 @@ block body
 						p Vozy A.C.S. umožňují cestování s důrazem na minimálnost a funkčnost. Je to kompromis mezi hotelovým pokojem v turistickém středisku a stanováním ve volné přírodě.
 	
 	//
-	// Product
+	// Work
 	//
-	article.product.my-work#product
+	article.work#work
 		h1.index-article__h1 Má práce
-		.work__content
-			article.current-work.my-work__item
-				a(href="./ford-custom.html")
-					section.podsekce-img.podsekce-predchoziprace.foto-1
-						.podsekce__link 
-							svg.podsekce__svg(viewbox="0 0 100 100")
-								path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
-							p Ford Transit Custom
-				section.podsekce-txt
-					p Má poslední práce, dezignově povedený Ford jsem se pokusil  přizpůsobit buď početnější rodině nebo jenom sólo páru. <a href="./ford-custom.html">Více</a>
+		ul.work__ul
+			li.work__item
+				a.work__link.ford-custom__link--bg(href="./ford-custom.html")
+					.work__link__h
+						svg.podsekce__svg(viewbox="0 0 100 100")
+							path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
+						p Ford Transit Custom
+				p.work__txt Má poslední práce, dezignově povedený Ford jsem se pokusil  přizpůsobit buď početnější rodině nebo jenom sólo páru. <a href="./ford-custom.html">Více</a>
 
-			article.prev-work.sekce-prev-work.my-work__item#prev-work
-				a(href="./predchozi-prace.html")
-					section.podsekce-img.podsekce-predchoziprace.foto-2
-						.podsekce__link
-							svg.podsekce__svg(viewbox="0 0 100 100")
-								path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
-							p Ford Transit 2000
-				section.podsekce-txt
-					p Nejrozšířenější  vestavba pro krátké typy vozů. Počet sedících jsou pro 4 osoby a celkem pohodlné jsou i 4 místa pro spaní. <a href="./predchozi-prace.html">Více</a>
+			li.work__item
+				a.work__link.ford-2000__link--bg(href="./ford-2000.html")
+					.work__link__h
+						svg.podsekce__svg(viewbox="0 0 100 100")
+							path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
+						p Ford Transit 2000
+				p.work__txt Nejrozšířenější  vestavba pro krátké typy vozů. Počet sedících jsou pro 4 osoby a celkem pohodlné jsou i 4 místa pro spaní. <a href="./predchozi-prace.html">Více</a>
 
-			article.prev-work.sekce-prev-work.my-work__item
-				a(href="./predchozi-prace.html")
-					section.podsekce-img.podsekce-predchoziprace.foto-3
-						.podsekce__link
-							svg.podsekce__svg(viewbox="0 0 100 100")
-								path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
-							p Ford Transit 1996
-				section.podsekce-txt
-					p Vzpomínka na první práci, která uspokojila 4členou rodinu a sloužila poctivě 16 let karavaningu. <a href="./predchozi-prace.html">Více</a>
+			li.work__item
+				a.work__link.ford-1996__link--bg(href="./ford-1996.html")
+					.work__link__h
+						svg.podsekce__svg(viewbox="0 0 100 100")
+							path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
+						p Ford Transit 1996
+				p.work__txt Vzpomínka na první práci, která uspokojila 4členou rodinu a sloužila poctivě 16 let karavaningu. <a href="./predchozi-prace.html">Více</a>
 
 	//
 	// About
@@ -195,6 +189,32 @@ block body
 				p Napište mi co Vás zaujalo...
 			.form__sent 
 				a(href="#") Odeslat
-// block local-scripts
-	// script.
-		// window.addEventListener('scroll', showArticles)
+
+block footer
+	footer.footer
+		p.footer__copyright.footer--middle Auto Caravan Sport s.r.o. 2016
+		nav.footer__nav.footer--left
+			ul
+				li: a(href="#header") Nahoru
+				li: a(href="#presentation") Co je karavaning
+				li: a(href="#work") Má práce
+				li: a(href="#about") O firmě
+				li: a(href="#contact") Kontakt
+		.footer--right
+			img.home-socicon.footer__socicon(src="./img/email-icon.svg")
+			img.home-socicon.footer__socicon(src="./img/fb-icon.svg")
+		p.footer__credits Web: 
+			a(href="https://www.linkedin.com/in/radek-palisa-96332886", target="_blank") Radek Palisa
+
+block local-scripts
+	script.
+			$(function() {
+				$('.my-flipster').flipster({
+					style: 'flat',
+					buttons: true,
+					spacing: -0.5,
+					scrollwheel: false,
+					loop: true,
+					start: 'center'
+				});
+			});

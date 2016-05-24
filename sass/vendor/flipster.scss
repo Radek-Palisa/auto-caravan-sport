@@ -50,13 +50,13 @@
   z-index: 999;
   cursor: pointer;
   font-size: 15px;
-  opacity: 0.5;
+  opacity: 1; // adjusted
   transition: opacity 500ms ease;
   margin: -1em 2em;
 }
 .flipster__button svg {
   width: 2em;
-  stroke: currentColor;
+  stroke: black;// was currentColor
   fill: transparent;
   stroke-width: 3;
   stroke-linecap: round;

@@ -24,7 +24,7 @@
       <!-- nav.nav(role="navigation")
       ul
       	li: a(href="index.html") Domů
-      	li: a(href="#product") Nabídka
+      	li: a(href="#work") Nabídka
       	li: a(href="#about") O firmě
       	li: a(href="#contact") Kontakt
       
@@ -32,13 +32,13 @@
     </header>
     <section class="sub-header">
       <p class="slogan__txt">Vítejte v mém světě dodávkové velikosti</br>...ani malé ani velké.</p>
-      <nav role="navigation" class="sub-header__content"><a href="#picture-grid" class="sub-header__nav">
+      <nav role="navigation" class="sub-header__content"><a href="#presentation" class="sub-header__nav">
           <div class="nav-item__wrap">
             <svg viewbox="0 0 100 100" class="nav-item__svg">
               <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
             </svg>
             <h1 class="nav-item__h1--1st">Co je Karavaning</h1>
-          </div></a><a href="#product" class="sub-header__nav">
+          </div></a><a href="#work" class="sub-header__nav">
           <div class="nav-item__wrap">
             <svg viewbox="0 0 100 100" class="nav-item__svg">
               <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
@@ -62,7 +62,7 @@
           <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z" class="sub-header__arrow"></path>
         </svg>
       </p>
-      <!-- a.arrow-link(href="#picture-grid")
+      <!-- a.arrow-link(href="#presentation")
       img.arrow(src="img/ctrl.svg", alt="")
       
       -->
@@ -77,9 +77,9 @@
     
     -->
     <!---->
-    <!-- Picture Grid-->
+    <!-- Presentation-->
     <!---->
-    <article id="picture-grid" class="presentation">
+    <article id="presentation" class="presentation">
       <h2 class="index-article__h1 article-presentation__h1">Karavaning v malé dodávce</h2>
       <div class="presentation__content my-flipster">
         <ul>
@@ -151,51 +151,39 @@
       </div>
     </article>
     <!---->
-    <!-- Product-->
+    <!-- Work-->
     <!---->
-    <article id="product" class="product my-work">
+    <article id="work" class="work">
       <h1 class="index-article__h1">Má práce</h1>
-      <div class="work__content">
-        <article class="current-work my-work__item"><a href="./ford-custom.html">
-            <section class="podsekce-img podsekce-predchoziprace foto-1">
-              <div class="podsekce__link"> 
-                <svg viewbox="0 0 100 100" class="podsekce__svg">
-                  <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
-                </svg>
-                <p>Ford Transit Custom</p>
-              </div>
-            </section></a>
-          <section class="podsekce-txt">
-            <p>Má poslední práce, dezignově povedený Ford jsem se pokusil  přizpůsobit buď početnější rodině nebo jenom sólo páru. <a href="./ford-custom.html">Více</a></p>
-          </section>
-        </article>
-        <article id="prev-work" class="prev-work sekce-prev-work my-work__item"><a href="./predchozi-prace.html">
-            <section class="podsekce-img podsekce-predchoziprace foto-2">
-              <div class="podsekce__link">
-                <svg viewbox="0 0 100 100" class="podsekce__svg">
-                  <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
-                </svg>
-                <p>Ford Transit 2000</p>
-              </div>
-            </section></a>
-          <section class="podsekce-txt">
-            <p>Nejrozšířenější  vestavba pro krátké typy vozů. Počet sedících jsou pro 4 osoby a celkem pohodlné jsou i 4 místa pro spaní. <a href="./predchozi-prace.html">Více</a></p>
-          </section>
-        </article>
-        <article class="prev-work sekce-prev-work my-work__item"><a href="./predchozi-prace.html">
-            <section class="podsekce-img podsekce-predchoziprace foto-3">
-              <div class="podsekce__link">
-                <svg viewbox="0 0 100 100" class="podsekce__svg">
-                  <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
-                </svg>
-                <p>Ford Transit 1996</p>
-              </div>
-            </section></a>
-          <section class="podsekce-txt">
-            <p>Vzpomínka na první práci, která uspokojila 4členou rodinu a sloužila poctivě 16 let karavaningu. <a href="./predchozi-prace.html">Více</a></p>
-          </section>
-        </article>
-      </div>
+      <ul class="work__ul">
+        <li class="work__item"><a href="./ford-custom.html" class="work__link ford-custom__link--bg">
+            <div class="work__link__h">
+              <svg viewbox="0 0 100 100" class="podsekce__svg">
+                <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
+              </svg>
+              <p>Ford Transit Custom</p>
+            </div></a>
+          <p class="work__txt">Má poslední práce, dezignově povedený Ford jsem se pokusil  přizpůsobit buď početnější rodině nebo jenom sólo páru. <a href="./ford-custom.html">Více</a></p>
+        </li>
+        <li class="work__item"><a href="./ford-2000.html" class="work__link ford-2000__link--bg">
+            <div class="work__link__h">
+              <svg viewbox="0 0 100 100" class="podsekce__svg">
+                <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
+              </svg>
+              <p>Ford Transit 2000</p>
+            </div></a>
+          <p class="work__txt">Nejrozšířenější  vestavba pro krátké typy vozů. Počet sedících jsou pro 4 osoby a celkem pohodlné jsou i 4 místa pro spaní. <a href="./predchozi-prace.html">Více</a></p>
+        </li>
+        <li class="work__item"><a href="./ford-1996.html" class="work__link ford-1996__link--bg">
+            <div class="work__link__h">
+              <svg viewbox="0 0 100 100" class="podsekce__svg">
+                <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
+              </svg>
+              <p>Ford Transit 1996</p>
+            </div></a>
+          <p class="work__txt">Vzpomínka na první práci, která uspokojila 4členou rodinu a sloužila poctivě 16 let karavaningu. <a href="./predchozi-prace.html">Více</a></p>
+        </li>
+      </ul>
     </article>
     <!---->
     <!-- About-->
@@ -255,7 +243,8 @@
       <nav class="footer__nav footer--left">
         <ul>
           <li><a href="#header">Nahoru</a></li>
-          <li><a href="#product">Nabídka</a></li>
+          <li><a href="#presentation">Co je karavaning</a></li>
+          <li><a href="#work">Má práce</a></li>
           <li><a href="#about">O firmě</a></li>
           <li><a href="#contact">Kontakt</a></li>
         </ul>
@@ -275,15 +264,6 @@
       		scrollwheel: false,
       		loop: true,
       		start: 'center'
-      	});
-      	$(".rslides").responsiveSlides({
-      		auto: false,
-      		speed: 700,
-      		timeout: 7000,
-      		pager: false,
-      		nav: true,
-      		pause: true,
-      		namespace: 'centered-btns'
       	});
       });
     </script>

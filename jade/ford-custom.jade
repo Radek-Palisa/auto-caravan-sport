@@ -12,7 +12,7 @@ block body
 		// nav.nav.nav--fonts(role="navigation")
 			ul
 				li: a(href="index.html") Domů
-				li: a(href="nabidka.html") Nabídka
+				li: a(href="index.html#work") Má práce
 				li: a(href="index.html#about") O firmě
 				li: a(href="index.html#contact") Kontakt
 
@@ -136,55 +136,10 @@ block body
 		
 		nav.secondary-nav
 			p Kam dále?<br>Podívejte se na kompletní foto-dokumentaci jednodlivých částí tohoto vozu anebo se podívejte na mé předchozí práce:
-			.work__content
-				article.current-work.my-work__item
-					a(href="./gallery.html")
-						section.podsekce-img.podsekce-predchoziprace.foto-1
-							.podsekce__link
-								svg.podsekce__svg(viewbox="0 0 100 100")
-									path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
-								p Foto-dokumentace Ford Custom
+			ul.work__ul
 
-				article.prev-work.sekce-prev-work.my-work__item
-					a(href="./predchozi-prace.html")
-						section.podsekce-img.podsekce-predchoziprace.foto-2
-							.podsekce__link
-								svg.podsekce__svg(viewbox="0 0 100 100")
-									path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
-								p Ford Transit 2000
+				include partials/sub-nav-galerie.jade
 
-				article.prev-work.sekce-prev-work.my-work__item
-					a(href="./predchozi-prace.html")
-						section.podsekce-img.podsekce-predchoziprace.foto-3
-							.podsekce__link
-								svg.podsekce__svg(viewbox="0 0 100 100")
-									path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
-								p Ford Transit 1996
+				include partials/sub-nav-2000.jade
 
-block footer
-	footer.footer
-		p.footer__copyright.footer--middle Auto Caravan Sport s.r.o. 2016
-		nav.footer__nav.footer--left
-			ul
-				li: a(href="index.html") Domů
-				li: a(href="nabidka.html") Nabídka
-				li: a(href="index.html#about") O firmě
-				li: a(href="index.html#contact") Kontakt
-		.footer--right
-			img.home-socicon.footer__socicon(src="./img/email-icon.svg")
-			img.home-socicon.footer__socicon(src="./img/fb-icon.svg")
-		p.footer__credits Web: 
-			a(href="https://www.linkedin.com/in/radek-palisa-96332886", target="_blank") Radek Palisa
-
-block local-scripts
-	script.
-		$(function() {
-			$('.my-flipster').flipster({
-				style: 'flat',
-				buttons: true,
-				spacing: -0.39,
-				scrollwheel: false,
-				loop: true,
-				start: 'center'
-			});
-		});
+				include partials/sub-nav-1996.jade

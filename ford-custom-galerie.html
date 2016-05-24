@@ -24,14 +24,17 @@
       <!-- nav.nav.nav--fonts(role="navigation")
       ul
       	li: a(href="index.html") Domů
-      	li: a(href="ford-custom.html") Nabídka
+      	li: a(href="index.html#work") Má práce
       	li: a(href="index.html#about") O firmě
       	li: a(href="index.html#contact") Kontakt
       
       -->
     </header>
     <main>
-      <nav class="sub-page-nav"><a href="index.html"><span>&#x2190;</span> Zpět na domovskou stránku</a><a href="nabidka.html" class="sub-page-nav--float">Co nabízím <span>&#x2192;</span></a></nav>
+      <!-- nav.sub-page-nav
+      a(href="index.html") <span>&#x2190;</span> Zpět na domovskou stránku
+      a.sub-page-nav--float(href="nabidka.html") Co nabízím <span>&#x2192;</span>
+      -->
       <div class="heading__wrap">
         <h1 class="heading--fonts">Dokumentace Ford Custom A.C.S.</h1>
       </div>
@@ -76,13 +79,39 @@
           </article>
         </div>
       </section>
+      <nav class="secondary-nav">
+        <p>Kam dále?<br>Podívejte se na kompletní foto-dokumentaci jednodlivých částí tohoto vozu anebo se podívejte na mé předchozí práce:</p>
+        <ul class="work__ul">
+          <li class="work__item"><a href="./ford-custom.html" class="work__link ford-custom__link--bg">
+              <div class="work__link__h">
+                <svg viewbox="0 0 100 100" class="podsekce__svg">
+                  <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
+                </svg>
+                <p>Ford Transit Custom</p>
+              </div></a></li>
+          <li class="work__item"><a href="./ford-1996.html" class="work__link ford-1996__link--bg">
+              <div class="work__link__h">
+                <svg viewbox="0 0 100 100" class="podsekce__svg">
+                  <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
+                </svg>
+                <p>Ford Transit 1996</p>
+              </div></a></li>
+          <li class="work__item"><a href="./ford-2000.html" class="work__link ford-2000__link--bg">
+              <div class="work__link__h">
+                <svg viewbox="0 0 100 100" class="podsekce__svg">
+                  <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
+                </svg>
+                <p>Ford Transit 2000</p>
+              </div></a></li>
+        </ul>
+      </nav>
     </main>
     <footer class="footer">
       <p class="footer__copyright footer--middle">Auto Caravan Sport s.r.o. 2016</p>
       <nav class="footer__nav footer--left">
         <ul>
           <li><a href="index.html">Domů</a></li>
-          <li><a href="nabidka.html">Nabídka</a></li>
+          <li><a href="index.html#work">Má práce</a></li>
           <li><a href="index.html#about">O firmě</a></li>
           <li><a href="index.html#contact">Kontakt</a></li>
         </ul>
@@ -93,26 +122,5 @@
     <script src="js/functions.js"></script>
     <script src="js/flipster.js"></script>
     <script src="js/responsiveslides.min.js"></script>
-    <script>
-      $(function() {
-      	$('.my-flipster').flipster({
-      		style: 'flat',
-      		buttons: true,
-      		spacing: -0.5,
-      		scrollwheel: false,
-      		loop: true,
-      		start: 'center'
-      	});
-      	$(".rslides").responsiveSlides({
-      		auto: false,
-      		speed: 700,
-      		timeout: 7000,
-      		pager: false,
-      		nav: true,
-      		pause: true,
-      		namespace: 'centered-btns'
-      	});
-      });
-    </script>
   </body>
 </html>
