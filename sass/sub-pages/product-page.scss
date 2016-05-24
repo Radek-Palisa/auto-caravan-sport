@@ -5,7 +5,7 @@
 .heading__wrap {
 	// width: 1000px;
 	margin: 0 auto;
-	padding: 60px 0;
+	padding: 80px 0;
 	text-align: center;
 	// background-color: lavender;
 }
@@ -51,7 +51,8 @@
 }
 
 .flipster--margin {
-	margin-bottom: 60px
+	padding: 45px;
+	background-color: #49597A;
 }
 
 .img__container {
@@ -61,7 +62,15 @@
 // Flipster overwrite index page settings
 
 .sub-page__flipster .flipster--flat .flipster__item--past, .ford-custom .flipster--flat .flipster__item--future {
-	opacity: 0.3
+	opacity: 0.6
+}
+//.sub-page__flipster .flipster--flat .flipster__item--past .img__container, .ford-custom .flipster--flat .flipster__item--future .img__container{
+	//background-image: linear-gradient(rgba(255,255,255, 0.5), rgba(255,255,255,0.5))
+//}
+
+.sub-page__flipster .flipster--flat .flipster__item--past img, .ford-custom .flipster--flat .flipster__item--future img {
+	position: relative;
+	z-index: -1;
 }
 
 .sub-page__flipster .flipster--flat .flipster__item--past .flipster__item__content {
@@ -81,15 +90,15 @@
 	align-items: center;
 	justify-content: center;
 	background-color: white;
-	background-color: #666B9C;
-	background-color: #49597A;
+	// background-color: #666B9C;
+
 
 	p {
 		width: 475px;
 		line-height: 1.5;
 		font-size: 1em;
 		color: #4E4E4E;
-		color: white;
+		// color: white;
 	}
 }
 

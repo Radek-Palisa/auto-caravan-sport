@@ -258,8 +258,7 @@
 }
 .flipster--flat .flipster__item--past,
 .flipster--flat .flipster__item--future {
-  opacity: 0.5;
-  opacity: 0.4 //my own adjustment
+  // opacity: 0.5; //my own adjustment
 }
 .flipster--flat .flipster__item--past .flipster__item__content {
   transform: scale(0.75);
