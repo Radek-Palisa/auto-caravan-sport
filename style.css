@@ -455,6 +455,7 @@ th {
   opacity: 1;
   transition: opacity 500ms ease;
   margin: -1em 2em;
+  outline: none;
 }
 
 .flipster__button svg {
@@ -1251,6 +1252,9 @@ p {
   background-color: #ECECF7;
 }
 
+.presentation__content .flipster__container {
+  left: -19%;
+}
 .presentation__content figure {
   height: 490px;
   width: 372px;
@@ -1306,14 +1310,18 @@ p {
 .work__ul {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   margin: 0;
-  padding: 0 4% 8%;
+  padding: 0 0 8%;
+}
+
+.secondary-nav .work__ul {
+  flex-wrap: wrap;
 }
 
 .work__item {
   margin: 0 0.6%;
   list-style: none;
+  width: 400px;
 }
 .work__item a:hover .podsekce__link {
   background-color: rgba(0, 0, 0, 0.6);
@@ -1326,7 +1334,6 @@ p {
 .work__link {
   position: relative;
   display: block;
-  width: 400px;
   height: 250px;
   background-size: cover;
   overflow: hidden;
@@ -1421,19 +1428,25 @@ p {
 }
 
 .about-txt {
-  margin-left: 50%;
+  display: flex;
+  justify-content: flex-end;
   line-height: 1.4;
   color: #EFEFEF;
 }
 .about-txt__wrap {
-  max-width: 520px;
-  margin: 0 auto;
-  padding: 40px 50px;
+  max-width: 824px;
+  margin-right: 5%;
+  padding: 2em;
   background-color: rgba(0, 0, 0, 0.3);
 }
 .about-txt__wrap h2 {
   text-align: center;
   font-size: 1em;
+}
+.about-txt__wrap p {
+  display: table-cell;
+  width: 380px;
+  padding: 1em;
 }
 
 .sub-about {

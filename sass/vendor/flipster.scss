@@ -6,7 +6,7 @@
   overflow-y: visible;
   position: relative;
 }
-.flipster:focus {
+.flipster:focus, {
   outline: none;
 }
 .flipster__container,
@@ -53,6 +53,7 @@
   opacity: 1; // adjusted
   transition: opacity 500ms ease;
   margin: -1em 2em;
+  outline: none
 }
 .flipster__button svg {
   width: 2em;
