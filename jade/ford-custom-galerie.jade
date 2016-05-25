@@ -2,7 +2,7 @@ extends partials/skeleton.jade
 
 block body
 
-	header.header.header--index-bg
+	header.header.header--nabidka-bg
 		.logo.logo--fonts
 			h1 A.C.S. s.r.o.
 			p Auto Caravan Sport
@@ -16,52 +16,58 @@ block body
 				li: a(href="index.html#about") O firmě
 				li: a(href="index.html#contact") Kontakt
 
-	main
+	main.sub-page.galerie-page
 		// nav.sub-page-nav
 				a(href="index.html") <span>&#x2190;</span> Zpět na domovskou stránku
 				a.sub-page-nav--float(href="nabidka.html") Co nabízím <span>&#x2192;</span>
-		.heading__wrap
+		header.heading__wrap
 			h1.heading--fonts Dokumentace Ford Custom A.C.S.
-		section.content
-			nav#gallery-nav
+		
+		section.galerie-container
+			ul#galerie__menu
 				li.active Izolace vozu
 				li Sestava sedadel
 				li Toaletní kout
 				li Kuchyňská skříň
 				li Postel
 
-			#tab-wrapper
-				article.gallery.active
-					h2 Izolace vozu
-					p Boční pevné stěny vozu jsou vypěněny montážní pěnou (elektrik. Kabely byly vloženy do husích krků), stěna je obložena 3mm překližkou, oboustranně nalakovanou akrylátem. Stropní plech je vylepen pláty PP pěny MIRELON. Stropnice vozu zůstala originální, v toaletním prostoru byla nahrazena 3mm deskou ABS. Podlaha je izolována PP německou pěnou EXTREME. Na ní leží 8mm vodovzdorná překližka a tvrzené dekorační lino. Okraje desky jsou zalakovány, pod toaletním je kompletně lakovaná 12mm vodní překližka.
+			#galerie__tabs
+				section.gallery.active
+					header
+						h2 Izolace vozu
+						p Boční pevné stěny vozu jsou vypěněny montážní pěnou (elektrik. Kabely byly vloženy do husích krků), stěna je obložena 3mm překližkou, oboustranně nalakovanou akrylátem. Stropní plech je vylepen pláty PP pěny MIRELON. Stropnice vozu zůstala originální, v toaletním prostoru byla nahrazena 3mm deskou ABS. Podlaha je izolována PP německou pěnou EXTREME. Na ní leží 8mm vodovzdorná překližka a tvrzené dekorační lino. Okraje desky jsou zalakovány, pod toaletním je kompletně lakovaná 12mm vodní překližka.
 					section.izolace-vozu
 						- for (var x = 0; x < 31; x++)
 							a.gallery__thumbnail(href="#")
 
-				article.gallery
-					h2 Sestava sedadel
-					p Sedadla jsou původní a v originálním postavení od výrobce. U tohoto vozu je počet míst k sezení 1+6. Ve 3. řadě došlo k nahrazení pravého jedno-sedadla, kuchyňským blokem. Sedadla 2. a 3. řady mají sklápěcí opěradla a jsou lehce vyjmutelná z vozu. Na jejich místo je možno, do původního podlahového uložení, namontovat vysouvací postel. Během jízdy se na posteli nesmí sedět, proto se sníží počet přepravovaných osob na 1+2.
+				section.gallery
+					header
+						h2 Sestava sedadel
+						p Sedadla jsou původní a v originálním postavení od výrobce. U tohoto vozu je počet míst k sezení 1+6. Ve 3. řadě došlo k nahrazení pravého jedno-sedadla, kuchyňským blokem. Sedadla 2. a 3. řady mají sklápěcí opěradla a jsou lehce vyjmutelná z vozu. Na jejich místo je možno, do původního podlahového uložení, namontovat vysouvací postel. Během jízdy se na posteli nesmí sedět, proto se sníží počet přepravovaných osob na 1+2.
 					section.sestava-sedadel
 						- for (var x = 0; x < 28; x++)
 							a.gallery__thumbnail(href="#")
 
-				article.gallery
-					h2 Toaletní kout
-					p Místo umožňuje možnost nouzově udělat toaletní potřeby. Je vybaven umyvadlem, záchodem a sprchou. Sprchování je možné uvnitř vozu, tak i venku mimo vůz. Dva okruhy, teplá a studená voda. Teplá voda je zajištěna průtokovým ohřívačem na 220V.  Vůz disponuje 50l čisté vody, 72l odpadní vody a 17 fekální vody.
+				section.gallery
+					header
+						h2 Toaletní kout
+						p Místo umožňuje možnost nouzově udělat toaletní potřeby. Je vybaven umyvadlem, záchodem a sprchou. Sprchování je možné uvnitř vozu, tak i venku mimo vůz. Dva okruhy, teplá a studená voda. Teplá voda je zajištěna průtokovým ohřívačem na 220V.  Vůz disponuje 50l čisté vody, 72l odpadní vody a 17 fekální vody.
 					section.toaletni-kout
 						- for (var x = 0; x < 28; x++)
 							a.gallery__thumbnail(href="#")
 
-				article.gallery
-					h2 Kuchyňská skříň
-					p Skříň je maximálně minimalizována do prostoru, kde má své místo. Je na sedadlovém posuvu a je tedy ji možno vysunovat více do prostoru bočních dveří aby byl k ní lepší přístup a zase zasunovat pro lepší nastupování a vystupování pro třetí řadu sedadel. Prostor za skříní může sloužit pro regálek surovin. Skříň disponuje dvouplotýnkovím vařičem, dřezem s teplou a studenou vodou, 40l kompresorovou ledničkou, vysouvacím stolkem s úložným prostorem a dalším úložným prostorem za lednicí. Nad kuchyňkou je polička s 12V digistorem.
+				section.gallery
+					header
+						h2 Kuchyňská skříň
+						p Skříň je maximálně minimalizována do prostoru, kde má své místo. Je na sedadlovém posuvu a je tedy ji možno vysunovat více do prostoru bočních dveří aby byl k ní lepší přístup a zase zasunovat pro lepší nastupování a vystupování pro třetí řadu sedadel. Prostor za skříní může sloužit pro regálek surovin. Skříň disponuje dvouplotýnkovím vařičem, dřezem s teplou a studenou vodou, 40l kompresorovou ledničkou, vysouvacím stolkem s úložným prostorem a dalším úložným prostorem za lednicí. Nad kuchyňkou je polička s 12V digistorem.
 					section.kuchynska-skrin
 						- for (var x = 0; x < 28; x++)
 							a.gallery__thumbnail(href="#")
 
-				article.gallery
-					h2 Postel
-					p Postel je lehce smontovatelná a zase odmontovatelná (lepší manipulace je z pomocí druhé osoby). Skládá se dvou ocelových stojek, uchycených do původních úchytů sedadel. Vysunovacího postelového roštu se sklopným opěradlem a dvěma matracemi. Celá postel se dá nahoru odklápět a tím je možno využít velkého úložného prostoru, rozděleného vyjmutelnými organizéry. Postel se nesmí jakýmkoli způsobem používat za jízdy.
+				section.gallery
+					header
+						h2 Postel
+						p Postel je lehce smontovatelná a zase odmontovatelná (lepší manipulace je z pomocí druhé osoby). Skládá se dvou ocelových stojek, uchycených do původních úchytů sedadel. Vysunovacího postelového roštu se sklopným opěradlem a dvěma matracemi. Celá postel se dá nahoru odklápět a tím je možno využít velkého úložného prostoru, rozděleného vyjmutelnými organizéry. Postel se nesmí jakýmkoli způsobem používat za jízdy.
 					section.postel
 						- for (var x = 0; x < 28; x++)
 							a.gallery__thumbnail(href="#")

@@ -951,6 +951,21 @@ p {
   */
 }
 
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+  /* ie 6/7 */
+}
+
 /* Header partial */
 .header {
   position: relative;
@@ -1769,49 +1784,73 @@ p {
 * ********   Gallery Module    ***********
 *
 */
-#gallery-nav {
-  margin-top: 40px;
-}
-#gallery-nav li {
-  display: inline-block;
-  text-decoration: none;
-  color: dimgrey;
-  margin-bottom: -1px;
-  padding: 8px 15px;
-  border: 1px solid rosybrown;
-  font-size: 1.2em;
-  cursor: pointer;
-  transition: 0.4s;
-}
-#gallery-nav li:hover {
-  background-color: rosybrown;
-  color: aliceblue;
-  transition: 0.4s;
-}
-#gallery-nav li.active {
-  background-color: rosybrown;
-  color: aliceblue;
+.galerie-container {
+  max-width: 65em;
+  margin: 0 auto;
 }
 
-#tab-wrapper {
-  background-color: rosybrown;
-  padding: 20px;
+#galerie__menu {
+  display: flex;
+  margin: 1em 0 5px;
+  padding: 0;
+  list-style: none;
 }
-#tab-wrapper article {
+#galerie__menu li {
+  flex-grow: 1;
+  text-decoration: none;
+  color: dimgrey;
+  margin-right: 5px;
+  padding: 8px 15px;
+  box-shadow: 1px 1px 4px #49597A;
+  text-align: center;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#galerie__menu li:last-of-type {
+  margin-right: 0;
+}
+#galerie__menu li:hover {
+  transform: translateY(2px);
+  background-color: #49597A;
+  color: aliceblue;
+  transition: 0.3s;
+}
+#galerie__menu li.active {
+  background-color: #49597A;
+  color: aliceblue;
+  box-shadow: 0px 6px 5px 1px #2B3448;
+}
+
+#galerie__tabs {
+  background-color: #49597A;
+  padding: 20px;
+  box-shadow: 0px 2px 4px black;
+}
+#galerie__tabs > section {
   display: none;
 }
-#tab-wrapper article.active {
+#galerie__tabs > section.active {
   display: block;
 }
 
-.gallery h2 {
-  color: midnightblue;
+.gallery header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 15px;
 }
-.gallery p {
-  max-width: 55em;
-}
-.gallery section {
+.gallery header h2 {
+  width: 235px;
+  padding: 59px 0;
   text-align: center;
+  color: white;
+  border-radius: 5px;
+  background-color: #2E384C;
+}
+.gallery header p {
+  max-width: 38em;
+  color: white;
 }
 
 .izolace-vozu .gallery__thumbnail {
@@ -1838,6 +1877,7 @@ p {
   display: inline-block;
   width: 189px;
   height: 126.5px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
   background-color: grey;
   margin: 5px;
   transition: 0.3s;
@@ -1845,7 +1885,7 @@ p {
 }
 .gallery__thumbnail:hover {
   transition: 0.3s;
-  filter: brightness(130%);
+  -webkit-filter: brightness(130%);
 }
 
 .gallery__thumbnail:nth-of-type(1) {
