@@ -9,54 +9,15 @@
 	margin: 0 auto;
 }
 
-#galerie__menu {
-	display: flex;
-	margin: 1em 0 5px;
-	padding: 0;
-	list-style: none;
-
-	li {
-		flex-grow: 1;
-		text-decoration: none;
-		color: dimgrey;
-		margin-right: 5px;
-		padding: 8px 15px;
-		box-shadow: 1px 1px 4px #49597A;
-		text-align: center;
-		font-size: 1.2em;
-		cursor: pointer;
-		transition: 0.3s;
-
-		&:last-of-type {
-			margin-right: 0
-		}
-	}
-	
-	li:hover {
-		transform: translateY(2px);
-		background-color: #49597A;
-		color: aliceblue;
-		transition: 0.3s;
-	}
-	
-	li.active {
-		background-color: #49597A;
-		color: aliceblue;
-		box-shadow: 0px 6px 5px 1px #2B3448;
-	}
-}
-
-#galerie__tabs {
+.gallery {
 	background-color: #49597A;
-	padding: 20px;
+	margin-bottom: 2em;
+	padding: 20px 20px 0;
 	box-shadow: 0px 2px 4px black;
+	border-radius: 5px;
 
-	> section {
+	section {
 		display: none;
-
-		&.active {
-			display: block;
-		}
 	}
 }
 
@@ -64,21 +25,44 @@
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	padding-bottom: 15px;
+	padding-bottom: 30px;
 	
 	h2 {
-		width: 235px;
-		padding: 59px 0;
+		width: 270px;
+		padding: 74px 0;
+		margin: 0;
 		text-align: center;
 		color: white;
-		border-radius: 5px;
+		// border-radius: 5px;
 		background-color: #2E384C;
+		background-size: cover;
 	}
-	
+
 	p {
-		max-width: 38em;
+		max-width: 34em;
 		color: white;
 	}
+}
+
+.izolace-vozu h2 {
+	background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('./img/gallery-thumbs/izolace-vozu.jpg');
+}
+.sestava-sedadel h2 {
+	background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('./img/gallery-thumbs/sestava-sedadel.jpg');
+}
+.toaletni-kout h2 {
+	background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('./img/gallery-thumbs/toaletni-kout.jpg');
+}
+.kuchynska-skrin h2 {
+	background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('./img/gallery-thumbs/kuchynsky-blok.jpg');
+}
+.postel h2 {
+	background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('./img/gallery-thumbs/postel.jpg');
+}
+
+.btn-galerie-show {
+	cursor: pointer;
+	width: 50px;
 }
 
 $thumbnail-width: 189px;
