@@ -36,14 +36,8 @@ function debounce(func, wait, immediate) {
 // --- Tabs for Gallery ---
 //
 $(document).ready(function(){
-	$("#galerie__menu li").click(function(e){
-		if (!$(this).hasClass("active")) {
-			var tabNum = $(this).index() + 1;
-			$("#galerie__menu li.active").removeClass("active");
-			$(this).addClass("active");
-			$("#galerie__tabs section.active").removeClass("active");
-			$("#galerie__tabs section:nth-child("+tabNum+")").addClass("active");
-		}
+	$(".btn-galerie-show").click(function(e){
+		$(this).parent().next().slideToggle(600);
 	});
 });
 
