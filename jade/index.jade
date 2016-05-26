@@ -56,50 +56,47 @@ block body
 		.jumbotron__txt
 			h3 Ford Custom A.C.S.
 			p  Lorem ipsum dolor sit amet. Consectetur adipisicing elit. Adipisci minus autem distinctio voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-	
 	//
 	// Presentation
 	//
 	article.presentation#presentation
 		h2.index-article__h1.article-presentation__h1 Karavaning v malé dodávce
-		.presentation__content.my-flipster
+		.presentation__content
+			section.welcome
+				p Vítejte na stránkách mé firmy
+				p <strong>Auto Caravan Sport s.r.o.</strong>
+				p.welcome__p Jmenuji se Libor Palisa a skrze tuto firmu si  naplňuji svou vášeň pro způsob výbavy vozu k volnému cestování.
+				p.welcome__p.welcome__p--js Karavaning je zpusob cestovani..Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam architecto totam, accusantium quod maiores incidunt explicabo. Laudantium impedit sapiente minus.
+				.welcome__img.welcome__img--js-on
+				p Vozy tohoto tipu jsou založené na principu vnitřního minimalismu a přesto maximalismu možného pohodlí v navštívené lokalitě.
+				.pres__btn
+					svg.pres__btn__1st(viewbox="0 0 100 100")
+						path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
+					svg.pres__btn__2nd(viewbox="0 0 100 100")
+						path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
+
 			ul
-				li.js-el-height
-					figure
-						figcaption
-							h1 Využití
-							p Auta jsou ideální pro dálniční cestování, polykání kilometrů, neustálé přesuny. Poskytují určitý komfort potřeb k pobytu  a přesto mohou sloužit  v každodenním provozu,  jako osobní vozy.
-						.img-container.img-container-2
+				li
+					.img-container.img-container-2
+					// h3 Využití
+					p #[span Využití] Auta jsou ideální pro dálniční cestování, polykání kilometrů, neustálé přesuny. Poskytují určitý komfort potřeb k pobytu  a přesto mohou sloužit  v každodenním provozu,  jako osobní vozy.
+						
 
 				li
-					figure
-						figcaption
-							h1 Vítejte na stránkách firmy Auto Caravan Sport s.r.o.
-							p Jmenuji se Libor Palisa a skrze tuto firmu si  naplňuji svou vášeň pro způsob výbavy vozu k volnému cestování.
-							.img-container.img-container-1
-							p Vozy tohoto tipu jsou založené na principu vnitřního minimalismu a přesto maximalismu možného pohodlí v navštívené lokalitě.
-
-				li
-					figure
-						figcaption
-							h1 Dostupnost
-							p S vozem se dostanete i na těžko přístupná místa jako přeplněná centra velkoměst, parkoviště v historických částech a to samé v přírodě. Přece jenom je dodávka méně,  než velký obytný vůz.
-						.img-container.img-container-3
-
-				li
-					figure
-						figcaption
-							h1 Komfort
-							p Ať už cestujete kamkoliv, vozíte si sebou pohodlí domova. V autě můžete spát, vařit, sprchovat se a samozřejmostí je vestavěný chemický záchod a možnost připojit se na elektřinu.
-						.img-container.img-container-4
+					.img-container.img-container-3
+					//h3 Dostupnost
+					p #[span Dostupnost] S vozem se dostanete i na těžko přístupná místa jako přeplněná centra velkoměst, parkoviště v historických částech a to samé v přírodě. Přece jenom je dodávka méně,  než velký obytný vůz.
 				
 				li
-					figure
-						figcaption
-							h1 Kvalita
-							p U všech přestaveb jsou použity certifikované komponenty od firmy REIMO a splňují bezpečnostní a technické parametry. Německá firma REIMO se  zabývá  prodejem právě do těchto vozů.    
-						.img-container.img-container-5
-	
+					.img-container.img-container-5
+					//h3 Komfort
+					p #[span Komfort] Ať už cestujete kamkoliv, vozíte si sebou pohodlí domova. V autě můžete spát, vařit, sprchovat se a samozřejmostí je vestavěný chemický záchod a možnost připojit se na elektřinu.
+
+				li
+					.img-container.img-container-4
+					//h3 Kvalita
+					p #[span Kvalita] U všech přestaveb jsou použity certifikované komponenty od firmy REIMO a splňují bezpečnostní a technické parametry. Německá firma REIMO se  zabývá  prodejem právě do těchto vozů.		
+
 	//
 	// Work
 	//

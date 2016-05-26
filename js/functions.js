@@ -91,3 +91,24 @@ var aboutOffView = aboutTop + aboutHeight;
 		}
 		$about.css('background-position', 'center '+bgPosAbout+'%');
 	});
+
+// Presentation Tabbing
+
+var $leftPane = $('.welcome');
+$leftPane.addClass('leftPane--js-centered');
+
+var $welcomeTxt = $('.welcome__p');
+var $welcomeImg = $('.welcome__img');
+
+var $rightPane = $('.presentation__content ul');
+$rightPane.addClass('rightPane--js-hidden');
+
+var $presBtn = $('.pres__btn__1st'); 
+
+$('.pres__btn').on('click', function (){
+	$leftPane.toggleClass('leftPane--js-centered leftPane--js-psLeft');
+	$welcomeTxt.toggleClass('welcome__p--js');
+	$welcomeImg.toggleClass('welcome__img--js-on welcome__img--js-off');
+	$rightPane.toggleClass('rightPane--js-hidden rightPane--js-activated');
+	$presBtn.toggleClass('pres__btn--rotated');
+});
