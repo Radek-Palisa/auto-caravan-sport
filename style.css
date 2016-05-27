@@ -1274,96 +1274,107 @@ p {
 .presentation__content {
   display: flex;
   justify-content: center;
-  align-items: center;
   overflow: hidden;
 }
-.presentation__content .welcome {
+
+.leftPane {
   position: relative;
   max-width: 500px;
-  margin-left: -3em;
+  margin-left: -7em;
   padding: 2em;
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.3);
 }
-.presentation__content .welcome h2 {
-  text-align: center;
-  font-size: 1.2em;
-  color: white;
-}
-.presentation__content .welcome p {
+.leftPane p {
   margin: 0;
   color: white;
   line-height: 1.5;
-  font-size: 1.2em;
+  font-size: 1.1em;
+}
+.leftPane p:nth-of-type(2) {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  font-weight: bold;
   text-align: center;
 }
-.presentation__content .welcome p strong {
-  font-size: 1.5em;
+.leftPane__head {
+  text-align: center;
 }
-.presentation__content .welcome p:nth-of-type(2) {
-  margin-bottom: 1em;
-}
-.presentation__content .welcome__p {
+.leftPane__intro {
   height: 84px;
+  text-align: center;
 }
-.presentation__content .welcome__p--js {
+.leftPane__p--js {
   display: none;
 }
-.presentation__content .welcome__img {
-  height: 170px;
+.leftPane__img {
+  height: 160px;
   margin: 2em auto;
 }
-.presentation__content .welcome__img--js-on {
-  width: 170px;
+.leftPane__img--js-on {
+  width: 160px;
   border-radius: 50%;
   background-image: url(./img/profile.jpg);
   background-position: 55% 58%;
   background-size: 358%;
   transition: border-radius 0.1s ease-in-out;
 }
-.presentation__content .welcome__img--js-off {
-  width: 220px;
+.leftPane__img--js-off {
+  width: 260px;
   background-image: url(./img/picture-grid/pic-grid_03.jpg);
   transition: all 0.3s ease-in-out;
   background-size: cover;
   background-position: center;
   transition: border-radius 0.1s ease-in-out;
 }
-.presentation__content .welcome .pres__btn {
-  position: absolute;
-  width: 1.8em;
-  top: 50%;
-  left: 100%;
+
+.leftPane__presIntro {
+  display: flex;
+  justify-content: center;
+}
+.leftPane__presIntro p {
+  width: 68%;
+  text-align: left;
+}
+
+.leftPane__presBtn {
   display: flex;
   align-items: center;
-  margin-top: -14px;
-  margin-left: 0.5em;
-  border-radius: 4px;
+  margin: 8px 0;
+  padding: 0 15px;
+  border-left: 2px solid rgba(255, 255, 255, 0.8);
   cursor: pointer;
 }
-.presentation__content .welcome .pres__btn svg {
+.leftPane__presBtn svg {
   width: 1.4em;
+  transform: rotateY(180deg);
 }
-.presentation__content .welcome .pres__btn svg path {
+.leftPane__presBtn svg path {
   fill: rgba(255, 255, 255, 0.8);
 }
-.presentation__content .welcome .pres__btn .pres__btn__1st {
-  margin-right: -13px;
+.leftPane__presBtn .presBtn__2nd {
+  margin-left: -13px;
+  transition: all 0.2s ease-in-out;
 }
-.presentation__content ul {
+.leftPane__presBtn:hover .presBtn__2nd {
+  transform: rotateY(180deg) translateX(-5px);
+  transition: all 0.2s ease-in-out;
+}
+
+.rightPane {
   max-width: 682px;
-  margin: 0 1em 0 3em;
+  margin: 0 0 0 0.5em;
   padding: 1.5em 2em;
   border-radius: 5px;
   list-style: none;
   background-color: rgba(0, 0, 0, 0.8);
 }
-.presentation__content li {
+.rightPane li {
   padding: 3px 0;
   display: flex;
   align-items: center;
 }
-.presentation__content li h3 {
+.rightPane li h3 {
   margin: 0 0 0.5em;
   font-size: 14px;
   font-family: Open Sans;
@@ -1371,7 +1382,7 @@ p {
   text-align: center;
   text-transform: uppercase;
 }
-.presentation__content li span {
+.rightPane li span {
   font-size: 14px;
   font-family: Open Sans;
   color: white;
@@ -1382,14 +1393,14 @@ p {
   border: 1px solid rgba(255, 255, 255, 0.8);
   margin-right: 10px;
 }
-.presentation__content li p {
+.rightPane li p {
   width: 394px;
   margin: 0;
   color: white;
   line-height: 1.6;
   font-size: 16px;
 }
-.presentation__content li .img-container {
+.rightPane li .img-container {
   width: 195px;
   height: 138px;
   margin-right: 2em;
@@ -1397,20 +1408,20 @@ p {
   background-size: cover;
   background-position: center;
 }
-.presentation__content li .img-container-2 {
+.rightPane li .img-container-2 {
   background-image: linear-gradient(rgba(255, 255, 255, 0.0) 5%,rgba(255, 255, 255, 0) 50%), url(./img/picture-grid/pic-grid_06.jpg);
 }
-.presentation__content li .img-container-3 {
+.rightPane li .img-container-3 {
   background-image: linear-gradient(rgba(255, 255, 255, 0.0) 5%,rgba(255, 255, 255, 0) 50%), url(./img/picture-grid/pic-grid_07.jpg);
 }
-.presentation__content li .img-container-4 {
+.rightPane li .img-container-4 {
   background-image: linear-gradient(rgba(255, 255, 255, 0.0) 5%,rgba(255, 255, 255, 0) 50%), url(./img/picture-grid/pic-grid_04.jpg);
 }
-.presentation__content li .img-container-5 {
+.rightPane li .img-container-5 {
   background-image: linear-gradient(rgba(255, 255, 255, 0.0) 5%,rgba(255, 255, 255, 0) 50%), url(./img/picture-grid/pic-grid_05.jpg);
 }
 
-.leftPane--js-centered {
+.leftPane--centered {
   transform: translateX(80%);
   transition: all 0.6s ease-in-out;
 }
@@ -1419,9 +1430,7 @@ p {
   transform: translateX(0);
   transition: all 0.3s ease-in-out;
   background-color: rgba(0, 0, 0, 0.8) !important;
-  padding: 66px 1.5em !important;
   margin-left: 0;
-  width: 470px;
 }
 
 .rightPane--js-hidden {
@@ -1436,9 +1445,9 @@ p {
   transition: all 0.6s ease-in-out;
 }
 
-.pres__btn--rotated {
-  margin-right: -4px !important;
-  transform: rotateY(180deg);
+.presBtn--rotated {
+  margin-left: -4px !important;
+  transform: rotateY(0deg) !important;
 }
 
 .work {
