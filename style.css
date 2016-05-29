@@ -1123,13 +1123,10 @@ p {
   background-image: url(./img/pic-grid_07.jpg);
 }
 .sub-header__nav:nth-of-type(3):before {
-  background-image: url(./img/pic-grid_06.jpg);
+  background-image: url(./img/sub-header/ofirme.jpg);
 }
 .sub-header__nav:nth-of-type(4):before {
-  background-image: url(./img/pic-grid_03.jpg);
-}
-.sub-header__nav:nth-of-type(5):before {
-  background-image: url(./img/pic-grid_05.jpg);
+  background-image: url(./img/sub-header/kontakt.jpg);
 }
 .sub-header__nav:before {
   content: "";
@@ -1329,24 +1326,21 @@ p {
 }
 
 .leftPane__presIntro {
-  display: flex;
-  justify-content: center;
+  padding: 0 30px;
 }
 .leftPane__presIntro p {
-  width: 68%;
   text-align: left;
 }
 
 .leftPane__presBtn {
-  display: flex;
+  display: inline;
   align-items: center;
   margin: 8px 0;
   padding: 0 15px;
-  border-left: 2px solid rgba(255, 255, 255, 0.8);
   cursor: pointer;
 }
 .leftPane__presBtn svg {
-  width: 1.4em;
+  width: 0.9em;
   transform: rotateY(180deg);
 }
 .leftPane__presBtn svg path {
@@ -1920,39 +1914,54 @@ p {
 *
 */
 .galerie-container {
-  max-width: 65em;
   margin: 0 auto;
 }
 
 .gallery {
+  max-width: 65em;
   background-color: #49597A;
-  margin-bottom: 2em;
-  padding: 20px 20px 0;
+  margin: 0 auto 2em;
   box-shadow: 0px 2px 4px black;
   border-radius: 5px;
-}
-.gallery section {
-  display: none;
 }
 
 .gallery header {
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  padding-bottom: 30px;
+}
+.gallery header .header__h2-container {
+  width: 270px;
+  height: 180px;
+  margin: 0;
+  padding: 4px;
+  border-radius: 4px;
 }
 .gallery header h2 {
-  width: 270px;
-  padding: 74px 0;
+  width: 100%;
+  height: 100%;
   margin: 0;
+  line-height: 180px;
   text-align: center;
   color: white;
   background-color: #2E384C;
   background-size: cover;
 }
 .gallery header p {
-  max-width: 34em;
+  position: relative;
+  max-width: 38em;
+  max-height: 150px;
+  margin: auto 2em;
+  overflow: hidden;
   color: white;
+}
+.gallery header p:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background-image: linear-gradient(rgba(73, 89, 122, 0), #49597a);
 }
 
 .izolace-vozu h2 {
@@ -1978,6 +1987,19 @@ p {
 .btn-galerie-show {
   cursor: pointer;
   width: 50px;
+}
+.btn-galerie-show svg {
+  display: inline-block;
+  width: 20px;
+  transform: rotate(-90deg);
+}
+.btn-galerie-show svg path {
+  fill: #fff;
+}
+
+.gallery section {
+  display: none;
+  padding: 20px;
 }
 
 .izolace-vozu .gallery__thumbnail {
