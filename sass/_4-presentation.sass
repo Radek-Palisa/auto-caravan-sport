@@ -6,25 +6,22 @@
 	padding: 50px 0 !important
 
 .presentation
-	padding-bottom: 50px
-	background-image: url(./img/prezentace/P8290226.jpg)
+	background-image: url(./img/prezentace/P8290226_reversed.jpg)
 	background-size: cover
-	// background-position: center
+	background-position: center
 	background-color: #ECECF7
 	// background-attachment: fixed
 
 .presentation__content
 	display: flex
-	justify-content: center
+	justify-content: flex-end
 	overflow: hidden
 	
 .leftPane
 	position: relative
-	max-width: 500px
-	margin-left: -7em
-	padding: 2em
-	border-radius: 5px
-	background-color: rgba(0,0,0,0.3)
+	max-width: 530px
+	padding: 5em 5em
+	background-color: rgba(0,0,0,0.5)
 
 	p 
 		margin: 0
@@ -32,47 +29,25 @@
 		line-height: 1.5
 		font-size: 1.1em
 
-		&:nth-of-type(2)
-			font-size: 1.5em
-			margin-bottom: 1em
-			font-weight: bold
-			text-align: center
-
 	&__head
+		text-align: center
+		font-size: 1.5em
+		margin-bottom: 2em !important
+		font-weight: bold
 		text-align: center
 
 	&__intro
-		height: 84px
-		text-align: center
-
-	&__p--js
-		display: none
+		margin-bottom: 1em !important
 
 	&__img
 		height: 160px
 		margin: 2em auto
-
-		&--js-on
-			width: 160px
-			border-radius: 50%
-			background-image: url(./img/profile.jpg)
-			background-position: 55% 58%
-			background-size: 358%
-			transition: border-radius 0.1s ease-in-out
-
-		&--js-off
-			width: 260px
-			background-image: url(./img/picture-grid/pic-grid_03.jpg)
-			transition: all 0.3s ease-in-out
-			background-size: cover
-			background-position: center
-			transition: border-radius 0.1s ease-in-out
-
-.leftPane__presIntro
-	padding: 0 30px
-
-	p
-		text-align: left
+		width: 260px
+		background-image: url(./img/picture-grid/pic-grid_03.jpg)
+		transition: all 0.3s ease-in-out
+		background-size: cover
+		background-position: center
+		transition: border-radius 0.1s ease-in-out
 
 .leftPane__presBtn
 	display: inline
@@ -97,12 +72,14 @@
 		transition: all 0.2s ease-in-out
 
 .rightPane 
-	max-width: 682px
-	margin: 0 0 0 0.5em
+	height: 624px
+	width: 682px
+	margin: 0
 	padding: 1.5em 2em
-	border-radius: 5px
+	// border-radius: 5px
 	list-style: none
 	background-color: rgba(0,0,0,0.8)
+	overflow: hidden
 
 	li
 		padding: 3px 0
@@ -160,23 +137,24 @@
 
 // Presentation animation
 .leftPane--centered
-	transform: translateX(80%)
+	//transform: translateX(37%)
 	transition: all 0.6s ease-in-out
 
 .leftPane--js-psLeft
-	transform: translateX(0)
-	transition: all 0.3s ease-in-out
+	transition: all 0.6s ease-in-out
 	background-color: rgba(0,0,0,0.8) !important
-	margin-left: 0
 
 .rightPane--js-hidden
-	opacity: 0
-	transform: translateY(-100%)
+	// opacity: 0
+	// transform: translateX(100%)
+	margin-right: -424px
 	transition: all 0.3s ease-in-out
 
 .rightPane--js-activated
-	opacity: 1
-	transform: translateY(0)
+	// opacity: 1
+	//width: 682px
+	//transform: translateY(0)
+	margin-right: 0
 	transition: all 0.6s ease-in-out
 
 .presBtn--rotated

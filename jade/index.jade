@@ -2,23 +2,29 @@ extends partials/skeleton.jade
 
 block body
 
+	nav.nav(role="navigation")
+		p Auto Caravan Sport #[span s.r.o.]
+		ul
+				li: a(href="#presentation") O co jde
+				li: a(href="#work") Má práce
+				li: a(href="#about") Jak to začalo
+				li: a(href="#contact") Kontakt
+
 	header.header.header--index-bg#header
+		p.header__txt Vítejte v mém světě dodávkové velikosti</br>...ani malé ani velké.
 		.logo
 			h1 A.C.S. s.r.o.
 			p Auto Caravan Sport
 			.underline
 				span.underline__txt s.r.o.
 
-		// nav.nav(role="navigation")
-			ul
-				li: a(href="index.html") Domů
-				li: a(href="#work") Nabídka
-				li: a(href="#about") O firmě
-				li: a(href="#contact") Kontakt
-
 	section.sub-header
-		p.slogan__txt Vítejte v mém světě dodávkové velikosti</br>...ani malé ani velké.
-		nav.sub-header__content(role="navigation")
+		// p.slogan__txt Vůz volného času
+		//p.slogan__txt Vítejte v mém světě dodávkové velikosti</br>...ani malé ani velké.
+		.intro
+			.intro__img
+			p.intro__txt Vítejte na stránkách firmy <strong>Auto Caravan Sport s.r.o.</strong><br>Jmenuji se Libor Palisa a skrze tuto firmu si naplňuji svou vášeň pro způsob výbavy vozu k volnému cestování.
+		// nav.sub-header__content(role="navigation")
 			a.sub-header__nav(href="#presentation")
 				.nav-item__wrap
 					svg.nav-item__svg(viewbox="0 0 100 100")
@@ -42,7 +48,7 @@ block body
 					svg.nav-item__svg(viewbox="0 0 100 100")
 						path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
 					h1 Kontakt
-		p.arrow-container 
+		// p.arrow-container 
 			svg.sub-header-svg(viewbox="0 0 100 100")
 				path.sub-header__arrow(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
 				
@@ -60,14 +66,12 @@ block body
 	// Presentation
 	//
 	article.presentation#presentation
-		h2.index-article__h1.article-presentation__h1 Vůz volného času
+		// h2.index-article__h1.article-presentation__h1 Vůz volného času
 		.presentation__content
-			section.leftPane
-				p.leftPane__head Vítejte na stránkách mé firmy
-				p Auto Caravan Sport s.r.o.
-				p.leftPane__intro Jmenuji se Libor Palisa a skrze tuto firmu si  naplňuji svou vášeň pro způsob výbavy vozu k volnému cestování.
-				p.leftPane__intro.leftPane__p--js Karavaning je zpusob cestovani..Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam architecto totam, accusantium quod maiores incidunt explicabo. Laudantium impedit sapiente minus.
-				.leftPane__img.leftPane__img--js-on
+			section.leftPane.leftPane--centered
+				p.leftPane__head Vůz volného času
+				p.leftPane__intro Karavaning je zpusob cestovani..Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam architecto totam, accusantium quod maiores incidunt explicabo. Laudantium impedit sapiente minus.
+				// .leftPane__img
 				.leftPane__presIntro
 					p Vozy tohoto tipu jsou založené na principu vnitřního minimalismu a přesto maximalismu možného pohodlí v navštívené lokalitě.#[span.leftPane__presBtn #[svg.presBtn__1st(viewbox="0 0 100 100") #[path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")]]#[svg.presBtn__2nd(viewbox="0 0 100 100")#[path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")]]]
 
