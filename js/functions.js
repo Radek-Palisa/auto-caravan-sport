@@ -68,12 +68,12 @@ var aboutOffView = aboutTop + aboutHeight;
 		var wScroll = $(document).scrollTop();
 		var headerPos = 35;
 		var bgPosPres = 150;
-		
+		/*
 		if (wScroll > 0) {
 			headerPos = headerPos-(wScroll/3);
 		}
 		$header.css('background-position', 'center '+headerPos+'%');
-
+		*/
 		if (wScroll >= presInView) {
 			bgPosPres = bgPosPres-((wScroll-presInView)/6);
 		}
