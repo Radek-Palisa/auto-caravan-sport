@@ -1018,10 +1018,10 @@ p {
 .header--index-bg {
   background-image: url(./img/header/5.jpg);
   background-position: center bottom;
-  background-image: url(./img/header/header-bg_3872w_60q.jpg);
-  background-position: center 35%;
   background-image: url(./img/header/hlavicka_01.jpg);
   background-position: right;
+  /* background-image: url(./img/header/header-bg_3872w_60q.jpg); */
+  /* background-position: center 35%; */
 }
 .header--gallery-bg {
   background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.2), transparent), url(img/gallery-bg_3872w_35q.jpg);
@@ -1300,6 +1300,7 @@ p {
 
 .presentation {
   background-image: url(./img/prezentace/P8290226_reversed.jpg);
+  /* background-image: url(./img/prezentace/P8290226_reversed2.jpg); */
   background-size: cover;
   background-position: center;
   background-color: #ECECF7;
@@ -1373,7 +1374,7 @@ p {
   margin: 0;
   padding: 1.5em 2em;
   list-style: none;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgb(0, 2, 27);
   overflow: hidden;
 }
 .rightPane li {
