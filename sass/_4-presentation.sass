@@ -6,21 +6,26 @@
 	padding: 50px 0 !important
 
 .presentation
-	background-image: url(./img/prezentace/P8290226_reversed.jpg)
-	background-image: url(./img/prezentace/P8290226_reversed2.jpg)
-	background-size: cover
-	background-position: center
 	background-color: #ECECF7
-	// background-attachment: fixed
 
 .presentation__content
-	display: flex
-	justify-content: flex-end
+	position: relative
 	overflow: hidden
 	
+.leftPane__container
+	margin-right: 258px
+	background-image: url(./img/prezentace/P8290226_reversed2.jpg)
+	background-image: url(./img/prezentace/P8290226_reversed.jpg)
+	background-size: cover
+	background-position: center
+
+	display: flex
+	justify-content: flex-end
+
 .leftPane
 	position: relative
 	max-width: 530px
+	height: 624px
 	padding: 5em 5em
 	background-color: rgba(0,0,0,0.5)
 
@@ -73,13 +78,18 @@
 		transition: all 0.2s ease-in-out
 
 .rightPane 
+	position: absolute
+	top: 0
+	right: 0
 	height: 624px
 	width: 682px
 	margin: 0
 	padding: 1.5em 2em
 	// border-radius: 5px
 	list-style: none
-	background-color: rgba(0,0,0,0.8)
+	//background-color: rgba(0,0,0,0.8)
+	background-color: rgb(83, 102, 130)
+	//background-image: linear-gradient(45deg, #000000,#536682)
 	overflow: hidden
 
 	li
@@ -139,9 +149,10 @@
 // Presentation animation
 .leftPane--centered
 	//transform: translateX(37%)
-	transition: all 0.6s ease-in-out
+	transition: all 0.3s ease-in-out
 
 .leftPane--js-psLeft
+	margin-right: 424px
 	transition: all 0.6s ease-in-out
 	background-color: rgba(0,0,0,0.8) !important
 

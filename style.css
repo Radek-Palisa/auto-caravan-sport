@@ -975,7 +975,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50px;
+  height: 5em;
   text-align: right;
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.6);
   background-color: white;
@@ -983,11 +983,14 @@ p {
   letter-spacing: 0.5px;
   font-family: roboto;
   text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
 }
 .nav p {
   margin: 0 0 0 40px;
   font-weight: bold;
   color: #3B6396;
+  font-size: 1.2em;
+  transition: all 0.3s ease-in-out;
 }
 .nav p span {
   font-size: 0.7em;
@@ -1009,19 +1012,28 @@ p {
   letter-spacing: 1px;
 }
 
+.nav--js-narrowed {
+  height: 3em;
+  transition: all 0.3s ease-in-out;
+}
+.nav--js-narrowed p {
+  font-size: 1.1em !important;
+  transition: all 0.3s ease-in-out;
+}
+
 .header {
   position: relative;
-  height: 500px;
-  margin-top: 50px;
+  height: 450px;
+  margin-top: 80px;
   background-size: cover;
 }
 .header--index-bg {
   background-image: url(./img/header/5.jpg);
   background-position: center bottom;
+  background-image: url(./img/header/header-bg_3872w_60q.jpg);
+  background-position: center 35%;
   background-image: url(./img/header/hlavicka_01.jpg);
   background-position: right;
-  /* background-image: url(./img/header/header-bg_3872w_60q.jpg); */
-  /* background-position: center 35%; */
 }
 .header--gallery-bg {
   background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.2), transparent), url(img/gallery-bg_3872w_35q.jpg);
@@ -1039,11 +1051,9 @@ p {
 
 .header__txt {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 50%;
+  bottom: 40px;
+  left: 40px;
   margin: 0 auto;
-  text-align: center;
   font-size: 30px;
   font-style: italic;
   color: white;
@@ -1114,7 +1124,7 @@ p {
 
 .intro {
   margin: 0 auto;
-  padding: 60px 0;
+  padding: 60px 0 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1299,22 +1309,28 @@ p {
 }
 
 .presentation {
-  background-image: url(./img/prezentace/P8290226_reversed.jpg);
-  /* background-image: url(./img/prezentace/P8290226_reversed2.jpg); */
-  background-size: cover;
-  background-position: center;
   background-color: #ECECF7;
 }
 
 .presentation__content {
+  position: relative;
+  overflow: hidden;
+}
+
+.leftPane__container {
+  margin-right: 258px;
+  background-image: url(./img/prezentace/P8290226_reversed2.jpg);
+  background-image: url(./img/prezentace/P8290226_reversed.jpg);
+  background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: flex-end;
-  overflow: hidden;
 }
 
 .leftPane {
   position: relative;
   max-width: 530px;
+  height: 624px;
   padding: 5em 5em;
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -1369,12 +1385,15 @@ p {
 }
 
 .rightPane {
+  position: absolute;
+  top: 0;
+  right: 0;
   height: 624px;
   width: 682px;
   margin: 0;
   padding: 1.5em 2em;
   list-style: none;
-  background-color: rgb(0, 2, 27);
+  background-color: #536682;
   overflow: hidden;
 }
 .rightPane li {
@@ -1430,10 +1449,11 @@ p {
 }
 
 .leftPane--centered {
-  transition: all 0.6s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .leftPane--js-psLeft {
+  margin-right: 424px;
   transition: all 0.6s ease-in-out;
   background-color: rgba(0, 0, 0, 0.8) !important;
 }

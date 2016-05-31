@@ -68,6 +68,13 @@ var aboutOffView = aboutTop + aboutHeight;
 		var wScroll = $(document).scrollTop();
 		var headerPos = 35;
 		var bgPosPres = 150;
+
+		// Nav to shrink
+		if (wScroll > 160) {
+			$('.nav').addClass('nav--js-narrowed');
+		} else {
+			$('.nav').removeClass('nav--js-narrowed');
+		}
 		/*
 		if (wScroll > 0) {
 			headerPos = headerPos-(wScroll/3);
