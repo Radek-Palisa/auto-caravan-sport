@@ -50,7 +50,7 @@ var $logo = $('.logo');
 var $header = $('.header');
 
 // Parallax sliding - Presentation section vars
-var $pres = $('.presentation');
+var $pres = $('.presentation__content');
 var presTop = $pres.offset().top;
 var presInView = presTop - windowHeight;
 var presHeight = $pres.outerHeight();
@@ -67,7 +67,7 @@ var aboutOffView = aboutTop + aboutHeight;
 	$(window).bind('scroll', function(){
 		var wScroll = $(document).scrollTop();
 		var headerPos = 35;
-		var bgPosPres = 150;
+		var bgPosPres = 130;
 
 		// Nav to shrink
 		if (wScroll > 160) {
@@ -82,7 +82,7 @@ var aboutOffView = aboutTop + aboutHeight;
 		$header.css('background-position', 'center '+headerPos+'%');
 		*/
 		if (wScroll >= presInView) {
-			bgPosPres = bgPosPres-((wScroll-presInView)/6);
+			bgPosPres = bgPosPres-((wScroll-presInView)/8);
 		}
 		$pres.css('background-position', 'center '+bgPosPres+'%');
 
@@ -100,12 +100,12 @@ var $leftPane = $('.leftPane');
 $leftPane.addClass('leftPane--centered');
 
 var $rightPane = $('.presentation__content ul');
-$rightPane.addClass('rightPane--js-hidden');
+//$rightPane.addClass('rightPane--js-hidden');
 
 var $presBtn = $('.presBtn__2nd'); 
 
 $('.leftPane__presBtn').on('click', function (){
-	$leftPane.toggleClass('leftPane--centered leftPane--js-psLeft');
+	$('.presentation__overlay').toggleClass('presentation__overlay--js-on presentation__overlay--js-off');
 	$rightPane.toggleClass('rightPane--js-hidden rightPane--js-activated').animate();
 	$presBtn.toggleClass('presBtn--rotated');
 });
