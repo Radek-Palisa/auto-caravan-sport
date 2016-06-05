@@ -3,12 +3,12 @@
 .nav {
 	position: fixed;
 	width: 100%;
+	height: 4em;
 	top: 0;
 	z-index: 10; // for the box shadow to show
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	height: 4em;
 	text-align: right;
 	box-shadow: 0 1px 10px 0 rgba(0,0,0,.2);
 	background-color: rgb(58,54,54);
@@ -31,7 +31,7 @@
 		}
 	}
 	
-	ul {
+	.nav__ul {
 		padding: 0;
 		margin: 0 40px 0 0;
 		
@@ -62,13 +62,11 @@
 	}
 }
 
-.header {
+.jumbotron {
 	position: relative;
 	height: 450px;
 	margin-top: 4em;
 	background-size: cover;
-	
-	$linear-gradient: linear-gradient(transparent, rgba(0,0,0,0.2), transparent);
 
 	&--index-bg {
 		background-image: url(./img/header/5.jpg);
@@ -80,21 +78,10 @@
 		background-image: url(./img/header/hlavicka_01.jpg);
 		background-position: right;
 	}
-	&--gallery-bg {
-		background-image: $linear-gradient, url(img/gallery-bg_3872w_35q.jpg);
-	}
 	
-	&--nabidka-bg {
-		background-image: $linear-gradient, url(img/nabidka-bg-1600w-45q.jpg);
-		background-position: center 24%;
-		
+	&--subpage-bg {
 		background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url(./img/header/1.jpg);
 		background-position: center 77%;
-	}
-	
-	&--predchoziprace-bg {
-		background-image: $linear-gradient, url(img/kontakt-bg_3872w_10q.jpg);
-		background-position: center 24%;
 	}
 }
 
