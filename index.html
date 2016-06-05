@@ -15,89 +15,61 @@
     <script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
   </head>
   <body>
+    <nav role="navigation" class="nav">
+      <p>Auto Caravan Sport <span>s.r.o.</span></p>
+      <ul>
+        <li><a href="#presentation">O co jde</a></li>
+        <li><a href="#work">Má práce</a></li>
+        <li><a href="#about">Jak to začalo</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+    </nav>
     <header id="header" class="header header--index-bg">
       <div class="logo">
         <h1>A.C.S. s.r.o.</h1>
         <p>Auto Caravan Sport</p>
         <div class="underline"><span class="underline__txt">s.r.o.</span></div>
       </div>
-      <!-- nav.nav(role="navigation")
-      ul
-      	li: a(href="index.html") Domů
-      	li: a(href="#work") Nabídka
-      	li: a(href="#about") O firmě
-      	li: a(href="#contact") Kontakt
-      
-      -->
     </header>
     <section class="sub-header">
+      <!-- p.slogan__txt Vůz volného času-->
       <p class="slogan__txt">Vítejte v mém světě dodávkové velikosti</br>...ani malé ani velké.</p>
-      <nav role="navigation" class="sub-header__content"><a href="#presentation" class="sub-header__nav">
-          <div class="nav-item__wrap">
-            <svg viewbox="0 0 100 100" class="nav-item__svg">
-              <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
-            </svg>
-            <h1 class="nav-item__h1--1st">Co je Karavaning</h1>
-          </div></a><a href="#work" class="sub-header__nav">
-          <div class="nav-item__wrap">
-            <svg viewbox="0 0 100 100" class="nav-item__svg">
-              <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
-            </svg>
-            <h1>Má práce	</h1>
-          </div></a><a href="#about" class="sub-header__nav">
-          <div class="nav-item__wrap">
-            <svg viewbox="0 0 100 100" class="nav-item__svg">
-              <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
-            </svg>
-            <h1>O firmě</h1>
-          </div></a><a href="#contact" class="sub-header__nav">
-          <div class="nav-item__wrap">
-            <svg viewbox="0 0 100 100" class="nav-item__svg">
-              <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
-            </svg>
-            <h1>Kontakt</h1>
-          </div></a></nav>
-      <p class="arrow-container"> 
-        <svg viewbox="0 0 100 100" class="sub-header-svg">
-          <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z" class="sub-header__arrow"></path>
-        </svg>
-      </p>
-      <!-- a.arrow-link(href="#presentation")
-      img.arrow(src="img/ctrl.svg", alt="")
-      
-      -->
+      <h3 class="intro__h">Vítejte na stránkách firmy <strong>Auto Caravan Sport s.r.o.</strong></h3>
+      <div class="intro">
+        <div class="intro__img"></div>
+        <p class="intro__txt">Jmenuji se Libor Palisa a má dlouholetá vášeň je hledat řešení, jakým způsobem vybavit vůz dodávkové velikosti. Velikosti, která nabízí prostor k cestování od malých osobních aut a končí před obytnými velikány.</p>
+      </div>
     </section>
     <!---->
     <!-- Jumbotron-->
     <!---->
     <!-- article.jumbotron
     .jumbotron__txt
-    	h3 Ford Custom A.C.S.
-    	p  Lorem ipsum dolor sit amet. Consectetur adipisicing elit. Adipisci minus autem distinctio voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    	h3 Vůz volného času
+    	p  Vozy tohoto typu jsou založené na principu  minimálního vybavení vnitřního prostoru a přesto maximálního možného pohodlí na všech cestách. Mé zájmy by se daly charakterizovat v následujících bodech:
     -->
     <!---->
     <!-- Presentation-->
     <!---->
     <article id="presentation" class="presentation">
-      <h2 class="index-article__h1 article-presentation__h1">Vůz volného času</h2>
+      <!-- h2.index-article__h1.article-presentation__h1 Vůz volného času-->
       <div class="presentation__content">
-        <section class="leftPane">
-          <p class="leftPane__head">Vítejte na stránkách mé firmy</p>
-          <p>Auto Caravan Sport s.r.o.</p>
-          <p class="leftPane__intro">Jmenuji se Libor Palisa a skrze tuto firmu si  naplňuji svou vášeň pro způsob výbavy vozu k volnému cestování.</p>
-          <p class="leftPane__intro leftPane__p--js">Karavaning je zpusob cestovani..Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam architecto totam, accusantium quod maiores incidunt explicabo. Laudantium impedit sapiente minus.</p>
-          <div class="leftPane__img leftPane__img--js-on"></div>
-          <div class="leftPane__presIntro">
-            <p>Vozy tohoto tipu jsou založené na principu vnitřního minimalismu a přesto maximalismu možného pohodlí v navštívené lokalitě.<span class="leftPane__presBtn">
-                <svg viewbox="0 0 100 100" class="presBtn__1st">
-                  <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
-                </svg>
-                <svg viewbox="0 0 100 100" class="presBtn__2nd">
-                  <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
-                </svg></span></p>
+        <div class="presentation__overlay presentation__overlay--js-on"></div>
+        <section class="leftPane__container">
+          <div class="leftPane">
+            <h3 class="leftPane__h">Vůz volného času</h3>
+            <div class="leftPane__presIntro">
+              <p>Vozy tohoto typu jsou založené na principu  minimálního vybavení vnitřního prostoru a přesto maximálního možného pohodlí na všech cestách. Mé zájmy by se daly charakterizovat v následujících bodech: <span class="leftPane__presBtn">
+                  <svg viewbox="0 0 100 100" class="presBtn__1st">
+                    <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
+                  </svg>
+                  <svg viewbox="0 0 100 100" class="presBtn__2nd">
+                    <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
+                  </svg></span></p>
+            </div>
           </div>
         </section>
-        <ul class="rightPane">
+        <ul class="rightPane rightPane--js-hidden">
           <li>
             <div class="img-container img-container-2"></div>
             <!-- h3 Využití-->
@@ -215,10 +187,10 @@
       <nav class="footer__nav footer--left">
         <ul>
           <li><a href="#header">Nahoru</a></li>
-          <li><a href="#presentation">Co je karavaning</a></li>
-          <li><a href="#work">Má práce</a></li>
-          <li><a href="#about">O firmě</a></li>
-          <li><a href="#contact">Kontakt</a></li>
+          <!-- li: a(href="#presentation") Co je karavaning-->
+          <!--li: a(href="#work") Má práce-->
+          <!--li: a(href="#about") O firmě-->
+          <!--li: a(href="#contact") Kontakt-->
         </ul>
       </nav>
       <div class="footer--right"><img src="./img/email-icon.svg" class="home-socicon footer__socicon"><img src="./img/fb-icon.svg" class="home-socicon footer__socicon"></div>

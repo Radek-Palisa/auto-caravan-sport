@@ -45,9 +45,12 @@ var $window = $(window);
 var windowHeight = $window.height();
 var $logo = $('.logo');
 
+// Parallax sliding - header section
+
+var $header = $('.header');
 
 // Parallax sliding - Presentation section vars
-var $pres = $('.presentation');
+var $pres = $('.presentation__content');
 var presTop = $pres.offset().top;
 var presInView = presTop - windowHeight;
 var presHeight = $pres.outerHeight();
@@ -63,18 +66,23 @@ var aboutOffView = aboutTop + aboutHeight;
 
 	$(window).bind('scroll', function(){
 		var wScroll = $(document).scrollTop();
-		var headerPos = -50;
-		var bgPosPres = 150;
-		
-		/*
-		if (offset > 0) {
-			headerPos = Math.min(1000,-50+(offset/3.5));
-		}
-		$logo.css('transform', 'translate(-50%,'+headerPos+'%)');
-		*/
+		var headerPos = 35;
+		var bgPosPres = 130;
 
+		// Nav to shrink
+		if (wScroll > 160) {
+			$('.nav').addClass('nav--js-narrowed');
+		} else {
+			$('.nav').removeClass('nav--js-narrowed');
+		}
+		/*
+		if (wScroll > 0) {
+			headerPos = headerPos-(wScroll/3);
+		}
+		$header.css('background-position', 'center '+headerPos+'%');
+		*/
 		if (wScroll >= presInView) {
-			bgPosPres = bgPosPres-((wScroll-presInView)/6);
+			bgPosPres = bgPosPres-((wScroll-presInView)/8);
 		}
 		$pres.css('background-position', 'center '+bgPosPres+'%');
 
@@ -91,18 +99,13 @@ var aboutOffView = aboutTop + aboutHeight;
 var $leftPane = $('.leftPane');
 $leftPane.addClass('leftPane--centered');
 
-var $welcomeTxt = $('.leftPane__intro');
-var $welcomeImg = $('.leftPane__img');
-
 var $rightPane = $('.presentation__content ul');
-$rightPane.addClass('rightPane--js-hidden');
+//$rightPane.addClass('rightPane--js-hidden');
 
 var $presBtn = $('.presBtn__2nd'); 
 
 $('.leftPane__presBtn').on('click', function (){
-	$leftPane.toggleClass('leftPane--centered leftPane--js-psLeft');
-	$welcomeTxt.toggleClass('leftPane__p--js');
-	$welcomeImg.toggleClass('leftPane__img--js-on leftPane__img--js-off');
-	$rightPane.toggleClass('rightPane--js-hidden rightPane--js-activated');
+	$('.presentation__overlay').toggleClass('presentation__overlay--js-on presentation__overlay--js-off');
+	$rightPane.toggleClass('rightPane--js-hidden rightPane--js-activated').animate();
 	$presBtn.toggleClass('presBtn--rotated');
 });
