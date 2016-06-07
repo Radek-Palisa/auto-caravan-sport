@@ -8,7 +8,7 @@
 	margin: 0 auto;
 }
 
-.gallery {
+.galerie {
 	max-width: 65em;
 	background-color: #49597A;
 	margin: 0 auto 2em;
@@ -16,7 +16,7 @@
 	border-radius: 5px;
 }
 
-.gallery header {
+.galerie header {
 	display: flex;
 	// justify-content: space-around;
 	align-items: center;
@@ -62,19 +62,19 @@
 	}
 }
 
-.izolace-vozu h2 {
+.galerie-izolace h2 {
 	background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('./img/gallery-thumbs/izolace-vozu.jpg');
 }
-.sestava-sedadel h2 {
+.galerie-sedadla h2 {
 	background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('./img/gallery-thumbs/sestava-sedadel.jpg');
 }
-.toaletni-kout h2 {
+.galerie-toaleta h2 {
 	background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('./img/gallery-thumbs/toaletni-kout.jpg');
 }
-.kuchynska-skrin h2 {
+.galerie-kuchyn h2 {
 	background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('./img/gallery-thumbs/kuchynsky-blok.jpg');
 }
-.postel h2 {
+.galerie-postel h2 {
 	background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('./img/gallery-thumbs/postel.jpg');
 }
 
@@ -94,46 +94,19 @@
 }
 
 
-.gallery section {
+.galerie section {
 	display: none;
 	padding: 20px;
 }
 
-
-$thumbnail-width: 189px;
-$thumbnail-height: 126.5px;
-$thumbnail-url: 
-	'img/gallery-izolace.jpg',
-	'img/gallery-izolace.jpg',
-	'img/gallery-izolace.jpg',
-	'img/gallery-izolace.jpg',
-	'img/gallery-izolace.jpg';
-
-.izolace-vozu .gallery__thumbnail {
-	background-image: url('#{nth($thumbnail-url, 1)}');
-}
-.sestava-sedadel .gallery__thumbnail {
-	background-image: url('#{nth($thumbnail-url, 2)}');
-}
-.toaletni-kout .gallery__thumbnail {
-	background-image: url('#{nth($thumbnail-url, 3)}');
-}
-.kuchynska-skrin .gallery__thumbnail {
-	background-image: url('#{nth($thumbnail-url, 4)}');
-}
-.postel .gallery__thumbnail {
-	background-image: url('#{nth($thumbnail-url, 5)}');
-}
-
 .gallery__thumbnail {
 	display: inline-block;
-	width: $thumbnail-width;
-	height: $thumbnail-height;
+	width: 182px;
+	height: 142px;
 	border: 1px solid rgba(255,255,255,0.7);
 	background-color: grey;
 	margin: 5px;
 	transition: 0.3s;
-	background-size: auto $thumbnail-height;
 
 	&:hover {
 		transition: 0.3s;
@@ -141,8 +114,3 @@ $thumbnail-url:
 	}
 }
 
-@for $i from 1 through 31  {
-	.gallery__thumbnail:nth-of-type(#{$i}) {
-		background-position: -($thumbnail-width) * $i + $thumbnail-width; 
-	}
-}

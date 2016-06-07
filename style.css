@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
@@ -905,6 +906,231 @@ th {
   background: rgba(0, 0, 0, 0.8);
 }
 
+/**
+ * Featherlight ÔÇô ultra slim jQuery lightbox
+ * Version 1.4.0 - http://noelboss.github.io/featherlight/
+ *
+ * Copyright 2016, No├źl Raoul Bossart (http://www.noelboss.com)
+ * MIT Licensed.
+**/
+@media all {
+  .featherlight {
+    display: none;
+    /* dimensions: spanning the background from edge to edge */
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2147483647;
+    /* z-index needs to be >= elements on the site. */
+    /* position: centering content */
+    text-align: center;
+    /* insures that the ::before pseudo element doesn't force wrap with fixed width content; */
+    white-space: nowrap;
+    /* styling */
+    cursor: pointer;
+    background: #333;
+    /* IE8 "hack" for nested featherlights */
+    background: transparent;
+  }
+
+  /* support for nested featherlights. Does not work in IE8 (use JS to fix) */
+  .featherlight:last-of-type {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .featherlight:before {
+    /* position: trick to center content vertically */
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+  }
+
+  .featherlight .featherlight-content {
+    /* make content container for positioned elements (close button) */
+    position: relative;
+    /* position: centering vertical and horizontal */
+    text-align: left;
+    vertical-align: middle;
+    display: inline-block;
+    /* dimensions: cut off images */
+    overflow: auto;
+    border: 0;
+    padding: 0;
+    /* dimensions: handling large content */
+    margin-left: 5%;
+    margin-right: 5%;
+    max-height: 95%;
+    /* styling */
+    background: #fff;
+    cursor: auto;
+    /* reset white-space wrapping */
+    white-space: normal;
+  }
+
+  /* contains the content */
+  .featherlight .featherlight-inner {
+    /* make sure its visible */
+    display: block;
+  }
+
+  .featherlight .featherlight-close-icon {
+    /* position: centering vertical and horizontal */
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    /* dimensions: 25px x 25px */
+    line-height: 25px;
+    width: 25px;
+    /* styling */
+    cursor: pointer;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: #fff;
+    /* Set the background in case it overlaps the content */
+    background: rgba(255, 255, 255, 0.3);
+    color: #000;
+  }
+
+  .featherlight .featherlight-image {
+    /* styling */
+    width: 100%;
+    border: 20px solid #fff;
+    max-width: 100%;
+  }
+
+  .featherlight-iframe .featherlight-content {
+    /* removed the border for image croping since iframe is edge to edge */
+    border-bottom: 0;
+    padding: 0;
+  }
+
+  .featherlight iframe {
+    /* styling */
+    border: none;
+  }
+}
+/* handling phones and small screens */
+@media only screen and (max-width: 1024px) {
+  .featherlight .featherlight-content {
+    /* dimensions: maximize lightbox with for small screens */
+    margin-left: 10px;
+    margin-right: 10px;
+    max-height: 98%;
+  }
+
+  .featherlight .featherlight-image {
+    border: 10px solid #fff;
+  }
+}
+/**
+ * Featherlight Gallery ÔÇô an extension for the ultra slim jQuery lightbox
+ * Version 1.4.0 - http://noelboss.github.io/featherlight/
+ *
+ * Copyright 2016, No├źl Raoul Bossart (http://www.noelboss.com)
+ * MIT Licensed.
+**/
+@media all {
+  .featherlight-next,
+  .featherlight-previous {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    bottom: 0;
+    left: 80%;
+    cursor: pointer;
+    /* preventing text selection */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* IE9 hack, otherwise navigation doesn't appear */
+    background: transparent;
+  }
+
+  .featherlight-previous {
+    left: 20px;
+    right: 80%;
+  }
+
+  .featherlight-next:hover,
+  .featherlight-previous:hover {
+    background: rgba(255, 255, 255, 0.25);
+  }
+
+  .featherlight-next span,
+  .featherlight-previous span {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    width: 82%;
+    /* center horizontally */
+    text-align: center;
+    font-size: 80px;
+    line-height: 80px;
+    /* center vertically */
+    margin-top: -40px;
+    text-shadow: 0px 0px 5px #fff;
+    color: #fff;
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  .featherlight-next span {
+    right: 5%;
+    left: auto;
+  }
+
+  .featherlight-next:hover span,
+  .featherlight-previous:hover span {
+    display: inline-block;
+  }
+
+  /* Hide navigation while loading */
+  .featherlight-loading .featherlight-previous, .featherlight-loading .featherlight-next {
+    display: none;
+  }
+}
+/* Always display arrows on touch devices */
+@media only screen and (max-device-width: 1024px) {
+  .featherlight-next:hover,
+  .featherlight-previous:hover {
+    background: none;
+  }
+
+  .featherlight-next span,
+  .featherlight-previous span {
+    display: block;
+  }
+}
+/* handling phones and small screens */
+@media only screen and (max-width: 1024px) {
+  .featherlight-next,
+  .featherlight-previous {
+    top: 10px;
+    right: 10px;
+    left: 85%;
+  }
+
+  .featherlight-previous {
+    left: 10px;
+    right: 85%;
+  }
+
+  .featherlight-next span,
+  .featherlight-previous span {
+    margin-top: -30px;
+    font-size: 40px;
+  }
+}
 html {
   box-sizing: border-box;
 }
@@ -968,7 +1194,7 @@ p {
 
 /* Header partial */
 .nav {
-  position: fixed;
+  position: static;
   width: 100%;
   height: 4em;
   top: 0;
@@ -984,6 +1210,9 @@ p {
   font-family: roboto;
   text-transform: uppercase;
   transition: all 0.3s ease-in-out;
+}
+.nav--fixed {
+  position: fixed;
 }
 .nav p {
   margin: 0 0 0 40px;
@@ -1025,7 +1254,6 @@ p {
 .jumbotron {
   position: relative;
   height: 450px;
-  margin-top: 4em;
   background-size: cover;
 }
 .jumbotron--index-bg {
@@ -1035,6 +1263,7 @@ p {
   background-position: center 35%;
   background-image: url(./img/header/hlavicka_01.jpg);
   background-position: right;
+  margin-top: 4em;
 }
 .jumbotron--subpage-bg {
   background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)), url(./img/header/1.jpg);
@@ -1129,8 +1358,8 @@ p {
 .intro {
   margin: 0 auto;
   padding: 0 0 4.5em;
-  /* display: flex; */
-  /* justify-content: center; */
+  display: flex;
+  justify-content: center;
   background-color: #363636;
 }
 
@@ -1146,7 +1375,7 @@ p {
 }
 
 .intro__txt {
-  max-width: 590px;
+  max-width: 400px;
   margin: 0;
   line-height: 1.5;
   font-size: 18px;
@@ -1245,7 +1474,7 @@ p {
   text-align: center;
 }
 .leftPane p {
-  width: 370px;
+  width: 400px;
   margin: 0 auto;
   line-height: 1.8;
   font-size: 1.1em;
@@ -1828,7 +2057,7 @@ p {
   margin: 0 auto;
 }
 
-.gallery {
+.galerie {
   max-width: 65em;
   background-color: #49597A;
   margin: 0 auto 2em;
@@ -1836,18 +2065,18 @@ p {
   border-radius: 5px;
 }
 
-.gallery header {
+.galerie header {
   display: flex;
   align-items: center;
 }
-.gallery header .header__h2-container {
+.galerie header .header__h2-container {
   width: 270px;
   height: 180px;
   margin: 0;
   padding: 4px;
   border-radius: 4px;
 }
-.gallery header h2 {
+.galerie header h2 {
   width: 100%;
   height: 100%;
   margin: 0;
@@ -1857,7 +2086,7 @@ p {
   background-color: #2E384C;
   background-size: cover;
 }
-.gallery header p {
+.galerie header p {
   position: relative;
   max-width: 38em;
   max-height: 150px;
@@ -1865,7 +2094,7 @@ p {
   overflow: hidden;
   color: white;
 }
-.gallery header p:after {
+.galerie header p:after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -1875,23 +2104,23 @@ p {
   background-image: linear-gradient(rgba(73, 89, 122, 0), #49597a);
 }
 
-.izolace-vozu h2 {
+.galerie-izolace h2 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./img/gallery-thumbs/izolace-vozu.jpg");
 }
 
-.sestava-sedadel h2 {
+.galerie-sedadla h2 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./img/gallery-thumbs/sestava-sedadel.jpg");
 }
 
-.toaletni-kout h2 {
+.galerie-toaleta h2 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./img/gallery-thumbs/toaletni-kout.jpg");
 }
 
-.kuchynska-skrin h2 {
+.galerie-kuchyn h2 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./img/gallery-thumbs/kuchynsky-blok.jpg");
 }
 
-.postel h2 {
+.galerie-postel h2 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./img/gallery-thumbs/postel.jpg");
 }
 
@@ -1908,168 +2137,23 @@ p {
   fill: #fff;
 }
 
-.gallery section {
+.galerie section {
   display: none;
   padding: 20px;
 }
 
-.izolace-vozu .gallery__thumbnail {
-  background-image: url("img/gallery-izolace.jpg");
-}
-
-.sestava-sedadel .gallery__thumbnail {
-  background-image: url("img/gallery-izolace.jpg");
-}
-
-.toaletni-kout .gallery__thumbnail {
-  background-image: url("img/gallery-izolace.jpg");
-}
-
-.kuchynska-skrin .gallery__thumbnail {
-  background-image: url("img/gallery-izolace.jpg");
-}
-
-.postel .gallery__thumbnail {
-  background-image: url("img/gallery-izolace.jpg");
-}
-
 .gallery__thumbnail {
   display: inline-block;
-  width: 189px;
-  height: 126.5px;
+  width: 182px;
+  height: 142px;
   border: 1px solid rgba(255, 255, 255, 0.7);
   background-color: grey;
   margin: 5px;
   transition: 0.3s;
-  background-size: auto 126.5px;
 }
 .gallery__thumbnail:hover {
   transition: 0.3s;
   -webkit-filter: brightness(130%);
-}
-
-.gallery__thumbnail:nth-of-type(1) {
-  background-position: 0px;
-}
-
-.gallery__thumbnail:nth-of-type(2) {
-  background-position: -189px;
-}
-
-.gallery__thumbnail:nth-of-type(3) {
-  background-position: -378px;
-}
-
-.gallery__thumbnail:nth-of-type(4) {
-  background-position: -567px;
-}
-
-.gallery__thumbnail:nth-of-type(5) {
-  background-position: -756px;
-}
-
-.gallery__thumbnail:nth-of-type(6) {
-  background-position: -945px;
-}
-
-.gallery__thumbnail:nth-of-type(7) {
-  background-position: -1134px;
-}
-
-.gallery__thumbnail:nth-of-type(8) {
-  background-position: -1323px;
-}
-
-.gallery__thumbnail:nth-of-type(9) {
-  background-position: -1512px;
-}
-
-.gallery__thumbnail:nth-of-type(10) {
-  background-position: -1701px;
-}
-
-.gallery__thumbnail:nth-of-type(11) {
-  background-position: -1890px;
-}
-
-.gallery__thumbnail:nth-of-type(12) {
-  background-position: -2079px;
-}
-
-.gallery__thumbnail:nth-of-type(13) {
-  background-position: -2268px;
-}
-
-.gallery__thumbnail:nth-of-type(14) {
-  background-position: -2457px;
-}
-
-.gallery__thumbnail:nth-of-type(15) {
-  background-position: -2646px;
-}
-
-.gallery__thumbnail:nth-of-type(16) {
-  background-position: -2835px;
-}
-
-.gallery__thumbnail:nth-of-type(17) {
-  background-position: -3024px;
-}
-
-.gallery__thumbnail:nth-of-type(18) {
-  background-position: -3213px;
-}
-
-.gallery__thumbnail:nth-of-type(19) {
-  background-position: -3402px;
-}
-
-.gallery__thumbnail:nth-of-type(20) {
-  background-position: -3591px;
-}
-
-.gallery__thumbnail:nth-of-type(21) {
-  background-position: -3780px;
-}
-
-.gallery__thumbnail:nth-of-type(22) {
-  background-position: -3969px;
-}
-
-.gallery__thumbnail:nth-of-type(23) {
-  background-position: -4158px;
-}
-
-.gallery__thumbnail:nth-of-type(24) {
-  background-position: -4347px;
-}
-
-.gallery__thumbnail:nth-of-type(25) {
-  background-position: -4536px;
-}
-
-.gallery__thumbnail:nth-of-type(26) {
-  background-position: -4725px;
-}
-
-.gallery__thumbnail:nth-of-type(27) {
-  background-position: -4914px;
-}
-
-.gallery__thumbnail:nth-of-type(28) {
-  background-position: -5103px;
-}
-
-.gallery__thumbnail:nth-of-type(29) {
-  background-position: -5292px;
-}
-
-.gallery__thumbnail:nth-of-type(30) {
-  background-position: -5481px;
-}
-
-.gallery__thumbnail:nth-of-type(31) {
-  background-position: -5670px;
 }
 
 /*# sourceMappingURL=style.css.map */

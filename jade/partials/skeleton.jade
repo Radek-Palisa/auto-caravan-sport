@@ -13,6 +13,12 @@ html
 		script(type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js")
 		
 	body
+		block navigation
+			nav.nav(role="navigation")
+				p Auto Caravan Sport #[span s.r.o.]
+				ul.nav__ul
+					li: a(href="index.html") Zpět na domovskou stránku
+
 		block body
 		
 		block footer
@@ -20,10 +26,9 @@ html
 				p.footer__copyright.footer--middle Auto Caravan Sport s.r.o. 2016
 				nav.footer__nav.footer--left
 					ul
+						li: a(href="#") Nahoru
 						li: a(href="index.html") Domů
-						li: a(href="index.html#work") Má práce
-						li: a(href="index.html#about") O firmě
-						li: a(href="index.html#contact") Kontakt
+
 				.footer--right
 					img.home-socicon.footer__socicon(src="./img/email-icon.svg")
 					img.home-socicon.footer__socicon(src="./img/fb-icon.svg")

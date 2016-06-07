@@ -1,14 +1,15 @@
 extends partials/skeleton.jade
 
-block body
-
-	nav.nav(role="navigation")
+block navigation
+	nav.nav.nav--fixed(role="navigation")
 		p Auto Caravan Sport #[span s.r.o.]
 		ul.nav__ul
-				li: a(href="#presentation") O co jde
-				li: a(href="#work") Má práce
-				li: a(href="#about") Jak to začalo
-				li: a(href="#contact") Kontakt
+			li: a(href="#presentation") O co jde
+			li: a(href="#work") Má práce
+			li: a(href="#about") Jak to začalo
+			li: a(href="#contact") Kontakt	
+
+block body
 
 	header.jumbotron.jumbotron--index-bg#header
 		.logo
@@ -18,21 +19,12 @@ block body
 				span.underline__txt s.r.o.
 
 	section.sub-header
-		// p.slogan__txt Vůz volného času
 		p.slogan__txt Vítejte v mém světě dodávkové velikosti</br>...ani malé ani velké.
 		h3.intro__h Vítejte na stránkách firmy <strong>Auto Caravan Sport s.r.o.</strong>
 		.intro
 			.intro__img
-			p.intro__txt Jmenuji se Libor Palisa a má dlouholetá vášeň je hledat řešení, jakým způsobem vybavit vůz dodávkové velikosti. Velikosti, která nabízí prostor k cestování od malých osobních aut a končí před obytnými velikány.
+			p.intro__txt Jmenuji se Libor Palisa a mojí dlouholetou vášní je hledat způsoby, jakými by bylo možno vybavit obytný vůz dodávkové velikost. Vybral jsem si velikost mezi osobním autem a obytným velikánem.
 
-
-	//
-	// Mezisekce filler
-	//
-	// article.mezisekce
-		.mezisekce__txt
-			h3 Vůz volného času
-			p  Vozy tohoto typu jsou založené na principu  minimálního vybavení vnitřního prostoru a přesto maximálního možného pohodlí na všech cestách. Mé zájmy by se daly charakterizovat v následujících bodech:
 	//
 	// Presentation
 	//
@@ -44,28 +36,26 @@ block body
 				.leftPane
 					h3.leftPane__h Vůz volného času
 					.leftPane__presIntro
-						p Vozy tohoto typu jsou založené na principu  minimálního vybavení vnitřního prostoru a přesto maximálního možného pohodlí na všech cestách. Mé zájmy by se daly charakterizovat v následujících bodech: #[span.leftPane__presBtn #[svg.presBtn__1st(viewbox="0 0 100 100") #[path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")]]#[svg.presBtn__2nd(viewbox="0 0 100 100")#[path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")]]]
+						p Vozy tohoto typu jsou založené na dokonalém využití vnitřního prostoru pro maximální možné pohodlí na cestách. Mé zájmy by se daly charakterizovat v následujících oblastech: #[span.leftPane__presBtn #[svg.presBtn__1st(viewbox="0 0 100 100") #[path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")]]#[svg.presBtn__2nd(viewbox="0 0 100 100")#[path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")]]]
 
 			ul.rightPane.rightPane--js-hidden
 				li
 					.img-container.img-container-2
-					// h3 Využití
-					p #[span Využití] Auta jsou ideální pro dálniční cestování, polykání kilometrů, neustálé přesuny. Poskytují určitý komfort potřeb k pobytu  a přesto mohou sloužit  v každodenním provozu,  jako osobní vozy.
+					p #[span Využití] Auta jsou ideální pro polykání kilometrů na dálnicích. Dokáží poskytnout určitý komfort potřeb k pobytu a přesto mohou sloužit v každodenním provozu jako osobní vozy.
 
 				li
 					.img-container.img-container-3
 					//h3 Dostupnost
-					p #[span Dostupnost] S vozem se dostanete i na těžko přístupná místa jako přeplněná centra velkoměst, parkoviště v historických částech a to samé v přírodě. Přece jenom je dodávka méně,  než velký obytný vůz.
+					p #[span Dostupnost] S vozem se dostanete i na těžko přístupná místa jako přeplněná centra velkoměst, parkoviště v historických částech a to samé při toulkách v přírodě. Přece jen je dodávka méně nápadná než velký obytný vůz.
 				
 				li
 					.img-container.img-container-5
 					//h3 Komfort
-					p #[span Komfort] Ať už cestujete kamkoliv, vozíte si sebou pohodlí domova. V autě můžete spát, vařit, sprchovat se a samozřejmostí je vestavěný chemický záchod a možnost připojit se na elektřinu.
-
+					p #[span Komfort] V autě můžete spát, vařit, sprchovat se a samozřejmostí je i chemický záchod. Technické možnosti vnitřního vybavení jsou veliké. Ať už cestujete kamkoliv, vozíte si sebou pohodlí domova.
 				li
 					.img-container.img-container-4
 					//h3 Kvalita
-					p #[span Kvalita] U všech přestaveb jsou použity certifikované komponenty od firmy REIMO a splňují bezpečnostní a technické parametry. Německá firma REIMO se  zabývá  prodejem právě do těchto vozů.		
+					p #[span Kvalita] U přestaveb jsou použity komponenty od předních výrobců zabývajících se karavaningem. Německá firma REIMO se  zabývá speciálně prodejem do těchto typů vozidel. Nabízí i celé vozy, nebo jejich kompletní výbavu.		
 
 	//
 	// Work
@@ -147,10 +137,7 @@ block footer
 		nav.footer__nav.footer--left
 			ul
 				li: a(href="#header") Nahoru
-				// li: a(href="#presentation") Co je karavaning
-				//li: a(href="#work") Má práce
-				//li: a(href="#about") O firmě
-				//li: a(href="#contact") Kontakt
+
 		.footer--right
 			img.home-socicon.footer__socicon(src="./img/email-icon.svg")
 			img.home-socicon.footer__socicon(src="./img/fb-icon.svg")

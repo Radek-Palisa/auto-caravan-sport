@@ -25,7 +25,7 @@ block body
 		
 		section.galerie-container
 			#galerie__tabs
-				section.gallery.izolace-vozu
+				section.galerie.galerie-izolace
 					header
 						.header__h2-container
 							h2 Izolace vozu
@@ -33,11 +33,16 @@ block body
 						.btn-galerie-show
 							svg(viewbox="0 0 100 100")
 								path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
-					section
-						- for (var x = 0; x < 31; x++)
-							a.gallery__thumbnail(href="#")
+					section.izolace-vozu__thumbs
+						- for (var x = 1; x < 10; x++)
+							a.galerie-izolace__item.gallery__thumbnail(href="./img/galerie/izolace-vozu_0#{x}.jpg",data-featherlight="image")
+								img(src="./img/galerie-thumbs/izolace-vozu_0#{x}.jpg", alt="")
 
-				section.gallery.sestava-sedadel
+						- for (var x = 10; x < 31; x++)
+							a.galerie-izolace__item.gallery__thumbnail(href="./img/galerie/izolace-vozu_#{x}.jpg",data-featherlight="image")
+								img(src="./img/galerie-thumbs/izolace-vozu_#{x}.jpg", alt="")
+
+				section.galerie.galerie-sedadla
 					header
 						.header__h2-container
 							h2 Sestava sedadel
@@ -45,11 +50,16 @@ block body
 						.btn-galerie-show
 							svg(viewbox="0 0 100 100")
 								path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
-					section
-						- for (var x = 0; x < 28; x++)
-							a.gallery__thumbnail(href="#")
+					section.sestava-sedadel__thumbs
+						- for (var x = 1; x < 10; x++)
+							a.galerie-sedadla__item.gallery.gallery__thumbnail(href="./img/galerie/sestava-sedadel_0#{x}.jpg",data-featherlight="image")
+								img(src="./img/galerie-thumbs/sestava-sedadel_0#{x}.jpg", alt="")
 
-				section.gallery.toaletni-kout
+						- for (var x = 10; x < 12; x++)
+							a.galerie-sedadla__item.gallery.gallery__thumbnail(href="./img/galerie/sestava-sedadel_#{x}.jpg",data-featherlight="image")
+								img(src="./img/galerie-thumbs/sestava-sedadel_#{x}.jpg", alt="")
+
+				section.galerie.galerie-toaleta
 					header
 						.header__h2-container
 							h2 Toaletní kout
@@ -58,10 +68,15 @@ block body
 							svg(viewbox="0 0 100 100")
 								path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
 					section
-						- for (var x = 0; x < 28; x++)
-							a.gallery__thumbnail(href="#")
+						- for (var x = 1; x < 10; x++)
+							a.galerie-toaleta__item.gallery__thumbnail(href="./img/galerie/toaletni-kout_0#{x}.jpg",data-featherlight="image")
+								img(src="./img/galerie-thumbs/toaletni-kout_0#{x}.jpg", alt="")
 
-				section.gallery.kuchynska-skrin
+						- for (var x = 10; x < 31; x++)
+							a.galerie-toaleta__item.gallery__thumbnail(href="./img/galerie/toaletni-kout_#{x}.jpg",data-featherlight="image")
+								img(src="./img/galerie-thumbs/toaletni-kout_#{x}.jpg", alt="")
+
+				section.galerie.galerie-kuchyn
 					header
 						.header__h2-container
 							h2 Kuchyňská skříň
@@ -70,10 +85,15 @@ block body
 							svg(viewbox="0 0 100 100")
 								path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
 					section
-						- for (var x = 0; x < 28; x++)
-							a.gallery__thumbnail(href="#")
+						- for (var x = 1; x < 10; x++)
+							a.galerie-kuchyn__item.gallery__thumbnail(href="./img/galerie/kuchynsky-blok_0#{x}.jpg",data-featherlight="image")
+								img(src="./img/galerie-thumbs/kuchynsky-blok_0#{x}.jpg", alt="")
 
-				section.gallery.postel
+						- for (var x = 10; x < 31; x++)
+							a.galerie-kuchyn__item.gallery__thumbnail(href="./img/galerie/kuchynsky-blok_#{x}.jpg",data-featherlight="image")
+								img(src="./img/galerie-thumbs/kuchynsky-blok_#{x}.jpg", alt="")
+
+				section.galerie.galerie-postel
 					header
 						.header__h2-container
 							h2 Postel
@@ -82,8 +102,13 @@ block body
 							svg(viewbox="0 0 100 100")
 								path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
 					section
-						- for (var x = 0; x < 28; x++)
-							a.gallery__thumbnail(href="#")
+						- for (var x = 1; x < 10; x++)
+							a.galerie-postel__item.gallery__thumbnail(href="./img/galerie/postel_0#{x}.jpg",data-featherlight="image")
+								img(src="./img/galerie-thumbs/postel_0#{x}.jpg", alt="")
+
+						- for (var x = 10; x < 28; x++)
+							a.galerie-postel__item.gallery__thumbnail(href="./img/galerie/postel_#{x}.jpg",data-featherlight="image")
+								img(src="./img/galerie-thumbs/postel_#{x}.jpg", alt="")
 
 		nav.secondary-nav
 			p Kam dále?<br>Podívejte se na mé ostatní práce:
@@ -96,3 +121,11 @@ block body
 				include partials/sub-nav-1996.jade
 
 block local-scripts
+	script(src="js/featherlight.gallery.js")
+	script.
+		$('.galerie-izolace__item').featherlightGallery();
+		$('.galerie-sedadla__item').featherlightGallery();
+		$('.galerie-toaleta__item').featherlightGallery();
+		$('.galerie-kuchyn__item').featherlightGallery();
+		$('.galerie-postel__item').featherlightGallery();
+
