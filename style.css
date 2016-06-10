@@ -1713,25 +1713,42 @@ p {
 }
 
 .about-txt {
-  display: flex;
-  justify-content: flex-end;
-  line-height: 1.4;
+  width: 50%;
+  margin-left: 50%;
+  line-height: 1.5;
   color: #EFEFEF;
 }
 .about-txt__wrap {
-  max-width: 824px;
-  margin-right: 5%;
-  padding: 2em;
+  margin: 0 auto;
+  max-width: 516px;
+  padding: 0 4em 3em;
   background-color: rgba(0, 0, 0, 0.3);
 }
 .about-txt__wrap h2 {
+  margin: 0;
+  padding: 2em 0;
   text-align: center;
   font-size: 1em;
 }
-.about-txt__wrap p {
-  display: table-cell;
-  width: 380px;
-  padding: 1em;
+.about-txt__wrap__inner {
+  height: 286px;
+  padding-right: 25px;
+  overflow-y: scroll;
+}
+.about-txt__wrap__inner p {
+  margin: 0;
+}
+.about-txt__wrap__inner::-webkit-scrollbar {
+  width: 8px;
+}
+.about-txt__wrap__inner::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+.about-txt__wrap__inner::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .sub-about {
