@@ -15,74 +15,70 @@
     <script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
   </head>
   <body>
-    <nav role="navigation" class="nav nav--fixed">
-      <p>Auto Caravan Sport <span>s.r.o.</span></p>
-      <ul class="nav__ul">
+    <header class="site-header site-header--fixed"><a href="#" class="logo">Auto Caravan Sport <span>s.r.o.</span></a>
+      <div class="menu-icon">&#9776;</div>
+      <ul role="navigation" class="nav__ul">
         <li><a href="#presentation">O co jde</a></li>
         <li><a href="#work">Má práce</a></li>
         <li><a href="#about">Jak to začalo</a></li>
         <li><a href="#contact">Kontakt	</a></li>
       </ul>
-    </nav>
-    <header id="header" class="jumbotron jumbotron--index-bg">
-      <div class="logo">
-        <h1>A.C.S. s.r.o.</h1>
-        <p>Auto Caravan Sport</p>
-        <div class="underline"><span class="underline__txt">s.r.o.</span></div>
-      </div>
     </header>
-    <section class="sub-header">
-      <p class="slogan__txt">Vítejte v mém světě dodávkové velikosti</br>...ani malé ani velké.</p>
-      <h3 class="intro__h">Vítejte na stránkách firmy <strong>Auto Caravan Sport s.r.o.</strong></h3>
-      <div class="intro">
-        <div class="intro__img"></div>
-        <p class="intro__txt">Jmenuji se Libor Palisa a mojí dlouholetou vášní je hledat způsoby, jakými by bylo možno vybavit obytný vůz dodávkové velikost. Vybral jsem si velikost mezi osobním autem a obytným velikánem.</p>
-      </div>
+    <div id="header" class="jumbotron jumbotron--index-bg"></div>
+    <p class="slogan">Vítejte v mém světě dodávkové velikosti</br>...ani malé ani velké.</p>
+    <section class="site-intro">
+      <h3 class="site-intro__h">Vítejte na stránkách firmy <strong>Auto Caravan Sport s.r.o.</strong></h3>
+      <div class="site-intro__img"></div>
+      <p class="site-intro__txt">Jmenuji se Libor Palisa a mojí dlouholetou vášní je hledat způsoby, jakými by bylo možno vybavit obytný vůz dodávkové velikost. Vybral jsem si velikost mezi osobním autem a obytným velikánem.</p>
     </section>
     <!---->
     <!-- Presentation-->
     <!---->
-    <article id="presentation" class="presentation">
-      <!-- h2.index-article__h1.article-presentation__h1 Vůz volného času-->
-      <div class="presentation__content">
-        <div class="presentation__overlay presentation__overlay--js-on"></div>
-        <section class="leftPane__container">
-          <div class="leftPane">
-            <h3 class="leftPane__h">Vůz volného času</h3>
-            <div class="leftPane__presIntro">
-              <p>Vozy tohoto typu jsou založené na dokonalém využití vnitřního prostoru pro maximální možné pohodlí na cestách. Mé zájmy by se daly charakterizovat v následujících oblastech: <span class="leftPane__presBtn">
-                  <svg viewbox="0 0 100 100" class="presBtn__1st">
+    <div class="presentation-outer">
+      <article id="presentation" class="presentation">
+        <div class="presentation__content">
+          <div class="presentation__overlay presentation__overlay--js-on"></div>
+          <section class="leftPane__container">
+            <div class="leftPane">
+              <h3 class="leftPane__h">Vůz pro volný čas</h3>
+              <div class="leftPane__presIntro">
+                <p class="leftPane__presIntro__p">Vozy tohoto typu jsou založené na dokonalém využití vnitřního prostoru pro maximální možné pohodlí na cestách. Mé zájmy by se daly charakterizovat v následujících oblastech: </p>
+                <p class="leftPane__presIntro__p2">Využití  /  Dostupnost  /  Komfort  /  Kvalita</p>
+                <button class="leftPane__presBtn">
+                  <div class="circle">
+                    <p>Více</p>
+                  </div>
+                  <svg viewbox="0 0 100 100" class="presBtn__1st"> 
                     <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
                   </svg>
                   <svg viewbox="0 0 100 100" class="presBtn__2nd">
                     <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
-                  </svg></span></p>
+                  </svg>
+                </button>
+              </div>
             </div>
-          </div>
-        </section>
-        <ul class="rightPane rightPane--js-hidden">
-          <li>
-            <div class="img-container img-container-2"></div>
-            <p><span>Využití</span> Auta jsou ideální pro polykání kilometrů na dálnicích. Dokáží poskytnout určitý komfort potřeb k pobytu a přesto mohou sloužit v každodenním provozu jako osobní vozy.</p>
-          </li>
-          <li>
-            <div class="img-container img-container-3"></div>
-            <!--h3 Dostupnost-->
-            <p><span>Dostupnost</span> S vozem se dostanete i na těžko přístupná místa jako přeplněná centra velkoměst, parkoviště v historických částech a to samé při toulkách v přírodě. Přece jen je dodávka méně nápadná než velký obytný vůz.</p>
-          </li>
-          <li>
-            <div class="img-container img-container-5"></div>
-            <!--h3 Komfort-->
-            <p><span>Komfort</span> V autě můžete spát, vařit, sprchovat se a samozřejmostí je i chemický záchod. Technické možnosti vnitřního vybavení jsou veliké. Ať už cestujete kamkoliv, vozíte si sebou pohodlí domova.</p>
-          </li>
-          <li>
-            <div class="img-container img-container-4"></div>
-            <!--h3 Kvalita-->
-            <p><span>Kvalita</span> U přestaveb jsou použity komponenty od předních výrobců zabývajících se karavaningem. Německá firma REIMO se  zabývá speciálně prodejem do těchto typů vozidel. Nabízí i celé vozy, nebo jejich kompletní výbavu.		</p>
-          </li>
-        </ul>
-      </div>
-    </article>
+          </section>
+          <ul class="rightPane rightPane--js-hidden">
+            <li>
+              <div class="img-container img-container-2"></div>
+              <p><span>Využití</span> Auta jsou ideální pro polykání kilometrů na dálnicích. Dokáží poskytnout určitý komfort potřeb k pobytu a přesto mohou sloužit v každodenním provozu jako osobní vozy.</p>
+            </li>
+            <li>
+              <div class="img-container img-container-3"></div>
+              <p><span>Dostupnost</span> S vozem se dostanete i na těžko přístupná místa jako přeplněná centra velkoměst, parkoviště v historických částech a to samé při toulkách v přírodě. Přece jen je dodávka méně nápadná než velký obytný vůz.</p>
+            </li>
+            <li>
+              <div class="img-container img-container-5"></div>
+              <p><span>Komfort</span> V autě můžete spát, vařit, sprchovat se a samozřejmostí je i chemický záchod. Technické možnosti vnitřního vybavení jsou veliké. Ať už cestujete kamkoliv, vozíte si sebou pohodlí domova.</p>
+            </li>
+            <li>
+              <div class="img-container img-container-4"></div>
+              <p><span>Kvalita</span> U přestaveb jsou použity komponenty od předních výrobců zabývajících se karavaningem. Německá firma REIMO se  zabývá speciálně prodejem do těchto typů vozidel. Nabízí i celé vozy, nebo jejich kompletní výbavu.		</p>
+            </li>
+          </ul>
+        </div>
+      </article>
+    </div>
     <!---->
     <!-- Work-->
     <!---->
@@ -121,19 +117,21 @@
     <!---->
     <!-- About-->
     <!---->
-    <article id="about" class="about">
-      <h1 class="index-article__h1 article-about__h1">O firmě</h1>
-      <section class="about__content">
-        <section class="about-txt">
-          <div class="about-txt__wrap">
-            <h2> Jak to začalo</h2>
-            <div class="about-txt__wrap__inner">
-              <p>Myšlenka začala v roce 1994 po zakoupení staršího vozu Ford Transit. Nadšení pro volnost, prožití svého volného času, se stávala silnější a po zamilování se do windsurfingu bylo rozhodnuto.  Otvíraly se nové možnosti. Nemusel jsem k vůli surfu utíkat od rodiny ale rodinu jsem brával sebou. 14denní dovolená se protáhla od jara do podzimu. Od Baltu, přes všechny jezera a přehrady až k středozemnímu moři. Příjezdy do neznámých oblastí a já měl vše sebou, přece jen dodávalo více klidu. Auto bylo pro mne něco víc než jen převoz z místa do místa.<br><br>Jak děti rostli, začalo docházet k jeho postupné přestavbě a já se rozhodoval, co je důležité koupit dřív. Finance z rodinného rozpočtu prosadit na zakoupení životně důležité součásti obytného vozu, byl prostě problém. Byla to nejdelší přestavba ale šla, tak nějak nenápadně s mou rodinou. Vše mělo své kouzlo. Teď, co se život přehoupl do druhé poloviny, je to zase trochu jiné. Zakoupil jsem už nové auto, Ford Transit Custom a představa o vnitřní vestavbě dostala novou tvář. S manželkou nám stačí jedna postel a blížící se vnoučátka si budem brát na víkend jenom po jednom. Na těchto stránkách bych  Vás chtěl seznámit s tímto typem karavaningu a ze svou částečnou činností v tomto směru. </p>
+    <div class="about-outer">
+      <article id="about" class="about">
+        <h1 class="index-article__h1 article-about__h1">O firmě</h1>
+        <section class="about__content">
+          <section class="about-txt">
+            <div class="about-txt__wrap">
+              <h2> Jak to začalo</h2>
+              <div class="about-txt__wrap__inner">
+                <p>Myšlenka začala v roce 1994 po zakoupení staršího vozu Ford Transit. Nadšení pro volnost, prožití svého volného času, se stávala silnější a po zamilování se do windsurfingu bylo rozhodnuto.  Otvíraly se nové možnosti. Nemusel jsem k vůli surfu utíkat od rodiny ale rodinu jsem brával sebou. 14denní dovolená se protáhla od jara do podzimu. Od Baltu, přes všechny jezera a přehrady až k středozemnímu moři. Příjezdy do neznámých oblastí a já měl vše sebou, přece jen dodávalo více klidu. Auto bylo pro mne něco víc než jen převoz z místa do místa.<br><br>Jak děti rostli, začalo docházet k jeho postupné přestavbě a já se rozhodoval, co je důležité koupit dřív. Finance z rodinného rozpočtu prosadit na zakoupení životně důležité součásti obytného vozu, byl prostě problém. Byla to nejdelší přestavba ale šla, tak nějak nenápadně s mou rodinou. Vše mělo své kouzlo. Teď, co se život přehoupl do druhé poloviny, je to zase trochu jiné. Zakoupil jsem už nové auto, Ford Transit Custom a představa o vnitřní vestavbě dostala novou tvář. S manželkou nám stačí jedna postel a blížící se vnoučátka si budem brát na víkend jenom po jednom. Na těchto stránkách bych  Vás chtěl seznámit s tímto typem karavaningu a ze svou částečnou činností v tomto směru. </p>
+              </div>
             </div>
-          </div>
+          </section>
         </section>
-      </section>
-    </article>
+      </article>
+    </div>
     <article>
       <div class="sub-about">
         <div class="profile-pic"></div>
@@ -147,13 +145,12 @@
       <h1 class="index-article__h1 article-contact__h1">Kontakt</h1>
       <section class="contact__content">
         <div class="contact-wrapper">
-          <h2>Pojdme spolupracovat</h2>
+          <h2>Kontakt</h2>
           <p>Email: libor.palisa@gmail.com</p>
           <p>Facebook: Auto Caravan Sport</p>
           <p>adresa</p>
-          <p>Sokoloska 2530</p>
-          <p>Kromeriz</p>
-          <p>767 01</p>
+          <p>Sokoloska 2530<br>Kromeriz<br>767 01</p>
+          <div class="contact__map"></div>
         </div>
       </section>
     </article>

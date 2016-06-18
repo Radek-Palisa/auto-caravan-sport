@@ -4,10 +4,9 @@
 //
 //
 
-
-.slogan__txt
+.slogan
 	margin: 0
-	padding: 20px 0
+	padding: 20px
 	text-align: center
 	// font-weight: bold
 	font-style: italic
@@ -16,45 +15,46 @@
 	color: #757684
 	background-color: #EDEEF3
 
-.sub-header__content
-	margin: 55px auto 20px
+.site-intro
+	padding: 3.5em 20px 4.5em
 	display: flex
 	justify-content: center
 	flex-wrap: wrap
+	background-color: rgb(54,54,54)
 
-.intro__h
+.site-intro__h
+	flex: 0 1 100%
 	margin: 0
-	padding: 3.5em 0 1.5em
 	text-align: center
 	font-weight: normal
 	color: #D8D9E6
-	background-color: rgb(54,54,54)
 
 	strong
+		display: inline-block
+		margin-top: 10px
 		color: #62A8B5
 
-.intro
-	margin: 0 auto
-	padding: 0 0 4.5em
-	display: flex
-	justify-content: center
-	background-color: rgb(54,54,54)
-
-.intro__img
+.site-intro__img
+	flex: 0 1 auto
 	width: 130px
 	height: 130px
-	margin-right: 60px
+	margin-top: 25px
 	border-radius: 50%
 	background-image: url(./img/profile.jpg)
 	background-position: 55% 58%
 	background-size: 358%
 	border: 3px solid #62A8B5
 
-.intro__txt
+.site-intro__txt
+	flex: 1 1 200px
 	max-width: 400px
-	margin: 0
-	line-height: 1.5
+	margin: 25px 0 0 30px
+
+	@media (min-width: 1000px)
+		margin: 25px 0 0 60px
+	
+	line-height: 1.6
 	font-size: 18px
 	letter-spacing: 0.4px
-	color: #757684
 	color: #D8D9E6
+

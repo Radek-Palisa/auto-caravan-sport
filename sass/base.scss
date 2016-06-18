@@ -30,6 +30,8 @@ $headline-color: #D499B9;
 // zajimava zluta barva #f6d922, jde dohromdady s #202020 a #F7F7F7
 
 
+$highlight-color: #62A8B5;
+
 p {
 	font-family: roboto;
 }
@@ -38,7 +40,7 @@ p {
 .index-article__h1 {
 	position: relative;
 	margin: 0;
-	padding: 4%;
+	padding: 50px;
 	text-align: center;
 	font-size: 1.2em;
 	color: #943B6C;

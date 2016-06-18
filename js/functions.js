@@ -13,6 +13,14 @@ $(function() {
   });
 });
 
+
+//
+// --- Responsive Nav ---
+//
+$('.menu-icon').on('click', function() {
+	$(this).toggleClass('menu-icon--activated');
+	$('.nav__ul').toggleClass('nav__ul--activated');
+});
 //
 // --- Debounce function to improve performance on scroll listener
 // https://davidwalsh.name/javascript-debounce-function
@@ -70,11 +78,16 @@ var aboutOffView = aboutTop + aboutHeight;
 		var bgPosPres = 130;
 
 		// Nav to shrink
-		if (wScroll > 160) {
-			$('.nav').addClass('nav--js-narrowed');
-		} else {
-			$('.nav').removeClass('nav--js-narrowed');
-		}
+		//$(window).resize(function() {
+			if ($(window).width() >= 1000) {
+				if (wScroll > 250) {
+					$('.site-header').addClass('site-header--js-narrowed');
+				} else {
+					$('.site-header').removeClass('site-header--js-narrowed');
+				}
+			}
+		//});
+
 		/*
 		if (wScroll > 0) {
 			headerPos = headerPos-(wScroll/3);
@@ -102,10 +115,12 @@ $leftPane.addClass('leftPane--centered');
 var $rightPane = $('.presentation__content ul');
 //$rightPane.addClass('rightPane--js-hidden');
 
+var $presBtn1st = $('.presBtn__1st');
 var $presBtn = $('.presBtn__2nd'); 
 
 $('.leftPane__presBtn').on('click', function (){
 	$('.presentation__overlay').toggleClass('presentation__overlay--js-on presentation__overlay--js-off');
 	$rightPane.toggleClass('rightPane--js-hidden rightPane--js-activated').animate();
 	$presBtn.toggleClass('presBtn--rotated');
+	$presBtn1st.toggleClass('presBtn__1st--rotated');
 });

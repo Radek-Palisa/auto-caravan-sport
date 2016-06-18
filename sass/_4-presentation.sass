@@ -2,21 +2,32 @@
 /* ******** Presentation ******** */
 /**/
 /**/
+
+.presentation-outer
+	background-color: #212121
+
+	@media screen and (min-width: 1600px)
+		padding: 32px 10px
+
 .article-presentation__h1
 	padding: 50px 0 !important
 
-.presentation
-	background-color: #ECECF7
-
 .presentation__content
+	display: flex
+	justify-content: center
+	max-width: 1600px
+	margin: 0 auto
 	position: relative
 	overflow: hidden
 	// background-image: url(./img/prezentace/P8290226_reversed.jpg)
 	//background-image: url(./img/prezentace/P8290226.jpg)
 	background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url(./img/prezentace/P8290226.jpg)
+	//background-image: url(./img/prezentace/presentation_2x.jpg)
 	background-size: cover
 	background-position: center
-	display: flex
+
+	@media screen and (min-width: 1600px)
+		box-shadow: 0px 0px 10px black
 
 .presentation__overlay
 	position: absolute
@@ -38,8 +49,8 @@
 .leftPane__container
 	display: flex
 	justify-content: center
-	align-items: flex-end
-	width: 50%
+	align-items: center
+	height: 624px
 
 .leftPane
 	position: relative
@@ -52,50 +63,105 @@
 		font-size: 1.5em
 		margin-bottom: 1em
 		text-align: center
+		text-transform: uppercase
 
-	p 
-		width: 400px
+	&__presIntro__p 
+		max-width: 375px
 		margin: 0 auto
 		line-height: 1.8
-		font-size: 1.1em
+		font-size: 18px
+
+	&__presIntro__p2
+		margin: 2em auto !important
+		text-align: center
+		font-size: 18px
 
 // Button to open slideshow
 
 .leftPane__presBtn
-	display: inline
-	align-items: center
-	margin: 8px 0
-	padding: 0 15px
-	cursor: pointer
+	position: relative
+	display: block
+	width: 29px
+	height: 30px
+	margin: 2em auto
+	padding: 0
+	background-color: inherit
+	border: none
+	outline: none
+	// background-color: rgba(0,0,0,1)
+	
+	.circle
+		position: absolute
+		width: 60px
+		height: 60px
+		padding-left: 15px
+		border-radius: 50%
+		background-color: rgba(0, 0, 0, 0.6)
+		top: -10px
+		left: -16px
+		text-align: left
+		font-size: 18px
+		transition: all 0.2s ease-in-out
+
+		p 
+			opacity: 0
+			color: $highlight-color
+
+	&:hover .circle
+		border-radius: 0
+		width: 100px
+		left: -45px
+		transition: all 0.2s ease-in-out
+
+	&:hover .circle p 
+		opacity: 1
+		transition: all 0.2s ease-in-out 0.2s
 
 	svg 
-		width: 0.9em
+		position: absolute
+		width: 36px
 		transform: rotateY(180deg)
 
 		path 
-			fill: rgba(255,255,255,0.8)
+			fill: $highlight-color
+
+	.presBtn__1st
+		top: 4px
+		transform: rotateZ(-45deg)
+		left: -4px
+		transition: all 0.4s ease-in-out
 
 	.presBtn__2nd
-		margin-left: -13px
+		top: 0
+		left: -4px
+		transform: rotateZ(135deg)
 		transition: all 0.2s ease-in-out
 
+	&:hover .presBtn__1st
+		transform: rotateZ(-180deg) translate(-5px, 4px) scale(0.5)
+		transition: all 0.3s ease-in-out
+
 	&:hover .presBtn__2nd
-		transform: rotateY(180deg) translateX(-5px)
-		transition: all 0.2s ease-in-out
+		transform: rotateZ(-180deg) translateX(-15px) scale(0.5)
+		transition: all 0.3s ease-in-out
 
 
 .presBtn--rotated
-	margin-left: -7px !important
-	transform: rotateY(0deg) !important
+	transform: rotateZ(0deg) translateX(12px) scale(0.8) !important
+
+.presBtn__1st--rotated
+	transform: rotateZ(180deg) translate(11px, 4px) scale(0.8) !important
 
 // Right Pane styles
 
 .rightPane 
+	position: absolute
+	top: 0
+	right: 0
 	height: 624px
-	width: 682px
-	width: 50%
+	min-width: 50%
 	margin: 0 auto
-	padding: 1.5em 2em
+	padding: 1.5em 0
 	list-style: none
 	// background-image: linear-gradient(114deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 81%)
 	overflow: hidden
@@ -111,6 +177,8 @@
 		transition: all 0.6s ease-in-out 0.4s
 
 	li
+		width: 760px
+		margin: 0 auto
 		padding: 3px 0
 		display: flex
 		align-items: center
@@ -140,17 +208,17 @@
 			margin-right: 10px
 
 		p 
-			width: 394px
-			margin: 0
+			max-width: 540px
+			margin: 0 2em
 			color: #797979
 			color: white
 			line-height: 1.6
-			font-size: 16px	
+			font-size: 18px	
 
 		.img-container
 			width: 195px
 			height: 138px
-			margin-right: 2em
+			// margin-right: 2em
 			//border: 1px solid rgb(213, 213, 213)
 			border-radius: 2px
 			background-size: cover
