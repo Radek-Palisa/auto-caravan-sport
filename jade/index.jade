@@ -26,22 +26,12 @@ block body
 	.presentation-outer
 		article.presentation#presentation
 			.presentation__content
-				.presentation__overlay.presentation__overlay--js-on
-				section.leftPane__container
-					.leftPane
-						h3.leftPane__h Vůz pro volný čas
-						.leftPane__presIntro
-							p.leftPane__presIntro__p Vozy tohoto typu jsou založené na dokonalém využití vnitřního prostoru pro maximální možné pohodlí na cestách. Mé zájmy by se daly charakterizovat v následujících oblastech: 
-							p.leftPane__presIntro__p2 Využití  /  Dostupnost  /  Komfort  /  Kvalita
-							button.leftPane__presBtn
-								.circle
-									p Více
-								svg.presBtn__1st(viewbox="0 0 100 100") 
-									path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
-								svg.presBtn__2nd(viewbox="0 0 100 100")
-									path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
+				.upperPane
+					h3.upperPane__h Vůz pro volný čas
+					p.upperPane__presIntro__p Vozy tohoto typu jsou založené na dokonalém využití vnitřního prostoru pro maximální možné pohodlí na cestách. Mé zájmy by se daly charakterizovat v následujících oblastech: 
+					p.upperPane__presIntro__p2 Využití  /  Dostupnost  /  Komfort  /  Kvalita
 
-				ul.rightPane.rightPane--js-hidden
+				ul.rightPane
 					li
 						.img-container.img-container-2
 						p #[span Využití] Auta jsou ideální pro polykání kilometrů na dálnicích. Dokáží poskytnout určitý komfort potřeb k pobytu a přesto mohou sloužit v každodenním provozu jako osobní vozy.
@@ -55,7 +45,18 @@ block body
 						p #[span Komfort] V autě můžete spát, vařit, sprchovat se a samozřejmostí je i chemický záchod. Technické možnosti vnitřního vybavení jsou veliké. Ať už cestujete kamkoliv, vozíte si sebou pohodlí domova.
 					li
 						.img-container.img-container-4
-						p #[span Kvalita] U přestaveb jsou použity komponenty od předních výrobců zabývajících se karavaningem. Německá firma REIMO se  zabývá speciálně prodejem do těchto typů vozidel. Nabízí i celé vozy, nebo jejich kompletní výbavu.		
+						p #[span Kvalita] U přestaveb jsou použity komponenty od předních výrobců zabývajících se karavaningem. Německá firma REIMO se  zabývá speciálně prodejem do těchto typů vozidel. Nabízí i celé vozy, nebo jejich kompletní výbavu.
+
+				.bottomPane
+					button.leftPane__presBtn
+						.circle
+							p Více
+						svg.presBtn__1st(viewbox="0 0 100 100") 
+							path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
+						svg.presBtn__2nd(viewbox="0 0 100 100")
+							path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
+
+	
 
 	//
 	// Work

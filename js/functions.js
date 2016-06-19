@@ -109,18 +109,24 @@ var aboutOffView = aboutTop + aboutHeight;
 
 // Presentation Tabbing
 
-var $leftPane = $('.leftPane');
-$leftPane.addClass('leftPane--centered');
-
 var $rightPane = $('.presentation__content ul');
 //$rightPane.addClass('rightPane--js-hidden');
 
 var $presBtn1st = $('.presBtn__1st');
 var $presBtn = $('.presBtn__2nd'); 
 
+
+
 $('.leftPane__presBtn').on('click', function (){
-	$('.presentation__overlay').toggleClass('presentation__overlay--js-on presentation__overlay--js-off');
-	$rightPane.toggleClass('rightPane--js-hidden rightPane--js-activated').animate();
+
+	var wScrollB = $(document).scrollTop();
+
+	$rightPane.slideToggle(1000);
+	if ($presBtn.hasClass('presBtn--rotated') == true) {
+		$('html, body').animate({scrollTop: wScrollB-604}, 1000)
+	}
+
 	$presBtn.toggleClass('presBtn--rotated');
 	$presBtn1st.toggleClass('presBtn__1st--rotated');
+
 });
