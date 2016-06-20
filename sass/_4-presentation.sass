@@ -16,7 +16,6 @@
 	max-width: 1600px
 	margin: 0 auto
 	position: relative
-	overflow: hidden
 	//background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url(./img/prezentace/P8290226.jpg)
 	background-size: cover
 	background-position: center
@@ -30,6 +29,7 @@
 
 .upperPane
 	position: relative
+	z-index: 2 // for the box shadow on bottomPane
 	padding: 5em 20px 1em
 	color: #D8D9E6
 	color: white
@@ -57,88 +57,65 @@
 
 .bottomPane
 	position: relative
+	z-index: 1 // for the box shadow
 	padding: 1px 0 15px
 	color: #D8D9E6
 	color: white
 	background-image: url(./img/prezentace/presentation_2x.jpg)
 	background-size: 1600px auto
 	background-position: center -769px
+	box-shadow: 0px 0px 6px black
 
 // Button to open slideshow
 
 .leftPane__presBtn
 	position: relative
 	display: block
-	width: 29px
-	height: 30px
+	height: 60px
 	margin: 2em auto
 	padding: 0
-	background-color: inherit
 	border: none
 	outline: none
-	// background-color: rgba(0,0,0,1)
-	
-	.circle
-		position: absolute
-		width: 60px
-		height: 60px
-		padding-left: 15px
-		border-radius: 50%
-		background-color: rgba(0, 0, 0, 0.6)
-		top: -10px
-		left: -16px
+	text-align: left
+	background-color: rgba(0, 0, 0, 0.6)
+	color: $highlight-color
+
+	p 
+		display: inline-block
+		padding: 0 50px 0 20px
 		text-align: left
 		font-size: 18px
-		transition: all 0.2s ease-in-out
-
-		p 
-			opacity: 0
-			color: $highlight-color
-
-	&:hover .circle
-		border-radius: 0
-		width: 100px
-		left: -45px
-		transition: all 0.2s ease-in-out
-
-	&:hover .circle p 
-		opacity: 1
-		transition: all 0.2s ease-in-out 0.2s
 
 	svg 
 		position: absolute
-		width: 36px
+		top: 15px
+		right: 15px
+		width: 16px
 		transform: rotateY(180deg)
 
 		path 
 			fill: $highlight-color
 
 	.presBtn__1st
-		top: 4px
-		transform: rotateZ(-45deg)
-		left: -4px
+		transform: rotateZ(-90deg)
 		transition: all 0.4s ease-in-out
 
 	.presBtn__2nd
-		top: 0
-		left: -4px
-		transform: rotateZ(135deg)
+		transform: rotateZ(-90deg) translateX(-6px)
 		transition: all 0.2s ease-in-out
 
 	&:hover .presBtn__1st
-		transform: rotateZ(-180deg) translate(-5px, 4px) scale(0.5)
 		transition: all 0.3s ease-in-out
 
 	&:hover .presBtn__2nd
-		transform: rotateZ(-180deg) translateX(-15px) scale(0.5)
 		transition: all 0.3s ease-in-out
 
 
 .presBtn--rotated
-	transform: rotateZ(0deg) translateX(12px) scale(0.8) !important
+	transform: rotateZ(90deg) translateX(13px) !important
 
 .presBtn__1st--rotated
-	transform: rotateZ(180deg) translate(11px, 4px) scale(0.8) !important
+	//transform: rotateZ(0deg) translateX(0px) !important
 
 // Right Pane styles
 

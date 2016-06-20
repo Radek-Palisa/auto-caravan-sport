@@ -121,7 +121,7 @@ $('.leftPane__presBtn').on('click', function (){
 
 	var wScrollB = $(document).scrollTop();
 
-	$rightPane.slideToggle(1000);
+	$rightPane.slideToggle(900);
 	if ($presBtn.hasClass('presBtn--rotated') == true) {
 		$('html, body').animate({scrollTop: wScrollB-604}, 1000)
 	}
@@ -129,4 +129,18 @@ $('.leftPane__presBtn').on('click', function (){
 	$presBtn.toggleClass('presBtn--rotated');
 	$presBtn1st.toggleClass('presBtn__1st--rotated');
 
+	setTimeout(
+		function() {
+			$('.leftPane__presBtn p').text(function(i, text){
+				return text === "Zavřít" ? "Více" : "Zavřít";
+			});
+		}, 800);
+});
+
+$('.leftPane__presBtn').hover(function(){
+	if (!$presBtn.hasClass('presBtn--rotated')) {
+		$('.bottomPane').dequeue().stop().animate({ marginTop: "5px" });
+	}
+}, function() {
+	$('.bottomPane').animate({ marginTop: "0" }, "normal", "linear");
 });
