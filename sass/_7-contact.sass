@@ -4,43 +4,70 @@
 //
 //
 .contact
-	background-image: linear-gradient(113deg, rgba(0, 0, 0, 0.9) 61%, transparent 62%, transparent 81%, black 82%), linear-gradient(rgba(0, 0, 0, 0.9) 5%, transparent 6%, transparent 94%, rgba(0,0,0,0.9) 95%), url(img/kontakt-bg_4999w_50q.jpg)
-	background-image: linear-gradient(113deg, rgba(0, 0, 0, 0.9) 59%, transparent 65%, transparent 79%, black 84%), linear-gradient(rgba(0, 0, 0, 0.9) 7%, transparent 21%), url(img/kontakt-bg_4999w_50q.jpg)
-	background-image: linear-gradient(113deg, rgba(0, 0, 0, 0.9) 59%, transparent 65%, transparent 79%, black 84%), url(img/kontakt-bg_4999w_50q.jpg)
-	background-size: cover
-	background-position: bottom left 84%
-	background-repeat: no-repeat
+	padding: 60px 20px 60px
+	background: url(img/kontakt-bg_1600w_41q.jpg) 55% 50% / 1600px auto no-repeat black
 
 //.article-contact__h1
 	color: white 
 
-.contact__content
-	width: 50%
-	padding-bottom: 8%
-	
-
 .contact-wrapper
-	width: 500px
+	max-width: 350px
 	margin: 0 auto
 
 	h2
-		font-size: 18px
+		font-size: 24px
 		text-align: center
 		color: white
-		margin: 0
+		margin: 0 0 30px
 		text-transform: uppercase
 
 	p
 		color: white
-		text-align: center
 		font-size: 18px
 
+		img 
+			display: inline-block
+			width: 18px
+			margin-right: 10px
+
+	address
+		display: flex
+		justify-content: space-between
+		color: white
+		font-size: 18px
+		font-style: normal
+		text-align: center
+
+		p 
+			margin: 0
+			line-height: 1.6
+
+
 	.contact__map
-		width: 200px
-		height: 120px
-		margin: 0 auto
-		background-image: url(./img/ford-custom.jpg)
-		background-color: red
+		width: 135px
+		height: 85px
+
+.contact-fb
+	margin: 50px auto 10px
+	text-align: center
+
+.contact-fb-link
+	display: block
+	width: 56px
+	margin: 0 auto
+	padding: 8px
+	border-radius: 6px
+	transition: all 0.2s ease-in-out
+
+	&:hover 
+		background-color: black
+		transition: all 0.2s ease-in-out
+
+.contact-fb__icon
+	width: 40px
+	margin: 0 auto
+
+
 //
 // Sub-contact
 //

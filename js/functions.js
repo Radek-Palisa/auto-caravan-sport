@@ -100,11 +100,12 @@ var aboutOffView = aboutTop + aboutHeight;
 		$pres.css('background-position', 'center '+bgPosPres+'%');
 
 		var bgPosAbout = 210;
-
+		/*
 		if (wScroll >= aboutInView) {
 			bgPosAbout = bgPosAbout-((wScroll-aboutInView)/6);
 		}
 		$about.css('background-position', 'center '+bgPosAbout+'%');
+		*/
 	});
 
 // Presentation Tabbing

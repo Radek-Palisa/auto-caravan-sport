@@ -5,35 +5,44 @@
 	background-color: lavender
 	background-color: #EAEAEA
 	background-color: #f3f3f3
-	padding: 2% 0
+	padding: 0
 	
 .work__ul
-	max-width: 1600px
-	display: flex
+	max-width: 1608px
+	
+	@media (min-width: 1000px)
+		display: flex
+
 	justify-content: center
 	margin: 0 auto
-	padding: 0 0 8%
+	padding: 0 10px 8%
+
+	@media (min-width: 1000px)
+		padding: 0 2px 8%
 
 .secondary-nav .work__ul
 	flex-wrap: wrap
 
 .work__item
-	margin: 0 5px
+	max-width: 600px
+	margin: 10px auto
 	list-style: none
-	//width: 400px
-	flex-grow: 1
-	flex-basis: 0
+	//flex: 1 1 320px
+	border: 1px solid #DFDEDE
+	background-color: white
 
-	a:hover .podsekce__link
+	a:hover .work__link
 		background-color: rgba(0,0,0,0.6)
-
-.work__item--clear
-	width: 100%
 
 .work__link
 	position: relative
 	display: block
-	height: 350px
+	//height: 350px
+	padding-bottom: 60%
+
+	@media (min-width: 1000px)
+		padding-bottom: 80% 
+	
 	background-size: cover
 	overflow: hidden
 
@@ -67,23 +76,19 @@
 	top: 50%
 	left: 50%
 	transform: translate(-50%, -50%)
-	// padding: 10px 15px
 	padding: 3px 0 3px 5px
-	// border: 1px solid white
 	border: 1px solid #62A8B5
 	white-space: nowrap
 	text-align: center
 	font-family: roboto
 	font-weight: bold
-	color: #202020
 	color: white
-	background-color: #f6d922
-	background-color: rgba(0,0,0,0.5)
+	background-color: rgba(0,0,0,0.6)
 
 	p 
 		display: inline-block
 		margin: 0
-		padding: 5px 20px
+		padding: 8px 20px
 		border-left: 1px solid #62A8B5
 		text-align: center
 		font-size: 1.1em
@@ -102,10 +107,10 @@
 
 .work__txt
 	margin: 0
-	padding: 2em 20px 2.5em
-	border: 1px solid #DFDEDE
+	padding: 2em 20px 2em
 	color: #474141
-	background-color: white
+	font-size: 18px
+	text-align: center
 
 	a
 		text-decoration: underline

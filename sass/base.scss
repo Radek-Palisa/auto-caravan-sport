@@ -1,6 +1,6 @@
-$break-laptop: 1150px;
+$break-laptop: 1000px;
 $break-desktop: 1600px;
-$base-line-height: 1.4;
+$base-line-height: 1.5;
 
 html {
   box-sizing: border-box;
@@ -11,6 +11,11 @@ html {
 
 body {
 	line-height: $base-line-height;
+	font-size: 16px;
+
+	@media (min-width: $break-laptop) {
+		font-size: 18px
+	}
 }
 
 img {
@@ -36,15 +41,15 @@ p {
 	font-family: roboto;
 }
 
-
 .index-article__h1 {
 	position: relative;
 	margin: 0;
-	padding: 50px;
+	padding: 60px 0 45px;
 	text-align: center;
 	font-size: 1.2em;
 	color: #943B6C;
 	color: #AB6C8F;
+	color: #757684;
 	text-transform: uppercase;
 	/*
 	&::after {

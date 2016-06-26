@@ -1140,7 +1140,13 @@ html {
 }
 
 body {
-  line-height: 1.4;
+  line-height: 1.5;
+  font-size: 16px;
+}
+@media (min-width: 1000px) {
+  body {
+    font-size: 18px;
+  }
 }
 
 img {
@@ -1156,11 +1162,12 @@ p {
 .index-article__h1 {
   position: relative;
   margin: 0;
-  padding: 50px;
+  padding: 60px 0 45px;
   text-align: center;
   font-size: 1.2em;
   color: #943B6C;
   color: #AB6C8F;
+  color: #757684;
   text-transform: uppercase;
   /*
   &::after {
@@ -1346,7 +1353,7 @@ p {
   padding: 20px;
   text-align: center;
   font-style: italic;
-  font-size: 20px;
+  font-size: 1.13em;
   letter-spacing: 0.4px;
   color: #757684;
   background-color: #EDEEF3;
@@ -1364,6 +1371,7 @@ p {
   flex: 0 1 100%;
   margin: 0;
   text-align: center;
+  font-size: 1.1em;
   font-weight: normal;
   color: #D8D9E6;
 }
@@ -1390,7 +1398,6 @@ p {
   max-width: 400px;
   margin: 25px 0 0 30px;
   line-height: 1.6;
-  font-size: 18px;
   letter-spacing: 0.4px;
   color: #D8D9E6;
 }
@@ -1413,16 +1420,10 @@ p {
   }
 }
 
-.article-presentation__h1 {
-  padding: 50px 0 !important;
-}
-
 .presentation__content {
   max-width: 1600px;
   margin: 0 auto;
   position: relative;
-  background-size: cover;
-  background-position: center;
 }
 @media screen and (min-width: 1600px) {
   .presentation__content {
@@ -1433,7 +1434,7 @@ p {
 .upperPane {
   position: relative;
   z-index: 2;
-  padding: 5em 20px 1em;
+  padding: 60px 20px 10px;
   color: #D8D9E6;
   color: white;
   background-image: url(./img/prezentace/presentation_2x.jpg);
@@ -1448,15 +1449,13 @@ p {
   text-transform: uppercase;
 }
 .upperPane__presIntro__p {
-  max-width: 375px;
+  max-width: 410px;
   margin: 0 auto;
   line-height: 1.8;
-  font-size: 18px;
 }
 .upperPane__presIntro__p2 {
-  margin: 50px auto;
+  margin: 40px auto 30px;
   text-align: center;
-  font-size: 18px;
 }
 
 .bottomPane {
@@ -1467,7 +1466,7 @@ p {
   color: white;
   background-image: url(./img/prezentace/presentation_2x.jpg);
   background-size: 1600px auto;
-  background-position: center -769px;
+  background-position: center -814px;
   box-shadow: 0px 0px 6px black;
 }
 
@@ -1487,7 +1486,6 @@ p {
   display: inline-block;
   padding: 0 50px 0 20px;
   text-align: left;
-  font-size: 18px;
 }
 .leftPane__presBtn svg {
   position: absolute;
@@ -1596,15 +1594,24 @@ p {
   background-color: lavender;
   background-color: #EAEAEA;
   background-color: #f3f3f3;
-  padding: 2% 0;
+  padding: 0;
 }
 
 .work__ul {
-  max-width: 1600px;
-  display: flex;
+  max-width: 1608px;
   justify-content: center;
   margin: 0 auto;
-  padding: 0 0 8%;
+  padding: 0 10px 8%;
+}
+@media (min-width: 1000px) {
+  .work__ul {
+    display: flex;
+  }
+}
+@media (min-width: 1000px) {
+  .work__ul {
+    padding: 0 2px 8%;
+  }
 }
 
 .secondary-nav .work__ul {
@@ -1612,25 +1619,27 @@ p {
 }
 
 .work__item {
-  margin: 0 5px;
+  max-width: 600px;
+  margin: 10px auto;
   list-style: none;
-  flex-grow: 1;
-  flex-basis: 0;
+  border: 1px solid #DFDEDE;
+  background-color: white;
 }
-.work__item a:hover .podsekce__link {
+.work__item a:hover .work__link {
   background-color: rgba(0, 0, 0, 0.6);
-}
-
-.work__item--clear {
-  width: 100%;
 }
 
 .work__link {
   position: relative;
   display: block;
-  height: 350px;
+  padding-bottom: 60%;
   background-size: cover;
   overflow: hidden;
+}
+@media (min-width: 1000px) {
+  .work__link {
+    padding-bottom: 80%;
+  }
 }
 
 .ford-custom__link--bg {
@@ -1673,15 +1682,13 @@ p {
   text-align: center;
   font-family: roboto;
   font-weight: bold;
-  color: #202020;
   color: white;
-  background-color: #f6d922;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 .work__link__h p {
   display: inline-block;
   margin: 0;
-  padding: 5px 20px;
+  padding: 8px 20px;
   border-left: 1px solid #62A8B5;
   text-align: center;
   font-size: 1.1em;
@@ -1701,10 +1708,10 @@ p {
 
 .work__txt {
   margin: 0;
-  padding: 2em 20px 2.5em;
-  border: 1px solid #DFDEDE;
+  padding: 2em 20px 2em;
   color: #474141;
-  background-color: white;
+  font-size: 18px;
+  text-align: center;
 }
 .work__txt a {
   text-decoration: underline;
@@ -1721,51 +1728,61 @@ p {
 }
 
 .about {
+  position: relative;
   max-width: 1600px;
+  height: 560px;
   margin: 0 auto;
+  padding: 55px 0;
   background-image: url(img/ofirme.jpg);
   background-size: cover;
-}
-
-.about__content {
-  padding-bottom: 8%;
+  background-position: center 61%;
 }
 
 .about-txt {
-  width: 50%;
-  margin-left: 50%;
   line-height: 1.5;
   color: #EFEFEF;
-}
-.about-txt__wrap {
   margin: 0 auto;
   max-width: 590px;
   padding: 0 4em 3em;
   background-color: rgba(0, 0, 0, 0.3);
 }
-.about-txt__wrap h2 {
+@media (min-width: 1000px) {
+  .about-txt {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+  }
+}
+@media (min-width: 1600px) {
+  .about-txt {
+    right: 25%;
+    transform: translate(50%, -50%);
+  }
+}
+.about-txt h2 {
   margin: 0;
   padding: 2em 0;
   text-align: center;
   font-size: 18px;
 }
-.about-txt__wrap__inner {
+.about-txt__inner {
   height: 294px;
   padding-right: 25px;
   overflow-y: scroll;
 }
-.about-txt__wrap__inner p {
+.about-txt__inner p {
   margin: 0;
   font-size: 18px;
 }
-.about-txt__wrap__inner::-webkit-scrollbar {
+.about-txt__inner::-webkit-scrollbar {
   width: 8px;
 }
-.about-txt__wrap__inner::-webkit-scrollbar-track {
+.about-txt__inner::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
   border-radius: 10px;
 }
-.about-txt__wrap__inner::-webkit-scrollbar-thumb {
+.about-txt__inner::-webkit-scrollbar-thumb {
   border-radius: 10px;
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #62A8B5;
@@ -1773,13 +1790,14 @@ p {
 
 .sub-about {
   margin: 0 auto;
-  padding: 60px 0;
+  padding: 30px 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .profile-pic {
+  display: none;
   width: 190px;
   height: 190px;
   margin-right: 80px;
@@ -1790,52 +1808,92 @@ p {
 }
 
 .profile__txt {
-  max-width: 450px;
+  max-width: 470px;
   line-height: 1.5;
   text-align: center;
   font-style: italic;
   font-size: 18px;
-  letter-spacing: 0.4px;
   color: #757684;
+}
+.profile__txt:before, .profile__txt:after {
+  color: #ccc;
+  font-family: georgia;
+  font-size: 2em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.3em;
+}
+.profile__txt:before {
+  content: "“";
+}
+.profile__txt:after {
+  content: "”";
 }
 
 /* **** Contact **** */
 .contact {
-  background-image: linear-gradient(113deg, rgba(0, 0, 0, 0.9) 61%, transparent 62%, transparent 81%, black 82%), linear-gradient(rgba(0, 0, 0, 0.9) 5%, transparent 6%, transparent 94%, rgba(0, 0, 0, 0.9) 95%), url(img/kontakt-bg_4999w_50q.jpg);
-  background-image: linear-gradient(113deg, rgba(0, 0, 0, 0.9) 59%, transparent 65%, transparent 79%, black 84%), linear-gradient(rgba(0, 0, 0, 0.9) 7%, transparent 21%), url(img/kontakt-bg_4999w_50q.jpg);
-  background-image: linear-gradient(113deg, rgba(0, 0, 0, 0.9) 59%, transparent 65%, transparent 79%, black 84%), url(img/kontakt-bg_4999w_50q.jpg);
-  background-size: cover;
-  background-position: bottom left 84%;
-  background-repeat: no-repeat;
-}
-
-.contact__content {
-  width: 50%;
-  padding-bottom: 8%;
+  padding: 60px 20px 60px;
+  background: url(img/kontakt-bg_1600w_41q.jpg) 55% 50%/1600px auto no-repeat black;
 }
 
 .contact-wrapper {
-  width: 500px;
+  max-width: 350px;
   margin: 0 auto;
 }
 .contact-wrapper h2 {
-  font-size: 18px;
+  font-size: 24px;
   text-align: center;
   color: white;
-  margin: 0;
+  margin: 0 0 30px;
   text-transform: uppercase;
 }
 .contact-wrapper p {
   color: white;
-  text-align: center;
   font-size: 18px;
 }
+.contact-wrapper p img {
+  display: inline-block;
+  width: 18px;
+  margin-right: 10px;
+}
+.contact-wrapper address {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-size: 18px;
+  font-style: normal;
+  text-align: center;
+}
+.contact-wrapper address p {
+  margin: 0;
+  line-height: 1.6;
+}
 .contact-wrapper .contact__map {
-  width: 200px;
-  height: 120px;
+  width: 135px;
+  height: 85px;
+}
+
+.contact-fb {
+  margin: 50px auto 10px;
+  text-align: center;
+}
+
+.contact-fb-link {
+  display: block;
+  width: 56px;
   margin: 0 auto;
-  background-image: url(./img/ford-custom.jpg);
-  background-color: red;
+  padding: 8px;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+}
+.contact-fb-link:hover {
+  background-color: black;
+  transition: all 0.2s ease-in-out;
+}
+
+.contact-fb__icon {
+  width: 40px;
+  margin: 0 auto;
 }
 
 .sub-contact {

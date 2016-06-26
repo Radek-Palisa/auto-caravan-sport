@@ -6,21 +6,16 @@
 .presentation-outer
 	background-color: #212121
 
-	@media screen and (min-width: 1600px)
+	@media screen and (min-width: $break-desktop)
 		padding: 32px 10px
-
-.article-presentation__h1
-	padding: 50px 0 !important
 
 .presentation__content
 	max-width: 1600px
 	margin: 0 auto
 	position: relative
 	//background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url(./img/prezentace/P8290226.jpg)
-	background-size: cover
-	background-position: center
 
-	@media screen and (min-width: 1600px)
+	@media screen and (min-width: $break-desktop)
 		box-shadow: 0px 0px 10px black
 
 // Left Pane styles
@@ -30,7 +25,7 @@
 .upperPane
 	position: relative
 	z-index: 2 // for the box shadow on bottomPane
-	padding: 5em 20px 1em
+	padding: 60px 20px 10px
 	color: #D8D9E6
 	color: white
 	background-image: url(./img/prezentace/presentation_2x.jpg)
@@ -45,15 +40,13 @@
 		text-transform: uppercase
 
 	&__presIntro__p 
-		max-width: 375px
+		max-width: 410px
 		margin: 0 auto
 		line-height: 1.8
-		font-size: 18px
 
 	&__presIntro__p2
-		margin: 50px auto
+		margin: 40px auto 30px
 		text-align: center
-		font-size: 18px
 
 .bottomPane
 	position: relative
@@ -63,7 +56,7 @@
 	color: white
 	background-image: url(./img/prezentace/presentation_2x.jpg)
 	background-size: 1600px auto
-	background-position: center -769px
+	background-position: center -814px
 	box-shadow: 0px 0px 6px black
 
 // Button to open slideshow
@@ -84,7 +77,6 @@
 		display: inline-block
 		padding: 0 50px 0 20px
 		text-align: left
-		font-size: 18px
 
 	svg 
 		position: absolute
