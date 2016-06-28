@@ -6,19 +6,22 @@
 .about-outer
 	background-color: #363636
 
-	@media screen and (min-width: 1600px)
-		padding: 16px
+	@media screen and (min-width: $break-desktop)
+		padding: 16px 0
 
 .about
 	position: relative
 	max-width: 1600px
-	height: 560px
+	height: 620px
 	margin: 0 auto
 	padding: 55px 0
 	background-image: url(img/ofirme.jpg)
-	background-size: cover
-	background-position: center 61%
+	background-size: 1600px auto
+	background-position: 35% 61%
 	// background-attachment: fixed
+
+	@media screen and (min-width: $break-desktop)
+		box-shadow: 0px 0px 10px black
 
 .about-txt
 
@@ -32,27 +35,24 @@
 		right: 25%
 		transform: translate(50%, -50%)
 	
-	line-height: 1.5
 	color: #EFEFEF
 	margin: 0 auto
 	max-width: 590px
-	padding: 0 4em 3em
+	padding: 0 70px 50px
 	background-color: rgba(0,0,0,0.3)
 
-	h2 
+	.about__title 
 		margin: 0
-		padding: 2em 0
-		text-align: center
-		font-size: 18px
+		padding: 50px 0 1em
+		text-transform: uppercase
 
 	&__inner
-		height: 294px
+		height: 370px
 		padding-right: 25px
 		overflow-y: scroll
 
 		p 
-			margin: 0
-			font-size: 18px
+			margin: 0 0 1em 0
 
 		&::-webkit-scrollbar
 			width: 8px
@@ -70,28 +70,13 @@
 // Sub-about
 //
 .sub-about
-	margin: 0 auto
-	padding: 30px 0 
-	display: flex
-	justify-content: center
-	align-items: center
+	padding: 30px 15px 
 
-.profile-pic
-	display: none
-	width: 190px
-	height: 190px
-	margin-right: 80px
-	border-radius: 50%
-	background-image: url(./img/profile.jpg)
-	background-position: 55% 58%
-	background-size: 358%
-
-.profile__txt
+.sub-about__quote
 	max-width: 470px
-	line-height: 1.5
+	margin: 1em auto
 	text-align: center
 	font-style: italic
-	font-size: 18px
 	color: #757684
 
 	&:before, &:after 

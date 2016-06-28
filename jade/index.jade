@@ -16,51 +16,44 @@ block body
 
 	p.slogan Vítejte v mém světě dodávkové velikosti</br>...ani malé ani velké.
 	section.site-intro
-		h3.site-intro__h Vítejte na stránkách firmy <strong>Auto Caravan Sport s.r.o.</strong>
+		h1.site-intro__title Vítejte na stránkách firmy <strong>Auto Caravan Sport s.r.o.</strong>
 		.site-intro__img
 		p.site-intro__txt Jmenuji se Libor Palisa a mojí dlouholetou vášní je hledat možnosti, jakým způsobem přestavět dodávkový vůz, nejlépe kombi-van, na obytný vůz pro trávení volného času.
 
-	//
-	// Presentation
-	//
-	.presentation-outer
-		article.presentation#presentation
-			.presentation__content
-				.upperPane
-					h3.upperPane__h Vůz pro volný čas
-					p.upperPane__presIntro__p Snažím se klást důraz na dokonalé využití vnitřního prostoru pro maximální pohodlí. Chci aby vůz poskytoval základní potřeby pro pobyt v přírodě, městě, tak i třeba na dálničním parkovišti. Splňuji si svůj sen dokonalé samostatnosti a umožňuji si tím trávit příjemné chvíle na cestách. Charakterizoval bych své zájmy v následujících oblastech:
-					p.upperPane__presIntro__p2 Využití  /  Dostupnost  /  Komfort  /  Kvalita
+	.presentation-outer#presentation
+		section.presentation
+			.upperPane
+				h1.presentation__title Vůz pro volný čas
+				p.upperPane__presIntro__p Snažím se klást důraz na dokonalé využití vnitřního prostoru pro maximální pohodlí. Chci aby vůz poskytoval základní potřeby pro pobyt v přírodě, městě, tak i třeba na dálničním parkovišti. Splňuji si svůj sen dokonalé samostatnosti a umožňuji si tím trávit příjemné chvíle na cestách. Charakterizoval bych své zájmy v následujících oblastech:
+				p.upperPane__presIntro__p2 Využití  /  Dostupnost  /  Komfort  /  Kvalita
 
-				ul.rightPane
-					li
-						.img-container.img-container-2
-						p #[span Využití] Auta jsou ideální pro polykání kilometrů na dálnicích. Dokáží poskytnout určitý komfort potřeb k pobytu a přesto mohou sloužit v každodenním provozu jako osobní vozy.
+			ul.rightPane
+				li
+					.img-container.img-container-2
+					p #[span Využití] Auta jsou ideální pro polykání kilometrů na dálnicích. Dokáží poskytnout určitý komfort potřeb k pobytu a přesto mohou sloužit v každodenním provozu jako osobní vozy.
 
-					li
-						.img-container.img-container-3
-						p #[span Dostupnost] S vozem se dostanete i na těžko přístupná místa jako přeplněná centra velkoměst, parkoviště v historických částech a to samé při toulkách v přírodě.
-					
-					li
-						.img-container.img-container-5
-						p #[span Komfort] V autě můžete spát, vařit, sprchovat se a samozřejmostí je i chemický záchod. Technické vymoženosti vnitřního vybavení jsou veliké. Ať už cestujete kamkoliv, vozíte si sebou pohodlí domova.
-					li
-						.img-container.img-container-4
-						p #[span Kvalita] U přestaveb jsou použity komponenty od předních výrobců zabývajících se karavaningem. Německá firma REIMO se  zabývá speciálně prodejem do těchto typů vozidel. Nabízí i celé vozy, nebo jejich kompletní výbavu.
+				li
+					.img-container.img-container-3
+					p #[span Dostupnost] S vozem se dostanete i na těžko přístupná místa jako přeplněná centra velkoměst, parkoviště v historických částech a to samé při toulkách v přírodě.
+				
+				li
+					.img-container.img-container-5
+					p #[span Komfort] V autě můžete spát, vařit, sprchovat se a samozřejmostí je i chemický záchod. Technické vymoženosti vnitřního vybavení jsou veliké. Ať už cestujete kamkoliv, vozíte si sebou pohodlí domova.
+				li
+					.img-container.img-container-4
+					p #[span Kvalita] U přestaveb jsou použity komponenty od předních výrobců zabývajících se karavaningem. Německá firma REIMO se  zabývá speciálně prodejem do těchto typů vozidel. Nabízí i celé vozy, nebo jejich kompletní výbavu.
 
-				.bottomPane
-					button.leftPane__presBtn
-						p.presBtn__open Více
-						//p.presBtn__close Zavřít
-						svg.presBtn__1st(viewbox="0 0 100 100") 
-							path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
-						svg.presBtn__2nd(viewbox="0 0 100 100")
-							path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
+			.bottomPane
+				button.leftPane__presBtn
+					p.presBtn__open Více
+					//p.presBtn__close Zavřít
+					svg.presBtn__1st(viewbox="0 0 100 100") 
+						path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
+					svg.presBtn__2nd(viewbox="0 0 100 100")
+						path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
 
-	//
-	// Work
-	//
-	article.work#work
-		h1.index-article__h1 Má práce
+	section.work#work
+		h1.work__title Má práce
 		ul.work__ul
 			li.work__item.work__item--1st
 				a.work__link.ford-custom__link--bg(href="./ford-custom.html")
@@ -86,38 +79,32 @@ block body
 						p Ford Transit 1996
 				p.work__txt Vzpomínka na první práci, která uspokojila 4členou rodinu a sloužila poctivě 16 let karavaningu. <a href="./predchozi-prace.html">Více</a>
 
-	//
-	// About
-	//
-	.about-outer
-		article.about#about
+	.about-outer#about
+		.about
 			section.about-txt
-				h2 Jak to začalo
+				h1.about__title Jak to začalo
 				.about-txt__inner
-					p Myšlenka začala v roce 1994 po zakoupení staršího vozu Ford Transit. Nadšení pro volnost, prožití svého volného času, se stávala silnější a po zamilování se do windsurfingu bylo rozhodnuto.  Otvíraly se nové možnosti. Nemusel jsem k vůli surfu utíkat od rodiny ale rodinu jsem brával sebou. 14denní dovolená se protáhla od jara do podzimu. Od Baltu, přes všechny jezera a přehrady až k středozemnímu moři. Příjezdy do neznámých oblastí a já měl vše sebou, přece jen dodávalo více klidu. Auto bylo pro mne něco víc než jen převoz z místa do místa.<br><br>Jak děti rostli, začalo docházet k jeho postupné přestavbě a já se rozhodoval, co je důležité koupit dřív. Finance z rodinného rozpočtu prosadit na zakoupení životně důležité součásti obytného vozu, byl prostě problém. Byla to nejdelší přestavba ale šla, tak nějak nenápadně s mou rodinou. Vše mělo své kouzlo. Teď, co se život přehoupl do druhé poloviny, je to zase trochu jiné. Zakoupil jsem už nové auto, Ford Transit Custom a představa o vnitřní vestavbě dostala novou tvář. S manželkou nám stačí jedna postel a blížící se vnoučátka si budem brát na víkend jenom po jednom. Na těchto stránkách bych  Vás chtěl seznámit s tímto typem karavaningu a ze svou částečnou činností v tomto směru. 
+					p Myšlenka začala v roce 1994 po zakoupení staršího vozu Ford Transit. Nadšení pro volnost, prožití svého volného času, se stávala silnější a po zamilování se do windsurfingu bylo rozhodnuto.  Otvíraly se nové možnosti. Nemusel jsem k vůli surfu utíkat od rodiny ale rodinu jsem brával sebou. 14denní dovolená se protáhla od jara do podzimu. Od Baltu, přes všechny jezera a přehrady až k středozemnímu moři. Příjezdy do neznámých oblastí a já měl vše sebou, přece jen dodávalo více klidu. Auto bylo pro mne něco víc než jen převoz z místa do místa.
+					p Jak děti rostli, začalo docházet k jeho postupné přestavbě a já se rozhodoval, co je důležité koupit dřív. Finance z rodinného rozpočtu prosadit na zakoupení životně důležité součásti obytného vozu, byl prostě problém. Byla to nejdelší přestavba ale šla, tak nějak nenápadně s mou rodinou. Vše mělo své kouzlo. Teď, co se život přehoupl do druhé poloviny, je to zase trochu jiné. Zakoupil jsem už nové auto, Ford Transit Custom a představa o vnitřní vestavbě dostala novou tvář. S manželkou nám stačí jedna postel a blížící se vnoučátka si budem brát na víkend jenom po jednom. Na těchto stránkách bych  Vás chtěl seznámit s tímto typem karavaningu a ze svou částečnou činností v tomto směru. 
 
-	article
-		.sub-about
-			.profile-pic
-			blockquote.profile__txt Karavaning bych přirovnal k hudbě. Hudba poskytuje radost obrovské spoustě posluchačů a každý si najde tu svou. Také karavaning má široký rozsah zájmů a je třeba si vybrat ten svůj. 
-	//
-	// Contact
-	//
-	article.contact#contact
-		.contact-wrapper
-			h2 Kontakt
+	.sub-about
+		blockquote.sub-about__quote Karavaning bych přirovnal k hudbě. Hudba poskytuje radost obrovské spoustě posluchačů a každý si najde tu svou. Také karavaning má široký rozsah zájmů a je třeba si vybrat ten svůj. 
+
+	.contact-outer#contact
+		section.contact
+			h1.contact__title Kontakt
 			p #[img(src="./img/icons/mail_white.svg")] libor.palisa@gmail.com
 			p #[img(src="./img/icons/phone_white.svg")] +420 605 532 809
-			address
+			address.contact__address
 				p #[img(src="./img/icons/location-pin_white.svg")] Sokoloská 2530<br>Kroměříž<br>767 01
 				img.contact__map(src="./img/kromerizOnMap.svg", alt="")
 
 			p.contact-fb Najděte mě na facebooku:
 			a.contact-fb-link(href="#0"): img.contact-fb__icon(src="./img/fb-icon2.svg")
 			
-	article.sub-contact
-		.contact-form
-			h2.sub-contact__headline Napište mi
+	.contact-form-outer
+		section.contact-form
+			h1.contact-form__title Napište mi
 			.form__name
 				p Jméno
 			.form__email
@@ -129,15 +116,14 @@ block body
 
 block footer
 	footer.footer
-		p.footer__copyright.footer--middle Auto Caravan Sport s.r.o. 2016
-		nav.footer__nav.footer--left
-			ul
-				li: a(href="#header") Nahoru
+		
+		a.footer__goTop(href="#header") Nahoru
 
-		.footer--right
-			img.home-socicon.footer__socicon(src="./img/email-icon.svg")
+		p.footer__copyright Auto Caravan Sport s.r.o. 2016
+
+		.footer__right
 			img.home-socicon.footer__socicon(src="./img/fb-icon2.svg")
-		p.footer__credits Web: 
-			a(href="https://www.linkedin.com/in/radek-palisa-96332886", target="_blank") Radek Palisa
+			p.footer__credits Web: 
+				a(href="https://www.linkedin.com/in/radek-palisa-96332886", target="_blank") Radek Palisa
 
 block local-scripts

@@ -1,5 +1,5 @@
 $break-laptop: 1000px;
-$break-desktop: 1600px;
+$break-desktop: 1640px;
 $base-line-height: 1.5;
 
 html {
@@ -41,43 +41,7 @@ p {
 	font-family: roboto;
 }
 
-.index-article__h1 {
-	position: relative;
-	margin: 0;
-	padding: 60px 0 45px;
+h1 {
+	font-size: 1.1em;
 	text-align: center;
-	font-size: 1.2em;
-	color: #943B6C;
-	color: #AB6C8F;
-	color: #757684;
-	text-transform: uppercase;
-	/*
-	&::after {
-		content: "";
-		position: absolute;
-		bottom: 0;
-		left: 50%;
-		transform: translate(-50%, 50%) rotate(45deg);
-		width: 0.9em;
-		height: 0.9em;
-		background-color: white;
-		z-index: 2;
-	}
-	*/
-}
-
-// Clearfix
-
-.clearfix:before,
-.clearfix:after {
-  content: "";
-  display: table;
-}
-
-.clearfix:after {
-  clear: both;
-}
-
-.clearfix {
-  zoom: 1; /* ie 6/7 */
 }

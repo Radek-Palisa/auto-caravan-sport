@@ -5,8 +5,8 @@ $(function() {
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
         $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
+          scrollTop: target.offset().top - 51
+        }, 900);
         return false;
       }
     }
@@ -53,12 +53,14 @@ var $window = $(window);
 var windowHeight = $window.height();
 var $logo = $('.logo');
 
-// Parallax sliding - header section
+// Parallax sliding - jumbotron section
 
-var $header = $('.header');
+var $jumbotron = $('.jumbotron');
 
 // Parallax sliding - Presentation section vars
-var $pres = $('.presentation__content');
+var $pres = $('.presentation');
+var $upperPane = $('.upperPane');
+var $bottomPane = $('.bottomPane');
 var presTop = $pres.offset().top;
 var presInView = presTop - windowHeight;
 var presHeight = $pres.outerHeight();
@@ -67,15 +69,16 @@ var presOffView = presTop + presHeight;
 // Parallax sliding - About Section vars
 var $about = $('.about');
 var aboutTop = $about.offset().top;
-var jsElHeight = $('.js-el-height').outerHeight() * 4;
-var aboutInView =  aboutTop - jsElHeight - windowHeight;
+var presOpen = $('.rightPane').outerHeight();
+var aboutInView =  aboutTop - presOpen - windowHeight;
 var aboutHeight = $about.outerHeight();
 var aboutOffView = aboutTop + aboutHeight;
 
 	$(window).bind('scroll', function(){
 		var wScroll = $(document).scrollTop();
-		var headerPos = 35;
-		var bgPosPres = 130;
+		var headerPos = 0;
+		var bgPosPres = -449;
+		var bgPosPresBottom = -902;
 
 		// Nav to shrink
 		//$(window).resize(function() {
@@ -88,29 +91,32 @@ var aboutOffView = aboutTop + aboutHeight;
 			}
 		//});
 
-		/*
-		if (wScroll > 0) {
-			headerPos = headerPos-(wScroll/3);
+		if (wScroll >= 0) {
+			headerPos = headerPos+(wScroll/3);
 		}
-		$header.css('background-position', 'center '+headerPos+'%');
-		*/
-		if (wScroll >= presInView) {
-			bgPosPres = bgPosPres-((wScroll-presInView)/8);
-		}
-		$pres.css('background-position', 'center '+bgPosPres+'%');
+		$jumbotron.css('background-position', '25% '+headerPos+'px');
 
-		var bgPosAbout = 210;
-		/*
-		if (wScroll >= aboutInView) {
-			bgPosAbout = bgPosAbout-((wScroll-aboutInView)/6);
+
+		if (wScroll >= presInView) {
+			bgPosPres = bgPosPres+((wScroll-presInView)/3);
+			bgPosPresBottom = bgPosPresBottom+((wScroll-presInView)/3);
 		}
-		$about.css('background-position', 'center '+bgPosAbout+'%');
-		*/
+
+		$upperPane.css('background-position', 'center '+bgPosPres+'px');
+		$bottomPane.css('background-position', 'center '+bgPosPresBottom+'px');
+		
+		var bgPosAbout = 350;
+		
+		if (wScroll >= aboutInView) {
+			bgPosAbout = bgPosAbout+((wScroll-aboutInView)/3);
+		}
+		$about.css('background-position', '35% '+bgPosAbout+'px');
+		
 	});
 
 // Presentation Tabbing
 
-var $rightPane = $('.presentation__content ul');
+var $rightPane = $('.rightPane');
 //$rightPane.addClass('rightPane--js-hidden');
 
 var $presBtn1st = $('.presBtn__1st');

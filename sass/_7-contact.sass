@@ -3,38 +3,32 @@
 /* **** Contact **** */
 //
 //
-.contact
+.contact-outer
 	padding: 60px 20px 60px
 	background: url(img/kontakt-bg_1600w_41q.jpg) 55% 50% / 1600px auto no-repeat black
 
 //.article-contact__h1
 	color: white 
 
-.contact-wrapper
+.contact
 	max-width: 350px
 	margin: 0 auto
+	color: white
 
-	h2
-		font-size: 24px
-		text-align: center
+	&__title
 		color: white
 		margin: 0 0 30px
 		text-transform: uppercase
 
-	p
-		color: white
-		font-size: 18px
+	p img 
+		display: inline-block
+		width: 18px
+		margin-right: 10px
 
-		img 
-			display: inline-block
-			width: 18px
-			margin-right: 10px
-
-	address
+	&__address
 		display: flex
 		justify-content: space-between
 		color: white
-		font-size: 18px
 		font-style: normal
 		text-align: center
 
@@ -71,14 +65,15 @@
 //
 // Sub-contact
 //
-.sub-contact
+.contact-form-outer
 	padding: 4% 0
+
 .contact-form
 	max-width: 500px
 	margin: 0 auto
 	color: #545454
 	
-	h2
+	&__title
 		font-size: 20px
 		text-align: center
 		color: #717171
