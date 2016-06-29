@@ -12,6 +12,7 @@ html {
 body {
 	line-height: $base-line-height;
 	font-size: 16px;
+	font-family: roboto, sans-serif;
 
 	@media (min-width: $break-laptop) {
 		font-size: 18px
@@ -25,21 +26,7 @@ img {
 
 /* Typography */
 
-$headline-color: rgb(255, 205, 13);
-// $headline-color: #FFA700;
-
-// an alternative color for headlines, light purple
-// #D499B9
-//rest of the pallete #9055A2, #2E294E, #011638 from lolcolors.com
-$headline-color: #D499B9;
-// zajimava zluta barva #f6d922, jde dohromdady s #202020 a #F7F7F7
-
-
 $highlight-color: #62A8B5;
-
-p {
-	font-family: roboto;
-}
 
 h1 {
 	font-size: 1.1em;
