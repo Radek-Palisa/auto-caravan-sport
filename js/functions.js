@@ -70,10 +70,13 @@ var jumboHeight = $jumbotron.outerHeight();
 var $pres = $('.presentation');
 var $upperPane = $('.upperPane');
 var $bottomPane = $('.bottomPane');
+var bottomPaneTop = $bottomPane.offset().top;
+var bottomPaneHeight = $bottomPane.outerHeight();
+var bottomPaneOffView = bottomPaneTop + bottomPaneHeight;
 var presTop = $pres.offset().top;
 var presInView = Math.max((presTop - windowHeight), 0);
 var presHeight = $pres.outerHeight();
-var presOffView = presTop + presHeight +630;
+var presOffView = presTop + presHeight;
 
 // Parallax sliding - About Section vars
 var $about = $('.about');
@@ -82,13 +85,14 @@ var aboutInView =  aboutTop - windowHeight;
 var aboutHeight = $about.outerHeight();
 var aboutOffView = aboutTop + aboutHeight;
 
+
 function parallax() {
-	$(window).on('scroll', function(){
+	//$(window).on('scroll', function(){
 		var wScroll = $(document).scrollTop();
 		var headerPos = 0;
-		var bgPosPres = -449;
-		var bgPosPresBottom = -902;
-		var bgPosAbout = 350;
+		var bgPosPres;
+		var bgPosPresBottom;
+		var bgPosAbout = -550;
 
 		// Nav to shrink
 		if (wScroll > 350) {
@@ -99,29 +103,48 @@ function parallax() {
 
 		// Parallax scrolling
 		if (wScroll >= 0 && wScroll < jumboHeight) {
-			headerPos = headerPos+(wScroll/3);
+			//headerPos = (headerPos+(wScroll/3.5)).toFixed(2);
+			headerPos = (wScroll/3.5).toFixed(2);
+			//headerPos = (-(headerPos+(wScroll/1.5))).toFixed(2);
+			 //var headerPos = (-(wScroll/1.5)).toFixed(2);
 		}
-		$jumbotron.css('background-position', '25% '+headerPos+'px');
-		// 
+		$jumbotron.css('background-position', '50% '+headerPos+'px');
+
 		if (wScroll >= presInView && wScroll < presOffView) {
-			bgPosPres = bgPosPres+((wScroll-presInView)/3);
-			bgPosPresBottom = bgPosPresBottom+((wScroll-presInView)/3);
+			bgPosPres = (-449+((wScroll-presInView)/3.5)).toFixed(2);
+			bgPosPresBottom = (-902+((wScroll-presInView)/3.5)).toFixed(2);
+			//bgPosPres = (200-((wScroll-presInView)/1.5)).toFixed(2);
+			//bgPosPresBottom = (200-((wScroll-presInView)/1.5)).toFixed(2);
 		}
 
 		$upperPane.css('background-position', 'center '+bgPosPres+'px');
 		$bottomPane.css('background-position', 'center '+bgPosPresBottom+'px');
-		
+
 		if (wScroll >= aboutInView && wScroll < aboutOffView) {
-			bgPosAbout = bgPosAbout+((wScroll-aboutInView)/3);
+			bgPosAbout = (bgPosAbout+((wScroll-aboutInView)/3.5)).toFixed(2);
 		}
 		$about.css('background-position', '35% '+bgPosAbout+'px');
 		
-	});
+	//});
 };
 
 $(document).ready(function() {
 	if (window.matchMedia('(min-width: 1000px)').matches) {
-		parallax();
+		//parallax();
+		var didScroll = false;
+
+		window.onscroll = doThisStuffOnScroll;
+
+		function doThisStuffOnScroll() {
+		    didScroll = true;
+		}
+
+		setInterval(function() {
+		    if(didScroll) {
+		        didScroll = false;
+		        parallax();
+		    }
+		}, 10);
 	};
 });
 
@@ -129,11 +152,10 @@ $( window ).resize(function() {
 	if (window.matchMedia('(min-width: 1000px)').matches) {
 		// updating values in variables on resize
 		windowHeight = $(window).height();
-		jumboHeight = $jumbotron.outerHeight();
 		presTop = $pres.offset().top;
 		presInView = Math.max((presTop - windowHeight), 0);
 		presHeight = $pres.outerHeight();
-		presOffView = presTop + presHeight +630;
+		presOffView = presTop + presHeight;
 		aboutTop = $about.offset().top;
 		aboutInView =  aboutTop - windowHeight;
 		aboutHeight = $about.outerHeight();

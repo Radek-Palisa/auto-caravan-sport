@@ -1289,13 +1289,12 @@ h1 {
 }
 @media (min-width: 1000px) {
   .jumbotron {
-    height: 460px;
-    margin-top: 50px;
+    height: 500px;
+    margin-top: 10px;
   }
 }
 .jumbotron--index-bg {
-  background-image: url(./img/index/jumbotron.jpg);
-  background-position: 25% 0;
+  background: url(./img/index/jumbotron.jpg) 50% 0/1936px auto no-repeat;
 }
 @media (min-width: 1000px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1000px) and (min-resolution: 144dpi) {
   .jumbotron--index-bg {
@@ -1330,7 +1329,7 @@ h1 {
 .site-intro__title {
   flex: 0 1 100%;
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 1.1em;
   font-weight: normal;
   color: #D8D9E6;
 }
@@ -1397,9 +1396,7 @@ h1 {
   padding: 60px 20px 10px;
   color: #D8D9E6;
   color: white;
-  background-image: url(./img/prezentace/presentation_2x.jpg);
-  background-size: 1600px auto;
-  background-position: center -449px;
+  background: url(./img/prezentace/presentation_2x.jpg) center 0/1600px auto;
 }
 .upperPane__presIntro__p {
   max-width: 420px;
@@ -1423,9 +1420,7 @@ h1 {
   padding: 50px 0;
   color: #D8D9E6;
   color: white;
-  background-image: url(./img/prezentace/presentation_2x.jpg);
-  background-size: 1600px auto;
-  background-position: center -902px;
+  background: url(./img/prezentace/presentation_2x.jpg) center 0/1600px auto;
   box-shadow: 0px 0px 6px black;
 }
 
