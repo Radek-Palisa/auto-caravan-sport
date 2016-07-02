@@ -102,6 +102,7 @@ function parallax() {
 		}
 
 		// Parallax scrolling
+		
 		if (wScroll >= 0 && wScroll < jumboHeight) {
 			//headerPos = (headerPos+(wScroll/3.5)).toFixed(2);
 			headerPos = (wScroll/3.5).toFixed(2);
@@ -109,7 +110,7 @@ function parallax() {
 			 //var headerPos = (-(wScroll/1.5)).toFixed(2);
 		}
 		$jumbotron.css('background-position', '50% '+headerPos+'px');
-
+		
 		if (wScroll >= presInView && wScroll < presOffView) {
 			bgPosPres = (-449+((wScroll-presInView)/3.5)).toFixed(2);
 			bgPosPresBottom = (-902+((wScroll-presInView)/3.5)).toFixed(2);
@@ -144,7 +145,7 @@ $(document).ready(function() {
 		        didScroll = false;
 		        parallax();
 		    }
-		}, 10);
+		}, 5);
 	};
 });
 
