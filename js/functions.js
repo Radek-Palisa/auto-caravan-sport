@@ -95,14 +95,14 @@ function parallax() {
 		var bgPosAbout = -550;
 
 		// Nav to shrink
-		if (wScroll > 350) {
+		if (wScroll > 440) {
 			$('.site-header').addClass('site-header--js-narrowed');
 		} else {
 			$('.site-header').removeClass('site-header--js-narrowed');
 		}
 
 		// Parallax scrolling
-		
+		/*
 		if (wScroll >= 0 && wScroll < jumboHeight) {
 			//headerPos = (headerPos+(wScroll/3.5)).toFixed(2);
 			headerPos = (wScroll/3.5).toFixed(2);
@@ -125,7 +125,7 @@ function parallax() {
 			bgPosAbout = (bgPosAbout+((wScroll-aboutInView)/3.5)).toFixed(2);
 		}
 		$about.css('background-position', '35% '+bgPosAbout+'px');
-		
+		*/
 	//});
 };
 
@@ -145,7 +145,7 @@ $(document).ready(function() {
 		        didScroll = false;
 		        parallax();
 		    }
-		}, 5);
+		}, 250);
 	};
 });
 
