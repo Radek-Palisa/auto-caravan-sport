@@ -3,31 +3,32 @@ extends partials/skeleton.jade
 block navigation
 	header.site-header.site-header--fixed
 		a.logo(href="#") Auto Caravan Sport #[span s.r.o.]
-		.menu-icon &#9776;
+		.menu-icon
+			button &#9776;
 		ul.nav__ul(role="navigation")
 			li: a(href="#presentation") O co jde
 			li: a(href="#work") Má práce
 			li: a(href="#about") Jak to začalo
-			li: a(href="#contact") Kontakt	
+			li: a(href="#contact") Kontakt
 
 block body
 
 	.jumbotron.jumbotron--index-bg#header
 
 	p.slogan Vítejte v mém světě dodávkové velikosti</br>...ani malé ani velké.
-	section.site-intro
+	section.site-intro#presentation
 		h1.site-intro__title Vítejte na stránkách firmy <strong>Auto Caravan Sport s.r.o.</strong>
 		.site-intro__img
 		p.site-intro__txt Jmenuji se Libor Palisa a mojí dlouholetou vášní je hledat možnosti, jakým způsobem přestavět dodávkový vůz, nejlépe kombi-van, na obytný vůz pro trávení volného času.
 
-	.presentation-outer#presentation
+	.presentation-outer
 		section.presentation
 			.upperPane
 				h1.presentation__title Vůz pro volný čas
 				p.upperPane__presIntro__p Snažím se klást důraz na dokonalé využití vnitřního prostoru pro maximální pohodlí. Chci aby vůz poskytoval základní potřeby pro pobyt v přírodě, městě, tak i třeba na dálničním parkovišti. Splňuji si svůj sen dokonalé samostatnosti a umožňuji si tím trávit příjemné chvíle na cestách. Charakterizoval bych své zájmy v následujících oblastech:
 				p.upperPane__presIntro__p2 Využití  /  Dostupnost  /  Komfort  /  Kvalita
 
-			ul.rightPane
+			ul.middlePane
 				li
 					.img-container.img-container-2
 					p #[span Využití] Auta jsou ideální pro polykání kilometrů na dálnicích. Dokáží poskytnout určitý komfort potřeb k pobytu a přesto mohou sloužit v každodenním provozu jako osobní vozy.

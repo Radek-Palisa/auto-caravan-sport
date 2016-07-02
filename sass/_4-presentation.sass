@@ -25,22 +25,33 @@
 .upperPane
 	position: relative
 	z-index: 2 // for the box shadow on bottomPane
-	height: 460px
-	padding: 60px 20px 10px
+	height: 430px
+	padding: 40px 10px 10px
 	color: #D8D9E6
 	color: white
-	background: url(./img/prezentace/presentation_2x.jpg) 
-	background-size: 1600px auto
-	background-position: center -263px
+	background: url(./img/index/presentation_mobile.jpg) right 0 / 500px auto no-repeat
+
+	@media (min-width: 500px)
+		background: url(./img/index/presentation.jpg) center 0 / 1600px auto
+		height: 460px
+		padding: 60px 10px 10px
+
+	@media (min-width: 1000px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1000px) and (min-resolution: 144dpi)
+		background: url(./img/index/presentation_2x.jpg) center 0 / 1600px auto
 
 	&__presIntro__p 
-		max-width: 420px
+		max-width: 370px
+
+		@media (min-width: 1000px)
+			max-width: 420px
 		margin: 0 auto
 		line-height: 1.8
 
-	&__presIntro__p2
-		margin: 40px auto 30px
+	&__presIntro__p2		
 		text-align: center
+
+		@media (min-width: 1000px)
+			margin: 40px auto 0
 
 .presentation__title
 	margin-bottom: 1em
@@ -49,17 +60,21 @@
 .bottomPane
 	position: relative
 	z-index: 1 // for the box shadow
-	height: 160px
-	padding: 50px 0
+	padding: 20px 0
 	color: #D8D9E6
 	color: white
-	background: url(./img/prezentace/presentation_2x.jpg)
-	background-size: 1600px auto
-	background-position: center -723px
+	background: url(./img/index/presentation_mobile.jpg) right -430px / 500px auto no-repeat
 	box-shadow: 0px 0px 6px black
 
-// Button to open slideshow
+	@media (min-width: 500px)
+		background: url(./img/index/presentation.jpg) center -460px / 1600px auto
+		padding: 50px 0
 
+	@media (min-width: 1000px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1000px) and (min-resolution: 144dpi)
+		background-image: url(./img/index/presentation_2x.jpg)
+
+
+// Button to open slideshow
 .leftPane__presBtn
 	position: relative
 	display: block
@@ -110,7 +125,7 @@
 
 // Right Pane styles
 
-.rightPane 
+.middlePane 
 	display: none
 	height: 630px
 	margin: 0 auto
