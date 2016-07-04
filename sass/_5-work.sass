@@ -14,28 +14,25 @@
 	text-transform: uppercase
 
 .work__ul
-	max-width: 1608px
-	justify-content: center
+	max-width: 1606px
 	margin: 0 auto
-	padding: 0 10px 145px
+	padding: 0 10px 60px
 
 	@media (min-width: 1000px)
 		display: flex
-		padding: 0 2px 145px
+		justify-content: center
+		padding: 0 2px 115px
 
 .secondary-nav .work__ul
 	flex-wrap: wrap
 
 .work__item
 	max-width: 600px
-	margin: 10px auto
+	margin: 0 auto 20px
 	list-style: none
 	//flex: 1 1 320px
 	border: 1px solid #DFDEDE
 	background-color: white
-
-	a:hover .work__link
-		background-color: rgba(0,0,0,0.6)
 
 .work__link
 	position: relative
@@ -47,19 +44,17 @@
 		padding-bottom: 80% 
 	
 	background-size: cover
+	background-position: center
 	overflow: hidden
 
 .ford-custom__link--bg
-	background-image: url(./img/ma-prace/ford-custom.jpg)
-	background-position: top
+	background-image: url(./img/index/ma-prace/ford-custom.jpg)
 
 .ford-2000__link--bg
-	background-image: url(./img/ma-prace/P6190018.jpg)
-	background-position: center 81%
+	background-image: url(./img/index/ma-prace/ford-2000.jpg)
 
 .ford-1996__link--bg
-	background-image: url(./img/ma-prace/lefkas_073.jpg)
-	background-position: center
+	background-image: url(./img/index/ma-prace/ford-1996.jpg)
 
 .galerie__link--bg
 	width: 800px
@@ -74,16 +69,15 @@
 	margin: 1.5em auto
 
 
-.work__link__h
+.work__link__btn
 	position: absolute
 	top: 50%
 	left: 50%
 	transform: translate(-50%, -50%)
 	padding: 3px 0 3px 5px
-	border: 1px solid #62A8B5
+	border: 1px solid $highlight-color
 	white-space: nowrap
 	text-align: center
-	font-family: roboto
 	font-weight: bold
 	color: white
 	background-color: rgba(0,0,0,0.6)
@@ -92,9 +86,9 @@
 		display: inline-block
 		margin: 0
 		padding: 8px 20px
-		border-left: 1px solid #62A8B5
+		border-left: 1px solid $highlight-color
 		text-align: center
-		font-size: 1.1rem
+		font-size: 1.1em
 		letter-spacing: 0.5px
 
 
@@ -106,13 +100,10 @@
 	transition: all 0.2s ease-in-out
 
 	path
-		fill: #62A8B5
+		fill: $highlight-color
 
 .work__txt
 	margin: 0
-	padding: 2em 20px 2em
+	padding: 2em 20px
 	color: #474141
 	text-align: center
-
-	a
-		text-decoration: underline

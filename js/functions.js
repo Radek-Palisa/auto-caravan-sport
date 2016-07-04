@@ -96,7 +96,7 @@ $(document).ready(function() {
 			headerHeight = 52;
 		} else {
 			window.onscroll = null;
-			$jumbotron.css('background-position', '13% 0');
+			$jumbotron.css('background-position', '20% 0');
 
 			headerHeight = 0;
 		}
@@ -107,6 +107,7 @@ $(document).ready(function() {
 	//
 
 	var $middlePane = $('.middlePane');
+	var middlePaneHeight = $middlePane.outerHeight() - 15;
 	var $presBtn1st = $('.presBtn__1st');
 	var $presBtn = $('.presBtn__2nd');
 
@@ -116,7 +117,7 @@ $(document).ready(function() {
 
 		$middlePane.slideToggle(900);
 		if ($presBtn.hasClass('presBtn--rotated') == true) {
-			$('html, body').animate({scrollTop: wScrollB-604}, 1000)
+			$('html, body').animate({scrollTop: wScrollB- middlePaneHeight}, 1000)
 		}
 
 		$presBtn.toggleClass('presBtn--rotated');

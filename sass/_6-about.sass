@@ -12,18 +12,37 @@
 .about
 	position: relative
 	max-width: 1600px
-	height: 620px
 	margin: 0 auto
-	padding: 55px 0
-	background-image: url(img/ofirme.jpg)
-	background-size: 1600px auto
-	background-position: 35% 61%
+	background-image: url(img/index/ofirme_mobile.jpg)
+	background-size: cover
 	// background-attachment: fixed
+
+	@media (min-width: 640px)
+		background-image: url(img/index/ofirme.jpg)
+		background-position: 34% 50%
+		padding: 55px 0
+		height: 620px
+
+	@media (min-width: 640px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 640px) and (min-resolution: 144dpi)
+		background-image: url(img/index/ofirme_2x.jpg)
 
 	@media screen and (min-width: $break-desktop)
 		box-shadow: 0px 0px 10px black
 
 .about-txt
+	color: #EFEFEF
+	margin: 0 auto
+	padding: 0 20px 60px
+
+	.about__title 
+		margin: 0
+		padding: 50px 0 1em
+		text-transform: uppercase
+
+	@media (min-width: 640px)
+		max-width: 590px
+		padding: 0 70px 50px	
+		background-color: rgba(0,0,0,0.3)
 
 	@media (min-width: 1000px)
 		position: absolute
@@ -34,17 +53,6 @@
 	@media (min-width: 1600px)
 		right: 25%
 		transform: translate(50%, -50%)
-	
-	color: #EFEFEF
-	margin: 0 auto
-	max-width: 590px
-	padding: 0 70px 50px
-	background-color: rgba(0,0,0,0.3)
-
-	.about__title 
-		margin: 0
-		padding: 50px 0 1em
-		text-transform: uppercase
 
 	&__inner
 		height: 370px
@@ -69,12 +77,11 @@
 //
 // Sub-about
 //
-.sub-about
-	padding: 30px 15px 
 
 .sub-about__quote
 	max-width: 470px
-	margin: 1em auto
+	margin: 0 auto
+	padding: 35px 15px
 	text-align: center
 	font-style: italic
 	color: #757684

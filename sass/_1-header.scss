@@ -167,10 +167,13 @@
 	background-size: cover;
 
 	&--index-bg {
-		background: url(./img/index/jumbotron_mobile.jpg) 13% 0 / cover no-repeat;
+		background: url(./img/index/jumbotron_mobile.jpg) 50% 0 / cover no-repeat;
 
-		@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){ 
-			background: url(./img/index/jumbotron_mobile_2x.jpg) 20% 0 / cover no-repeat;;
+		@media (min-width: 500px), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+			background: url(./img/index/jumbotron_tablet.jpg) 20% 0 / cover no-repeat;
+		}
+		@media (min-width: 500px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 500px) and (min-resolution: 144dpi){ 
+			background: url(./img/index/jumbotron_tablet_2x.jpg) 20% 0 / cover no-repeat;;
 		}
 
 		@media (min-width: 1000px) {

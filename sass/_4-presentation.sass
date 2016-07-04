@@ -31,10 +31,13 @@
 	color: white
 	background: url(./img/index/presentation_mobile.jpg) right 0 / 500px auto no-repeat
 
-	@media (min-width: 500px)
-		background: url(./img/index/presentation.jpg) center 0 / 1600px auto
-		height: 460px
+	@media (min-width: 500px), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)
+		background: url(./img/index/presentation_tablet.jpg) right 0 / 1000px auto no-repeat
 		padding: 60px 10px 10px
+
+	@media (min-width: 1000px)
+		height: 460px
+		background: url(./img/index/presentation.jpg) center 0 / 1600px auto
 
 	@media (min-width: 1000px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1000px) and (min-resolution: 144dpi)
 		background: url(./img/index/presentation_2x.jpg) center 0 / 1600px auto
@@ -50,7 +53,7 @@
 	&__presIntro__p2		
 		text-align: center
 
-		@media (min-width: 1000px)
+		@media (min-width: 500px)
 			margin: 40px auto 0
 
 .presentation__title
@@ -66,9 +69,15 @@
 	background: url(./img/index/presentation_mobile.jpg) right -430px / 500px auto no-repeat
 	box-shadow: 0px 0px 6px black
 
+	@media (min-width: 500px), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)
+		background: url(./img/index/presentation_tablet.jpg) right -430px / 1000px auto	no-repeat
+
 	@media (min-width: 500px)
-		background: url(./img/index/presentation.jpg) center -460px / 1600px auto
 		padding: 50px 0
+
+	@media (min-width: 1000px)
+		background: url(./img/index/presentation.jpg) center -460px / 1600px auto
+
 
 	@media (min-width: 1000px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1000px) and (min-resolution: 144dpi)
 		background-image: url(./img/index/presentation_2x.jpg)
@@ -123,26 +132,47 @@
 .presBtn__1st--rotated
 	//transform: rotateZ(0deg) translateX(0px) !important
 
-// Right Pane styles
+// Middle Pane styles
 
 .middlePane 
 	display: none
-	height: 630px
 	margin: 0 auto
 	padding: 1.5em 20px
 	list-style: none
-	// background-image: linear-gradient(114deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 81%)
 	overflow: hidden
 	box-shadow: inset 1px 1px 10px black
 
-	li
+	&__item
+		max-width: 290px
 		margin: 0 auto
 		padding: 3px 0
-		display: flex
 		justify-content: center
 		align-items: center
 		flex-wrap: wrap
-		
+
+		@media (min-width: 640px)
+			display: flex
+			max-width: 700px
+
+		img
+			width: 100%
+			//height: 170px
+			border-radius: 2px
+
+			@media (min-width: 640px)
+				width: 195px
+				//height: 138px	
+
+		p 
+			flex: 1 1 300px
+			max-width: 470px
+			color: #797979
+			color: white
+			line-height: 1.6
+
+			@media (min-width: 640px)
+				margin: 0 0 0 2em
+
 		span 
 			font-size: 14px
 			color: #62A8B5
@@ -153,35 +183,4 @@
 			border: 1px solid #62A8B5
 			margin-right: 10px
 
-		p 
-			flex: 1 1 300px
-			max-width: 523px
-			margin: 0 0 0 2em
-			color: #797979
-			color: white
-			line-height: 1.6
-
-		.img-container
-			width: 195px
-			height: 138px
-			// margin-right: 2em
-			//border: 1px solid rgb(213, 213, 213)
-			border-radius: 2px
-			background-size: cover
-			background-position: center
-
-			$linear-gradient-pres: 'linear-gradient(rgba(255, 255, 255, 0.0) 5%,rgba(255, 255, 255, 0) 50%),'
-
-			&-2
-				background-image: #{$linear-gradient-pres} url(./img/picture-grid/pic-grid_06.jpg)
-
-			&-3
-				background-image: #{$linear-gradient-pres} url(./img/picture-grid/pic-grid_07.jpg)
-
-			&-4
-				background-image: #{$linear-gradient-pres} url(./img/picture-grid/pic-grid_04.jpg)
-
-			&-5
-				background-image: #{$linear-gradient-pres} url(./img/picture-grid/pic-grid_05.jpg)
-
-
+	
