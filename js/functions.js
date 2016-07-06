@@ -14,7 +14,7 @@ $(document).ready(function() {
 	      if (target.length) {
 	        $('html, body').animate({
 	          scrollTop: target.offset().top - headerHeight
-	        }, 900);
+	        }, 800);
 	        return false;
 	      }
 	    }
@@ -108,31 +108,31 @@ $(document).ready(function() {
 
 	var $middlePane = $('.middlePane');
 	var middlePaneHeight = $middlePane.outerHeight() - 15;
-	var $presBtn1st = $('.presBtn__1st');
-	var $presBtn = $('.presBtn__2nd');
+	var $presBtn = $('.presBtn');
+	var $presBtnIcon = $('.presBtn__icon');
+	//var $presBtn = $('.presBtn__2nd');
 
 
-	$('.leftPane__presBtn').on('click', function (){
+	$presBtn.on('click', function (){
 		var wScrollB = $(document).scrollTop();
 
 		$middlePane.slideToggle(900);
-		if ($presBtn.hasClass('presBtn--rotated') == true) {
+		if ($presBtnIcon.hasClass('presBtn__icon--open') == true) {
 			$('html, body').animate({scrollTop: wScrollB- middlePaneHeight}, 1000)
 		}
 
-		$presBtn.toggleClass('presBtn--rotated');
-		$presBtn1st.toggleClass('presBtn__1st--rotated');
+		$presBtnIcon.toggleClass('presBtn__icon--open');
 
 		setTimeout(
 			function() {
-				$('.leftPane__presBtn p').text(function(i, text){
+				$presBtnIcon.text(function(i, text){
 					return text === "Zavřít" ? "Více" : "Zavřít";
 				});
 			}, 800);
 	});
 
-	$('.leftPane__presBtn').hover(function(){
-		if (!$presBtn.hasClass('presBtn--rotated')) {
+	$presBtn.hover(function(){
+		if (!$presBtnIcon.hasClass('presBtn__icon--open')) {
 			$('.bottomPane').dequeue().stop().animate({ marginTop: "5px" });
 		}
 	}, function() {

@@ -56,15 +56,8 @@
           </li>
         </ul>
         <div class="bottomPane">
-          <button class="leftPane__presBtn">
-            <p class="presBtn__open">Více</p>
-            <!--p.presBtn__close Zavřít-->
-            <svg viewbox="0 0 100 100" class="presBtn__1st"> 
-              <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
-            </svg>
-            <svg viewbox="0 0 100 100" class="presBtn__2nd">
-              <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
-            </svg>
+          <button class="presBtn">
+            <p class="presBtn__icon">Více</p>
           </button>
         </div>
       </section>
@@ -74,27 +67,18 @@
       <ul class="work__ul">
         <li class="work__item"><a href="./ford-custom.html" class="work__link ford-custom__link--bg">
             <div class="work__link__btn">
-              <svg viewbox="0 0 100 100" class="podsekce__svg">
-                <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
-              </svg>
               <p>Ford Transit Custom</p>
             </div></a>
           <p class="work__txt">Má poslední práce, dezignově povedený Ford jsem se pokusil  přizpůsobit buď početnější rodině nebo jenom sólo páru.</p>
         </li>
         <li class="work__item"><a href="./ford-2000.html" class="work__link ford-2000__link--bg">
             <div class="work__link__btn">
-              <svg viewbox="0 0 100 100" class="podsekce__svg">
-                <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
-              </svg>
               <p>Ford Transit 2000</p>
             </div></a>
           <p class="work__txt">Nejrozšířenější  vestavba pro krátké typy vozů. Počet sedících jsou pro 4 osoby a celkem pohodlné jsou i 4 místa pro spaní.</p>
         </li>
         <li class="work__item"><a href="./ford-1996.html" class="work__link ford-1996__link--bg">
             <div class="work__link__btn">
-              <svg viewbox="0 0 100 100" class="podsekce__svg">
-                <path d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"></path>
-              </svg>
               <p>Ford Transit 1996</p>
             </div></a>
           <p class="work__txt">Vzpomínka na první práci, která uspokojila 4členou rodinu a sloužila poctivě 16 let karavaningu.</p>
@@ -116,12 +100,12 @@
     <div id="contact" class="contact-outer">
       <section class="contact">
         <h1 class="contact__title">Kontakt</h1>
-        <p><img src="./img/icons/mail_white.svg"> libor.palisa@gmail.com</p>
-        <p><img src="./img/icons/phone_white.svg"> +420 605 532 809</p>
+        <p class="contact__icon contact__icon--email">libor.palisa@gmail.com</p>
+        <p class="contact__icon contact__icon--tel">+420 605 532 809</p>
         <address class="contact__address">
-          <p><img src="./img/icons/location-pin_white.svg"> Sokoloská 2530<br>Kroměříž<br>767 01</p><img src="./img/kromerizOnMap.svg" alt="" class="contact__map">
+          <p class="contact__icon contact__icon--loc">Sokoloská 2530<br>Kroměříž<br>767 01</p><img src="./img/icons/kromerizOnMap.svg" alt="Kroměříž na mapě ČR" class="contact__map">
         </address>
-        <p class="contact-fb">Najděte mě na facebooku:</p><a href="#0" class="contact-fb-link"><img src="./img/fb-icon2.svg" class="contact-fb__icon"></a>
+        <p class="contact-fb">Najděte mě na facebooku:</p><a href="#0" class="contact-fb-link"><img src="./img/icons/fb-icon2.svg" class="contact-fb__icon"></a>
       </section>
     </div>
     <div class="contact-form-outer">
@@ -140,10 +124,9 @@
       </section>
     </div>
     <footer class="footer"><a href="#header" class="footer__goTop">Nahoru</a>
-      <p class="footer__copyright">Auto Caravan Sport s.r.o. 2016</p>
-      <div class="footer__right"><img src="./img/fb-icon2.svg" class="home-socicon footer__socicon">
-        <p class="footer__credits">Web: <a href="https://www.linkedin.com/in/radek-palisa-96332886" target="_blank">Radek Palisa</a></p>
-      </div>
+      <p class="footer__copyright">&#169; Auto Caravan Sport s.r.o. 2016</p>
+      <div class="footer__right"><a><img src="./img/icons/fb-icon2.svg" class="home-socicon footer__socicon"> Najděte mě na facebooku</a></div>
+      <p class="footer__credits">Design a tvorba webu: <a href="https://www.linkedin.com/in/radek-palisa-96332886" target="_blank">Radek Palisa</a></p>
     </footer>
     <script src="js/functions.js"></script>
     <script src="js/flipster.js"></script>

@@ -84,7 +84,7 @@
 
 
 // Button to open slideshow
-.leftPane__presBtn
+.presBtn
 	position: relative
 	display: block
 	height: 60px
@@ -96,41 +96,24 @@
 	background-color: rgba(0, 0, 0, 0.6)
 	color: $highlight-color
 
-	p 
+	&__icon
 		display: inline-block
 		padding: 0 50px 0 20px
 		text-align: left
 
-	svg 
-		position: absolute
-		top: 15px
-		right: 15px
-		width: 16px
-		transform: rotateY(180deg)
+		&::after
+			content: ''
+			position: absolute
+			right: 20px
+			top: 50%
+			transform: translateY(-50%)
+			width: 18px
+			height: 18px
+			background-image: url('./img/icons/sprite.svg')
+			background-position: -18px 0
 
-		path 
-			fill: $highlight-color
-
-	.presBtn__1st
-		transform: rotateZ(-90deg)
-		transition: all 0.4s ease-in-out
-
-	.presBtn__2nd
-		transform: rotateZ(-90deg) translateX(-6px)
-		transition: all 0.2s ease-in-out
-
-	&:hover .presBtn__1st
-		transition: all 0.3s ease-in-out
-
-	&:hover .presBtn__2nd
-		transition: all 0.3s ease-in-out
-
-
-.presBtn--rotated
-	transform: rotateZ(90deg) translateX(13px) !important
-
-.presBtn__1st--rotated
-	//transform: rotateZ(0deg) translateX(0px) !important
+		&--open::after
+			background-position: -90px 0 
 
 // Middle Pane styles
 

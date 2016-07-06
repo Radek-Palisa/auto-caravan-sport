@@ -45,13 +45,8 @@ block body
 					p #[span Kvalita] U přestaveb jsou použity komponenty od předních výrobců zabývajících se karavaningem. Německá firma REIMO se  zabývá speciálně prodejem do těchto typů vozidel. Nabízí i celé vozy, nebo jejich kompletní výbavu.
 
 			.bottomPane
-				button.leftPane__presBtn
-					p.presBtn__open Více
-					//p.presBtn__close Zavřít
-					svg.presBtn__1st(viewbox="0 0 100 100") 
-						path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
-					svg.presBtn__2nd(viewbox="0 0 100 100")
-						path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
+				button.presBtn
+					p.presBtn__icon Více
 
 	section.work#work
 		h1.work__title Má práce
@@ -59,24 +54,18 @@ block body
 			li.work__item
 				a.work__link.ford-custom__link--bg(href="./ford-custom.html")
 					.work__link__btn
-						svg.podsekce__svg(viewbox="0 0 100 100")
-							path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
 						p Ford Transit Custom
 				p.work__txt Má poslední práce, dezignově povedený Ford jsem se pokusil  přizpůsobit buď početnější rodině nebo jenom sólo páru.
 
 			li.work__item
 				a.work__link.ford-2000__link--bg(href="./ford-2000.html")
 					.work__link__btn
-						svg.podsekce__svg(viewbox="0 0 100 100")
-							path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
 						p Ford Transit 2000
 				p.work__txt Nejrozšířenější  vestavba pro krátké typy vozů. Počet sedících jsou pro 4 osoby a celkem pohodlné jsou i 4 místa pro spaní.
 
 			li.work__item
 				a.work__link.ford-1996__link--bg(href="./ford-1996.html")
 					.work__link__btn
-						svg.podsekce__svg(viewbox="0 0 100 100")
-							path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
 						p Ford Transit 1996
 				p.work__txt Vzpomínka na první práci, která uspokojila 4členou rodinu a sloužila poctivě 16 let karavaningu.
 
@@ -93,14 +82,14 @@ block body
 	.contact-outer#contact
 		section.contact
 			h1.contact__title Kontakt
-			p #[img(src="./img/icons/mail_white.svg")] libor.palisa@gmail.com
-			p #[img(src="./img/icons/phone_white.svg")] +420 605 532 809
+			p.contact__icon.contact__icon--email libor.palisa@gmail.com
+			p.contact__icon.contact__icon--tel +420 605 532 809
 			address.contact__address
-				p #[img(src="./img/icons/location-pin_white.svg")] Sokoloská 2530<br>Kroměříž<br>767 01
-				img.contact__map(src="./img/kromerizOnMap.svg", alt="")
+				p.contact__icon.contact__icon--loc Sokoloská 2530<br>Kroměříž<br>767 01
+				img.contact__map(src="./img/icons/kromerizOnMap.svg", alt="Kroměříž na mapě ČR")
 
 			p.contact-fb Najděte mě na facebooku:
-			a.contact-fb-link(href="#0"): img.contact-fb__icon(src="./img/fb-icon2.svg")
+			a.contact-fb-link(href="#0"): img.contact-fb__icon(src="./img/icons/fb-icon2.svg")
 			
 	.contact-form-outer
 		section.contact-form
@@ -119,11 +108,11 @@ block footer
 		
 		a.footer__goTop(href="#header") Nahoru
 
-		p.footer__copyright Auto Caravan Sport s.r.o. 2016
+		p.footer__copyright &#169; Auto Caravan Sport s.r.o. 2016
 
 		.footer__right
-			img.home-socicon.footer__socicon(src="./img/fb-icon2.svg")
-			p.footer__credits Web: 
-				a(href="https://www.linkedin.com/in/radek-palisa-96332886", target="_blank") Radek Palisa
+			a #[img.home-socicon.footer__socicon(src="./img/icons/fb-icon2.svg")] Najděte mě na facebooku
+		p.footer__credits Design a tvorba webu: 
+			a(href="https://www.linkedin.com/in/radek-palisa-96332886", target="_blank") Radek Palisa
 
 block local-scripts

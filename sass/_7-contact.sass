@@ -23,6 +23,29 @@
 		margin: 0 0 30px
 		text-transform: uppercase
 
+	&__icon
+		position: relative
+		padding-left: 2em
+
+	&__icon::before 
+		content: ''
+		position: absolute
+		left: 0
+		top: 4px
+		width: 1em
+		height: 1em
+		background-image: url('./img/icons/sprite.svg')
+		background-size: 10em 1em
+
+	&__icon--email::before
+		background-position:  -2em 0//-36px 0
+
+	&__icon--tel::before
+		background-position: -3em 0//-54px 0
+
+	&__icon--loc::before
+		background-position: -4em 0//-72px 0
+
 	p img 
 		display: inline-block
 		width: 18px
