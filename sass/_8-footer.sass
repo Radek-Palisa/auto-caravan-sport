@@ -2,49 +2,65 @@
 
 .footer
 	position: relative
-	height: 100px
-	display: flex
+	//height: 100px
+	//display: flex
 	align-items: center
 	justify-content: space-between
-	padding: 0 40px
-	font-size: 0.9em
-	color: #e1e1e1
+	padding: 2em 10px 1em
+	font-size: 0.8em
+	color: #cecece //#e1e1e1
 	background-color: #3A3636
-
-.footer__goTop, .footer__copyright, .footer__right
-	width: 33.3%
 
 .footer
 
 	&__goTop
-		position: relative
-		padding-left: 1.5em
-		color: white
+		display: block
+		color: #cecece //white
+		text-align: center
+		margin-bottom: 1em
+		margin: 0 auto 0.5em
 
 		&::before 
+			//display: none
 			content: ''
-			position: absolute
-			left: 0
-			top: 4px
+			display: inline-block
+			margin-right: 5px
 			width: 1em
 			height: 1em
 			background-image: url('./img/icons/sprite.svg')
 			background-size: 10em 1em
-			background-position: -8em 0
+			background-position: -7.8em 0
 			
 	&__copyright
 		text-align: center
 
 	&__right
-		text-align: right
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-wrap: wrap
+
+	&__fb
+		position: relative
+		padding: 0 1em
+		margin: 1em
+		border-left: 1px solid rgba(206, 206, 206, 0.5)
+		border-right: 1px solid rgba(206, 206, 206, 0.5)
 
 	&__socicon
-		width: 20px
-		display: inline-block
+		display: inline
+		margin-left: 5px
 
 	&__credits
+		font-size: 14px
 		flex: none
-		letter-spacing: 0.8px
+		text-align: center
+
+		a 
+			text-decoration: underline
 		
-		a
-			color: #ABB0FF
+	a
+		color: #cecece //#ABB0FF
+
+		&:hover
+			color: white

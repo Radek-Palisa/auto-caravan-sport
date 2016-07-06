@@ -1,18 +1,11 @@
-//
-//
-/* ***** INDEX PAGE *****/
-//
-//
-
 .slogan
 	margin: 0
 	padding: 20px 15px
 	text-align: center
-	// font-weight: bold
 	font-style: italic
 	font-size: 16px
 	letter-spacing: 0.4px
-	color: #757684
+	color: $grey
 	background-color: #EDEEF3
 
 	@media (min-width: 500px)
@@ -39,31 +32,28 @@
 
 .site-intro__img
 	flex: 0 1 auto
-	width: 130px
-	height: 130px
+	width: 125px
+	height: 125px
 	margin-top: 25px
 	border-radius: 50%
-	background-image: url(./img/profile.jpg)
-	background-position: 55% 58%
-	background-size: 358%
-	border: 3px solid #62A8B5
+	border: 3px solid $highlight-color
 
 .site-intro__txt
 	flex: 1 1 400px
 	max-width: 345px
 	margin: 25px 0 0 0
 	text-align: center
+	letter-spacing: 0.4px
+	color: #D8D9E6
 
 	@media (min-width: 500px)
 		margin: 25px 0 0 30px
 		flex: 1 1 300px
 		text-align: left
+	
+	@media (min-width: 1000px)
+		line-height: 1.8
 
 	@media (min-width: $break-laptop)
-		margin: 25px 0 0 60px
+		margin: 25px 0 0 50px
 		max-width: 400px
-
-	line-height: 1.6
-	letter-spacing: 0.4px
-	color: #D8D9E6
-

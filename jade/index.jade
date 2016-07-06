@@ -18,7 +18,7 @@ block body
 	p.slogan Vítejte v mém světě dodávkové velikosti</br>...ani malé ani velké.
 	section.site-intro#presentation
 		h1.site-intro__title Vítejte na stránkách firmy <strong>Auto Caravan Sport s.r.o.</strong>
-		.site-intro__img
+		img.site-intro__img(src="./img/index/profile.jpg", alt="zakladatel a jednatel firmy")
 		p.site-intro__txt Jmenuji se Libor Palisa a mojí dlouholetou vášní je hledat možnosti, jakým způsobem přestavět dodávkový vůz, nejlépe kombi-van, na obytný vůz pro trávení volného času.
 
 	.presentation-outer
@@ -105,14 +105,14 @@ block body
 
 block footer
 	footer.footer
-		
+
 		a.footer__goTop(href="#header") Nahoru
+		.footer__right 
+			p.footer__copyright &#169; Auto Caravan Sport s.r.o. 2016
 
-		p.footer__copyright &#169; Auto Caravan Sport s.r.o. 2016
+			a(href="#0").footer__fb Najděte mě na facebooku #[img.footer__socicon(src="./img/icons/fb-icon2.svg")] 
 
-		.footer__right
-			a #[img.home-socicon.footer__socicon(src="./img/icons/fb-icon2.svg")] Najděte mě na facebooku
-		p.footer__credits Design a tvorba webu: 
-			a(href="https://www.linkedin.com/in/radek-palisa-96332886", target="_blank") Radek Palisa
+			p.footer__credits Design a tvorba webu: 
+				a(href="https://www.linkedin.com/in/radek-palisa-96332886", target="_blank") Radek Palisa
 
 block local-scripts

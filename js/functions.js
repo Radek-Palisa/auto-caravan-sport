@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 	if (window.matchMedia('(min-width: 1000px)').matches) {
-		var headerHeight = 52;
+		var headerHeight = 51;
 		} else {
 			headerHeight = 0;
 		}

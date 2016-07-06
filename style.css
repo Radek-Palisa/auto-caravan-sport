@@ -1142,6 +1142,7 @@ body {
   line-height: 1.5;
   font-size: 16px;
   font-family: roboto, sans-serif;
+  background-color: #EDEEF3;
 }
 @media (min-width: 1000px) {
   body {
@@ -1361,7 +1362,6 @@ h1 {
   background-position: center 77%;
 }
 
-/* ***** INDEX PAGE **** */
 .slogan {
   margin: 0;
   padding: 20px 15px;
@@ -1401,13 +1401,10 @@ h1 {
 
 .site-intro__img {
   flex: 0 1 auto;
-  width: 130px;
-  height: 130px;
+  width: 125px;
+  height: 125px;
   margin-top: 25px;
   border-radius: 50%;
-  background-image: url(./img/profile.jpg);
-  background-position: 55% 58%;
-  background-size: 358%;
   border: 3px solid #62A8B5;
 }
 
@@ -1416,7 +1413,6 @@ h1 {
   max-width: 345px;
   margin: 25px 0 0 0;
   text-align: center;
-  line-height: 1.6;
   letter-spacing: 0.4px;
   color: #D8D9E6;
 }
@@ -1429,7 +1425,12 @@ h1 {
 }
 @media (min-width: 1000px) {
   .site-intro__txt {
-    margin: 25px 0 0 60px;
+    line-height: 1.8;
+  }
+}
+@media (min-width: 1000px) {
+  .site-intro__txt {
+    margin: 25px 0 0 50px;
     max-width: 400px;
   }
 }
@@ -1462,7 +1463,7 @@ h1 {
   position: relative;
   z-index: 2;
   height: 430px;
-  padding: 40px 10px 10px;
+  padding: 40px 20px 10px;
   color: #D8D9E6;
   color: white;
   background: url(./img/index/presentation_mobile.jpg) right 0/500px auto no-repeat;
@@ -1487,11 +1488,11 @@ h1 {
 .upperPane__presIntro__p {
   max-width: 370px;
   margin: 0 auto;
-  line-height: 1.8;
 }
 @media (min-width: 1000px) {
   .upperPane__presIntro__p {
     max-width: 420px;
+    line-height: 1.8;
   }
 }
 .upperPane__presIntro__p2 {
@@ -1624,16 +1625,10 @@ h1 {
   margin-right: 10px;
 }
 
-.work {
-  background-color: #f3f3f3;
-}
-
 .work__title {
   position: relative;
   margin: 0;
   padding: 60px 0 45px;
-  color: #943B6C;
-  color: #AB6C8F;
   color: #757684;
   text-transform: uppercase;
 }
@@ -1944,18 +1939,17 @@ h1 {
 }
 
 .contact-form-outer {
-  padding: 4% 0;
+  padding: 60px 15px;
 }
 
 .contact-form {
   max-width: 500px;
   margin: 0 auto;
-  color: #545454;
+  color: #757684;
 }
 .contact-form__title {
   font-size: 20px;
   text-align: center;
-  color: #717171;
   font-weight: normal;
   margin: 0;
 }
@@ -1982,9 +1976,9 @@ h1 {
 }
 
 .form__sent {
-  width: 25%;
+  width: 125px;
   padding: 10px 0;
-  margin: 2em auto;
+  margin: 2em auto 0;
   background-color: #62A8B5;
   text-align: center;
 }
@@ -1999,58 +1993,64 @@ h1 {
 /* Footer */
 .footer {
   position: relative;
-  /* height: 100px; */
-  display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 34px 40px 5px;
-  font-size: 0.9em;
-  color: #e1e1e1;
+  padding: 2em 10px 1em;
+  font-size: 0.8em;
+  color: #cecece;
   background-color: #3A3636;
-  flex-wrap: wrap;
-  /* font-size: 1em; */
-}
-
-.footer__goTop, .footer__copyright, .footer__right {
-  width: 33.3%;
 }
 
 .footer__goTop {
-  position: relative;
-  padding-left: 1.5em;
-  color: white;
+  display: block;
+  color: #cecece;
+  text-align: center;
+  margin-bottom: 1em;
+  margin: 0 auto 0.5em;
 }
 .footer__goTop::before {
   content: "";
-  position: absolute;
-  left: 0;
-  top: 4px;
+  display: inline-block;
+  margin-right: 5px;
   width: 1em;
   height: 1em;
   background-image: url("./img/icons/sprite.svg");
   background-size: 10em 1em;
-  background-position: -8em 0;
+  background-position: -7.8em 0;
 }
 .footer__copyright {
   text-align: center;
 }
 .footer__right {
-  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.footer__fb {
+  position: relative;
+  padding: 0 1em;
+  margin: 1em;
+  border-left: 1px solid rgba(206, 206, 206, 0.5);
+  border-right: 1px solid rgba(206, 206, 206, 0.5);
 }
 .footer__socicon {
-  width: 20px;
-  display: inline-block;
+  display: inline;
+  margin-left: 5px;
 }
 .footer__credits {
+  font-size: 14px;
   flex: none;
-  /* letter-spacing: 0.8px; */
-  width: 100%;
-  text-align: right;
-  margin: 0;
-  font-size: 0.9em;
+  text-align: center;
 }
 .footer__credits a {
-  color: #ABB0FF;
+  text-decoration: underline;
+}
+.footer a {
+  color: #cecece;
+}
+.footer a:hover {
+  color: white;
 }
 
 .heading__wrap {
