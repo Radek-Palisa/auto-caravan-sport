@@ -33,15 +33,31 @@ $(document).ready(function() {
 	//
 	// --- Tabs for Gallery ---
 	//
-	$(".btn-galerie-show").on('click', function() {
-		$(this).parent().next().slideToggle(600);
+	var $btnGalerie1 = $('.galerie__header__btn .galerie-btn');
+	var $btnGalerie2 = $('.galerie__section__btn .galerie-btn');
+	
+
+	$btnGalerie1.on('click', function() {
+		$(this).parent().parent().next().toggleClass('galerie__section--open');
+		$(this).find('.galerie-btn__svg').toggleClass('galerie-btn__svg--toClose');
+		$(this).parent().prev().toggleClass('galerie__header__txt--activated');
+	});
+
+	$btnGalerie2.on('click', function() {
+
+		var wScrollC = $(document).scrollTop();
+		var galerieHeight = $(this).parent().parent().outerHeight();
+		$(this).parent().parent().prev().find('.galerie-btn__svg').toggleClass('galerie-btn__svg--toClose');
+		$(this).parent().parent().toggleClass('galerie__section--open');
+		$(this).parent().parent().prev().find('.galerie__header__txt').toggleClass('galerie__header__txt--activated');
+		$('html, body').animate({scrollTop: wScrollC - galerieHeight}, 0)
 	});
 
 	//
 	// Parallax sliding - jumbotron section
 	//
-	var $siteHeader = $('.site-header');
-	var $jumbotron = $('.jumbotron');
+	var $siteHeader = $('.site-header--fixed');
+	var $jumbotron = $('.jumbotron--index-bg');
 	var jumboHeight = $jumbotron.outerHeight();
 
 	function parallax() {

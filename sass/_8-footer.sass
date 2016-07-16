@@ -1,44 +1,63 @@
 /* Footer */
 
 .footer
-	position: relative
-	//height: 100px
-	//display: flex
-	align-items: center
-	justify-content: space-between
 	padding: 2em 10px 1em
-	font-size: 0.8em
-	color: #cecece //#e1e1e1
+	font-size: 14px
+	color: #cecece
 	background-color: #3A3636
 
 .footer
 
-	&__goTop
+	&__nav
+		display: flex
+		justify-content: center
+
+	&__nav__item
 		display: block
-		color: #cecece //white
 		text-align: center
-		margin-bottom: 1em
-		margin: 0 auto 0.5em
+		margin: 0 1em 0.5em
 
 		&::before 
-			//display: none
 			content: ''
 			display: inline-block
 			margin-right: 5px
-			width: 1em
-			height: 1em
+			width: 14px
+			height: 14px
 			background-image: url('./img/icons/sprite.svg')
-			background-size: 10em 1em
-			background-position: -7.8em 0
-			
-	&__copyright
-		text-align: center
+			background-size: $bgSize14px
 
-	&__right
+		&:hover::before
+
+
+	&__goTop
+		&::before 
+			background-position: -112px 0
+		
+		&:hover::before					
+			background-position: -126px 0
+
+	&__goHome
+		&::before 
+			background-position: -140px 0
+		
+		&:hover::before					
+			background-position: -154px 0
+
+	&__goContact
+		&::before 
+			background-position: -168px 0
+		
+		&:hover::before					
+			background-position: -182px 0
+
+	&__info
 		display: flex
 		align-items: center
 		justify-content: center
 		flex-wrap: wrap
+
+	&__copyright
+		text-align: center
 
 	&__fb
 		position: relative
@@ -46,6 +65,19 @@
 		margin: 1em
 		border-left: 1px solid rgba(206, 206, 206, 0.5)
 		border-right: 1px solid rgba(206, 206, 206, 0.5)
+
+		&::after 
+			content: ''
+			display: inline-block
+			margin-left: 5px
+			width: 14px
+			height: 14px
+			background-image: url('./img/icons/sprite.svg')
+			background-size: $bgSize14px
+			background-position: -196px 0
+
+		&:hover::after				
+			background-position: -210px 0
 
 	&__socicon
 		display: inline

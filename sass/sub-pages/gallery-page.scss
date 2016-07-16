@@ -6,107 +6,149 @@
 
 .galerie-container {
 	margin: 0 auto;
+	padding: 0 5px 60px;
 }
 
 .galerie {
-	max-width: 65em;
-	background-color: #49597A;
+	max-width: 50em;
+	background-color: #7181a2;
 	margin: 0 auto 2em;
-	box-shadow: 0px 2px 4px black;
+	box-shadow: 0px 1px 4px black;
 	border-radius: 5px;
 }
 
-.galerie header {
+.galerie__header {
 	display: flex;
-	// justify-content: space-around;
-	align-items: center;
-	
-	.header__h2-container {
-		width: 270px;
-		height: 180px;
-		margin: 0;
-		padding: 4px;
-		border-radius: 4px;
-	}
+	flex-wrap: wrap;
+	justify-content: center;
 
 	h2 {
-		width: 100%;
-		height: 100%;
-		margin: 0;
+		flex: none;
+		width: 270px;
+		height: 180px;
+		margin: 1em;
 		line-height: 180px;
+		border-radius: 4px;
 		text-align: center;
 		color: white;
 		// border-radius: 5px;
 		background-color: #2E384C;
 		background-size: cover;
 	}
+}
 
-	p {
-		position: relative;
-		max-width: 38em;
-		// max-width: 450px;
-		max-height: 150px;
-		margin: auto 2em;
-		overflow: hidden;
-		color: white;
+.galerie__header__txt {
+	flex: 1 1 270px;
+	position: relative;
+	max-height: 150px;
+	margin: 0 1em 1em;
+	overflow: hidden;
+	color: white;
 
-		&:after {
-			content: '';
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			height: 30%;
-			background-image: linear-gradient(rgba(73, 89, 122, 0), rgba(73, 89, 122, 1));
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 30%;
+		background-image: linear-gradient(rgba(73, 89, 122, 0), #7181a2);
+	}
+
+	&--activated {
+		max-height: none !important;
+		overflow: visible;
+
+		&::after {
+		background-image: none;
 		}
 	}
 }
 
 .galerie-izolace h2 {
-	background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('./img/gallery-thumbs/izolace-vozu.jpg');
+	background-image: url('./img/galerie/headers/izolace-vozu.jpg');
 }
 .galerie-sedadla h2 {
-	background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('./img/gallery-thumbs/sestava-sedadel.jpg');
+	background-image: url('./img/galerie/headers/sestava-sedadel.jpg');
 }
 .galerie-toaleta h2 {
-	background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('./img/gallery-thumbs/toaletni-kout.jpg');
+	background-image: url('./img/galerie/headers/toaletni-kout.jpg');
 }
 .galerie-kuchyn h2 {
-	background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('./img/gallery-thumbs/kuchynsky-blok.jpg');
+	background-image: url('./img/galerie/headers/kuchynsky-blok.jpg');
 }
 .galerie-postel h2 {
-	background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('./img/gallery-thumbs/postel.jpg');
+	background-image: url('./img/galerie/headers/postel.jpg');
 }
 
-.btn-galerie-show {
-	cursor: pointer;
-	width: 50px;
+.galerie__header__btn {
+	width: 100%;
+	margin: 0 1em 1em;
+	display: flex;
+	align-items: center;
+	justify-content:center;
+}
 
-	svg {
-		display: inline-block;
-	    width: 20px;
-	    transform: rotate(-90deg);
+.galerie__section__btn {
+	width: 100%;
+	margin: 2em 0 1em;
+	text-align: right;
+}
 
-	    path {
-	    	fill: #fff;
-	    }
+.galerie-btn {
+	width: 100%;
+	padding: 20px;
+	border: 0;
+	outline: none;
+	background-color: rgba(0,0,0,0.1);
+	transition: all 0.15s ease-in-out;
+
+	&:hover {
+		box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+		transition: all 0.3s ease-in-out;
+	}
+
+	&:active {
+		padding: 19px;
+		transition: all 0.1s ease-in-out;
 	}
 }
 
+.galerie-btn__svg {	
+	width: 22px;
+	height: 22px;
+	margin: 0 auto;
+	background-image: url('./img/icons/sprite.svg');
+	background-size: 418px 22px;
 
-.galerie section {
+	&--toOpen {
+		background-position: -374px 0;		
+	}
+
+	&--toClose {
+		background-position: -396px 0;		
+	}
+}
+
+.galerie__section {
 	display: none;
-	padding: 20px;
+	padding: 1em 0;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.galerie__section--open {
+	display: flex;
 }
 
 .gallery__thumbnail {
-	display: inline-block;
-	width: 182px;
-	height: 142px;
-	border: 1px solid rgba(255,255,255,0.7);
-	background-color: grey;
-	margin: 5px;
+	box-shadow: 0px 0px 10px rgb(57, 64, 80);
+	margin: 3px;
 	transition: 0.3s;
+
+	img {
+		width: 130px;
+	}
 
 	&:hover {
 		transition: 0.3s;
@@ -114,3 +156,55 @@
 	}
 }
 
+@media (min-width: 630px) {
+
+	.galerie__header__txt {
+		max-height: 180px;
+		margin: 1em;
+	}
+
+	.galerie__section {
+		padding: 1em;
+	}
+
+	.gallery__thumbnail {
+		margin: 6px;
+
+		img {
+			width: 180px;
+		}
+	}
+}
+
+
+@media (min-width: 1000px) {
+	
+	.galerie {
+		max-width: 55em;
+	}
+
+	.galerie__header__txt {
+		margin: 1em 2em 0 1em;
+	}
+
+	.galerie__header__btn {
+		margin: 1em;
+		height: 180px;
+		width: auto;
+	}
+
+	.galerie-btn {
+		width: auto;
+	}
+	.galerie__section {
+		justify-content: space-between;
+	}
+
+	.gallery__thumbnail {
+		margin: 6px 0;
+	}
+		
+	.galerie-postel .gallery__thumbnail:last-of-type {
+			margin-right: 20.4%;
+		}
+}

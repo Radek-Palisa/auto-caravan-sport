@@ -2,13 +2,6 @@ extends partials/skeleton.jade
 
 block body
 
-	header.jumbotron.jumbotron--subpage-bg
-		.logo.logo--fonts
-			h1 A.C.S. s.r.o.
-			p Auto Caravan Sport
-			.underline
-				span.underline__txt s.r.o
-
 	main.sub-page
 		// nav.sub-page-nav
 			a(href="index.html") <span>&#x2190;</span> Zpět na domovskou stránku
@@ -21,25 +14,25 @@ block body
 				ul
 
 					li
-						.img__container: img(src="img/ford-1996/301.jpg" alt="")
+						img.ford-1996__img(src="img/ford-1996/301.jpg" alt="")
 					li
-						.img__container: img(src="img/ford-1996/302.jpg" alt="")
+						img.ford-1996__img(src="img/ford-1996/302.jpg" alt="")
 					li
-						.img__container: img(src="img/ford-1996/303.jpg" alt="")
+						img.ford-1996__img(src="img/ford-1996/303.jpg" alt="")
 					li
-						.img__container: img(src="img/ford-1996/305.jpg" alt="")
+						img.ford-1996__img(src="img/ford-1996/305.jpg" alt="")
 					li
-						.img__container: img(src="img/ford-1996/306.jpg" alt="")
+						img.ford-1996__img(src="img/ford-1996/306.jpg" alt="")
 					li
-						.img__container: img(src="img/ford-1996/304.jpg" alt="")
+						img.ford-1996__img(src="img/ford-1996/304.jpg" alt="")
 					li
-						.img__container: img(src="img/ford-1996/307.jpg" alt="")
+						img.ford-1996__img(src="img/ford-1996/307.jpg" alt="")
 					li
-						.img__container: img(src="img/ford-1996/308.jpg" alt="")
+						img.ford-1996__img(src="img/ford-1996/308.jpg" alt="")
 					li
-						.img__container: img(src="img/ford-1996/309.jpg" alt="")
+						img.ford-1996__img(src="img/ford-1996/309.jpg" alt="")
 					li
-						.img__container: img(src="img/ford-1996/310.jpg" alt="")
+						img.ford-1996__img(src="img/ford-1996/310.jpg" alt="")
 
 			section.sub-page__txt.box-shadow
 				// h1 Ford Transit 1996
@@ -47,8 +40,7 @@ block body
 
 		nav.secondary-nav
 			p Kam dále?<br>Podívejte se na mé ostatní práce:
-			ul.work__ul
-
+			.sec-nav-list
 				include partials/sub-nav-custom.jade
 
 				include partials/sub-nav-2000.jade

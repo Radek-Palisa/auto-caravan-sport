@@ -2,6 +2,10 @@ $break-laptop: 1000px;
 $break-desktop: 1640px;
 $base-line-height: 1.5;
 
+// icons
+$bgSize18px: 342px 18px;
+$bgSize14px: 266px 14px;
+
 html {
   box-sizing: border-box;
 }
@@ -30,7 +34,19 @@ img {
 $highlight-color: #62A8B5;
 $grey:	#757684;
 
-h1 {
+h1, h2 {
 	font-size: 1.1em;
 	text-align: center;
+}
+
+// For older browsers
+
+.browser-warning {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.9);
+	color: white;
 }

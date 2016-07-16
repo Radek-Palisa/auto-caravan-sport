@@ -15,31 +15,35 @@ html
 		
 	body
 		block navigation
-			nav.nav(role="navigation")
-				p Auto Caravan Sport #[span s.r.o.]
-				ul.nav__ul
-					li: a(href="index.html") Zpět na domovskou stránku
+			header.site-header#header
+				a.logo(href="#") Auto Caravan Sport #[span s.r.o.]
+				.menu-icon
+					button &#9776;
+				ul.nav__ul(role="navigation")
+					li: a.nav__ul__goHome(href="index.html") Zpět domů
 
 		block body
 		
 		block footer
 			footer.footer
-				p.footer__copyright.footer--middle Auto Caravan Sport s.r.o. 2016
-				nav.footer__nav.footer--left
-					ul
-						li: a(href="#") Nahoru
-						li: a(href="index.html") Domů
+				.footer__nav
+					a.footer__nav__item.footer__goTop(href="#header") Nahoru
+					a.footer__nav__item.footer__goHome(href="./index.html") Domů
+					a.footer__nav__item.footer__goContact(href="./index.html#contact") Kontakt
 
-				.footer--right
-					img.home-socicon.footer__socicon(src="./img/email-icon.svg")
-					img.home-socicon.footer__socicon(src="./img/fb-icon.svg")
-				p.footer__credits Web: 
-					a(href="https://www.linkedin.com/in/radek-palisa-96332886", target="_blank") Radek Palisa
+				.footer__info 
+					p.footer__copyright &#169; Auto Caravan Sport s.r.o. 2016
+
+					a(href="#0").footer__fb Najděte mě na facebooku
+
+					p.footer__credits Design a tvorba webu: 
+						a(href="https://www.linkedin.com/in/radek-palisa-96332886", target="_blank") Radek Palisa
 
 		script(src="js/functions.js")
 		script(src="js/flipster.js")
 		script(src="js/responsiveslides.min.js")
 		block local-scripts
+			script(src="/scripts/retina.min.js") 
 			script.
 				$(function() {
 					$('.my-flipster').flipster({

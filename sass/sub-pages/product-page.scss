@@ -33,12 +33,11 @@
 
 .heading--fonts {
 	font-family: Open Sans, Arial, sans-serif;
-	font-size: 2em;
+	font-size: 1.8em;
 	// color: #212121;
 }
 
 .sub-page {
-	background-color: #EAEAEA;
 	color: #4E4E4E
 }
 
@@ -54,10 +53,33 @@
 	margin-bottom: 60px
 }
 
-.img__container {
-	height: 72vh
+.ford-custom__img {
+	max-height: 72vh;
+	max-width: 1000px;
 }
 
+.ford-2000__img {
+	max-height: 72vh;
+	max-width: 748px;
+}
+
+.ford-2000-jumbo__img {
+	max-height: 72vh;
+	max-width: 640px;
+
+	@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+		max-width: 320px;
+	}
+}
+
+.ford-1996__img {
+	max-height: 72vh;
+	max-width: 764px;
+
+	@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+		max-width: 382px;
+	}
+}
 // Flipster overwrite index page settings
 
 .sub-page__flipster .flipster--flat .flipster__item--past, .ford-custom .flipster--flat .flipster__item--future {
@@ -76,7 +98,7 @@
 
 
 .sub-page__txt {
-	padding: 2em;
+	padding: 2em 15px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -85,9 +107,7 @@
 	background-color: #49597A;
 
 	p {
-		width: 475px;
-		line-height: 1.5;
-		font-size: 1em;
+		width: 590px;
 		color: #4E4E4E;
 		color: white;
 	}
@@ -96,18 +116,19 @@
 // Specifikace
 
 .specs {
-	padding-bottom: 2em;
+	padding: 0 5px 2em;
 
 	h1 {
 		width: 100%;
 		margin: 0;
-		padding: 2em;
-		text-align: center;
+		padding: 60px 0 2em;
+		font-size: 1.2em;
+		text-transform: uppercase;
 		// background-color: #EAEAEA;
 	}
 	
 	ul {
-		width: 530px;
+		max-width: 530px;
 		margin: 1em auto;
 		line-height: 1.6em;
 	}
@@ -124,10 +145,13 @@
 
 .custom-specs, .acs-specs {
 	margin: 0 auto 2em;
-	width: 54em;
-	padding: 2em 2em;
+	max-width: 54em;
+	padding: 2em 1em;
 	background-color: white;
-	font-size: 1.2em;
+
+	@media (min-width: 500px) {
+		padding: 2em 2em;
+	}
 }
 
 .custom-specs img {
@@ -135,28 +159,83 @@
 	margin: 4em auto;
 }
 
-.acs-specs img {
+.acs-specs {
+
+	img {
 	width: 100%;
 	margin: 0 auto;
-}
+	}
 
-.specs__h2 {
-	text-align: center;
+	figcaption {
+		text-align: center;
+
+		&::before {
+			content: '*';
+			color: #46e032;
+			margin-right: 3px;
+		}
+	}
 }
 
 // Kam dále
+
 .secondary-nav {
-	background-color: #EAEAEA;
+	background-color: white;
+	padding-bottom: 60px;
 }
 
 .secondary-nav > p {
-	max-width: 500px;
+	max-width: 530px;
 	margin: 0 auto;
-	padding: 2em 0 1.5em;
+	padding: 2em 15px 1.5em;
 	text-align: center;
 	line-height: 2;
 	font-size: 14px;
 	color: grey;
+}
+
+.sec-nav__item {
+		position: relative;
+		display: block;
+		height: 250px;
+		background-size: cover;
+		background-position: center;
+		box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+
+		&:hover {
+			box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.7);			
+		}
+}
+
+
+.sec-nav-list { 
+
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+
+	a {
+		width: 400px;
+		margin: 8px;
+	}
+}
+
+.galerie-link-container {
+	padding: 8px;
+}
+
+.galerie__link--bg {
+	max-width: 816px;
+	margin: 0 auto;
+	background-image: url(./img/ford-custom/111.jpg);
+	background-position: center 30%;
+}
+
+
+@media (max-width: 400px) {
+	.secondary-nav .work__link__btn p span {
+		display: block;
+	}
 }
 
 /* Predchozi prace */

@@ -2,20 +2,6 @@ extends partials/skeleton.jade
 
 block body
 
-	header.jumbotron.jumbotron--subpage-bg
-		.logo.logo--fonts
-			h1 A.C.S. s.r.o.
-			p Auto Caravan Sport
-			.underline
-				span.underline__txt s.r.o.
-
-		// nav.nav.nav--fonts(role="navigation")
-			ul
-				li: a(href="index.html") Domů
-				li: a(href="index.html#work") Má práce
-				li: a(href="index.html#about") O firmě
-				li: a(href="index.html#contact") Kontakt
-
 	main.sub-page
 		// nav.sub-page-nav
 			a(href="index.html") <span>&#x2190;</span> Zpět na domovskou stránku
@@ -26,25 +12,25 @@ block body
 			.my-flipster.flipster--margin
 				ul
 					li
-						.img__container: img(src="img/ford-2000/201.jpg" alt="")
+						img.ford-2000__img(src="img/ford-2000/201.jpg" alt="")
 					li
-						.img__container: img(src="img/ford-2000/202.jpg" alt="")
+						img.ford-2000__img(src="img/ford-2000/202.jpg" alt="")
 					li
-						.img__container: img(src="img/ford-2000/203.jpg" alt="")
+						img.ford-2000__img(src="img/ford-2000/203.jpg" alt="")
 					li
-						.img__container: img(src="img/ford-2000/205.jpg" alt="")
+						img.ford-2000__img(src="img/ford-2000/205.jpg" alt="")
 					li
-						.img__container: img(src="img/ford-2000/206.jpg" alt="")
+						img.ford-2000__img(src="img/ford-2000/206.jpg" alt="")
 					li
-						.img__container: img(src="img/ford-2000/204.jpg" alt="")
+						img.ford-2000__img(src="img/ford-2000/204.jpg" alt="")
 					li
-						.img__container: img(src="img/ford-2000/207.jpg" alt="")
+						img.ford-2000__img(src="img/ford-2000/207.jpg" alt="")
 					li
-						.img__container: img(src="img/ford-2000/208.jpg" alt="")
+						img.ford-2000__img(src="img/ford-2000/208.jpg" alt="")
 					li
-						.img__container: img(src="img/ford-2000/209.jpg" alt="")
+						img.ford-2000__img(src="img/ford-2000/209.jpg" alt="")
 					li
-						.img__container: img(src="img/ford-2000/211.jpg" alt="")
+						img.ford-2000__img(src="img/ford-2000/211.jpg" alt="")
 
 
 			section.sub-page__txt.box-shadow
@@ -56,21 +42,21 @@ block body
 			.my-flipster.flipster--margin
 				ul
 					li
-						.img__container: img(src="img/ford-2000/a)202.jpg" alt="")
+						img.ford-2000-jumbo__img(src="img/ford-2000/a)202.jpg" alt="")
 					li
-						.img__container: img(src="img/ford-2000/a)204.jpg" alt="")
+						img.ford-2000-jumbo__img(src="img/ford-2000/a)204.jpg" alt="")
 					li
-						.img__container: img(src="img/ford-2000/a)205.jpg" alt="")
+						img.ford-2000-jumbo__img(src="img/ford-2000/a)205.jpg" alt="")
 					li
-						.img__container: img(src="img/ford-2000/a)206.jpg" alt="")
+						img.ford-2000-jumbo__img(src="img/ford-2000/a)206.jpg" alt="")
 					li
-						.img__container: img(src="img/ford-2000/a)203.jpg" alt="")
+						img.ford-2000-jumbo__img(src="img/ford-2000/a)203.jpg" alt="")
 					li
-						.img__container: img(src="img/ford-2000/a)207.jpg" alt="")
+						img.ford-2000-jumbo__img(src="img/ford-2000/a)207.jpg" alt="")
 					li
-						.img__container: img(src="img/ford-2000/a)208.jpg" alt="")
+						img.ford-2000-jumbo__img(src="img/ford-2000/a)208.jpg" alt="")
 					li
-						.img__container: img(src="img/ford-2000/a)209.jpg" alt="")
+						img.ford-2000-jumbo__img(src="img/ford-2000/a)209.jpg" alt="")
 
 
 			section.sub-page__txt.box-shadow
@@ -78,8 +64,6 @@ block body
 
 		nav.secondary-nav
 			p Kam dále?<br>Podívejte se na mé ostatní práce:
-			ul.work__ul
-
+			.sec-nav-list
 				include partials/sub-nav-custom.jade
-
 				include partials/sub-nav-1996.jade
