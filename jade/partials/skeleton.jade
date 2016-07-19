@@ -1,22 +1,22 @@
 doctype html
-html
+html(lang="cs")
 	head
 		include html5shiv.jade
 		title ACS s.r.o.
 		meta(charset="utf-8")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
-		link(href='https://fonts.googleapis.com/css?family=Fira+Sans:400,300,500,700&subset=latin,latin-ext' rel='stylesheet' type='text/css')
-		link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,300italic,400italic,600italic,700italic,800,800italic&subset=latin-ext' rel='stylesheet' type='text/css')
 		link(href='https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css')
-		link(rel="stylesheet" href="style.css")
+		link(rel="stylesheet" href="style-min.css")
 		script(src="./js/jquery-1.12.4.min.js")
 		//script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js")
-		//script(type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js")
 		
 	body
+
+		include browser-notify.jade
+
 		block navigation
 			header.site-header#header
-				a.logo(href="#") Auto Caravan Sport #[span s.r.o.]
+				a.logo(href="./index.html") Auto Caravan Sport #[span s.r.o.]
 				.menu-icon
 					button &#9776;
 				ul.nav__ul(role="navigation")
@@ -40,10 +40,9 @@ html
 						a(href="https://www.linkedin.com/in/radek-palisa-96332886", target="_blank") Radek Palisa
 
 		script(src="js/functions.js")
-		script(src="js/flipster.js")
-		script(src="js/responsiveslides.min.js")
+
 		block local-scripts
-			script(src="/scripts/retina.min.js") 
+			script(src="js/flipster.js")
 			script.
 				$(function() {
 					$('.my-flipster').flipster({
@@ -52,7 +51,7 @@ html
 						spacing: -0.39,
 						scrollwheel: false,
 						loop: true,
-						start: 'center'
+						start: 3
 					});
 				});
 

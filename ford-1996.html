@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="cs">
   <head>
     <!--[if lte IE 8]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -7,16 +7,18 @@
     <title>ACS s.r.o.</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,300,500,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,300italic,400italic,600italic,700italic,800,800italic&amp;subset=latin-ext" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-min.css">
     <script src="./js/jquery-1.12.4.min.js"></script>
     <!--script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js")-->
-    <!--script(type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js")-->
   </head>
   <body>
-    <header id="header" class="site-header"><a href="#" class="logo">Auto Caravan Sport <span>s.r.o.</span></a>
+    <!--[if lt IE 10]>
+    <div class="browser-notify">
+    <p class="browser-notify__message">Tyto webové stránky jsou optimalizované pro moderní prohlížeče a nepodporují vaší verzi Internet Exploreru.</p>
+    </div>
+    <![endif]-->
+    <header id="header" class="site-header"><a href="./index.html" class="logo">Auto Caravan Sport <span>s.r.o.</span></a>
       <div class="menu-icon">
         <button>&#9776;</button>
       </div>
@@ -38,9 +40,9 @@
             <li><img src="img/ford-1996/301.jpg" alt="" class="ford-1996__img"></li>
             <li><img src="img/ford-1996/302.jpg" alt="" class="ford-1996__img"></li>
             <li><img src="img/ford-1996/303.jpg" alt="" class="ford-1996__img"></li>
+            <li><img src="img/ford-1996/304.jpg" alt="" class="ford-1996__img"></li>
             <li><img src="img/ford-1996/305.jpg" alt="" class="ford-1996__img"></li>
             <li><img src="img/ford-1996/306.jpg" alt="" class="ford-1996__img"></li>
-            <li><img src="img/ford-1996/304.jpg" alt="" class="ford-1996__img"></li>
             <li><img src="img/ford-1996/307.jpg" alt="" class="ford-1996__img"></li>
             <li><img src="img/ford-1996/308.jpg" alt="" class="ford-1996__img"></li>
             <li><img src="img/ford-1996/309.jpg" alt="" class="ford-1996__img"></li>
@@ -72,8 +74,6 @@
     </footer>
     <script src="js/functions.js"></script>
     <script src="js/flipster.js"></script>
-    <script src="js/responsiveslides.min.js"></script>
-    <script src="/scripts/retina.min.js"> </script>
     <script>
       $(function() {
       	$('.my-flipster').flipster({
@@ -82,7 +82,7 @@
       		spacing: -0.39,
       		scrollwheel: false,
       		loop: true,
-      		start: 'center'
+      		start: 3
       	});
       });
     </script>

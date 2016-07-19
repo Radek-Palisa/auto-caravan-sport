@@ -52,7 +52,8 @@
   font-size: 15px;
   opacity: 1; // adjusted
   transition: opacity 500ms ease;
-  margin: -1em 2em;
+  margin: 0 2em;
+  transform: translateY(-50%);
   outline: none
 }
 .flipster__button svg {

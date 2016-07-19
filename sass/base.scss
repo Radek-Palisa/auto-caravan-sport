@@ -17,7 +17,7 @@ body {
 	line-height: $base-line-height;
 	font-size: 16px;
 	font-family: roboto, sans-serif;
-	background-color: #EDEEF3;
+	background-color: #f5f6f9;
 
 	@media (min-width: $break-laptop) {
 		font-size: 18px
@@ -39,14 +39,27 @@ h1, h2 {
 	text-align: center;
 }
 
-// For older browsers
+// For older IE
 
-.browser-warning {
+.browser-notify {
+	position: absolute;
 	position: fixed;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background-color: rgba(0,0,0,0.9);
+	background-color: rgb(0,0,0);
 	color: white;
+	zoom: 1;
+	filter: alpha(opacity=90);
+	opacity: 0.9;
+	z-index: 999;
+
+	&__message {
+		font-size: 20px;
+		padding-top: 200px;
+		max-width: 500px;
+		margin: 0 auto;
+		text-align: center;
+	}
 }

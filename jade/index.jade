@@ -2,7 +2,7 @@ extends partials/skeleton.jade
 
 block navigation
 	header.site-header.site-header--fixed
-		a.logo(href="#") Auto Caravan Sport #[span s.r.o.]
+		a.logo(href="./index.html") Auto Caravan Sport #[span s.r.o.]
 		.menu-icon
 			button &#9776;
 		ul.nav__ul(role="navigation")
@@ -92,16 +92,12 @@ block body
 			a.contact-fb-link(href="#0"): img.contact-fb__icon(src="./img/icons/fb-icon2.svg")
 			
 	.contact-form-outer
-		section.contact-form
-			h1.contact-form__title Napište mi
-			.form__name
-				p Jméno
-			.form__email
-				p Email
-			.form__zprava
-				p Napište mi co Vás zaujalo...
-			.form__sent 
-				a(href="#") Odeslat
+		form.contact-form
+			h2.contact-form__title Napište mi
+			input.form__name(placeholder="Jméno")
+			input.form__email(placeholder="Email")
+			textarea.form__zprava(placeholder="Napište mi co Vás zaujalo...")
+			input.form__sent(type="submit", value="Odeslat") 
 
 block footer
 	footer.footer
