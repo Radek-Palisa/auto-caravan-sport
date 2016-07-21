@@ -1211,7 +1211,7 @@ h1, h2 {
   zoom: 1;
   filter: alpha(opacity=90);
   opacity: 0.9;
-  z-index: 999;
+  z-index: 1000;
 }
 .browser-notify__message {
   font-size: 20px;
@@ -1275,19 +1275,27 @@ h1, h2 {
 .menu-icon {
   position: absolute;
   width: 100%;
-  padding: 10px 40px;
+  height: 56px;
+  padding: 19px 40px;
   text-align: center;
   color: #3a3636;
   background-color: rgba(255, 255, 255, 0.8);
 }
 .menu-icon button {
   border: none;
-  font-size: 24px;
-  font-weight: bold;
-  background: none;
+  width: 18px;
+  height: 18px;
+  background: url(./img/icons/sprite.svg);
+  background-size: 378px 18px;
+  background-position: -342px 18px;
   padding: 0;
   outline: 0;
   transition: all 0.2s ease-in-out;
+}
+@media (min-width: 500px) {
+  .menu-icon button {
+    background-position: -360px 18px;
+  }
 }
 @media (min-width: 500px) {
   .menu-icon {
@@ -1376,7 +1384,7 @@ h1, h2 {
   width: 18px;
   height: 18px;
   background-image: url("./img/icons/sprite.svg");
-  background-size: 342px 18px;
+  background-size: 378px 18px;
   background-position: -288px 0;
 }
 @media (min-width: 1000px) {
@@ -1657,6 +1665,7 @@ h1, h2 {
   width: 18px;
   height: 18px;
   background-image: url("./img/icons/sprite.svg");
+  background-size: 378px 18px;
   background-position: -18px 0;
 }
 .presBtn__icon--open::after {
@@ -1829,6 +1838,8 @@ h1, h2 {
   width: 18px;
   height: 18px;
   background-image: url("./img/icons/sprite.svg");
+  background-size: 378px 18px;
+  background-position: 0 18px;
 }
 
 .work__txt {
@@ -1970,7 +1981,7 @@ h1, h2 {
   width: 1em;
   height: 1em;
   background-image: url("./img/icons/sprite.svg");
-  background-size: 19em 1em;
+  background-size: 21em 1em;
 }
 .contact__icon--email::before {
   background-position: -2em 0;
@@ -2111,7 +2122,7 @@ h1, h2 {
   width: 14px;
   height: 14px;
   background-image: url("./img/icons/sprite.svg");
-  background-size: 266px 14px;
+  background-size: 294px 14px;
 }
 .footer__goTop::before {
   background-position: -112px 0;
@@ -2162,7 +2173,7 @@ h1, h2 {
   width: 14px;
   height: 14px;
   background-image: url("./img/icons/sprite.svg");
-  background-size: 266px 14px;
+  background-size: 294px 14px;
   background-position: -196px 0;
 }
 .footer__fb:hover::after {
@@ -2542,7 +2553,7 @@ h1, h2 {
   height: 22px;
   margin: 0 auto;
   background-image: url("./img/icons/sprite.svg");
-  background-size: 418px 22px;
+  background-size: 462px 22px;
 }
 .galerie-btn__svg--toOpen {
   background-position: -374px 0;

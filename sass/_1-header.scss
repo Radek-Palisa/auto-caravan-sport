@@ -10,13 +10,10 @@
 		}
 	}
 	width: 100%;
-
 	top: 0;
 	z-index: 10; // for the box shadow to show
 	box-shadow: 0 1px 10px 0 rgba(0,0,0,.2);
 	background-color: rgb(58,54,54);
-	// Typography
-
 	letter-spacing: 0.5px;
 	text-transform: uppercase;
 	transition: all 0.3s ease-in-out;
@@ -53,20 +50,26 @@
 .menu-icon {
 	position: absolute;
 	width: 100%;
-	padding: 10px 40px;
+	height: 56px;
+	padding: 19px 40px;
 	text-align: center;
 	color: #3a3636;
 	background-color: rgba(255,255,255,0.8);
 
 	button {
 		border: none;
-
-		font-size: 24px;
-		font-weight: bold;
-		background: none;
+		width: 18px;
+		height: 18px;
+		background: url(./img/icons/sprite.svg);
+		background-size: $bgSize18px;
+		background-position: -342px 18px;
 		padding: 0;
 		outline: 0;
 		transition: all 0.2s ease-in-out;
+
+		@media (min-width: 500px) {
+			background-position: -360px 18px;		
+		}
 	}
 	
 	@media (min-width: 500px) {
