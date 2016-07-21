@@ -2,53 +2,45 @@ extends partials/skeleton.jade
 
 block body
 
-	header.jumbotron.jumbotron--subpage-bg
-		.logo.logo--fonts
-			h1 A.C.S. s.r.o.
-			p Auto Caravan Sport
-			.underline
-				span.underline__txt s.r.o
-
 	main.sub-page
 		// nav.sub-page-nav
 			a(href="index.html") <span>&#x2190;</span> Zpět na domovskou stránku
 			a.sub-page-nav--float(href="predchozi-prace.html") Předchozí práce <span>&#x2192;</span>
 		header.heading__wrap
-			h1.heading--fonts Ford Transit 1996
+			h1.heading--fonts Ford Transit 1996 (krátký rozvor) s vysokou pevnou střechou
 
 		article.sub-page__flipster
 			.my-flipster.flipster--margin
 				ul
 
 					li
-						.img__container: img(src="img/ford-1996/301.jpg" alt="")
+						img.ford-1996__img(src="img/ford-1996/301.jpg" alt="")
 					li
-						.img__container: img(src="img/ford-1996/302.jpg" alt="")
+						img.ford-1996__img(src="img/ford-1996/302.jpg" alt="")
 					li
-						.img__container: img(src="img/ford-1996/303.jpg" alt="")
+						img.ford-1996__img(src="img/ford-1996/303.jpg" alt="")
 					li
-						.img__container: img(src="img/ford-1996/305.jpg" alt="")
+						img.ford-1996__img(src="img/ford-1996/304.jpg" alt="")
 					li
-						.img__container: img(src="img/ford-1996/306.jpg" alt="")
+						img.ford-1996__img(src="img/ford-1996/305.jpg" alt="")
 					li
-						.img__container: img(src="img/ford-1996/304.jpg" alt="")
+						img.ford-1996__img(src="img/ford-1996/306.jpg" alt="")
 					li
-						.img__container: img(src="img/ford-1996/307.jpg" alt="")
+						img.ford-1996__img(src="img/ford-1996/307.jpg" alt="")
 					li
-						.img__container: img(src="img/ford-1996/308.jpg" alt="")
+						img.ford-1996__img(src="img/ford-1996/308.jpg" alt="")
 					li
-						.img__container: img(src="img/ford-1996/309.jpg" alt="")
+						img.ford-1996__img(src="img/ford-1996/309.jpg" alt="")
 					li
-						.img__container: img(src="img/ford-1996/310.jpg" alt="")
+						img.ford-1996__img(src="img/ford-1996/310.jpg" alt="")
 
 			section.sub-page__txt.box-shadow
 				// h1 Ford Transit 1996
-				p Jedna z nejrozšířenějších verzí spis pro střední a dlouhé dodávky. Většinou dále v zadní části byl ještě prostor pro koupelnový kout a připadnou garáž. Postel se rozklápí a opírá na přední otočná sedadla. Udělal jsem tuto verzi do krátkého rozvoru, třeba kvůli tomu, že manželka mohla v  zadní části vařit nebo já se převlékat do neoprenu a děti si tak mohly nerušeně hrát ve předu u stolu. Vzadu byl i mobilní záchod, což melo také své diskrétnější výhody. Plastová vysoká střecha měla tu výhodu, že byla ve vozidle permanentní stojná výška.  Na údržbu je proti zvedací střeše jednodušší ale vozidlo bylo o 80 centimetru vyšší a to zas melo své nevýhody.
+				p Další z verzí pro střední a dlouhé dodávky. Většinou v zadní části je ještě prostor pro koupelnový kout a připadnou garáž. Dvoumístná lavice se rozklápí na přední otočná sedadla. Udělal jsem tuto verzi do krátkého rozvoru, třeba kvůli tomu, že manželka mohla v zadní části vařit nebo já se převlékat do neoprenu a děti si tak mohly nerušeně hrát vpředu u stolu. Vzadu byl i mobilní záchod, což melo také své diskrétnější výhody. Plastová vysoká střecha měla tu výhodu, že byla ve vozidle permanentní stojná výška. Na údržbu je proti zvedací střeše jednodušší, ale vozidlo bylo o 80 centimetru vyšší a to zas mělo své nevýhody: větší odpor vzduchu při cestování a různé průjezdní brány limitující výšku vozu do 2m.  Je zde 4-místné sezení a dvě 2-lůžkové (rozklápěcí a zaklápěcí) postele.
 
 		nav.secondary-nav
 			p Kam dále?<br>Podívejte se na mé ostatní práce:
-			ul.work__ul
-
+			.sec-nav-list
 				include partials/sub-nav-custom.jade
 
 				include partials/sub-nav-2000.jade

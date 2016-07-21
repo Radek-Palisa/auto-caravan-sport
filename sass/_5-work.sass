@@ -1,111 +1,91 @@
-//
-// Co nabizim
-//	
-.work
-	background-color: lavender
-	background-color: #EAEAEA
-	background-color: #f3f3f3
-	padding: 2% 0
-	
+.work__title
+	position: relative
+	margin: 0
+	padding: 60px 0 25px
+	color: $grey
+	text-transform: uppercase
+
 .work__ul
-	max-width: 1600px
-	display: flex
-	justify-content: center
+	max-width: 1606px
 	margin: 0 auto
-	padding: 0 0 8%
+	padding: 0 10px 60px
+
+	@media (min-width: 1000px)
+		display: flex
+		justify-content: center
+		padding: 0 2px 95px
 
 .secondary-nav .work__ul
 	flex-wrap: wrap
 
 .work__item
-	margin: 0 5px
+	flex: 1 1 auto
+	max-width: 600px
+	margin: 0 auto 20px
 	list-style: none
-	//width: 400px
-	flex-grow: 1
-	flex-basis: 0
-
-	a:hover .podsekce__link
-		background-color: rgba(0,0,0,0.6)
-
-.work__item--clear
-	width: 100%
+	//flex: 1 1 320px
+	border: 1px solid #DFDEDE
+	background-color: white
 
 .work__link
 	position: relative
 	display: block
-	height: 350px
+	//height: 350px
+	padding-bottom: 60%
+
+	@media (min-width: 1000px)
+		padding-bottom: 80% 
+	
 	background-size: cover
+	background-position: center
 	overflow: hidden
 
 .ford-custom__link--bg
-	background-image: url(./img/ma-prace/ford-custom.jpg)
-	background-position: top
+	background-image: url(./img/index/ma-prace/ford-custom.jpg)
 
 .ford-2000__link--bg
-	background-image: url(./img/ma-prace/P6190018.jpg)
-	background-position: center 81%
+	background-image: url(./img/index/ma-prace/ford-2000.jpg)
 
 .ford-1996__link--bg
-	background-image: url(./img/ma-prace/lefkas_073.jpg)
-	background-position: center
+	background-image: url(./img/index/ma-prace/ford-1996.jpg)
 
-.galerie__link--bg
-	width: 800px
-	margin: 0 auto
-	background-image: url(./img/ford-custom/111.jpg)
-	background-position: center top -80px
-
-.galerie__link--under-txt
-	width: 100%
-	text-align: center
-	font-size: 14px
-	margin: 1.5em auto
-
-
-.work__link__h
+.work__link__btn
 	position: absolute
 	top: 50%
 	left: 50%
 	transform: translate(-50%, -50%)
-	// padding: 10px 15px
-	padding: 3px 0 3px 5px
-	// border: 1px solid white
-	border: 1px solid #62A8B5
+	padding: 3px 0
+	border: 1px solid $highlight-color
 	white-space: nowrap
 	text-align: center
-	font-family: roboto
 	font-weight: bold
-	color: #202020
 	color: white
-	background-color: #f6d922
-	background-color: rgba(0,0,0,0.5)
+	background-color: rgba(0,0,0,0.6)
 
 	p 
+		position: relative
 		display: inline-block
-		margin: 0
-		padding: 5px 20px
-		border-left: 1px solid #62A8B5
+		margin: 0 0 0 34px
+		padding: 8px 20px
+		border-left: 1px solid $highlight-color
 		text-align: center
 		font-size: 1.1em
 		letter-spacing: 0.5px
 
-
-.podsekce__svg
-	display: inline-block
-	width: 18px
-	margin: 1px
-	transform: translate(-3px, 3px) rotate(180deg)
-	transition: all 0.2s ease-in-out
-
-	path
-		fill: #62A8B5
+		&::before 
+			content: ''
+			position: absolute
+			left: -26px
+			top: 50%
+			transform: translateY(-50%)
+			width: 18px
+			height: 18px
+			background-image: url('./img/icons/sprite.svg')
+			background-size: $bgSize18px
+			background-position: 0 18px
 
 .work__txt
 	margin: 0
-	padding: 2em 20px 2.5em
-	border: 1px solid #DFDEDE
+	padding: 2em 20px
 	color: #474141
-	background-color: white
-
-	a
-		text-decoration: underline
+	text-align: center

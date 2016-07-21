@@ -1,126 +1,163 @@
-$(function() {
-  $('a[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
-      }
-    }
-  });
-});
+$(document).ready(function() {
 
+	if (window.matchMedia('(min-width: 1000px)').matches) {
+		var headerHeight = 51;
+		} else {
+			headerHeight = 0;
+		}
 
-//
-// --- Responsive Nav ---
-//
-$('.menu-icon').on('click', function() {
-	$(this).toggleClass('menu-icon--activated');
-	$('.nav__ul').toggleClass('nav__ul--activated');
-});
-//
-// --- Debounce function to improve performance on scroll listener
-// https://davidwalsh.name/javascript-debounce-function
-//
-function debounce(func, wait, immediate) {
-	var timeout;
-	return function() {
-		var context = this, args = arguments;
-		var later = function() {
-			timeout = null;
-			if (!immediate) func.apply(context, args);
-		};
-		var callNow = immediate && !timeout;
-		clearTimeout(timeout);
-		timeout = setTimeout(later, wait);
-		if (callNow) func.apply(context, args);
-	};
-};
-
-//
-// --- Tabs for Gallery ---
-//
-$(document).ready(function(){
-	$(".btn-galerie-show").click(function(e){
-		$(this).parent().next().slideToggle(600);
+	$(function() {
+	  $('a[href*="#"]:not([href="#"])').click(function() {
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+	      var target = $(this.hash);
+	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	      if (target.length) {
+	        $('html, body').animate({
+	          scrollTop: target.offset().top - headerHeight
+	        }, 800);
+	        return false;
+	      }
+	    }
+	  });
 	});
-});
 
-var $window = $(window);
-var windowHeight = $window.height();
-var $logo = $('.logo');
+	//
+	// --- Responsive Nav ---
+	//
+	var $menuButton = $('.menu-icon button');
+	$menuButton.on('click', function() {
+		$(this).toggleClass('menu-icon--activated');
+		$('.nav__ul').toggleClass('nav__ul--activated');
+	});
 
-// Parallax sliding - header section
+	//
+	// --- Tabs for Gallery ---
+	//
+	var $btnGalerie1 = $('.galerie__header__btn .galerie-btn');
+	var $btnGalerie2 = $('.galerie__section__btn .galerie-btn');
+	
 
-var $header = $('.header');
+	$btnGalerie1.on('click', function() {
+		$(this).parent().parent().next().toggleClass('galerie__section--open');
+		$(this).find('.galerie-btn__svg').toggleClass('galerie-btn__svg--toClose');
+		$(this).parent().prev().toggleClass('galerie__header__txt--activated');
+	});
 
-// Parallax sliding - Presentation section vars
-var $pres = $('.presentation__content');
-var presTop = $pres.offset().top;
-var presInView = presTop - windowHeight;
-var presHeight = $pres.outerHeight();
-var presOffView = presTop + presHeight;
+	$btnGalerie2.on('click', function() {
 
-// Parallax sliding - About Section vars
-var $about = $('.about');
-var aboutTop = $about.offset().top;
-var jsElHeight = $('.js-el-height').outerHeight() * 4;
-var aboutInView =  aboutTop - jsElHeight - windowHeight;
-var aboutHeight = $about.outerHeight();
-var aboutOffView = aboutTop + aboutHeight;
+		var wScrollC = $(document).scrollTop();
+		var galerieHeight = $(this).parent().parent().outerHeight();
+		$(this).parent().parent().prev().find('.galerie-btn__svg').toggleClass('galerie-btn__svg--toClose');
+		$(this).parent().parent().toggleClass('galerie__section--open');
+		$(this).parent().parent().prev().find('.galerie__header__txt').toggleClass('galerie__header__txt--activated');
+		$('html, body').animate({scrollTop: wScrollC - galerieHeight}, 0)
+	});
 
-	$(window).bind('scroll', function(){
-		var wScroll = $(document).scrollTop();
-		var headerPos = 35;
-		var bgPosPres = 130;
+	//
+	// Parallax sliding - jumbotron section
+	//
+	var $siteHeader = $('.site-header--fixed');
+	var $jumbotron = $('.jumbotron--index-bg');
+	var jumboHeight = $jumbotron.outerHeight();
 
-		// Nav to shrink
-		//$(window).resize(function() {
-			if ($(window).width() >= 1000) {
-				if (wScroll > 250) {
-					$('.site-header').addClass('site-header--js-narrowed');
-				} else {
-					$('.site-header').removeClass('site-header--js-narrowed');
-				}
+	function parallax() {
+			var wScroll = $(document).scrollTop();
+			var headerPos;
+
+			// Parallax scrolling		
+			if (wScroll >= 0 && wScroll < jumboHeight) {
+				var headerPos = (50-(wScroll/1.5)).toFixed(2);
 			}
-		//});
+			if (window.matchMedia('(max-width: 1600px)').matches) {
+				$jumbotron.css('background-position', '20% '+headerPos+'px');
+			} else {
+				$jumbotron.css('background-position', '50% '+headerPos+'px');
+			}
+			// shrink nav
+			if (wScroll > 440) {
+				$siteHeader.addClass('site-header--js-narrowed');
+			} else {
+				$siteHeader.removeClass('site-header--js-narrowed');
+			}
+	};
 
-		/*
-		if (wScroll > 0) {
-			headerPos = headerPos-(wScroll/3);
-		}
-		$header.css('background-position', 'center '+headerPos+'%');
-		*/
-		if (wScroll >= presInView) {
-			bgPosPres = bgPosPres-((wScroll-presInView)/8);
-		}
-		$pres.css('background-position', 'center '+bgPosPres+'%');
 
-		var bgPosAbout = 210;
+	var didScroll = false;
 
-		if (wScroll >= aboutInView) {
-			bgPosAbout = bgPosAbout-((wScroll-aboutInView)/6);
+	function doThisStuffOnScroll() {
+		didScroll = true;
 		}
-		$about.css('background-position', 'center '+bgPosAbout+'%');
+	
+	if (window.matchMedia('(min-width: 1000px)').matches) {
+		window.onscroll = doThisStuffOnScroll;
+		setInterval(function() {
+		    if(didScroll) {
+		        didScroll = false;
+		        parallax();
+		    }
+		}, 10);
+	};
+
+	$( window ).resize(function() {
+		if (window.matchMedia('(min-width: 1000px)').matches) {
+			jumboHeight = $jumbotron.outerHeight();
+			window.onscroll = doThisStuffOnScroll;
+			setInterval(function() {
+			    if(didScroll) {
+			        didScroll = false;
+			        parallax();
+			    }
+			}, 10);
+
+			headerHeight = 52;
+		} else {
+			window.onscroll = null;
+			$jumbotron.css('background-position', '20% 0');
+
+			headerHeight = 0;
+		}
 	});
 
-// Presentation Tabbing
+	//
+	// Presentation Tabbing
+	//
 
-var $leftPane = $('.leftPane');
-$leftPane.addClass('leftPane--centered');
+	var $middlePane = $('.middlePane');
+	var middlePaneHeight = $middlePane.outerHeight() - 15;
+	var $presBtn = $('.presBtn');
+	var $presBtnIcon = $('.presBtn__icon');
+	//var $presBtn = $('.presBtn__2nd');
 
-var $rightPane = $('.presentation__content ul');
-//$rightPane.addClass('rightPane--js-hidden');
 
-var $presBtn1st = $('.presBtn__1st');
-var $presBtn = $('.presBtn__2nd'); 
+	$presBtn.on('click', function (){
+		var wScrollB = $(document).scrollTop();
 
-$('.leftPane__presBtn').on('click', function (){
-	$('.presentation__overlay').toggleClass('presentation__overlay--js-on presentation__overlay--js-off');
-	$rightPane.toggleClass('rightPane--js-hidden rightPane--js-activated').animate();
-	$presBtn.toggleClass('presBtn--rotated');
-	$presBtn1st.toggleClass('presBtn__1st--rotated');
-});
+		$middlePane.slideToggle(900);
+		if ($presBtnIcon.hasClass('presBtn__icon--open') == true) {
+			$('html, body').animate({scrollTop: wScrollB- middlePaneHeight}, 1000)
+		}
+
+		$presBtnIcon.toggleClass('presBtn__icon--open');
+
+		setTimeout(
+			function() {
+				$presBtnIcon.text(function(i, text){
+					return text === "Zavřít" ? "Více" : "Zavřít";
+				});
+			}, 800);
+	});
+
+	$presBtn.hover(function(){
+		if (!$presBtnIcon.hasClass('presBtn__icon--open')) {
+			$('.bottomPane').dequeue().stop().animate({ marginTop: "5px" });
+		}
+	}, function() {
+		$('.bottomPane').animate({ marginTop: "0" }, "normal", "linear");
+	});
+}); // .ready end
+
+
+
+
+
+

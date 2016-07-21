@@ -2,118 +2,119 @@ extends partials/skeleton.jade
 
 block body
 
-	header.jumbotron.jumbotron--subpage-bg
-		.logo.logo--fonts
-			h1 A.C.S. s.r.o.
-			p Auto Caravan Sport
-			.underline
-				span.underline__txt s.r.o.
-
-		// nav.nav.nav--fonts(role="navigation")
-			ul
-				li: a(href="index.html") Domů
-				li: a(href="index.html#work") Má práce
-				li: a(href="index.html#about") O firmě
-				li: a(href="index.html#contact") Kontakt
-
 	main.sub-page.galerie-page
-		// nav.sub-page-nav
-				a(href="index.html") <span>&#x2190;</span> Zpět na domovskou stránku
-				a.sub-page-nav--float(href="nabidka.html") Co nabízím <span>&#x2192;</span>
 		header.heading__wrap
 			h1.heading--fonts Dokumentace Ford Custom A.C.S.
 		
 		section.galerie-container
 			#galerie__tabs
 				section.galerie.galerie-izolace
-					header
-						.header__h2-container
-							h2 Izolace vozu
-						p #[span Izolace vozu] Boční pevné stěny vozu jsou vypěněny montážní pěnou (elektrik. Kabely byly vloženy do husích krků), stěna je obložena 3mm překližkou, oboustranně nalakovanou akrylátem. Stropní plech je vylepen pláty PP pěny MIRELON. Stropnice vozu zůstala originální, v toaletním prostoru byla nahrazena 3mm deskou ABS. Podlaha je izolována PP německou pěnou EXTREME. Na ní leží 8mm vodovzdorná překližka a tvrzené dekorační lino. Okraje desky jsou zalakovány, pod toaletním je kompletně lakovaná 12mm vodní překližka.
-						.btn-galerie-show
-							svg(viewbox="0 0 100 100")
-								path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
-					section.izolace-vozu__thumbs
+					header.galerie__header
+						h2 Izolace vozu
+						p.galerie__header__txt Boční pevné stěny vozu jsou vypěněny montážní pěnou (elektrik. Kabely byly vloženy do husích krků), stěna je obložena 3mm překližkou, oboustranně nalakovanou akrylátem. Stropní plech je vylepen pláty PP pěny MIRELON. Stropnice vozu zůstala originální, v toaletním prostoru byla nahrazena 3mm deskou ABS. Podlaha je izolována PP německou pěnou EXTREME. Na ní leží 8mm vodovzdorná překližka a tvrzené dekorační lino. Okraje desky jsou zalakovány, pod toaletním je kompletně lakovaná 12mm vodní překližka.
+						.galerie__header__btn
+							button.galerie-btn
+								.galerie-btn__svg.galerie-btn__svg--toOpen
+
+					section.galerie__section.izolace-vozu__thumbs
 						- for (var x = 1; x < 10; x++)
-							a.galerie-izolace__item.gallery__thumbnail(href="./img/galerie/izolace-vozu_0#{x}.jpg",data-featherlight="image")
-								img(src="./img/galerie-thumbs/izolace-vozu_0#{x}.jpg", alt="")
+							a.galerie-izolace__item.gallery__thumbnail(href="./img/galerie/images/izolace-vozu_0#{x}.jpg",data-featherlight="image")
+								img(src="./img/galerie/thumbs/izolace-vozu_0#{x}.jpg", alt="izolace-vozu_0#{x}")
 
 						- for (var x = 10; x < 31; x++)
-							a.galerie-izolace__item.gallery__thumbnail(href="./img/galerie/izolace-vozu_#{x}.jpg",data-featherlight="image")
-								img(src="./img/galerie-thumbs/izolace-vozu_#{x}.jpg", alt="")
+							a.galerie-izolace__item.gallery__thumbnail(href="./img/galerie/images/izolace-vozu_#{x}.jpg",data-featherlight="image")
+								img(src="./img/galerie/thumbs/izolace-vozu_#{x}.jpg", alt="izolace-vozu_#{x}")
+
+						.galerie__section__btn
+							button.galerie-btn
+								.galerie-btn__svg.galerie-btn__svg--toClose
 
 				section.galerie.galerie-sedadla
-					header
-						.header__h2-container
-							h2 Sestava sedadel
-						p Sedadla jsou původní a v originálním postavení od výrobce. U tohoto vozu je počet míst k sezení 1+6. Ve 3. řadě došlo k nahrazení pravého jedno-sedadla, kuchyňským blokem. Sedadla 2. a 3. řady mají sklápěcí opěradla a jsou lehce vyjmutelná z vozu. Na jejich místo je možno, do původního podlahového uložení, namontovat vysouvací postel. Během jízdy se na posteli nesmí sedět, proto se sníží počet přepravovaných osob na 1+2.
-						.btn-galerie-show
-							svg(viewbox="0 0 100 100")
-								path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
-					section.sestava-sedadel__thumbs
-						- for (var x = 1; x < 10; x++)
-							a.galerie-sedadla__item.gallery.gallery__thumbnail(href="./img/galerie/sestava-sedadel_0#{x}.jpg",data-featherlight="image")
-								img(src="./img/galerie-thumbs/sestava-sedadel_0#{x}.jpg", alt="")
+					header.galerie__header
+						h2 Sestava sedadel
+						p.galerie__header__txt Sedadla jsou původní a v originálním postavení od výrobce. U tohoto vozu je počet míst k sezení 1+6. Ve 3. řadě došlo k nahrazení pravého jedno-sedadla, kuchyňským blokem. Sedadla 2. a 3. řady mají sklápěcí opěradla a jsou lehce vyjmutelná z vozu. Na jejich místo je možno, do původního podlahového uložení, namontovat vysouvací postel. Během jízdy se na posteli nesmí sedět, proto se sníží počet přepravovaných osob na 1+2.
+						.galerie__header__btn
+							button.galerie-btn
+								.galerie-btn__svg.galerie-btn__svg--toOpen
 
-						- for (var x = 10; x < 12; x++)
-							a.galerie-sedadla__item.gallery.gallery__thumbnail(href="./img/galerie/sestava-sedadel_#{x}.jpg",data-featherlight="image")
-								img(src="./img/galerie-thumbs/sestava-sedadel_#{x}.jpg", alt="")
+					section.galerie__section.sestava-sedadel__thumbs
+						- for (var x = 1; x < 10; x++)
+							a.galerie-sedadla__item.gallery.gallery__thumbnail(href="./img/galerie/images/sestava-sedadel_0#{x}.jpg",data-featherlight="image")
+								img(src="./img/galerie/thumbs/sestava-sedadel_0#{x}.jpg", alt="sestava-sedadel_0#{x}")
+
+						a.galerie-sedadla__item.gallery.gallery__thumbnail(href="./img/galerie/images/sestava-sedadel_10.jpg",data-featherlight="image")
+							img(src="./img/galerie/thumbs/sestava-sedadel_10.jpg", alt="sestava-sedadel_10")
+
+						.galerie__section__btn
+							button.galerie-btn
+								.galerie-btn__svg.galerie-btn__svg--toClose
 
 				section.galerie.galerie-toaleta
-					header
-						.header__h2-container
-							h2 Toaletní kout
-						p Místo umožňuje možnost nouzově udělat toaletní potřeby. Je vybaven umyvadlem, záchodem a sprchou. Sprchování je možné uvnitř vozu, tak i venku mimo vůz. Dva okruhy, teplá a studená voda. Teplá voda je zajištěna průtokovým ohřívačem na 220V.  Vůz disponuje 50l čisté vody, 72l odpadní vody a 17 fekální vody.
-						.btn-galerie-show
-							svg(viewbox="0 0 100 100")
-								path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
-					section
+					header.galerie__header
+						h2 Toaletní kout
+						p.galerie__header__txt Místo umožňuje možnost nouzově udělat toaletní potřeby. Je vybaven umyvadlem, záchodem a sprchou. Sprchování je možné uvnitř vozu, tak i venku mimo vůz. Dva okruhy, teplá a studená voda. Teplá voda je zajištěna průtokovým ohřívačem na 220V.  Vůz disponuje 50l čisté vody, 72l odpadní vody a 17 fekální vody.
+						.galerie__header__btn
+							button.galerie-btn
+								.galerie-btn__svg.galerie-btn__svg--toOpen
+
+					section.galerie__section
 						- for (var x = 1; x < 10; x++)
-							a.galerie-toaleta__item.gallery__thumbnail(href="./img/galerie/toaletni-kout_0#{x}.jpg",data-featherlight="image")
-								img(src="./img/galerie-thumbs/toaletni-kout_0#{x}.jpg", alt="")
+							a.galerie-toaleta__item.gallery__thumbnail(href="./img/galerie/images/toaletni-kout_0#{x}.jpg",data-featherlight="image")
+								img(src="./img/galerie/thumbs/toaletni-kout_0#{x}.jpg", alt="toaletni-kout_0#{x}")
 
 						- for (var x = 10; x < 31; x++)
-							a.galerie-toaleta__item.gallery__thumbnail(href="./img/galerie/toaletni-kout_#{x}.jpg",data-featherlight="image")
-								img(src="./img/galerie-thumbs/toaletni-kout_#{x}.jpg", alt="")
+							a.galerie-toaleta__item.gallery__thumbnail(href="./img/galerie/images/toaletni-kout_#{x}.jpg",data-featherlight="image")
+								img(src="./img/galerie/thumbs/toaletni-kout_#{x}.jpg", alt="toaletni-kout_#{x}")
+
+						.galerie__section__btn
+							button.galerie-btn
+								.galerie-btn__svg.galerie-btn__svg--toClose
 
 				section.galerie.galerie-kuchyn
-					header
-						.header__h2-container
-							h2 Kuchyňská skříň
-						p Skříň je maximálně minimalizována do prostoru, kde má své místo. Je na sedadlovém posuvu a je tedy ji možno vysunovat více do prostoru bočních dveří aby byl k ní lepší přístup a zase zasunovat pro lepší nastupování a vystupování pro třetí řadu sedadel. Prostor za skříní může sloužit pro regálek surovin. Skříň disponuje dvouplotýnkovím vařičem, dřezem s teplou a studenou vodou, 40l kompresorovou ledničkou, vysouvacím stolkem s úložným prostorem a dalším úložným prostorem za lednicí. Nad kuchyňkou je polička s 12V digistorem.
-						.btn-galerie-show
-							svg(viewbox="0 0 100 100")
-								path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
-					section
+					header.galerie__header
+						h2 Kuchyňská skříň
+						p.galerie__header__txt Skříň je maximálně minimalizována do prostoru, kde má své místo. Je na sedadlovém posuvu a je tedy ji možno vysunovat více do prostoru bočních dveří aby byl k ní lepší přístup a zase zasunovat pro lepší nastupování a vystupování pro třetí řadu sedadel. Prostor za skříní může sloužit pro regálek surovin. Skříň disponuje dvouplotýnkovím vařičem, dřezem s teplou a studenou vodou, 40l kompresorovou ledničkou, vysouvacím stolkem s úložným prostorem a dalším úložným prostorem za lednicí. Nad kuchyňkou je polička s 12V digistorem.
+						.galerie__header__btn
+							button.galerie-btn
+								.galerie-btn__svg.galerie-btn__svg--toOpen
+
+					section.galerie__section
 						- for (var x = 1; x < 10; x++)
-							a.galerie-kuchyn__item.gallery__thumbnail(href="./img/galerie/kuchynsky-blok_0#{x}.jpg",data-featherlight="image")
-								img(src="./img/galerie-thumbs/kuchynsky-blok_0#{x}.jpg", alt="")
+							a.galerie-kuchyn__item.gallery__thumbnail(href="./img/galerie/images/kuchynsky-blok_0#{x}.jpg",data-featherlight="image")
+								img(src="./img/galerie/thumbs/kuchynsky-blok_0#{x}.jpg", alt="kuchynsky-blok_0#{x}")
 
 						- for (var x = 10; x < 31; x++)
-							a.galerie-kuchyn__item.gallery__thumbnail(href="./img/galerie/kuchynsky-blok_#{x}.jpg",data-featherlight="image")
-								img(src="./img/galerie-thumbs/kuchynsky-blok_#{x}.jpg", alt="")
+							a.galerie-kuchyn__item.gallery__thumbnail(href="./img/galerie/images/kuchynsky-blok_#{x}.jpg",data-featherlight="image")
+								img(src="./img/galerie/thumbs/kuchynsky-blok_#{x}.jpg", alt="kuchynsky-blok_0#{x}")
+
+						.galerie__section__btn
+							button.galerie-btn
+								.galerie-btn__svg.galerie-btn__svg--toClose
 
 				section.galerie.galerie-postel
-					header
-						.header__h2-container
-							h2 Postel
-						p Postel je lehce smontovatelná a zase odmontovatelná (lepší manipulace je z pomocí druhé osoby). Skládá se dvou ocelových stojek, uchycených do původních úchytů sedadel. Vysunovacího postelového roštu se sklopným opěradlem a dvěma matracemi. Celá postel se dá nahoru odklápět a tím je možno využít velkého úložného prostoru, rozděleného vyjmutelnými organizéry. Postel se nesmí jakýmkoli způsobem používat za jízdy.
-						.btn-galerie-show
-							svg(viewbox="0 0 100 100")
-								path(d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z")
-					section
+					header.galerie__header
+						h2 Postel
+						p.galerie__header__txt Postel je lehce smontovatelná a zase odmontovatelná (lepší manipulace je z pomocí druhé osoby). Skládá se dvou ocelových stojek, uchycených do původních úchytů sedadel. Vysunovacího postelového roštu se sklopným opěradlem a dvěma matracemi. Celá postel se dá nahoru odklápět a tím je možno využít velkého úložného prostoru, rozděleného vyjmutelnými organizéry. Postel se nesmí jakýmkoli způsobem používat za jízdy.
+						.galerie__header__btn
+							button.galerie-btn
+								.galerie-btn__svg.galerie-btn__svg--toOpen
+									
+					section.galerie__section
 						- for (var x = 1; x < 10; x++)
-							a.galerie-postel__item.gallery__thumbnail(href="./img/galerie/postel_0#{x}.jpg",data-featherlight="image")
-								img(src="./img/galerie-thumbs/postel_0#{x}.jpg", alt="")
+							a.galerie-postel__item.gallery__thumbnail(href="./img/galerie/images/postel_0#{x}.jpg",data-featherlight="image")
+								img(src="./img/galerie/thumbs/postel_0#{x}.jpg", alt="postel_0#{x}")
 
-						- for (var x = 10; x < 28; x++)
-							a.galerie-postel__item.gallery__thumbnail(href="./img/galerie/postel_#{x}.jpg",data-featherlight="image")
-								img(src="./img/galerie-thumbs/postel_#{x}.jpg", alt="")
+						- for (var x = 10; x < 25; x++)
+							a.galerie-postel__item.gallery__thumbnail(href="./img/galerie/images/postel_#{x}.jpg",data-featherlight="image")
+								img(src="./img/galerie/thumbs/postel_#{x}.jpg", alt="postel_0#{x}")
+
+						.galerie__section__btn
+							button.galerie-btn
+								.galerie-btn__svg.galerie-btn__svg--toClose
 
 		nav.secondary-nav
 			p Kam dále?<br>Podívejte se na mé ostatní práce:
-			ul.work__ul
-
+			.sec-nav-list
 				include partials/sub-nav-custom.jade
 
 				include partials/sub-nav-2000.jade

@@ -1,44 +1,47 @@
 doctype html
-html
+html(lang="cs")
 	head
 		include html5shiv.jade
 		title ACS s.r.o.
 		meta(charset="utf-8")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
-		link(href='https://fonts.googleapis.com/css?family=Fira+Sans:400,300,500,700&subset=latin,latin-ext' rel='stylesheet' type='text/css')
-		link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,300italic,400italic,600italic,700italic,800,800italic&subset=latin-ext' rel='stylesheet' type='text/css')
 		link(href='https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css')
-		link(rel="stylesheet" href="style.css")
+		link(rel="stylesheet" href="style-min.css")
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js")
-		script(type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js")
 		
 	body
+
+		include browser-notify.jade
+
 		block navigation
-			nav.nav(role="navigation")
-				p Auto Caravan Sport #[span s.r.o.]
-				ul.nav__ul
-					li: a(href="index.html") Zpět na domovskou stránku
+			header.site-header#header
+				a.logo(href="./index.html") Auto Caravan Sport #[span s.r.o.]
+				.menu-icon
+					button
+				ul.nav__ul(role="navigation")
+					li: a.nav__ul__goHome(href="index.html") Zpět domů
 
 		block body
 		
 		block footer
 			footer.footer
-				p.footer__copyright.footer--middle Auto Caravan Sport s.r.o. 2016
-				nav.footer__nav.footer--left
-					ul
-						li: a(href="#") Nahoru
-						li: a(href="index.html") Domů
+				.footer__nav
+					a.footer__nav__item.footer__goTop(href="#header") Nahoru
+					a.footer__nav__item.footer__goHome(href="./index.html") Domů
+					a.footer__nav__item.footer__goContact(href="./index.html#contact") Kontakt
 
-				.footer--right
-					img.home-socicon.footer__socicon(src="./img/email-icon.svg")
-					img.home-socicon.footer__socicon(src="./img/fb-icon.svg")
-				p.footer__credits Web: 
-					a(href="https://www.linkedin.com/in/radek-palisa-96332886", target="_blank") Radek Palisa
+				.footer__info 
+					p.footer__copyright &#169; Auto Caravan Sport s.r.o. 2016
+
+					a(href="https://www.facebook.com/Auto-Caravan-Sport-sro-871786519617622/w").footer__fb Najděte mě na facebooku
+
+					p.footer__credits Design a tvorba webu: 
+						a(href="https://www.linkedin.com/in/radek-palisa-96332886", target="_blank") Radek Palisa
 
 		script(src="js/functions.js")
-		script(src="js/flipster.js")
-		script(src="js/responsiveslides.min.js")
+
 		block local-scripts
+			script(src="js/flipster.js")
 			script.
 				$(function() {
 					$('.my-flipster').flipster({
@@ -47,7 +50,7 @@ html
 						spacing: -0.39,
 						scrollwheel: false,
 						loop: true,
-						start: 'center'
+						start: 3
 					});
 				});
 

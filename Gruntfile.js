@@ -45,7 +45,7 @@ module.exports = function(grunt) {
 		      'style.css': 'sass/main.scss'
 		    }
 		  },
-		  /* Concatenate CSS when done with development	
+		  // Concatenate CSS when done with development	
 		  dist: {
 			options: {
 			  style: 'compressed',
@@ -55,7 +55,6 @@ module.exports = function(grunt) {
 			  'style-min.css': 'sass/main.scss'
 			}
 		  }
-		  */
 		},
 
 		/**
@@ -85,7 +84,7 @@ module.exports = function(grunt) {
 			},
 			css: {
 				files: 'sass/**/*.{scss,sass}',
-				tasks: ['sass'] // add ,'autoprefixer' here to switch it on, its off cos it disables source-mapping
+				tasks: ['sass', 'autoprefixer'] // add ,'autoprefixer' here to switch it on, its off cos it disables source-mapping
 			},
 			html: {
 				files: '*.html',
