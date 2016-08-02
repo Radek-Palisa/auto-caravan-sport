@@ -74,8 +74,8 @@ block body
 			section.about-txt
 				h1.about__title Jak to začalo
 				.about-txt__inner
-					p Myšlenka začala v roce 1994 po zakoupení staršího vozu Ford Transit. Nadšení pro volnost, prožití svého volného času, se stávala silnější a po zamilování se do windsurfingu bylo rozhodnuto.  Otvíraly se nové možnosti. Nemusel jsem k vůli surfu utíkat od rodiny ale rodinu jsem brával sebou. 14denní dovolená se protáhla od jara do podzimu. Od Baltu, přes všechny jezera a přehrady až k středozemnímu moři. Příjezdy do neznámých oblastí a já měl vše sebou, přece jen dodávalo více klidu. Auto bylo pro mne něco víc než jen převoz z místa do místa.
-					p Jak děti rostli, začalo docházet k jeho postupné přestavbě a já se rozhodoval, co je důležité koupit dřív. Finance z rodinného rozpočtu prosadit na zakoupení životně důležité součásti obytného vozu, byl prostě problém. Byla to nejdelší přestavba ale šla, tak nějak nenápadně s mou rodinou. Vše mělo své kouzlo. Teď, co se život přehoupl do druhé poloviny, je to zase trochu jiné. Zakoupil jsem už nové auto, Ford Transit Custom a představa o vnitřní vestavbě dostala novou tvář. S manželkou nám stačí jedna postel a blížící se vnoučátka si budem brát na víkend jenom po jednom. Na těchto stránkách bych  Vás chtěl seznámit s tímto typem karavaningu a ze svou částečnou činností v tomto směru. 
+					p Myšlenka začala v roce 1994 po zakoupení staršího vozu Ford Transit. Nadšení pro volnost v prožití svého volného času se stávala silnější a po tom, co jsem se zamiloval do windsurfingu, bylo rozhodnuto. Otvíraly se nové možnosti. Nemusel jsem kvůli surfu utíkat od rodiny, ale rodinu jsem brával s sebou. 14 denní dovolená se protáhla od jara do podzimu. Od Baltu, přes všechna jezera a přehrady až k Středozemnímu moři. Příjezdy do neznámých oblastí, a já měl vše s sebou, přece jen dodávalo více klidu. Auto bylo pro mne něco víc než jen pro převoz z místa do místa.
+					p Jak děti rostly začalo docházet k jeho postupné přestavbě a já se rozhodoval, co je důležité koupit dřív. Prosadit finance z rodinného rozpočtu na zakoupení životně důležité součásti obytného vozu byl prostě problém. Byla to nejdelší přestavba, ale šla tak nějak nenápadně s mou rodinou. Vše mělo své kouzlo. Teď, co se život přehoupl do druhé poloviny, je to zase trochu jiné. Zakoupil jsem už nové auto, Ford Transit Custom, a představa o vnitřní vestavbě dostala novou tvář. S manželkou nám stačí jedna postel a blížící se vnoučátka si budem brát na víkend jenom po jednom. Na těchto stránkách bych Vás chtěl seznámit s tímto typem karavaningu a se svou částečnou činností v tomto směru.
 
 	blockquote.sub-about__quote Karavaning bych přirovnal k hudbě. Hudba poskytuje radost obrovské spoustě posluchačů a každý si najde tu svou. Také karavaning má široký rozsah zájmů a je třeba si vybrat ten svůj. 
 
@@ -85,19 +85,22 @@ block body
 			p.contact__icon.contact__icon--email libor.palisa@gmail.com
 			p.contact__icon.contact__icon--tel +420 605 532 809
 			address.contact__address
-				p.contact__icon.contact__icon--loc Sokoloská 2530<br>Kroměříž<br>767 01
+				p.contact__icon.contact__icon--loc Sokolovská 2530<br>Kroměříž<br>767 01
 				img.contact__map(src="./img/icons/kromerizOnMap.svg", alt="Kroměříž na mapě ČR")
 
 			p.contact-fb Najděte mě na facebooku:
 			a.contact-fb-link(href="https://www.facebook.com/Auto-Caravan-Sport-sro-871786519617622/"): img.contact-fb__icon(src="./img/icons/fb-icon2.svg")
 			
 	.contact-form-outer
-		form.contact-form
+		form.contact-form(action="https://formspree.io/palisa.libor@gmail.com", method="POST")
 			h2.contact-form__title Napište mi
-			input.form__name(placeholder="Jméno")
-			input.form__email(placeholder="Email")
-			textarea.form__zprava(placeholder="Napište mi co Vás zaujalo...")
-			input.form__sent(type="submit", value="Odeslat") 
+			input.form__name(placeholder="Jméno", type="text", name="name")
+			input.form__email(placeholder="Email", type="email", name="_replyto")
+			textarea.form__zprava(placeholder="Napište mi co Vás zaujalo...", name="message")
+			input.form__sent(type="submit", value="Odeslat")
+
+	//.contact-form2
+		include partials/form.jade
 
 block footer
 	footer.footer
@@ -109,6 +112,6 @@ block footer
 			a(href="https://www.facebook.com/Auto-Caravan-Sport-sro-871786519617622/").footer__fb Najděte mě na facebooku
 
 			p.footer__credits Design a tvorba webu: 
-				a(href="https://www.linkedin.com/in/radek-palisa-96332886", target="_blank") Radek Palisa
+				a(href="http://www.radekpalisa.com", target="_blank") Radek Palisa
 
 block local-scripts

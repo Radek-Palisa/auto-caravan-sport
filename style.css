@@ -1370,9 +1370,12 @@ h1, h2 {
   font-size: 14px;
   letter-spacing: 1px;
 }
+.nav__ul a:hover {
+  color: white;
+}
 @media (min-width: 1000px) {
   .nav__ul a {
-    color: white;
+    color: #efefef;
     margin-right: 0;
   }
 }
@@ -1457,18 +1460,12 @@ h1, h2 {
 
 .slogan {
   margin: 0;
-  padding: 20px 15px;
+  padding: 35px 15px;
   text-align: center;
   font-style: italic;
-  font-size: 16px;
   letter-spacing: 0.4px;
   color: #757684;
   background-color: #EDEEF3;
-}
-@media (min-width: 500px) {
-  .slogan {
-    font-size: 1.13em;
-  }
 }
 
 .site-intro {
@@ -1563,7 +1560,7 @@ h1, h2 {
   position: relative;
   z-index: 2;
   height: 430px;
-  padding: 40px 20px 10px;
+  padding: 60px 15px 10px;
   color: #D8D9E6;
   color: white;
   background: url(./img/index/presentation_mobile.jpg) right 0/500px auto no-repeat;
@@ -1571,7 +1568,6 @@ h1, h2 {
 @media (min-width: 500px), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
   .upperPane {
     background: url(./img/index/presentation_tablet.jpg) right 0/1000px auto no-repeat;
-    padding: 60px 10px 10px;
   }
 }
 @media (min-width: 1000px) {
@@ -1605,6 +1601,7 @@ h1, h2 {
 }
 
 .presentation__title {
+  margin-top: 0;
   margin-bottom: 1em;
   text-transform: uppercase;
 }
@@ -1739,7 +1736,7 @@ h1, h2 {
 .work__title {
   position: relative;
   margin: 0;
-  padding: 60px 0 25px;
+  padding: 60px 0 50px;
   color: #757684;
   text-transform: uppercase;
 }
@@ -1757,7 +1754,7 @@ h1, h2 {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding: 0 2px 95px;
+    padding: 0 2px 120px;
   }
 }
 
@@ -2313,7 +2310,7 @@ h1, h2 {
 .specs h1 {
   width: 100%;
   margin: 0;
-  padding: 60px 0 2em;
+  padding: 80px 0 40px;
   font-size: 1.2em;
   text-transform: uppercase;
 }
@@ -2330,14 +2327,14 @@ h1, h2 {
   padding: 0.7em 0.7em;
 }
 
-.custom-specs, .acs-specs {
+.custom-specs, .acs-specs, .cenik {
   margin: 0 auto 2em;
   max-width: 54em;
   padding: 2em 1em;
   background-color: white;
 }
 @media (min-width: 500px) {
-  .custom-specs, .acs-specs {
+  .custom-specs, .acs-specs, .cenik {
     padding: 2em 2em;
   }
 }
@@ -2358,6 +2355,15 @@ h1, h2 {
   content: '*';
   color: #46e032;
   margin-right: 3px;
+}
+
+.cenik img {
+  width: 100%;
+}
+
+.rozdeleni-sekci {
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .secondary-nav {

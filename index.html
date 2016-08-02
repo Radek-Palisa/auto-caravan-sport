@@ -90,8 +90,8 @@
         <section class="about-txt">
           <h1 class="about__title">Jak to začalo</h1>
           <div class="about-txt__inner">
-            <p>Myšlenka začala v roce 1994 po zakoupení staršího vozu Ford Transit. Nadšení pro volnost, prožití svého volného času, se stávala silnější a po zamilování se do windsurfingu bylo rozhodnuto.  Otvíraly se nové možnosti. Nemusel jsem k vůli surfu utíkat od rodiny ale rodinu jsem brával sebou. 14denní dovolená se protáhla od jara do podzimu. Od Baltu, přes všechny jezera a přehrady až k středozemnímu moři. Příjezdy do neznámých oblastí a já měl vše sebou, přece jen dodávalo více klidu. Auto bylo pro mne něco víc než jen převoz z místa do místa.</p>
-            <p>Jak děti rostli, začalo docházet k jeho postupné přestavbě a já se rozhodoval, co je důležité koupit dřív. Finance z rodinného rozpočtu prosadit na zakoupení životně důležité součásti obytného vozu, byl prostě problém. Byla to nejdelší přestavba ale šla, tak nějak nenápadně s mou rodinou. Vše mělo své kouzlo. Teď, co se život přehoupl do druhé poloviny, je to zase trochu jiné. Zakoupil jsem už nové auto, Ford Transit Custom a představa o vnitřní vestavbě dostala novou tvář. S manželkou nám stačí jedna postel a blížící se vnoučátka si budem brát na víkend jenom po jednom. Na těchto stránkách bych  Vás chtěl seznámit s tímto typem karavaningu a ze svou částečnou činností v tomto směru. </p>
+            <p>Myšlenka začala v roce 1994 po zakoupení staršího vozu Ford Transit. Nadšení pro volnost v prožití svého volného času se stávala silnější a po tom, co jsem se zamiloval do windsurfingu, bylo rozhodnuto. Otvíraly se nové možnosti. Nemusel jsem kvůli surfu utíkat od rodiny, ale rodinu jsem brával s sebou. 14 denní dovolená se protáhla od jara do podzimu. Od Baltu, přes všechna jezera a přehrady až k Středozemnímu moři. Příjezdy do neznámých oblastí, a já měl vše s sebou, přece jen dodávalo více klidu. Auto bylo pro mne něco víc než jen pro převoz z místa do místa.</p>
+            <p>Jak děti rostly začalo docházet k jeho postupné přestavbě a já se rozhodoval, co je důležité koupit dřív. Prosadit finance z rodinného rozpočtu na zakoupení životně důležité součásti obytného vozu byl prostě problém. Byla to nejdelší přestavba, ale šla tak nějak nenápadně s mou rodinou. Vše mělo své kouzlo. Teď, co se život přehoupl do druhé poloviny, je to zase trochu jiné. Zakoupil jsem už nové auto, Ford Transit Custom, a představa o vnitřní vestavbě dostala novou tvář. S manželkou nám stačí jedna postel a blížící se vnoučátka si budem brát na víkend jenom po jednom. Na těchto stránkách bych Vás chtěl seznámit s tímto typem karavaningu a se svou částečnou činností v tomto směru.</p>
           </div>
         </section>
       </div>
@@ -103,25 +103,29 @@
         <p class="contact__icon contact__icon--email">libor.palisa@gmail.com</p>
         <p class="contact__icon contact__icon--tel">+420 605 532 809</p>
         <address class="contact__address">
-          <p class="contact__icon contact__icon--loc">Sokoloská 2530<br>Kroměříž<br>767 01</p><img src="./img/icons/kromerizOnMap.svg" alt="Kroměříž na mapě ČR" class="contact__map">
+          <p class="contact__icon contact__icon--loc">Sokolovská 2530<br>Kroměříž<br>767 01</p><img src="./img/icons/kromerizOnMap.svg" alt="Kroměříž na mapě ČR" class="contact__map">
         </address>
         <p class="contact-fb">Najděte mě na facebooku:</p><a href="https://www.facebook.com/Auto-Caravan-Sport-sro-871786519617622/" class="contact-fb-link"><img src="./img/icons/fb-icon2.svg" class="contact-fb__icon"></a>
       </section>
     </div>
     <div class="contact-form-outer">
-      <form class="contact-form">
+      <form action="https://formspree.io/palisa.libor@gmail.com" method="POST" class="contact-form">
         <h2 class="contact-form__title">Napište mi</h2>
-        <input placeholder="Jméno" class="form__name">
-        <input placeholder="Email" class="form__email">
-        <textarea placeholder="Napište mi co Vás zaujalo..." class="form__zprava"></textarea>
+        <input placeholder="Jméno" type="text" name="name" class="form__name">
+        <input placeholder="Email" type="email" name="_replyto" class="form__email">
+        <textarea placeholder="Napište mi co Vás zaujalo..." name="message" class="form__zprava"></textarea>
         <input type="submit" value="Odeslat" class="form__sent">
       </form>
     </div>
+    <!--.contact-form2
+    include partials/form.jade
+    
+    -->
     <footer class="footer">
       <section class="footer_nav"><a href="#header" class="footer__nav__item footer__goTop">Nahoru</a></section>
       <setion class="footer__info">
         <p class="footer__copyright">&#169; Auto Caravan Sport s.r.o. 2016</p><a href="https://www.facebook.com/Auto-Caravan-Sport-sro-871786519617622/" class="footer__fb">Najděte mě na facebooku</a>
-        <p class="footer__credits">Design a tvorba webu: <a href="https://www.linkedin.com/in/radek-palisa-96332886" target="_blank">Radek Palisa</a></p>
+        <p class="footer__credits">Design a tvorba webu: <a href="http://www.radekpalisa.com" target="_blank">Radek Palisa</a></p>
       </setion>
     </footer>
     <script src="js/functions.js"></script>
