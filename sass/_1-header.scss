@@ -136,8 +136,12 @@
 		font-size: 14px;
 		letter-spacing: 1px;
 
+		&:hover {
+			color: white;	
+		}
+
 		@media (min-width: 1000px) {
-			color: white;
+			color: #efefef;
 			margin-right: 0;
 		}
 	}
