@@ -1,19 +1,15 @@
 extends partials/skeleton.jade
 
-block title-n-meta
-	title ACS s.r.o. | Obytné vestavby do aut
-	meta(name="description" content="Zabývám se přestavbami a vestavbami aut dodákové velikosti, nejlépe kombi-vanů, na obytné vozy pro trávení volného času.")
-
 block navigation
 	header.site-header.site-header--fixed
 		a.logo(href="./index.html") Auto Caravan Sport #[span s.r.o.]
+		.menu-icon
+			button
 		ul.nav__ul(role="navigation")
 			li: a(href="#presentation") O co jde
 			li: a(href="#work") Má práce
 			li: a(href="#about") Jak to začalo
 			li: a(href="#contact") Kontakt
-		.menu-icon
-			button
 
 block body
 
@@ -71,7 +67,7 @@ block body
 				a.work__link.ford-1996__link--bg(href="./ford-1996.html")
 					.work__link__btn
 						p Ford Transit 1996
-				p.work__txt Vzpomínka na první práci, která uspokojila 4-člennou rodinu a sloužila poctivě 16 let karavaningu.
+				p.work__txt Vzpomínka na první práci, která uspokojila 4členou rodinu a sloužila poctivě 16 let karavaningu.
 
 	.about-outer#about
 		.about
@@ -102,6 +98,9 @@ block body
 			input.form__email(placeholder="Email", type="email", name="_replyto")
 			textarea.form__zprava(placeholder="Napište mi co Vás zaujalo...", name="message")
 			input.form__sent(type="submit", value="Odeslat")
+
+	//.contact-form2
+		include partials/form.jade
 
 block footer
 	footer.footer
