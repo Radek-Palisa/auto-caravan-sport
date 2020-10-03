@@ -61,7 +61,7 @@
 		border: none;
 		width: 18px;
 		height: 18px;
-		background: url(../../img/icons/sprite.svg);
+		background: url(../img/icons/sprite.svg);
 		background-size: $bgSize18px;
 		background-position: -342px 18px;
 		padding: 0;
@@ -156,7 +156,7 @@
 	margin-right: 8px;
 	width: 18px;
 	height: 18px;
-	background-image: url('../../img/icons/sprite.svg');
+	background-image: url('../img/icons/sprite.svg');
 	background-size: $bgSize18px;
 	background-position: -288px 0;
 
@@ -188,22 +188,22 @@
 	background-size: cover;
 
 	&--index-bg {
-		background: url(../../img/index/jumbotron_mobile.jpg) 50% 0 / cover no-repeat;
+		background: url(../img/index/jumbotron_mobile.jpg) 50% 0 / cover no-repeat;
 
 		@media (min-width: 500px), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-			background: url(../../img/index/jumbotron_tablet.jpg) 20% 0 / cover no-repeat;
+			background: url(../img/index/jumbotron_tablet.jpg) 20% 0 / cover no-repeat;
 		}
 		@media (min-width: 500px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 500px) and (min-resolution: 144dpi){ 
-			background: url(../../img/index/jumbotron_tablet_2x.jpg) 20% 0 / cover no-repeat;;
+			background: url(../img/index/jumbotron_tablet_2x.jpg) 20% 0 / cover no-repeat;;
 		}
 
 		@media (min-width: 1000px) {
-			background: url(../../img/index/jumbotron.jpg) 20% 50px / 1936px auto no-repeat fixed;
+			background: url(../img/index/jumbotron.jpg) 20% 50px / 1936px auto no-repeat fixed;
 			margin-top: 50px;
 			height: 500px;		
 		}
 		@media (min-width: 1000px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1000px) and (min-resolution: 144dpi){ 
-			background: url(../../img/index/jumbotron_2x.jpg) 20% 50px / 1936px auto no-repeat fixed;
+			background: url(../img/index/jumbotron_2x.jpg) 20% 50px / 1936px auto no-repeat fixed;
 		}
 		@media (min-width: 1600px) {
 			background-position: 50% 50px;
@@ -216,7 +216,7 @@
 	}
 	
 	// &--subpage-bg {
-	// 	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url(../../img/header/1.jpg);
+	// 	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url(../img/header/1.jpg);
 	// 	background-position: center 70%;
 	// }
 }

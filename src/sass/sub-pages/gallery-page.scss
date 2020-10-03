@@ -66,19 +66,19 @@
 }
 
 .galerie-izolace h2 {
-	background-image: url('../../img/galerie/headers/izolace-vozu.jpg');
+	background-image: url('../img/galerie/headers/izolace-vozu.jpg');
 }
 .galerie-sedadla h2 {
-	background-image: url('../../img/galerie/headers/sestava-sedadel.JPG');
+	background-image: url('../img/galerie/headers/sestava-sedadel.JPG');
 }
 .galerie-toaleta h2 {
-	background-image: url('../../img/galerie/headers/toaletni-kout.JPG');
+	background-image: url('../img/galerie/headers/toaletni-kout.JPG');
 }
 .galerie-kuchyn h2 {
-	background-image: url('../../img/galerie/headers/kuchynsky-blok.JPG');
+	background-image: url('../img/galerie/headers/kuchynsky-blok.JPG');
 }
 .galerie-postel h2 {
-	background-image: url('../../img/galerie/headers/postel.JPG');
+	background-image: url('../img/galerie/headers/postel.JPG');
 }
 
 .galerie__header__btn {
@@ -118,7 +118,7 @@
 	width: 22px;
 	height: 22px;
 	margin: 0 auto;
-	background-image: url('../../img/icons/sprite.svg');
+	background-image: url('../img/icons/sprite.svg');
 	background-size: 462px 22px;
 
 	&--toOpen {

@@ -4,8 +4,8 @@
   "description": "A small business website",
   "author": "Radek Palisa",
   "scripts": {
-    "dev": "parcel jade/index.pug",
-    "build": "parcel build jade/index.pug"
+    "dev": "parcel src/jade/index.pug",
+    "build": "parcel build src/jade/index.pug"
   },
   "devDependencies": {
     "autoprefixer": "9.8.6",
