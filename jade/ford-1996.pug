@@ -1,0 +1,50 @@
+extends partials/skeleton.pug
+
+block title-n-meta
+	title ACS s.r.o. | Obytná přestavba vozu Ford Transit 1996
+	meta(name="description" content="Ukázka mojí první práce, přestavby vozu Ford TRANSIT model 1996 s vysokou plastovou střechou. Komponenty pro přestavbu byly dodány německou firmou REIMO.")
+
+block body
+
+	main.sub-page
+		// nav.sub-page-nav
+			a(href="index.html") <span>&#x2190;</span> Zpět na domovskou stránku
+			a.sub-page-nav--float(href="predchozi-prace.html") Předchozí práce <span>&#x2192;</span>
+		header.heading__wrap
+			h1.heading--fonts Ford Transit 1996 (krátký rozvor) s vysokou pevnou střechou
+
+		article.sub-page__flipster
+			.my-flipster.flipster--margin
+				ul
+
+					li
+						img.ford-1996__img(src="../img/ford-1996/301.jpg" alt="Obytná přestavba vozu Ford Transit model 1996")
+					li
+						img.ford-1996__img(src="../img/ford-1996/302.jpg" alt="Obytná přestavba vozu Ford Transit model 1996")
+					li
+						img.ford-1996__img(src="../img/ford-1996/303.jpg" alt="Obytná přestavba vozu Ford Transit model 1996")
+					li
+						img.ford-1996__img(src="../img/ford-1996/304.jpg" alt="Obytná přestavba vozu Ford Transit model 1996")
+					li
+						img.ford-1996__img(src="../img/ford-1996/305.jpg" alt="Obytná přestavba vozu Ford Transit model 1996")
+					li
+						img.ford-1996__img(src="../img/ford-1996/306.jpg" alt="Obytná přestavba vozu Ford Transit model 1996")
+					li
+						img.ford-1996__img(src="../img/ford-1996/307.jpg" alt="Obytná přestavba vozu Ford Transit model 1996")
+					li
+						img.ford-1996__img(src="../img/ford-1996/308.jpg" alt="Obytná přestavba vozu Ford Transit model 1996")
+					li
+						img.ford-1996__img(src="../img/ford-1996/309.jpg" alt="Obytná přestavba vozu Ford Transit model 1996")
+					li
+						img.ford-1996__img(src="../img/ford-1996/310.jpg" alt="Obytná přestavba vozu Ford Transit model 1996")
+
+			section.sub-page__txt.box-shadow
+				// h1 Ford Transit 1996
+				p Další z verzí pro střední a dlouhé dodávky. Většinou v zadní části je ještě prostor pro koupelnový kout a připadnou garáž. Dvoumístná lavice se rozklápí na přední otočná sedadla. Udělal jsem tuto verzi do krátkého rozvoru, třeba kvůli tomu, že manželka mohla v zadní části vařit nebo já se převlékat do neoprenu a děti si tak mohly nerušeně hrát vpředu u stolu. Vzadu byl i mobilní záchod, což melo také své diskrétnější výhody. Plastová vysoká střecha měla tu výhodu, že byla ve vozidle permanentní stojná výška. Na údržbu je proti zvedací střeše jednodušší, ale vozidlo bylo o 80 centimetru vyšší a to zas mělo své nevýhody: větší odpor vzduchu při cestování a různé průjezdní brány limitující výšku vozu do 2m.  Je zde 4-místné sezení a dvě 2-lůžkové (rozklápěcí a zaklápěcí) postele.
+
+		nav.secondary-nav
+			p Kam dále?<br>Podívejte se na mé ostatní práce:
+			.sec-nav-list
+				include partials/sub-nav-custom.pug
+
+				include partials/sub-nav-2000.pug
