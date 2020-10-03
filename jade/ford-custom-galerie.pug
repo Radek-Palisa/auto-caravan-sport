@@ -1,4 +1,4 @@
-extends partials/skeleton.jade
+extends partials/skeleton.pug
 
 block title-n-meta
 	title ACS s.r.o. | Foto-dokumentace Fordu Custom ACS
@@ -21,13 +21,17 @@ block body
 								.galerie-btn__svg.galerie-btn__svg--toOpen
 
 					section.galerie__section.izolace-vozu__thumbs
-						- for (var x = 1; x < 10; x++)
-							a.galerie-izolace__item.gallery__thumbnail(href="./img/galerie/images/izolace-vozu_0#{x}.jpg",data-featherlight="image")
-								img(src="./img/galerie/thumbs/izolace-vozu_0#{x}.jpg", alt="izolace-vozu_0#{x}")
+						- var x = 1;
+						while x < 10
+							a.galerie-izolace__item.gallery__thumbnail(href=`../img/galerie/images/izolace-vozu_0${x}.jpg`,data-featherlight="image")
+								img(src=`../img/galerie/thumbs/izolace-vozu_0${x}.jpg`, alt=`izolace-vozu_0${x}`)
+							- x++
 
-						- for (var x = 10; x < 31; x++)
-							a.galerie-izolace__item.gallery__thumbnail(href="./img/galerie/images/izolace-vozu_#{x}.jpg",data-featherlight="image")
-								img(src="./img/galerie/thumbs/izolace-vozu_#{x}.jpg", alt="izolace-vozu_#{x}")
+						- var x = 10;
+						while x < 31
+							a.galerie-izolace__item.gallery__thumbnail(href=`../img/galerie/images/izolace-vozu_${x}.jpg`,data-featherlight="image")
+								img(src=`../img/galerie/thumbs/izolace-vozu_${x}.jpg`, alt=`izolace-vozu_${x}`)
+							- x++
 
 						.galerie__section__btn
 							button.galerie-btn
@@ -42,12 +46,14 @@ block body
 								.galerie-btn__svg.galerie-btn__svg--toOpen
 
 					section.galerie__section.sestava-sedadel__thumbs
-						- for (var x = 1; x < 10; x++)
-							a.galerie-sedadla__item.gallery.gallery__thumbnail(href="./img/galerie/images/sestava-sedadel_0#{x}.jpg",data-featherlight="image")
-								img(src="./img/galerie/thumbs/sestava-sedadel_0#{x}.jpg", alt="sestava-sedadel_0#{x}")
+						- var x = 1;
+						while x < 10
+							a.galerie-sedadla__item.gallery.gallery__thumbnail(href=`../img/galerie/images/sestava-sedadel_0${x}.jpg`,data-featherlight="image")
+								img(src=`../img/galerie/thumbs/sestava-sedadel_0${x}.jpg`, alt=`sestava-sedadel_0${x}`)
+							- x++
 
-						a.galerie-sedadla__item.gallery.gallery__thumbnail(href="./img/galerie/images/sestava-sedadel_10.jpg",data-featherlight="image")
-							img(src="./img/galerie/thumbs/sestava-sedadel_10.jpg", alt="sestava-sedadel_10")
+						a.galerie-sedadla__item.gallery.gallery__thumbnail(href="../img/galerie/images/sestava-sedadel_10.jpg",data-featherlight="image")
+							img(src="../img/galerie/thumbs/sestava-sedadel_10.jpg", alt="sestava-sedadel_10")
 
 						.galerie__section__btn
 							button.galerie-btn
@@ -62,17 +68,22 @@ block body
 								.galerie-btn__svg.galerie-btn__svg--toOpen
 
 					section.galerie__section
-						- for (var x = 1; x < 10; x++)
-							a.galerie-toaleta__item.gallery__thumbnail(href="./img/galerie/images/toaletni-kout_0#{x}.jpg",data-featherlight="image")
-								img(src="./img/galerie/thumbs/toaletni-kout_0#{x}.jpg", alt="toaletni-kout_0#{x}")
+						- var x = 1;
+						while x < 10
+							a.galerie-toaleta__item.gallery__thumbnail(href=`../img/galerie/images/toaletni-kout_0${x}.jpg`,data-featherlight="image")
+								img(src=`../img/galerie/thumbs/toaletni-kout_0${x}.jpg`, alt=`toaletni-kout_0${x}`)
+							- x++
 
-						- for (var x = 10; x < 31; x++)
-							a.galerie-toaleta__item.gallery__thumbnail(href="./img/galerie/images/toaletni-kout_#{x}.jpg",data-featherlight="image")
-								img(src="./img/galerie/thumbs/toaletni-kout_#{x}.jpg", alt="toaletni-kout_#{x}")
+						- var x = 10;
+						while x < 31
+							a.galerie-toaleta__item.gallery__thumbnail(href=`../img/galerie/images/toaletni-kout_${x}.jpg`,data-featherlight="image")
+								img(src=`../img/galerie/thumbs/toaletni-kout_${x}.jpg`, alt=`toaletni-kout_${x}`)
+							- x++
 
 						.galerie__section__btn
 							button.galerie-btn
 								.galerie-btn__svg.galerie-btn__svg--toClose
+
 
 				section.galerie.galerie-kuchyn
 					header.galerie__header
@@ -83,13 +94,17 @@ block body
 								.galerie-btn__svg.galerie-btn__svg--toOpen
 
 					section.galerie__section
-						- for (var x = 1; x < 10; x++)
-							a.galerie-kuchyn__item.gallery__thumbnail(href="./img/galerie/images/kuchynsky-blok_0#{x}.jpg",data-featherlight="image")
-								img(src="./img/galerie/thumbs/kuchynsky-blok_0#{x}.jpg", alt="kuchynsky-blok_0#{x}")
+						- var x = 1;
+						while x < 10
+							a.galerie-kuchyn__item.gallery__thumbnail(href=`../img/galerie/images/kuchynsky-blok_0${x}.jpg`,data-featherlight="image")
+								img(src=`../img/galerie/thumbs/kuchynsky-blok_0${x}.jpg`, alt=`kuchynsky-blok_0${x}`)
+							- x++
 
-						- for (var x = 10; x < 31; x++)
-							a.galerie-kuchyn__item.gallery__thumbnail(href="./img/galerie/images/kuchynsky-blok_#{x}.jpg",data-featherlight="image")
-								img(src="./img/galerie/thumbs/kuchynsky-blok_#{x}.jpg", alt="kuchynsky-blok_0#{x}")
+						- var x = 10;
+						while x < 31
+							a.galerie-kuchyn__item.gallery__thumbnail(href=`../img/galerie/images/kuchynsky-blok_${x}.jpg`,data-featherlight="image")
+								img(src=`../img/galerie/thumbs/kuchynsky-blok_${x}.jpg`, alt=`kuchynsky-blok_0${x}`)
+							- x++
 
 						.galerie__section__btn
 							button.galerie-btn
@@ -104,13 +119,17 @@ block body
 								.galerie-btn__svg.galerie-btn__svg--toOpen
 									
 					section.galerie__section
-						- for (var x = 1; x < 10; x++)
-							a.galerie-postel__item.gallery__thumbnail(href="./img/galerie/images/postel_0#{x}.jpg",data-featherlight="image")
-								img(src="./img/galerie/thumbs/postel_0#{x}.jpg", alt="postel_0#{x}")
+						- var x = 1;
+						while x < 10
+							a.galerie-postel__item.gallery__thumbnail(href=`../img/galerie/images/postel_0${x}.jpg`,data-featherlight="image")
+								img(src=`../img/galerie/thumbs/postel_0${x}.jpg`, alt=`postel_0${x}`)
+							- x++
 
-						- for (var x = 10; x < 25; x++)
-							a.galerie-postel__item.gallery__thumbnail(href="./img/galerie/images/postel_#{x}.jpg",data-featherlight="image")
-								img(src="./img/galerie/thumbs/postel_#{x}.jpg", alt="postel_0#{x}")
+						- var x = 10;
+						while x < 25
+							a.galerie-postel__item.gallery__thumbnail(href=`../img/galerie/images/postel_${x}.jpg`,data-featherlight="image")
+								img(src=`../img/galerie/thumbs/postel_${x}.jpg`, alt=`postel_0${x}`)
+							- x++
 
 						.galerie__section__btn
 							button.galerie-btn
@@ -119,14 +138,14 @@ block body
 		nav.secondary-nav
 			p Kam dále?<br>Podívejte se na mé ostatní práce:
 			.sec-nav-list
-				include partials/sub-nav-custom.jade
+				include partials/sub-nav-custom.pug
 
-				include partials/sub-nav-2000.jade
+				include partials/sub-nav-2000.pug
 
-				include partials/sub-nav-1996.jade
+				include partials/sub-nav-1996.pug
 
 block local-scripts
-	script(src="js/featherlight.gallery.js")
+	script(src="../js/featherlight.gallery.js")
 	script.
 		$('.galerie-izolace__item').featherlightGallery();
 		$('.galerie-sedadla__item').featherlightGallery();

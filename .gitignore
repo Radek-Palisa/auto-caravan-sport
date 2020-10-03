@@ -7,3 +7,5 @@ vendors
 img
 style-min.css
 style.css.map
+.cache
+dist

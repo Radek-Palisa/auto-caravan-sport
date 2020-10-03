@@ -1,4 +1,4 @@
-extends partials/skeleton.jade
+extends partials/skeleton.pug
 
 block title-n-meta
 	title ACS s.r.o. | Obytné vestavby do aut
@@ -6,7 +6,7 @@ block title-n-meta
 
 block navigation
 	header.site-header.site-header--fixed
-		a.logo(href="./index.html") Auto Caravan Sport #[span s.r.o.]
+		a.logo(href="./index.pug") Auto Caravan Sport #[span s.r.o.]
 		ul.nav__ul(role="navigation")
 			li: a(href="#presentation") O co jde
 			li: a(href="#work") Má práce
@@ -22,7 +22,7 @@ block body
 	p.slogan Vítejte v mém světě dodávkové velikosti</br>...ani malé ani velké.
 	section.site-intro#presentation
 		h1.site-intro__title Vítejte na stránkách firmy <strong>Auto Caravan Sport s.r.o.</strong>
-		img.site-intro__img(src="./img/index/profile.jpg", alt="zakladatel a jednatel firmy")
+		img.site-intro__img(src="../img/index/profile.jpg", alt="zakladatel a jednatel firmy")
 		p.site-intro__txt Jmenuji se Libor Palisa a mojí dlouholetou vášní je hledat možnosti, jakými způsoby přestavět dodávkový vůz, nejlépe kombi-van, na obytný vůz pro trávení volného času.
 
 	.presentation-outer
@@ -34,18 +34,18 @@ block body
 
 			ul.middlePane
 				li.middlePane__item
-					img(src="./img/index/prezentace/vyuziti.jpg", alt="Využití aut Auto Caravan Sport")
+					img(src="../img/index/prezentace/vyuziti.jpg", alt="Využití aut Auto Caravan Sport")
 					p #[span Využití] Auta jsou ideální pro polykání kilometrů na dálnicích. Dokáží poskytnout určitý komfort potřeb k pobytu a přesto mohou sloužit v každodenním provozu jako osobní vozy.
 
 				li.middlePane__item
-					img(src="./img/index/prezentace/dostupnost.jpg", alt="Dostupnost aut Auto Caravan Sport")
+					img(src="../img/index/prezentace/dostupnost.jpg", alt="Dostupnost aut Auto Caravan Sport")
 					p #[span Dostupnost] S vozem se dostanete i na těžko přístupná místa jako přeplněná centra velkoměst, parkoviště v historických částech a to samé při toulkách v přírodě.
 				
 				li.middlePane__item
-					img(src="./img/index/prezentace/komfort.jpg", alt="Komfort aut Auto Caravan Sport")
+					img(src="../img/index/prezentace/komfort.jpg", alt="Komfort aut Auto Caravan Sport")
 					p #[span Komfort] V autě můžete spát, vařit, sprchovat se a samozřejmostí je i chemický záchod. Technické vymoženosti vnitřního vybavení jsou veliké. Ať už cestujete kamkoliv, vozíte si sebou pohodlí domova.
 				li.middlePane__item
-					img(src="./img/index/prezentace/kvalita.jpg", alt="Kvalita aut Auto Caravan Sport")
+					img(src="../img/index/prezentace/kvalita.jpg", alt="Kvalita aut Auto Caravan Sport")
 					p #[span Kvalita] U přestaveb jsou použity komponenty od předních výrobců zabývajících se karavaningem. Německá firma REIMO se  zabývá speciálně prodejem do těchto typů vozidel. Nabízí i celé vozy, nebo jejich kompletní výbavu.
 
 			.bottomPane
@@ -56,19 +56,19 @@ block body
 		h1.work__title Má práce
 		ul.work__ul
 			li.work__item
-				a.work__link.ford-custom__link--bg(href="./ford-custom.html")
+				a.work__link.ford-custom__link--bg(href="./ford-custom.pug")
 					.work__link__btn
 						p Ford Transit Custom
 				p.work__txt Má poslední práce, dezignově povedený Ford jsem se pokusil  přizpůsobit buď početnější rodině nebo jenom sólo páru.
 
 			li.work__item
-				a.work__link.ford-2000__link--bg(href="./ford-2000.html")
+				a.work__link.ford-2000__link--bg(href="./ford-2000.pug")
 					.work__link__btn
 						p Ford Transit 2000
 				p.work__txt Nejrozšířenější  vestavba pro krátké typy vozů. Počet sedících jsou pro 4 osoby a celkem pohodlné jsou i 4 místa pro spaní.
 
 			li.work__item
-				a.work__link.ford-1996__link--bg(href="./ford-1996.html")
+				a.work__link.ford-1996__link--bg(href="./ford-1996.pug")
 					.work__link__btn
 						p Ford Transit 1996
 				p.work__txt Vzpomínka na první práci, která uspokojila 4-člennou rodinu a sloužila poctivě 16 let karavaningu.
@@ -90,10 +90,10 @@ block body
 			p.contact__icon.contact__icon--tel +420 605 532 809
 			address.contact__address
 				p.contact__icon.contact__icon--loc Sokolovská 2530<br>Kroměříž<br>767 01
-				img.contact__map(src="./img/icons/kromerizOnMap.svg", alt="Kroměříž na mapě ČR")
+				img.contact__map(src="../img/icons/kromerizOnMap.svg", alt="Kroměříž na mapě ČR")
 
 			p.contact-fb Najděte mě na facebooku:
-			a.contact-fb-link(href="https://www.facebook.com/Auto-Caravan-Sport-sro-871786519617622/"): img.contact-fb__icon(src="./img/icons/fb-icon2.svg")
+			a.contact-fb-link(href="https://www.facebook.com/Auto-Caravan-Sport-sro-871786519617622/"): img.contact-fb__icon(src="../img/icons/fb-icon2.svg")
 			
 	.contact-form-outer
 		form.contact-form(action="https://formspree.io/palisa.libor@gmail.com", method="POST")
