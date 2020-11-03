@@ -189,6 +189,10 @@
 .secondary-nav {
 	background-color: white;
 	padding-bottom: 60px;
+
+	&--padd-top {
+		padding-top: 60px
+	}
 }
 
 .secondary-nav > p {
